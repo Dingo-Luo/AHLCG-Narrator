@@ -1,0 +1,465 @@
+{
+  "id": "blood_on_the_altar",
+  "scenario_name": "Blood on the Altar",
+  "header": "Scenario IV",
+  "full_name": "Scenario IV: Blood on the Altar",
+  "chaos_bag_card": "02195",
+  "setup": [
+    "prologue",
+    "$check_tarot_reading",
+    "gather_encounter_sets",
+    "setup_village_commons",
+    "setup_locations",
+    "location_layout",
+    "gather_sacrifices",
+    "set_aside_cards",
+    "check_delayed",
+    "encounter_deck",
+    "check_bone_to_pick",
+    "setup_hidden_cards",
+    "hidden_chamber_note",
+    "$play_scenario"
+  ],
+  "rules": [
+    {
+      "title": "The Hidden Chamber",
+      "steps": ["hidden_chamber_note"]
+    }
+  ],
+  "steps": [
+    {
+      "id": "prologue",
+      "narration": {
+        "id": "the_dunwich_legacy.blood_on_the_altar.intro",
+        "name": "Intro",
+        "lang": [
+          "dv",
+          "de",
+          "es",
+          "ru",
+          "pl"
+        ]
+      },
+      "type": "story",
+      "text": "When you finally reach Dunwich, you are greeted by Zebulon Whateley and Earl Sawyer, another man from the village who had met with Dr. Armitage during the incident several months ago. “Things ain’t lookin’ too good here,” Earl tells you. “Some folk up and went missin’ a few nights ago. ‘Dem whippoorwills won’ shut up. Dunno what yer doin’ here, but last time you Arkham folk came ‘round it was bad news. Very bad news.” His eyes blink rapidly, and he coughs and looks away.\n“Look, why don’t you rest fer the night an’ look fer whatever it is yer looking fer t’morra,” Zebulon chimes in, putting a wrinkled hand on your shoulder. You begin to protest, but your aching muscles and weary mind won’t allow you to refuse. The elderly man offers to take you in for the night, and drives you to his home at the outskirts of Dunwich village. The town is disheveled and eerie, and you find yourself wishing you hadn’t come here at all. You fall asleep on the ride over and scarcely remember anything else from that night.\nWhen you awaken, you find that Zebulon’s house is abandoned, and there is no sign of the elderly man, or of Mr. Sawyer. Fearing the worst, you head into the village of Dunwich to investigate, hoping to find answers."
+    },
+    {
+      "id": "gather_encounter_sets",
+      "title": "Setup",
+      "type": "encounter_sets",
+      "encounter_sets": [
+        "blood_on_the_altar",
+        "dunwich",
+        "whippoorwills",
+        "nightgaunts",
+        "ancient_evils"
+      ]
+    },
+    {
+      "id": "setup_village_commons",
+      "text": "Put Village Commons into play. Each investigator begins play in the Village Commons."
+    },
+    {
+      "id": "setup_locations",
+      "text": "Remove one of the two copies of each other location from the game at random. Then, choose one of the six remaining locations at random, and remove it from the game as well. Put the remaining five locations into play."
+    },
+    {
+      "id": "location_layout",
+      "type": "location_setup",
+      "text": "Location Placement",
+      "note": "<i><b>Note</b>: One of the below locations will <b>not</b> be in play.</i>",
+      "horizontal": "half",
+      "vertical": "normal",
+      "locations": [
+        [
+          "blank",
+          "02210_back",
+          "blank",
+          "02212_back",
+          "blank",
+          "blank"
+        ],
+        [
+          "02208_back",
+          "blank",
+          "02201_back",
+          "blank",
+          "02206_back",
+          "blank"
+        ],
+        [
+          "blank",
+          "02204_back",
+          "blank",
+          "02202_back",
+          "blank",
+          "blank"
+        ]
+      ]
+    },
+    {
+      "id": "gather_sacrifices",
+      "text": "Check Campaign Log. Gather the cards for each character who “was kidnapped” according to your Campaign Log. Form a facedown pile of “potential sacrifices,” consisting of each of those cards, along with the Zebulon Whateley card and the Earl Sawyer card."
+    },
+    {
+      "id": "set_aside_cards",
+      "text": "Set the following cards aside, out of play: Silas Bishop, The Hidden Chamber, Key to the Chamber, and Powder of Ibn-Ghazi."
+    },
+    {
+      "id": "check_delayed",
+      "type": "branch",
+      "condition": {
+        "type": "campaign_log",
+        "section": "campaign_notes",
+        "id": "investigators_delayed",
+        "options": [
+          {
+            "boolCondition": true,
+            "steps": [
+              "add_1_doom"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "add_1_doom",
+      "bullet_type": "small",
+      "text": "Add 1 doom to agenda 1a."
+    },
+    {
+      "id": "encounter_deck",
+      "text": "Shuffle the remainder of the encounter cards (from the previously gathered encounter sets) to form the encounter deck."
+    },
+    {
+      "id": "check_bone_to_pick",
+      "type": "branch",
+      "condition": {
+        "type": "campaign_log",
+        "section": "campaign_notes",
+        "id": "bone_to_pick",
+        "options": [
+          {
+            "boolCondition": true,
+            "steps": [
+              "gather_naomis_crew"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "gather_naomis_crew",
+      "bullet_type": "small",
+      "text": "Seeking vengeance, the gang from the Clover Club has followed you to Dunwich. Gather all cards from the <i>Naomi’s Crew</i> encounter set and shuffle them into the encounter deck.",
+      "type": "encounter_sets",
+      "encounter_sets": [
+        "naomis_crew"
+      ]
+    },
+    {
+      "id": "setup_hidden_cards",
+      "text": "Take the previously set-aside The Hidden Chamber and Key to the Chamber cards, along with the top 3 cards of the encounter deck. Shuffle them and randomly deal 1 card facedown underneath each location in play except Village Commons."
+    },
+    {
+      "id": "hidden_chamber_note",
+      "type": "rule_reminder",
+      "title": "The Hidden Chamber",
+      "text": "This scenario includes a single-sided location (The Hidden Chamber) which has been dealt facedown underneath a random location. The Hidden Chamber only has a revealed side, and has a <b>Revelation</b> effect that puts it into play when drawn.\nWhen put into play, a single-sided location is put into play with its revealed side faceup, because it has no unrevealed side. Otherwise, it functions as a normal location in every other way."
+    },
+    {
+      "id": "ritual_completed",
+      "effects": [
+        {
+          "type": "campaign_log",
+          "section": "campaign_notes",
+          "id": "ritual_completed",
+          "text": "the ritual was completed."
+        }
+      ]
+    },
+    {
+      "id": "killed_silas_bishop",
+      "effects": [
+        {
+          "type": "campaign_log",
+          "section": "campaign_notes",
+          "id": "killed_silas_bishop",
+          "text": "the investigators put Silas Bishop out of his misery."
+        }
+      ]
+    },
+    {
+      "id": "restored_silas_bishop",
+      "effects": [
+        {
+          "type": "campaign_log",
+          "section": "campaign_notes",
+          "id": "restored_silas_bishop",
+          "text": "the investigators restored Silas Bishop."
+        }
+      ]
+    },
+    {
+      "id": "banished_silas_bishop",
+      "effects": [
+        {
+          "type": "campaign_log",
+          "section": "campaign_notes",
+          "id": "banished_silas_bishop",
+          "text": "the investigators banished Silas Bishop."
+        }
+      ]
+    },
+    {
+      "id": "sacrifice_all",
+      "text": "If there were any potential sacrifices remaining at the end of the game, place them underneath the agenda deck."
+    },
+    {
+      "id": "record_sacrificed",
+      "text": "In your Campaign Log, under “Sacrificed to Yog‐Sothoth,” record the names of each unique card that is underneath the agenda deck.\nEach of these cards are removed from all players’ decks and can no longer be included in any players’ decks for the remainder of the campaign.",
+      "type": "input",
+      "input": {
+        "type": "card_choice",
+        "query": [
+          {
+            "traits": ["ally"],
+            "unique": true,
+            "source": "deck",
+            "exclude_code": [
+              "02080",
+              "02061",
+              "02040",
+              "02217",
+              "02218",
+              "51052"
+            ]
+          },
+          {
+            "code": [
+              "02080",
+              "02061",
+              "02040",
+              "02217",
+              "02218"
+            ]
+          }
+        ],
+        "choices": [
+          {
+            "id": "sacrificed",
+            "text": "Sacrificed",
+            "effects": [
+              {
+                "type": "campaign_log_cards",
+                "section": "sacrificed",
+                "id": "$input_value",
+                "text": "#name#"
+              },
+              {
+                "type": "remove_card",
+                "card": "$input_value"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lose_necronomicon",
+      "type": "branch",
+      "condition": {
+        "type": "has_card",
+        "investigator": "defeated",
+        "card": "02140",
+        "options": [
+          {
+            "boolCondition": true,
+            "steps": [
+              "necronomicon_stolen",
+              "remove_necronomicon"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "necronomicon_stolen",
+      "effects": [
+        {
+          "type": "campaign_log",
+          "section": "campaign_notes",
+          "id": "necronomicon_stolen",
+          "text": "the Necronomicon was stolen."
+        }
+      ]
+    },
+    {
+      "id": "remove_necronomicon",
+      "text": "The Necronomicon <i>(Olaus Wormius Translation)</i> must be removed from that investigator’s deck.",
+      "effects": [
+        {
+          "type": "remove_card",
+          "card": "02140"
+        }
+      ]
+    },
+    {
+      "id": "earn_2_xp",
+      "text": "Each investigator earns experience equal to the Victory X value of each card in the victory display.",
+      "type": "input",
+      "input": {
+        "type": "counter",
+        "text": "Victory display:",
+        "confirm_text": "Each investigator earns 2 bonus experience as they gain insight into the hidden world of the Mythos.",
+        "effects": [
+          {
+            "type": "earn_xp",
+            "investigator": "all",
+            "bonus": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "skip_survivors",
+      "hidden": true,
+      "effects": [
+        {
+          "type": "campaign_data",
+          "setting": "skip_scenario",
+          "scenario": "dwl_interlude2"
+        }
+      ]
+    },
+    {
+      "id": "check_henry_armitage",
+      "type": "branch",
+      "condition": {
+        "type": "campaign_log",
+        "section": "sacrificed",
+        "id": "02040",
+        "options": [
+          {
+            "boolCondition": false,
+            "steps": [
+              "henry_armitage_survived"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "henry_armitage_survived",
+      "bullet_type": "small",
+      "effects": [
+        {
+          "type": "campaign_log",
+          "section": "campaign_notes",
+          "id": "henry_armitage_survived",
+          "text": "Dr. Henry Armitage survived The Dunwich Legacy."
+        }
+      ]
+    }
+  ],
+  "resolutions": [
+    {
+      "id": "no_resolution",
+      "narration": {
+        "id": "the_dunwich_legacy.blood_on_the_altar.no_resolution",
+        "name": "No Resolution",
+        "lang": [
+          "dv",
+          "de",
+          "es",
+          "ru",
+          "pl"
+        ]
+      },
+      "title": "No resolution was reached",
+      "description": "Each investigator resigned or was defeated",
+      "investigator_status": [
+        "resigned",
+        "eliminated",
+        "physical",
+        "mental"
+      ],
+      "text": "The cries of the whippoorwills fade into the distance, and the town of Dunwich is filled with an eerie silence. All that can be heard is the dry whistle of the chill wind and the slow rustling of dead leaves. There is no sign of the missing townsfolk, nor will there be ever again.",
+      "steps": [
+        "ritual_completed",
+        "sacrifice_all",
+        "record_sacrificed",
+        "check_henry_armitage",
+        "lose_necronomicon",
+        "earn_2_xp",
+        "$upgrade_decks",
+        "skip_survivors"
+      ]
+    },
+    {
+      "id": "R1",
+      "narration": {
+        "id": "the_dunwich_legacy.blood_on_the_altar.resolution_1",
+        "name": "Resolution 1",
+        "lang": [
+          "dv",
+          "de",
+          "es",
+          "ru",
+          "pl"
+        ]
+      },
+      "title": "Resolution 1",
+      "text": "As you land the finishing blow, the creature’s body explodes into hundreds of squirming ropelike appendages, wriggling across the ground and climbing up the walls. You’re so startled that you aren’t fast enough to prevent them from escaping the room. Even so, whatever that creature was, you’re glad it’s now dead.",
+      "steps": [
+        "killed_silas_bishop",
+        "record_sacrificed",
+        "lose_necronomicon",
+        "earn_2_xp"
+      ]
+    },
+    {
+      "id": "R2",
+      "narration": {
+        "id": "the_dunwich_legacy.blood_on_the_altar.resolution_2",
+        "name": "Resolution 2",
+        "lang": [
+          "dv",
+          "de",
+          "es",
+          "ru",
+          "pl"
+        ]
+      },
+      "title": "Resolution 2",
+      "text": "With the creature that once was Silas lashing out at you from its chains, you have little time to react. Knowing that the Necronomicon might have a spell or incantation that could subdue Silas, you fend off the abomination long enough to find a passage that can help. With no time to spare, you recite the Latin incantation, and find that the words come effortlessly to your tongue, as though recalled from an earlier memory. The creature’s body begins to shrink and melt away as the incantation builds, its cries terrifying and haunting. In the end, all that is left is the disfigured corpse of a man—Silas Bishop. You find a silver pendant emblazoned with an odd constellation tucked into his shirt. You take it with you, hoping to find a use for it.",
+      "steps": [
+        "restored_silas_bishop",
+        "record_sacrificed",
+        "earn_2_xp"
+      ]
+    },
+    {
+      "id": "R3",
+      "narration": {
+        "id": "the_dunwich_legacy.blood_on_the_altar.resolution_3",
+        "name": "Resolution 3",
+        "lang": [
+          "dv",
+          "de",
+          "es",
+          "ru",
+          "pl"
+        ]
+      },
+      "title": "Resolution 3",
+      "text": "With the creature that once was Silas lashing out at you from its chains, you have little time to react. Hoping there is something in the chamber you can use to your advantage, you fend off the abomination long enough to find a journal; many of its passages are written in Latin. It appears to be a handwritten excerpt from the Necronomicon, its purpose unknown. With no time to spare, you recite the incantation, stumbling over the words and feeling your throat tighten with each sentence. The creature’s body begins to shrink and melt away as the incantation continues, its cries terrifying and haunting. In the end, all that is left is a pile of wet and sticky ichor, and a rotten stench.",
+      "steps": [
+        "banished_silas_bishop",
+        "record_sacrificed",
+        "lose_necronomicon",
+        "earn_2_xp"
+      ]
+    }
+  ]
+}

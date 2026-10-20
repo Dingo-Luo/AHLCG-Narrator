@@ -1,0 +1,4 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$ref": "./schema/refs/campaign.schema.json#/definitions/campaign"
+}

@@ -1,0 +1,28 @@
+{
+  "scenarios": [
+    "armitages_fate",
+    "blood_on_the_altar",
+    "essex_county_express",
+    "dwl_epilogue",
+    "dwl_prologue",
+    "extracurricular_activity",
+    "dwl_interlude2",
+    "lost_in_time_and_space",
+    "where_doom_awaits",
+    "the_house_always_wins",
+    "undimensioned_and_unseen",
+    "the_miskatonic_museum"
+  ],
+  "interactiveScenarios": [
+    "the_house_always_wins",
+    "extracurricular_activity"
+  ],
+  "cards": 829,
+  "agendaAndActCards": 82,
+  "translations": {
+    "zh-cn": 547,
+    "zh": 505
+  },
+  "localCardImages": 26,
+  "images": "English card images for interactive scenarios are stored locally. Other images remain remote references. Separate upstream zh-cn card translations are imported without character conversion; current playable coverage is recorded in simplified-chinese-audit.json. Campaign has zh-cn and zh catalogs."
+}

@@ -1,0 +1,954 @@
+{
+  "importedAt": "2026-10-16T10:35:23.884Z",
+  "snapshots": [
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "commit": "22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d",
+      "license": "No root license identified; upstream game content rights remain with their owners."
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "commit": "4ac7e1640dd75862b5e29bb6f9b604dc2e555355",
+      "license": "No root license identified; upstream game content rights remain with their owners."
+    }
+  ],
+  "files": [
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "campaigns/dwl/armitages_fate.json",
+      "sha256": "10584519467493f3508424e031fbf14d1364d0e9948c817f8d80010144902aea",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/campaigns/dwl/armitages_fate.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "campaigns/dwl/blood_on_the_altar.json",
+      "sha256": "98241d142692d9c62b5e46dc97150ce6e7ca57c0965339a7590543076a82b385",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/campaigns/dwl/blood_on_the_altar.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "campaigns/dwl/campaign.json",
+      "sha256": "42f6443862f36dec5bff373bda60149a4923d2254ee8e585857285b513a8027b",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/campaigns/dwl/campaign.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "campaigns/dwl/dwl_prologue.json",
+      "sha256": "e9b068827e4c96446338bdd5b39fa0a6f644b8e0baa7039a30b7856dcd1a5a81",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/campaigns/dwl/dwl_prologue.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "campaigns/dwl/epilogue.json",
+      "sha256": "329889436a424dbb34c44c124261872d81563a7c376be43400ab216f9e52af13",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/campaigns/dwl/epilogue.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "campaigns/dwl/essex_county_express.json",
+      "sha256": "572b845251626d32eb7d9dcaec51066995838586f31f09273e2c12c2fadd50d9",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/campaigns/dwl/essex_county_express.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "campaigns/dwl/extracurricular_activity.json",
+      "sha256": "cdbf32d9271e1e9fc858d6c4346cf35c39089b1dbb9333a14604ea6c0ff23da0",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/campaigns/dwl/extracurricular_activity.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "campaigns/dwl/lost_in_time_and_space.json",
+      "sha256": "43cf88abffc693ff8e9213da55980705c8ffd0b3684af4c0cb064f3d39bca5fb",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/campaigns/dwl/lost_in_time_and_space.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "campaigns/dwl/survivors.json",
+      "sha256": "dd5368fe73d81738696fe501be651bd8a999e1762689f09bf7c46ff3f17dbb52",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/campaigns/dwl/survivors.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "campaigns/dwl/the_house_always_wins.json",
+      "sha256": "4304bd04a47512d602ee7d84fc4827c44a4c11075f680ac9317d53324625dc6e",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/campaigns/dwl/the_house_always_wins.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "campaigns/dwl/the_miskatonic_museum.json",
+      "sha256": "f1654737a752549d390d06ccd5adac6b37a987a545c7967b917fca0973569be3",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/campaigns/dwl/the_miskatonic_museum.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "campaigns/dwl/undimensioned_and_unseen.json",
+      "sha256": "0bac4fdd488f01fe1da5c5d3c74b15afb1c183a55bd9c29c74bc12301fecced0",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/campaigns/dwl/undimensioned_and_unseen.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "campaigns/dwl/where_doom_awaits.json",
+      "sha256": "c0f2c9ce42fffa9d6b94668c46598dbf7dcef05ac5ef847a61320857799e8f8b",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/campaigns/dwl/where_doom_awaits.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "encounter_sets.json",
+      "sha256": "d78c674ee0a75c2f1c14df074ebda91490e4a10155f550d5a5ee31d8f9d3d144",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/encounter_sets.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh-cn/campaigns/dwl/armitages_fate.po",
+      "sha256": "3a6275c968d89a4caa8765635127ac259545e98962e43b05cb8ab01f343f45de",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh-cn/campaigns/dwl/armitages_fate.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh-cn/campaigns/dwl/blood_on_the_altar.po",
+      "sha256": "7e4262e4c9b30a147d24f1ea20b455b719b879ab3eabebf784304a9c52c4378b",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh-cn/campaigns/dwl/blood_on_the_altar.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh-cn/campaigns/dwl/campaign.po",
+      "sha256": "0b3e4662076e3fca79e635620648de66392e01583a7e7c127796b37a18a25294",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh-cn/campaigns/dwl/campaign.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh-cn/campaigns/dwl/dwl_prologue.po",
+      "sha256": "f53d3d31f354d87108f4014b05ff41c635eb119d22b842fca39b7288fb11a37f",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh-cn/campaigns/dwl/dwl_prologue.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh-cn/campaigns/dwl/epilogue.po",
+      "sha256": "c8acd5ac065ca0c05897fa7e527522a3d195656092fbb2891ffe8cae87211671",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh-cn/campaigns/dwl/epilogue.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh-cn/campaigns/dwl/essex_county_express.po",
+      "sha256": "15b00abe8317503c74db1ea90ebf08c6efb73bebe8d8f077caebee216844fcd3",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh-cn/campaigns/dwl/essex_county_express.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh-cn/campaigns/dwl/extracurricular_activity.po",
+      "sha256": "dbc0a53c5039edb403de4bebd636d492b236e875949fd962db65ef9fd87b2db9",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh-cn/campaigns/dwl/extracurricular_activity.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh-cn/campaigns/dwl/lost_in_time_and_space.po",
+      "sha256": "509df5a42bb61aa0a858cb800f6add1bb9209f7d30eea9b5c2cc434468781287",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh-cn/campaigns/dwl/lost_in_time_and_space.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh-cn/campaigns/dwl/survivors.po",
+      "sha256": "b69e00de26cb7cdd9640790b593237e733175e1b246856034b707d39354a2687",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh-cn/campaigns/dwl/survivors.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh-cn/campaigns/dwl/the_house_always_wins.po",
+      "sha256": "71c5de3cd6fdedc67765e6d32a4bc13433d3015f5a12a2965d2533a3a50e6df3",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh-cn/campaigns/dwl/the_house_always_wins.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh-cn/campaigns/dwl/the_miskatonic_museum.po",
+      "sha256": "22b6bccd5f8b4bf7d7d158c86822a069bc26027feb04cb5bd01d5c7c49134844",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh-cn/campaigns/dwl/the_miskatonic_museum.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh-cn/campaigns/dwl/undimensioned_and_unseen.po",
+      "sha256": "a3a18f1f1cda09ac57565ce35ac20ac708d128afd49c189babe88403c0547681",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh-cn/campaigns/dwl/undimensioned_and_unseen.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh-cn/campaigns/dwl/where_doom_awaits.po",
+      "sha256": "67f98e6b16279e39939ddeb6784325d3298f3f9f9da65a93802570f08809eca3",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh-cn/campaigns/dwl/where_doom_awaits.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh-cn/encounter_sets.po",
+      "sha256": "b2b2059f99dd1bb7242347133f7db4af3f47aaba241127ff203656785752386b",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh-cn/encounter_sets.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh/campaigns/dwl/armitages_fate.po",
+      "sha256": "eb163a82e3b053ce356cd1852e65d61b8c2936ce5b95a499976ba966cf925f24",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh/campaigns/dwl/armitages_fate.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh/campaigns/dwl/blood_on_the_altar.po",
+      "sha256": "535665f06974a3b45c7f8ef96527d7d98be328201b28536dcf9adf69e141c412",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh/campaigns/dwl/blood_on_the_altar.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh/campaigns/dwl/campaign.po",
+      "sha256": "131b48b006902832048fe17231ed7e43af79325939ae00f6b0be76c3ee52c146",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh/campaigns/dwl/campaign.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh/campaigns/dwl/dwl_prologue.po",
+      "sha256": "9429988b7058191f1dbc0c018755e8eee5b0c6f5c64c816036d8b87ba920fb35",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh/campaigns/dwl/dwl_prologue.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh/campaigns/dwl/epilogue.po",
+      "sha256": "c46c3c211d82ee526e189f8eb2c6064b48d96fc9716afdc09a4c55466d4b6b1f",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh/campaigns/dwl/epilogue.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh/campaigns/dwl/essex_county_express.po",
+      "sha256": "5c03f8b896367f765664b5ecee1fc9a99128a9ca19bc1daa7916f6e647df9a84",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh/campaigns/dwl/essex_county_express.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh/campaigns/dwl/extracurricular_activity.po",
+      "sha256": "ddadd88f05e8e7d95792082661dddccdca0c65d75c28157c97a193f24e367cd5",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh/campaigns/dwl/extracurricular_activity.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh/campaigns/dwl/lost_in_time_and_space.po",
+      "sha256": "1d11d7cb7f847ff465d1bbaf532eb85b5df6847a5c885797f8997d85e564ee66",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh/campaigns/dwl/lost_in_time_and_space.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh/campaigns/dwl/survivors.po",
+      "sha256": "5d4b05909f15acf49d8e771c71e79b76186cad88b77fb36df1336fd833976f4e",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh/campaigns/dwl/survivors.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh/campaigns/dwl/the_house_always_wins.po",
+      "sha256": "5f6ae1713f66dbd34fe35550962834cafa35762ec96886626dd7d02753d5bef7",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh/campaigns/dwl/the_house_always_wins.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh/campaigns/dwl/the_miskatonic_museum.po",
+      "sha256": "d9633c4a0b197e98f1c8242854c055b60d45385f7dd921b4b53318bb980debb1",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh/campaigns/dwl/the_miskatonic_museum.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh/campaigns/dwl/undimensioned_and_unseen.po",
+      "sha256": "e5d5cb668d7a6bf2c2c9301bab713d945b1ffefc6a2075ce12d7ac4463140719",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh/campaigns/dwl/undimensioned_and_unseen.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh/campaigns/dwl/where_doom_awaits.po",
+      "sha256": "ed843b1f3263f535092917ea861d593372444fcd0d14c87b41d17e0c7f6db40a",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh/campaigns/dwl/where_doom_awaits.po"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "i18n/zh/encounter_sets.po",
+      "sha256": "e9a037ba48bded47763e54b2e8745b8f1e613d2563d9ca06e7e701ed47402c74",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/i18n/zh/encounter_sets.po"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/core/core_2026_encounter.json",
+      "sha256": "2d73c0f741713143d140f77b98f580d719fd236b6753ba9cd07d17ea0529c19b",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/core/core_2026_encounter.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/core/core_2026.json",
+      "sha256": "9fea63553cfa7d39d0063ea0e2c5cfeac70037b2c0958e412350af9b417bf299",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/core/core_2026.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/core/core_encounter.json",
+      "sha256": "9f73fc2dc9d2be604c07d139e3f78f57a663231e9fad3ba0d0b79d5664d1da31",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/core/core_encounter.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/core/core.json",
+      "sha256": "5c7bc669790beabe51036a5ebbb21315f68b8207a9212ed9320228e6e695a79c",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/core/core.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/core/rcore.json",
+      "sha256": "ea47f7ac27f901ad0df3c86e95cf39595bca84f08717f85305af16335f91ef4e",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/core/rcore.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/dwl/bota_encounter.json",
+      "sha256": "75da4a6f8c7e777b3fbf77d994af5149c5701709798bc07e764ed5449ba13aa3",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/dwl/bota_encounter.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/dwl/bota.json",
+      "sha256": "f29a5e8b6dc95a6d87e5bd96af3c9bcecaa76dd5bb739adb2abad9915f1d1502",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/dwl/bota.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/dwl/dwl_encounter.json",
+      "sha256": "9b420cad4e688180234f79806b1c2a35d779ff726e082a597e2d3e18a945a5ad",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/dwl/dwl_encounter.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/dwl/dwl.json",
+      "sha256": "3c23975295f0512fcded5cf2257d54b9865735cfb3d7f3b3130dc6fa6d18f923",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/dwl/dwl.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/dwl/litas_encounter.json",
+      "sha256": "2211f2f89dbb537f26e53c75137164ff3af2f3af4b22491223ddbaf96ddd4cf2",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/dwl/litas_encounter.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/dwl/litas.json",
+      "sha256": "090e7a14b38a77fb9159ee68910755dcd719644e1e99c893b2362f9b50892f44",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/dwl/litas.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/dwl/tece_encounter.json",
+      "sha256": "9ef76d7387fa8b8fcf75128f41155d63c10ecdc5f87b6877a476075aa32a21ee",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/dwl/tece_encounter.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/dwl/tece.json",
+      "sha256": "685a91b1d90be7dc31a977a55b1a7c297e256147cfa843bb42ad8623370facba",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/dwl/tece.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/dwl/tmm_encounter.json",
+      "sha256": "feae6e3e84924d27d87e9d7811906de840b02f491eb3e6840f0d4d18bb9552c4",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/dwl/tmm_encounter.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/dwl/tmm.json",
+      "sha256": "e81e70efdb6ef4bf33765807f658e299f67ff1a9079b1b25d2c977a6a6542544",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/dwl/tmm.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/dwl/uau_encounter.json",
+      "sha256": "da298317b6b7f2a5707384b372815f16805f0bb1a8f36b4691e8caaddcefaa9a",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/dwl/uau_encounter.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/dwl/uau.json",
+      "sha256": "d6467f7f99dcba9e41ffad29634434d6c1ad5be2df860a2fab7fa127e4480c9c",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/dwl/uau.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/dwl/wda_encounter.json",
+      "sha256": "46f63bfbc387cf38156a786c9a468cd257d4530e632c27450fb445d8bbfe6842",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/dwl/wda_encounter.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "pack/dwl/wda.json",
+      "sha256": "0bad5e4f836e6792c91ad898880d8f29106fb1ccec28dc86c4e3a4a6200bc9ea",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/pack/dwl/wda.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "README.md",
+      "sha256": "a44e6d3ac172f6d8848c6038b194b6b4b03a3c35b8a0081975723d0f282f6897",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/README.md"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "README.md",
+      "sha256": "0bb6b63c0d8b8db7ed1d77972e579610c5139e1e81f89ca16c36286112299c78",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/README.md"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/campaign.schema.json",
+      "sha256": "50ef3f54507d868fbeff862f6230dfc8c9ea67e9330f958bc9c3b3be04cf6559",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/campaign.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/chaosTokens.schema.json",
+      "sha256": "65e47ee1f0d6e7b998f8232507d18170c6825644391ccc83224fe218cf278b4b",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/chaosTokens.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/errata.schema.json",
+      "sha256": "47002eedadcfbbc983a5104712c2a9da509f7b6854b6f995d37834dbc7ff8532",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/errata.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/refs/campaign.schema.json",
+      "sha256": "20325a8ce2ccb7ce8a9095ea856eec97af580309c4f74308fcac8fae746e6132",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/refs/campaign.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/refs/card.schema.json",
+      "sha256": "738aa0f1e95aad359d053602e4e2ccdd7a02a35606a33bdb153b29f2f5ec9326",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/refs/card.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/refs/chaosTokens.schema.json",
+      "sha256": "84306bc6d1cf81626d61a6c06ce0d34ea81a73321b1d68ee36c3e1c47a9bb99b",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/refs/chaosTokens.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/refs/condition.schema.json",
+      "sha256": "d459a45cc14e0cce55cf57bec2b669943de9d437fffee0ee741e7ae14aeb4fe3",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/refs/condition.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/refs/effect.schema.json",
+      "sha256": "0c49d7ef9efbe60749fc0655bf7268c90f56a07db756e048c5185a33f5713544",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/refs/effect.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/refs/errata.schema.json",
+      "sha256": "be808c3b9fcae90647bacf18644911ea85878dcf334d0b53df5c66c06b9eb6c4",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/refs/errata.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/refs/fullCampaign.schema.json",
+      "sha256": "9679cfeb96f8f7fc652931d6aeca03091bdbffcb96aacaefda7b48ce8efef16b",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/refs/fullCampaign.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/refs/input.schema.json",
+      "sha256": "9394b6e1f7026ebd257feb7050ea6383dc650240f553e196f1521c927bb3c57f",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/refs/input.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/refs/log.schema.json",
+      "sha256": "9babab12618bb97fad4d4ef53478cbbfc0c34a9108feacea1524bc3f6220e24a",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/refs/log.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/refs/logEntry.schema.json",
+      "sha256": "8caabe8b7a723f15fb3d9e7c4d9a4a0112a91a7690d72510a9a4c3fe3eb23cd4",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/refs/logEntry.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/refs/option.schema.json",
+      "sha256": "c284a17692b6087d5f82b22d3d0ae2879455e0bb9f175f2cdd999d197a4d663a",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/refs/option.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/refs/resolution.schema.json",
+      "sha256": "35b2e4621ea87a1a58b01fa254511f1d8317bd9d9040a378389e78e2ee4f56e7",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/refs/resolution.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/refs/rules.schema.json",
+      "sha256": "12413a2005246ae5bd78ccc5f65ff01e43626f233a86b6c6055bffc595227631",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/refs/rules.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/refs/scenario.schema.json",
+      "sha256": "04d0879f4cdb04f5780bdf0bed329606072b2b3b245616a76fadf25e9f050ebe",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/refs/scenario.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/refs/step.schema.json",
+      "sha256": "858a38b68b279c7367c6d4484a083f6f6a01cbc98f1e2f99e5e99e9c718f373c",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/refs/step.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/refs/taboo.schema.json",
+      "sha256": "2c8a2017f9f58426217cd1e8ede147b619e3548ba19cc78c95568b6cb3118fdf",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/refs/taboo.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/refs/types.schema.json",
+      "sha256": "1090e4cb31111415126afcede13cd8e1c954c4272a8e8db7253fc2c50d3ad95e",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/refs/types.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/rules.schema.json",
+      "sha256": "25963e24aa2459c6dd9000789d9f4f560514d4a2dece24c3f6c45149dabce2ff",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/rules.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/scenario.schema.json",
+      "sha256": "da4909e5e7a27e38fa86c1bf1f8288a231eac74b8e89e3240b9ef4bbb5a976f8",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/scenario.schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/schema.json",
+      "sha256": "8b782f1066d6c6c6ee992904b6226b187ef638347eec92f73378a1329d549dbf",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/schema.json"
+    },
+    {
+      "repository": "zzorba/arkham-cards-data",
+      "path": "schema/taboo.schema.json",
+      "sha256": "bdb2a3b5b20cd996529da53dcd56bf44995e73511ddcdaf5fe440dfdbb15b36e",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d/schema/taboo.schema.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "translations/zh/pack/core/core_2026.json",
+      "sha256": "f4a69a73592bce61f2a259c3e757b6db7c704406a9f91ae08d23463b3d868c4a",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/translations/zh/pack/core/core_2026.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "translations/zh/pack/core/core_encounter.json",
+      "sha256": "5f2e155d007b4eaee06a6234222e7ad6db7b9699b4854136ccc4d9660e3152f2",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/translations/zh/pack/core/core_encounter.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "translations/zh/pack/core/core.json",
+      "sha256": "d6de9a8bdbb5753409ad08a42b2ea3451b52a20758c56f53ea4fc6320f5bf79e",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/translations/zh/pack/core/core.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "translations/zh/pack/core/rcore.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/translations/zh/pack/core/rcore.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "translations/zh/pack/dwl/bota_encounter.json",
+      "sha256": "c506e5bf644c494e7bef32af19aa1d466da8ff98bcf86a259eb7015e976e689e",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/translations/zh/pack/dwl/bota_encounter.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "translations/zh/pack/dwl/bota.json",
+      "sha256": "a48cdd9d6686266481a6a5dfa5794585ab49e914f9f1ca3c7a905d7a844a99a5",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/translations/zh/pack/dwl/bota.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "translations/zh/pack/dwl/dwl_encounter.json",
+      "sha256": "b1520e2e7db3f5d5ee7ca6f835f451aac27dae8fc8aacf9fb820ad689020fab1",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/translations/zh/pack/dwl/dwl_encounter.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "translations/zh/pack/dwl/dwl.json",
+      "sha256": "7ae5a8896b0b8e62acc3a5fae7336f9f174da41aea7b48edc204bf9b2e87d8a7",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/translations/zh/pack/dwl/dwl.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "translations/zh/pack/dwl/litas_encounter.json",
+      "sha256": "4950f173211b91360c07d42bf04794c457244df16fffb59acf01cf66f7d910f8",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/translations/zh/pack/dwl/litas_encounter.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "translations/zh/pack/dwl/litas.json",
+      "sha256": "19b2dfbc30a560f0c580d2f1023f12ba118d33e96a9f27f9d1fd5cfd8763231d",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/translations/zh/pack/dwl/litas.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "translations/zh/pack/dwl/tece_encounter.json",
+      "sha256": "782c6ec4c743e55875a465b952b3e0b8822651c3a7cb119eb0c1d96753bde3ca",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/translations/zh/pack/dwl/tece_encounter.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "translations/zh/pack/dwl/tece.json",
+      "sha256": "bede85d3d4d3127f3ccf094c48dbdffd6df76689b69d80e3a05b3a7b2b98b0e6",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/translations/zh/pack/dwl/tece.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "translations/zh/pack/dwl/tmm_encounter.json",
+      "sha256": "2c820e322656d444c201018c273291c715521219579b8f3fc89f45c64c04f9a7",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/translations/zh/pack/dwl/tmm_encounter.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "translations/zh/pack/dwl/tmm.json",
+      "sha256": "86851192b3f45cc2d04e94626674db8d35344589b25116037c22a1ba74d70fe2",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/translations/zh/pack/dwl/tmm.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "translations/zh/pack/dwl/uau_encounter.json",
+      "sha256": "ddeb34f3b28adfdf2abd52a85e13bf748979f51a9ee6ded26af157967841cbd5",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/translations/zh/pack/dwl/uau_encounter.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "translations/zh/pack/dwl/uau.json",
+      "sha256": "0810700aa0e6676c4662f5df6aca0e86644b0601981988abc9dfb8779d18a704",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/translations/zh/pack/dwl/uau.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "translations/zh/pack/dwl/wda_encounter.json",
+      "sha256": "bf765a59bafa37edb548251e58c0434182549b59e58eec185c53692b98297aa7",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/translations/zh/pack/dwl/wda_encounter.json"
+    },
+    {
+      "repository": "zzorba/arkhamdb-json-data",
+      "path": "translations/zh/pack/dwl/wda.json",
+      "sha256": "701ccaf4c58ab6783dc7181ed314efa8421e45af8d3e956d9bb73e85f7dd34c2",
+      "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/4ac7e1640dd75862b5e29bb6f9b604dc2e555355/translations/zh/pack/dwl/wda.json"
+    }
+  ],
+  "images": [
+    {
+      "code": "02044",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/02044.png",
+      "path": "assets/cards/02044.jpg",
+      "sha256": "d761d24b1aec42a95b39c20d9129a6c764f1298339d4c052249661d9663d4473"
+    },
+    {
+      "code": "02045",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/02045.png",
+      "path": "assets/cards/02045.jpg",
+      "sha256": "1d993311e7ac0cb123bef04bc5147df5ce16843945893e04aee3fd97eddd9e90"
+    },
+    {
+      "code": "02042",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/02042.png",
+      "path": "assets/cards/02042.jpg",
+      "sha256": "7c08eba6ef8b2725288feb9d17d1965289eaaeef993c18a72c044ce60931b33c"
+    },
+    {
+      "code": "02043",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/02043.png",
+      "path": "assets/cards/02043.jpg",
+      "sha256": "180a27e366a8512dc659c0d580cd1f37eb5fcd5a33894d2844913a41ef939e4f"
+    },
+    {
+      "code": "02044",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/02044b.png",
+      "path": "assets/cards/02044b.jpg",
+      "sha256": "9af97f5347d3062c2b5c5988e3a84263825e287ed7726cc3c0767cd535417409"
+    },
+    {
+      "code": "02045",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/02045b.png",
+      "path": "assets/cards/02045b.jpg",
+      "sha256": "e24fb18716ed7972a7287286850f2765a2133c1390cd052ba406bfec0ab89465"
+    },
+    {
+      "code": "02043",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/02043b.png",
+      "path": "assets/cards/02043b.jpg",
+      "sha256": "9d6c0ea6f21cd22fa8435c52adab4413abbe715e17793eeeae7072fdbebfb5cf"
+    },
+    {
+      "code": "02042",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/02042b.png",
+      "path": "assets/cards/02042b.jpg",
+      "sha256": "f0436621aace9056270a310b444760e2ba214b21aecb810d7ca8f9701fb18866"
+    },
+    {
+      "code": "02046",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/02046.png",
+      "path": "assets/cards/02046.jpg",
+      "sha256": "4fee764470b004428d27f40540caa40df01ee9a7c54642c82630dc4bb9688f88"
+    },
+    {
+      "code": "02064",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/02064.png",
+      "path": "assets/cards/02064.jpg",
+      "sha256": "5027f4ac72a8b23253a834fd9b7eb657ee3ed177eebe18ea6e5047367dd79c84"
+    },
+    {
+      "code": "02047",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/02047.png",
+      "path": "assets/cards/02047.jpg",
+      "sha256": "a5f8ab734fb3d5a20edf8f17d2ee723f34eb22c38806c0ca63398635170d76ee"
+    },
+    {
+      "code": "02063",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/02063.png",
+      "path": "assets/cards/02063.jpg",
+      "sha256": "4c70d04445ec2bc0b46fb93cafd0b11eed46366040664d0b30f3499262f7f4cc"
+    },
+    {
+      "code": "02046",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/02046b.png",
+      "path": "assets/cards/02046b.jpg",
+      "sha256": "7230aed6a6152b6370e459426e08bf1f30a5a627ed52d2b8e035a4065f81c973"
+    },
+    {
+      "code": "02064",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/02064b.png",
+      "path": "assets/cards/02064b.jpg",
+      "sha256": "c8717ba39d487496afa09fa4bfc5a68511f7688105b82ba9594bfca6b8fadc6f"
+    },
+    {
+      "code": "02047",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/02047b.png",
+      "path": "assets/cards/02047b.jpg",
+      "sha256": "6e92d48fb6e3515b4c832e68bbb4025248bc6b7b31c6fcc1289cb3c59487bb99"
+    },
+    {
+      "code": "02063",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/02063b.png",
+      "path": "assets/cards/02063b.jpg",
+      "sha256": "3da52552cc7d4abfcafcf034d1a5646adff23615b52dfd5656e5aa4b8750922c"
+    },
+    {
+      "code": "02066",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/02066.png",
+      "path": "assets/cards/02066.jpg",
+      "sha256": "82d4e8426de81e2686033defee5ca17d03feef0e16948768e2b07b9d36933c6b"
+    },
+    {
+      "code": "02065",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/02065.png",
+      "path": "assets/cards/02065.jpg",
+      "sha256": "bd2db899a3a26a5618832c1960ab51d0b0c0f8fc88b757bb5845d269f1d289cd"
+    },
+    {
+      "code": "02068",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/02068.png",
+      "path": "assets/cards/02068.jpg",
+      "sha256": "e9018a4a7249c101ddd17133806102bacbc1ad9fecbafb46eb951dfd69dd9b13"
+    },
+    {
+      "code": "02067",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/02067.png",
+      "path": "assets/cards/02067.jpg",
+      "sha256": "5c108a5ce81d509771f44d991ba00010159a3f5c07a772264edf5fdd977fe0cf"
+    },
+    {
+      "code": "02068",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/02068b.png",
+      "path": "assets/cards/02068b.jpg",
+      "sha256": "5035e46c8cf9a91869983f4746ed4db04c15eb0a95967f711858aa901100750a"
+    },
+    {
+      "code": "02067",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/02067b.png",
+      "path": "assets/cards/02067b.jpg",
+      "sha256": "f34cd96d9223afb445b53747cb167ffc4c20b96d3f3273dcef88e9b27a490081"
+    },
+    {
+      "code": "02065",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/02065b.png",
+      "path": "assets/cards/02065b.jpg",
+      "sha256": "d3b107dd033c798af0d50678253321a371ad6a463187e22c3d2054decb8284e4"
+    },
+    {
+      "code": "02066",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/02066b.png",
+      "path": "assets/cards/02066b.jpg",
+      "sha256": "a581971120bd08756d6d23b817a10fb71f42ec88f86512a55e05baae2546a225"
+    },
+    {
+      "code": "02069",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/02069.png",
+      "path": "assets/cards/02069.jpg",
+      "sha256": "7441b32e04a221b18e5ca350634e5aafe84da32bdd2a4f193862fe3d9d343dcc"
+    },
+    {
+      "code": "02069",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/02069b.png",
+      "path": "assets/cards/02069b.jpg",
+      "sha256": "f91195d307086088117acf3974b1ba72bb342e4a617655d2e6700f1fcc7a92c2"
+    }
+  ],
+  "cardTranslations": [
+    {
+      "locale": "zh-cn",
+      "repository": "zzorba/arkhamdb-json-data",
+      "commit": "5f633d3afaaa924d7ff4672ed0af43d50794420f",
+      "files": [
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/core/core_2026_encounter.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/core/core_2026_encounter.json",
+          "sha256": "0230540191ddcc98058fe64bc0a4b96e5e4b23d5de0fb29077cdde7c99546a6e"
+        },
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/core/core_2026.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/core/core_2026.json",
+          "sha256": "9b19acaba518bc24b1d21918c234475f6752e3e4c157dc1e8c899db502c4e35b"
+        },
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/core/core_encounter.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/core/core_encounter.json",
+          "sha256": "51944fd26fcdee087dfdb6a7991effcd57ef1a7853706eff7be4a7bea1f456a3"
+        },
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/core/core.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/core/core.json",
+          "sha256": "fd18789e683a77cc96d519d212b3b2860399c1f5b7aa379de0f6da6d2125d78a"
+        },
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/core/rcore.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/core/rcore.json",
+          "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        },
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/dwl/bota_encounter.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/dwl/bota_encounter.json",
+          "sha256": "3a1ab9108b955211fd8ee3ae0403c26b5e8e64a52d5e31b13caebbe8a7f8dcbb"
+        },
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/dwl/bota.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/dwl/bota.json",
+          "sha256": "23afdc8bd081c1291a7692aa2977b8c739a3c3e1b70d26937fbd87041e25fc46"
+        },
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/dwl/dwl_encounter.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/dwl/dwl_encounter.json",
+          "sha256": "05bb10f04e20f4336cd559818146b0088ace342fa29967c9e6b47f552d9ff125"
+        },
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/dwl/dwl.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/dwl/dwl.json",
+          "sha256": "523d2aa7cd4db8948e2f8d5fc327155dbe237b07c8453eac759696f39b63da21"
+        },
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/dwl/litas_encounter.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/dwl/litas_encounter.json",
+          "sha256": "f0465e5dca4e9dbd7d761fbb15703e0fd6266d1bb8e9fd07b82d43bf75a899af"
+        },
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/dwl/litas.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/dwl/litas.json",
+          "sha256": "1b2d741c8a4efad19911bb0e1bc382b7e85a347b13c6e1d2e3347e1f71fb56cd"
+        },
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/dwl/tece_encounter.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/dwl/tece_encounter.json",
+          "sha256": "7ecddaefefd6de796648df83a6c7959bfba1b64853fba769d94df31cc394fef3"
+        },
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/dwl/tece.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/dwl/tece.json",
+          "sha256": "3c6e612700d20eaa0e2500c1e9bde170aff264eed58821945e9772ea90a645bb"
+        },
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/dwl/tmm_encounter.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/dwl/tmm_encounter.json",
+          "sha256": "979937c2022c9940470f9e80b943599e858ef20174e3a7b63d694e85975034d1"
+        },
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/dwl/tmm.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/dwl/tmm.json",
+          "sha256": "513953c3c5f082343bca73efc4db0d767b3d84b012188cfd556b60e9b2f85665"
+        },
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/dwl/uau_encounter.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/dwl/uau_encounter.json",
+          "sha256": "72297098696e820514671f1a6f13cee20d279e36eb022c753c7856d424727dc6"
+        },
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/dwl/uau.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/dwl/uau.json",
+          "sha256": "00a1e3de1e3a0d562a3d82d3b175ea6508221126325cc860dd13c0cd86dae1d2"
+        },
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/dwl/wda_encounter.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/dwl/wda_encounter.json",
+          "sha256": "193b423d2d94af238f8564ecae85963774b817abfe1ab33aea44f06bd61d54ca"
+        },
+        {
+          "repository": "zzorba/arkhamdb-json-data",
+          "path": "translations/zh-cn/pack/dwl/wda.json",
+          "url": "https://raw.githubusercontent.com/zzorba/arkhamdb-json-data/5f633d3afaaa924d7ff4672ed0af43d50794420f/translations/zh-cn/pack/dwl/wda.json",
+          "sha256": "1c25dc994ac35c3d3c8d6ac52c9d0743b6ea395adf092915df922a3b887b64f7"
+        }
+      ]
+    }
+  ]
+}

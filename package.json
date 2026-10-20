@@ -1,0 +1,11 @@
+{
+  "name": "ahlcg-narrator",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "import": "node scripts/import-data.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

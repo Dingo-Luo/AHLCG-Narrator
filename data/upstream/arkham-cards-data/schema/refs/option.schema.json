@@ -1,0 +1,184 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "schema/option.schema.json",
+  "definitions": {
+    "option": {
+      "title": "Option",
+      "type": "object",
+      "properties": {
+        "icon": {
+          "$ref": "types.schema.json#/definitions/choiceIcon"
+        },
+        "boolCondition": {
+          "type": "boolean"
+        },
+        "numCondition": {
+          "type": "number"
+        },
+        "repeatable": {
+          "type": "boolean"
+        },
+        "condition": {
+          "type": "string"
+        },
+        "prompt": {
+          "type": "string"
+        },
+        "border": {
+          "type": "boolean"
+        },
+        "border_color": {
+          "$ref": "types.schema.json#/definitions/borderColor"
+        },
+        "pre_border_effects": {
+          "type": "array",
+          "items": {
+            "$ref": "effect.schema.json#/definitions/effect"
+          }
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "effect.schema.json#/definitions/effect"
+          }
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "stringOption": {
+      "title": "StringOption",
+      "type": "object",
+      "properties": {
+        "condition": {
+          "type": "string"
+        },
+        "prompt": {
+          "type": "string"
+        },
+        "border": {
+          "type": "boolean"
+        },
+        "border_color": {
+          "$ref": "types.schema.json#/definitions/borderColor"
+        },
+        "pre_border_effects": {
+          "type": "array",
+          "items": {
+            "$ref": "effect.schema.json#/definitions/effect"
+          }
+        },
+        "repeatable": {
+          "type": "boolean"
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "effect.schema.json#/definitions/effect"
+          }
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "condition"
+      ],
+      "additionalProperties": false
+    },
+    "boolOption": {
+      "title": "BoolOption",
+      "type": "object",
+      "properties": {
+        "boolCondition": {
+          "type": "boolean"
+        },
+        "prompt": {
+          "type": "string"
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "effect.schema.json#/definitions/effect"
+          }
+        },
+        "repeatable": {
+          "type": "boolean"
+        },
+        "border": {
+          "type": "boolean"
+        },
+        "border_color": {
+          "$ref": "types.schema.json#/definitions/borderColor"
+        },
+        "pre_border_effects": {
+          "type": "array",
+          "items": {
+            "$ref": "effect.schema.json#/definitions/effect"
+          }
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "boolCondition"
+      ],
+      "additionalProperties": false
+    },
+    "numOption": {
+      "title": "NumOption",
+      "type": "object",
+      "properties": {
+        "numCondition": {
+          "type": "number"
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "effect.schema.json#/definitions/effect"
+          }
+        },
+        "border": {
+          "type": "boolean"
+        },
+        "border_color": {
+          "$ref": "types.schema.json#/definitions/borderColor"
+        },
+        "repeatable": {
+          "type": "boolean"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "numCondition"
+      ],
+      "additionalProperties": false
+    },
+    "defaultOption": {
+      "title": "DefaultOption",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/option"
+        }
+      ]
+    }
+  }
+}

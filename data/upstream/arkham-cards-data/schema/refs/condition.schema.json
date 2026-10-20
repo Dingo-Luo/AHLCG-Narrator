@@ -1,0 +1,1720 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "schema/condition.schema.json",
+  "definitions": {
+    "binaryChoiceCondition": {
+      "title": "BinaryChoiceCondition",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/binaryCardCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignDataInvestigatorCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignDataInvestigatorStatusCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignDataScenarioCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignDataChaosBagCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignDataNextScenarioCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignDataStandaloneCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignLogCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignLogCountCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignLogSectionExistsCondition"
+        },
+        {
+          "$ref": "#/definitions/multiCondition"
+        },
+        {
+          "$ref": "#/definitions/partnerStatusCondition"
+        },
+        {
+          "$ref": "#/definitions/locationCondition"
+        },
+        {
+          "$ref": "#/definitions/scarletKeyCondition"
+        }
+      ]
+    },
+    "investigatorChoiceCondition": {
+      "title": "InvestigatorChoiceCondition",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/investigatorCardCondition"
+        },
+        {
+          "$ref": "#/definitions/basicTraumaCondition"
+        },
+        {
+          "$ref": "#/definitions/investigatorCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignLogCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignLogCardsCondition"
+        },
+        {
+          "$ref": "#/definitions/multiCondition"
+        }
+      ]
+    },
+    "multiCondition": {
+      "title": "MultiCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "multi"
+          ]
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              { "$ref": "#/definitions/campaignLogCondition" },
+              { "$ref": "#/definitions/campaignLogCardsCondition" },
+              { "$ref": "#/definitions/campaignLogSectionExistsCondition" },
+              { "$ref": "#/definitions/campaignDataChaosBagCondition" },
+              { "$ref": "#/definitions/campaignDataNextScenarioCondition" },
+              { "$ref": "#/definitions/campaignLogCountCondition" },
+              { "$ref": "#/definitions/campaignDataVersionCondition" },
+              { "$ref": "#/definitions/campaignDataScenarioCondition" },
+              { "$ref": "#/definitions/scenarioDataResolutionCondition" },
+              { "$ref": "#/definitions/scenarioDataPlayerCountCondition" },
+              { "$ref": "#/definitions/campaignDataStandaloneCondition" },
+              { "$ref": "#/definitions/campaignDataDifficultyCondition" },
+              { "$ref": "#/definitions/investigatorCardCondition" },
+              { "$ref": "#/definitions/binaryCardCondition" },
+              { "$ref": "#/definitions/mathCondition" },
+              { "$ref": "#/definitions/partnerStatusCondition" },
+              { "$ref": "#/definitions/basicTraumaCondition" },
+              { "$ref": "#/definitions/campaignDataInvestigatorCondition" },
+              { "$ref": "#/definitions/campaignDataInvestigatorStatusCondition" },
+              { "$ref": "#/definitions/campaignDataCycleCondition" },
+              { "$ref": "#/definitions/scarletKeyCondition" },
+              { "$ref": "#/definitions/scarletKeyCountCondition" },
+              { "$ref": "#/definitions/scenarioDataInvestigatorStatusCondition" }
+            ]
+          }
+        },
+        "count": {
+          "type": "integer"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "conditions",
+        "count",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "killedTraumaCondition": {
+      "title": "KilledTraumaCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "trauma"
+          ]
+        },
+        "investigator": {
+          "type": "string",
+          "enum": ["lead_investigator", "all"]
+        },
+        "trauma": {
+          "type": "string",
+          "enum": [
+            "killed",
+            "insane"
+          ]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "investigator",
+        "trauma",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "basicTraumaCondition": {
+      "title": "BasicTraumaCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "trauma"
+          ]
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "each"
+          ]
+        },
+        "trauma": {
+          "type": "string",
+          "enum": [
+            "physical",
+            "mental",
+            "alive"
+          ]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "investigator",
+        "trauma",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "traumaCondition": {
+      "title": "TraumaCondition",
+      "oneOf": [
+        { "$ref": "#/definitions/killedTraumaCondition" },
+        { "$ref": "#/definitions/basicTraumaCondition" }
+      ]
+    },
+    "scenarioDataPlayerCountCondition": {
+      "title": "ScenarioDataPlayerCountCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "scenario_data"
+          ]
+        },
+        "scenario_data": {
+          "type": "string",
+          "enum": [
+            "player_count"
+          ]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/numOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "scenario_data",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "scenarioDataResolutionCondition": {
+      "title": "ScenarioDataResolutionCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "scenario_data"
+          ]
+        },
+        "scenario_data": {
+          "type": "string",
+          "enum": [
+            "resolution"
+          ]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/stringOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "scenario_data",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "scenarioDataHasResolutionCondition": {
+      "title": "ScenarioDataHasResolutionCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "scenario_data"
+          ]
+        },
+        "scenario_data": {
+          "type": "string",
+          "enum": [
+            "has_resolution"
+          ]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "scenario_data",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "partnerStatusCondition": {
+      "title": "PartnerStatusCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "partner_status"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "partner": {
+          "type": "string",
+          "enum": ["any", "$fixed_partner"]
+        },
+        "fixed_partner": {
+          "type": "string"
+        },
+        "status": {
+          "type": "array",
+          "items": {
+            "$ref": "types.schema.json#/definitions/partnerStatus"
+          }
+        },
+        "operation": {
+          "type": "string",
+          "enum": ["any", "all"]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "section",
+        "partner",
+        "status",
+        "operation",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "scenarioDataInvestigatorStatusCondition": {
+      "title": "ScenarioDataInvestigatorStatusCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "scenario_data"
+          ]
+        },
+        "scenario_data": {
+          "type": "string",
+          "enum": [
+            "investigator_status"
+          ]
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "alive",
+            "defeated",
+            "not_defeated",
+            "resigned",
+            "not_resigned"
+          ]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "scenario_data",
+        "investigator",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "scenarioDataFixedInvestigatorStatusCondition": {
+      "title": "ScenarioDataFixedInvestigatorStatusCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "scenario_data"
+          ]
+        },
+        "scenario_data": {
+          "type": "string",
+          "enum": [
+            "fixed_investigator_status"
+          ]
+        },
+        "fixed_investigator": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "defeated",
+            "resigned"
+          ]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "scenario_data",
+        "fixed_investigator",
+        "status",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "scenarioDataCondition": {
+      "title": "ScenarioDataCondition",
+      "oneOf": [
+        { "$ref": "#/definitions/scenarioDataResolutionCondition" },
+        { "$ref": "#/definitions/scenarioDataHasResolutionCondition" },
+        { "$ref": "#/definitions/scenarioDataInvestigatorStatusCondition" },
+        { "$ref": "#/definitions/scenarioDataPlayerCountCondition" },
+        { "$ref": "#/definitions/scenarioDataFixedInvestigatorStatusCondition" }
+      ]
+    },
+    "campaignDataCondition": {
+      "title": "CampaignDataCondition",
+      "oneOf": [
+        { "$ref": "#/definitions/campaignDataDifficultyCondition" },
+        { "$ref": "#/definitions/campaignDataScenarioCondition" },
+        { "$ref": "#/definitions/campaignDataChaosBagCondition" },
+        { "$ref": "#/definitions/campaignDataNextScenarioCondition" },
+        { "$ref": "#/definitions/campaignDataInvestigatorCondition" },
+        { "$ref": "#/definitions/campaignDataInvestigatorStatusCondition" },
+        { "$ref": "#/definitions/campaignDataLinkedCondition" },
+        { "$ref": "#/definitions/campaignDataVersionCondition" },
+        { "$ref": "#/definitions/campaignDataCycleCondition" },
+        { "$ref": "#/definitions/campaignDataStandaloneCondition" }
+      ]
+    },
+    "campaignDataVersionCondition": {
+      "title": "CampaignDataVersionCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "campaign_data": {
+          "type": "string",
+          "enum": [
+            "version"
+          ]
+        },
+        "min_version": {
+          "type": "number"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "campaign_data",
+        "min_version",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+
+    "campaignDataStandaloneCondition": {
+      "title": "CampaignDataStandaloneCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "campaign_data": {
+          "type": "string",
+          "enum": [
+            "standalone"
+          ]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "campaign_data",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "campaignDataCycleCondition": {
+      "title": "CampaignDataCycleCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "campaign_data": {
+          "type": "string",
+          "enum": [
+            "cycle"
+          ]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/stringOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "campaign_data",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "campaignDataLinkedCondition": {
+      "title": "CampaignDataLinkedCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "campaign_data": {
+          "type": "string",
+          "enum": [
+            "linked_campaign"
+          ]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "campaign_data",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "campaignDataDifficultyCondition": {
+      "title": "CampaignDataDifficultyCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "campaign_data": {
+          "type": "string",
+          "enum": [
+            "difficulty"
+          ]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/stringOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "campaign_data",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "campaignDataScenarioCondition": {
+      "title": "CampaignDataScenarioCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "campaign_data": {
+          "type": "string",
+          "enum": [
+            "scenario_completed",
+            "scenario_replayed"
+          ]
+        },
+        "scenario": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "campaign_data",
+        "scenario",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+
+    "campaignDataNextScenarioCondition": {
+      "title": "CampaignDataNextScenarioCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "campaign_data": {
+          "type": "string",
+          "enum": [
+            "next_scenario"
+          ]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "campaign_data",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "campaignDataChaosBagCondition": {
+      "title": "CampaignDataChaosBagCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "campaign_data": {
+          "type": "string",
+          "enum": [
+            "chaos_bag"
+          ]
+        },
+        "token": {
+          "$ref": "types.schema.json#/definitions/chaosToken"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/numOption"
+          }
+        },
+        "default_option": {
+          "$ref": "option.schema.json#/definitions/option"
+        }
+      },
+      "required": [
+        "type",
+        "campaign_data",
+        "token",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "investigatorCondition": {
+      "title": "InvestigatorCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "investigator"
+          ]
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "each"
+          ]
+        },
+        "investigator_data": {
+          "type": "string",
+          "enum": [
+            "trait",
+            "faction",
+            "code"
+          ]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/stringOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "investigator",
+        "investigator_data",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "campaignDataInvestigatorStatusCondition": {
+      "title": "CampaignDataInvestigatorStatusCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "campaign_data": {
+          "type": "string",
+          "enum": [
+            "investigator_status"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "not_eliminated"
+          ]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "campaign_data",
+        "status",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "campaignDataInvestigatorCondition": {
+      "title": "CampaignDataInvestigatorCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "campaign_data": {
+          "type": "string",
+          "enum": [
+            "investigator"
+          ]
+        },
+        "investigator_data": {
+          "type": "string",
+          "enum": [
+            "trait",
+            "faction",
+            "code"
+          ]
+        },
+        "exclude_investigators": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/stringOption"
+          }
+        },
+        "default_option": {
+          "$ref": "option.schema.json#/definitions/option"
+        }
+      },
+      "required": [
+        "type",
+        "campaign_data",
+        "investigator_data",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "scarletKeyCondition": {
+      "title": "ScarletKeyCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "scarlet_key"
+          ]
+        },
+        "scarlet_key": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "investigator",
+            "enemy"
+          ]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "scarlet_key",
+        "status",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "scarletKeyCountCondition": {
+      "title": "ScarletKeyCountCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "scarlet_key_count"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "investigator",
+            "enemy"
+          ]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/numOption"
+          }
+        },
+        "default_option": {
+          "$ref": "option.schema.json#/definitions/defaultOption"
+        }
+      },
+      "required": [
+        "type",
+        "status",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "investigatorCardCondition": {
+      "title": "InvestigatorCardCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "has_card"
+          ]
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "each"
+          ]
+        },
+        "card": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "card",
+        "investigator",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "binaryCardCondition": {
+      "title": "BinaryCardCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "has_card"
+          ]
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "defeated",
+            "any"
+          ]
+        },
+        "card": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "card",
+        "investigator",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "cardCondition": {
+      "title": "CardCondition",
+      "oneOf": [
+        { "$ref": "#/definitions/investigatorCardCondition" },
+        { "$ref": "#/definitions/binaryCardCondition" }
+      ]
+    },
+    "campaignLogSectionExistsCondition": {
+      "title": "CampaignLogSectionExistsCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_log_section_exists"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "section",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "checkSuppliesCondition": {
+      "title": "CheckSuppliesCondition",
+      "oneOf": [
+        { "$ref": "#/definitions/checkSuppliesAllCondition" },
+        { "$ref": "#/definitions/checkSuppliesAnyCondition" }
+      ]
+    },
+    "checkSuppliesAllCondition": {
+      "title": "CheckSuppliesAllCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "check_supplies"
+          ]
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "all"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "prompt": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        },
+        "show_result": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "type",
+        "investigator",
+        "section",
+        "id",
+        "name",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "locationCondition": {
+      "title": "LocationCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "location"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "visited",
+            "current"
+          ]
+        },
+        "location": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "status",
+        "location",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "checkSuppliesAnyCondition": {
+      "title": "CheckSuppliesAnyCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "check_supplies"
+          ]
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "any"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "prompt": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "investigator",
+        "section",
+        "id",
+        "name",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "campaignLogCondition": {
+      "title": "CampaignLogCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_log"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "section",
+        "id",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "investigatorCampaignLogCardsCondition": {
+      "title": "InvestigatorCampaignLogCardsCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "investigator_campaign_log_cards"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "prompt": {
+          "type": "string"
+        },
+        "option": {
+          "$ref": "option.schema.json#/definitions/boolOption"
+        }
+      },
+      "required": [
+        "type",
+        "section",
+        "id",
+        "prompt",
+        "option"
+      ],
+      "additionalProperties": false
+    },
+    "campaignLogCardsCondition": {
+      "title": "CampaignLogCardsCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_log_cards"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "section",
+        "id",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "campaignLogCardsSwitchCondition": {
+      "title": "CampaignLogCardsSwitchCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_log_cards_switch"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/stringOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "section",
+        "id",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "campaignLogCountCondition": {
+      "title": "CampaignLogCountCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_log_count"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/numOption"
+          }
+        },
+        "max": {
+          "type": "integer"
+        },
+        "default_option": {
+          "$ref": "option.schema.json#/definitions/defaultOption"
+        }
+      },
+      "required": [
+        "type",
+        "section",
+        "id",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+
+    "campaignLogTaskCondition": {
+      "title": "CampaignLogTaskCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_log_task"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "section",
+        "id",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "campaignLogInvestigatorCountCondition": {
+      "title": "CampaignLogInvestigatorCountCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_log_investigator_count"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "any",
+            "all"
+          ]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/numOption"
+          }
+        },
+        "default_option": {
+          "$ref": "option.schema.json#/definitions/defaultOption"
+        }
+      },
+      "required": [
+        "type",
+        "section",
+        "investigator",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "campaignLogCountOperand": {
+      "title": "CampaignLogCountOperand",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_log_count"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "section"
+      ],
+      "additionalProperties": false
+    },
+    "campaignLogTaskOperand": {
+      "title": "CampaignLogTaskOperand",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_log_task"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "section",
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "chaosBagOperand": {
+      "title": "ChaosBagOperand",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "chaos_bag"
+          ]
+        },
+        "token": {
+          "$ref": "types.schema.json#/definitions/chaosToken"
+        }
+      },
+      "required": [
+        "type",
+        "token"
+      ],
+      "additionalProperties": false
+    },
+    "playerCountOperand": {
+      "title": "PlayerCountOperand",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "scenario_data"
+          ]
+        },
+        "scenario_data": {
+          "type": "string",
+          "enum": ["player_count"]
+        }
+      },
+      "required": [
+        "type",
+        "scenario_data"
+      ],
+      "additionalProperties": false
+    },
+    "mostXpEarnedOperand": {
+      "title": "MostXpEarnedOperand",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "most_xp_earned"
+          ]
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "constantOperand": {
+      "title": "ConstantOperand",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "constant"
+          ]
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "type",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "operand": {
+      "title": "Operand",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/campaignLogCountOperand"
+        },
+        {
+          "$ref": "#/definitions/campaignLogTaskOperand"
+        },
+        {
+          "$ref": "#/definitions/chaosBagOperand"
+        },
+        {
+          "$ref": "#/definitions/constantOperand"
+        },
+        {
+          "$ref": "#/definitions/mostXpEarnedOperand"
+        },
+        {
+          "$ref": "#/definitions/partnerStatusCondition"
+        },
+        {
+          "$ref": "#/definitions/playerCountOperand"
+        }
+      ]
+    },
+    "mathEqualsCondition": {
+      "title": "MathEqualsCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "math"
+          ]
+        },
+        "opA": {
+          "$ref": "#/definitions/operand"
+        },
+        "opB": {
+          "$ref": "#/definitions/operand"
+        },
+        "operation": {
+          "type": "string",
+          "enum": ["equals"]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/boolOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "opA",
+        "opB",
+        "operation",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "mathCompareCondition": {
+      "title": "MathCompareCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "math"
+          ]
+        },
+        "opA": {
+          "$ref": "#/definitions/operand"
+        },
+        "opB": {
+          "$ref": "#/definitions/operand"
+        },
+        "operation": {
+          "type": "string",
+          "enum": ["compare"]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/numOption"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "opA",
+        "opB",
+        "operation",
+        "options"
+      ],
+      "additionalProperties": false
+    },
+    "mathOpCondition": {
+      "title": "MathOpCondition",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "math"
+          ]
+        },
+        "opA": {
+          "$ref": "#/definitions/operand"
+        },
+        "opB": {
+          "$ref": "#/definitions/operand"
+        },
+        "operation": {
+          "type": "string",
+          "enum": ["sum", "divide"]
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "$ref": "option.schema.json#/definitions/numOption"
+          }
+        },
+        "default_option": {
+          "$ref": "option.schema.json#/definitions/defaultOption"
+        }
+      },
+      "required": [
+        "type",
+        "opA",
+        "opB",
+        "operation",
+        "options",
+        "default_option"
+      ],
+      "additionalProperties": false
+    },
+    "mathCondition": {
+      "title": "MathCondition",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/mathCompareCondition"
+        },
+        {
+          "$ref": "#/definitions/mathOpCondition"
+        },
+        {
+          "$ref": "#/definitions/mathEqualsCondition"
+        }
+      ]
+    },
+    "condition": {
+      "title": "Condition",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/multiCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignLogCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignLogCountCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignLogInvestigatorCountCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignLogTaskCondition"
+        },
+        {
+          "$ref": "#/definitions/mathCondition"
+        },
+        {
+          "$ref": "#/definitions/cardCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignDataCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignLogSectionExistsCondition"
+        },
+        {
+          "$ref": "#/definitions/scenarioDataCondition"
+        },
+        {
+          "$ref": "#/definitions/traumaCondition"
+        },
+        {
+          "$ref": "#/definitions/checkSuppliesCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignLogCardsCondition"
+        },
+        {
+          "$ref": "#/definitions/campaignLogCardsSwitchCondition"
+        },
+        {
+          "$ref": "#/definitions/partnerStatusCondition"
+        },
+        {
+          "$ref": "#/definitions/locationCondition"
+        },
+        {
+          "$ref": "#/definitions/scarletKeyCondition"
+        },
+        {
+          "$ref": "#/definitions/scarletKeyCountCondition"
+        },
+        {
+          "$ref": "#/definitions/investigatorCampaignLogCardsCondition"
+        }
+      ]
+    }
+  }
+}

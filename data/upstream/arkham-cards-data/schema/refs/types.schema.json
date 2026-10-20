@@ -1,0 +1,1504 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "schema/types.schema.json",
+  "definitions": {
+    "borderColor": {
+      "title": "BorderColor",
+      "type": "string",
+      "enum": [
+        "setup",
+        "resolution",
+        "interlude"
+      ]
+    },
+    "campaignRule": {
+      "title": "CampaignRule",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "condition": {
+          "$ref": "condition.schema.json#/definitions/binaryChoiceCondition"
+        }
+      },
+      "required": [
+        "title",
+        "steps"
+      ],
+      "additionalProperties": false
+    },
+    "image": {
+      "title": "Image",
+      "type": "object",
+      "properties": {
+        "ratio": {
+          "type": "number"
+        },
+        "uri": {
+          "type": "string"
+        },
+        "alignment": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right",
+            "top",
+            "bottom"
+          ]
+        }
+      },
+      "required": [
+        "ratio",
+        "uri",
+        "alignment"
+      ],
+      "additionalProperties": false
+    },
+    "locationDetails": {
+      "title": "LocationDetails",
+      "type": "object",
+      "properties": {
+        "region": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "country": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "region"
+      ],
+      "additionalProperties": false
+    },
+    "mapLabel": {
+      "title": "MapLabel",
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        },
+        "direction": {
+          "type": "string",
+          "enum": [
+            "left",
+            "center",
+            "right"
+          ]
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "connection",
+            "ocean",
+            "small_ocean",
+            "sea",
+            "continent",
+            "country"
+          ]
+        },
+        "lang_position": {
+          "type": "object",
+          "properties": {
+            "es": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ],
+              "additionalProperties": false
+            },
+            "ko": {
+              "type": "object",
+              "properties": {
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "rotation": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "name",
+        "direction",
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "dossierElement": {
+      "title": "DossierElement",
+      "type": "object",
+      "properties": {
+        "image": {
+          "$ref": "#/definitions/image"
+        },
+        "text": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "city",
+            "name"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "calendarEntry": {
+      "title": "CalendarEntry",
+      "type": "object",
+      "properties": {
+        "symbol": {
+          "type": "string"
+        },
+        "time": {
+          "type": "number"
+        },
+        "entry": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "symbol"
+      ]
+    },
+    "dossier": {
+      "title": "Dossier",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "title_font": {
+          "type": "string",
+          "enum": [
+            "file"
+          ]
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/dossierElement"
+          }
+        },
+        "locked": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "entries"
+      ],
+      "additionalProperties": false
+    },
+    "mapLocation": {
+      "title": "MapLocation",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        },
+        "file_name": {
+          "type": "string"
+        },
+        "scenario": {
+          "type": "string"
+        },
+        "dossier": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/dossier"
+          }
+        },
+        "hidden": {
+          "type": "boolean"
+        },
+        "details": {
+          "$ref": "#/definitions/locationDetails"
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "locked",
+            "standard",
+            "side"
+          ]
+        },
+        "current": {
+          "type": "string",
+          "enum": [
+            "up",
+            "down"
+          ]
+        },
+        "direction": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ]
+        },
+        "connections": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "x",
+        "y",
+        "name",
+        "status",
+        "connections",
+        "direction",
+        "scenario",
+        "details"
+      ],
+      "additionalProperties": false
+    },
+    "scarletKey": {
+      "title": "ScarletKey",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "checklistItem": {
+      "title": "ChecklistItem",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "partner": {
+      "title": "Partner",
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "health": {
+          "type": "number"
+        },
+        "sanity": {
+          "type": "number"
+        },
+        "img": {
+          "type": "string"
+        },
+        "img_offset": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right"
+          ]
+        },
+        "resolute_health": {
+          "type": "number"
+        },
+        "resolute_sanity": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "code",
+        "name",
+        "health",
+        "sanity"
+      ],
+      "additionalProperties": false
+    },
+    "partnerStatus": {
+      "title": "PartnerStatus",
+      "type": "string",
+      "enum": [
+        "eliminated",
+        "alive",
+        "has_damage",
+        "has_horror",
+        "mia",
+        "safe",
+        "resolute",
+        "investigator_defeated",
+        "investigator_selected",
+        "victim",
+        "cannot_take"
+      ]
+    },
+    "ultimatum": {
+      "title": "Ultimatum",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "achievement": {
+      "title": "Achievement",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "binary",
+            "count",
+            "list"
+          ]
+        },
+        "max": {
+          "type": "number"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "text",
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "narration": {
+      "title": "Narration",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "lang": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "lang"
+      ],
+      "additionalProperties": false
+    },
+    "locationSetupCard": {
+      "title": "LocationSetupCard",
+      "type": "object",
+      "properties": {
+        "rotate": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right",
+            "invert"
+          ]
+        },
+        "code": {
+          "type": "string"
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "layer": {
+          "type": "string",
+          "enum": [
+            "bottom",
+            "top"
+          ]
+        }
+      },
+      "required": [
+        "code",
+        "x",
+        "y"
+      ],
+      "additionalProperties": false
+    },
+    "locationDecoration": {
+      "title": "LocationDecoration",
+      "type": "object",
+      "properties": {
+        "layer": {
+          "type": "string",
+          "enum": [
+            "top",
+            "bottom"
+          ]
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "line",
+            "circle"
+          ]
+        },
+        "start_x": {
+          "type": "number"
+        },
+        "start_y": {
+          "type": "number"
+        },
+        "end_x": {
+          "type": "number"
+        },
+        "end_y": {
+          "type": "number"
+        },
+        "color": {
+          "type": "string",
+          "enum": [
+            "blue"
+          ]
+        }
+      },
+      "required": [
+        "layer",
+        "type",
+        "start_x",
+        "start_y",
+        "end_x",
+        "end_y"
+      ],
+      "additionalProperties": false
+    },
+    "locationArrow": {
+      "title": "LocationArrow",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "short",
+            "long",
+            "swoop",
+            "swoop_right",
+            "long_single"
+          ]
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "color": {
+          "type": "string",
+          "enum": [
+            "red"
+          ]
+        },
+        "size": {
+          "type": "number"
+        },
+        "width": {
+          "type": "number"
+        },
+        "height": {
+          "type": "number"
+        },
+        "opacity": {
+          "type": "number"
+        },
+        "rotation": {
+          "type": "string",
+          "enum": [
+            "-45deg",
+            "-22deg",
+            "22deg",
+            "45deg",
+            "67deg",
+            "90deg",
+            "180deg",
+            "270deg",
+            "315deg"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "x",
+        "y",
+        "color"
+      ],
+      "additionalProperties": false
+    },
+    "locationAnnotation": {
+      "title": "LocationAnnotation",
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "width": {
+          "type": "number"
+        },
+        "height": {
+          "type": "number"
+        },
+        "style": {
+          "type": "string",
+          "enum": [
+            "title",
+            "description"
+          ]
+        },
+        "alignment": {
+          "type": "string",
+          "enum": [
+            "left",
+            "right",
+            "center"
+          ]
+        },
+        "position": {
+          "type": "string",
+          "enum": [
+            "top",
+            "bottom",
+            "left",
+            "right"
+          ]
+        }
+      },
+      "required": [
+        "text",
+        "x",
+        "y",
+        "position"
+      ],
+      "additionalProperties": false
+    },
+    "locationConnector": {
+      "title": "LocationConnector",
+      "type": "string",
+      "enum": [
+        "purple_moon",
+        "blue_triangle",
+        "red_square",
+        "orange_heart",
+        "green_diamond",
+        "green_clover"
+      ]
+    },
+    "investigator": {
+      "title": "InvestigatorSelector",
+      "type": "string",
+      "enum": [
+        "lead_investigator",
+        "all",
+        "any",
+        "choice",
+        "defeated",
+        "resigned",
+        "not_defeated",
+        "not_resigned",
+        "any_resigned",
+        "$input_value",
+        "$fixed_investigator"
+      ]
+    },
+    "choiceIcon": {
+      "title": "ChoiceIcon",
+      "type": "string",
+      "enum": [
+        "mental",
+        "physical",
+        "resign",
+        "dismiss",
+        "accept",
+        "killed",
+        "insane"
+      ]
+    },
+    "border": {
+      "title": "Border",
+      "type": "string",
+      "enum": [
+        "top",
+        "bottom",
+        "both"
+      ]
+    },
+    "investigatorStatus": {
+      "title": "InvestigatorStatus",
+      "type": "string",
+      "enum": [
+        "alive",
+        "resigned",
+        "physical",
+        "mental",
+        "eliminated",
+        "killed",
+        "insane"
+      ]
+    },
+    "scenarioStatus": {
+      "title": "ScenarioStatus",
+      "type": "string",
+      "enum": [
+        "not_started",
+        "skipped",
+        "started",
+        "resolution",
+        "completed",
+        "unlocked"
+      ]
+    },
+    "difficulty": {
+      "title": "Difficulty",
+      "type": "string",
+      "enum": [
+        "easy",
+        "standard",
+        "hard",
+        "expert"
+      ]
+    },
+    "specialXp": {
+      "title": "SpecialXp",
+      "type": "string",
+      "enum": [
+        "resupply_points",
+        "supply_points",
+        "unspect_xp"
+      ]
+    },
+    "specialChaosToken": {
+      "title": "SpecialChaosToken",
+      "type": "string",
+      "enum": [
+        "skull",
+        "cultist",
+        "tablet",
+        "elder_thing",
+        "elder_sign",
+        "auto_fail",
+        "bless",
+        "curse",
+        "frost",
+        "blood"
+      ]
+    },
+    "campaignResult": {
+      "title": "CampaignResult",
+      "type": "string",
+      "enum": [
+        "win",
+        "lose",
+        "survived"
+      ]
+    },
+    "chaosToken": {
+      "title": "ChaosToken",
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "+1",
+            "0",
+            "-1",
+            "-2",
+            "-3",
+            "-4",
+            "-5",
+            "-6",
+            "-7",
+            "-8"
+          ]
+        },
+        {
+          "$ref": "#/definitions/specialChaosToken"
+        }
+      ]
+    },
+    "customData": {
+      "title": "CustomData",
+      "type": "object",
+      "properties": {
+        "creator": {
+          "type": "string"
+        },
+        "download_link": {
+          "type": "object",
+          "properties": {
+            "en": {
+              "type": "string"
+            },
+            "ko": {
+              "type": "string"
+            },
+            "de": {
+              "type": "string"
+            },
+            "es": {
+              "type": "string"
+            },
+            "fr": {
+              "type": "string"
+            },
+            "zh": {
+              "type": "string"
+            },
+            "ru": {
+              "type": "string"
+            },
+            "it": {
+              "type": "string"
+            },
+            "vi": {
+              "type": "string"
+            },
+            "pl": {
+              "type": "string"
+            },
+            "uk": {
+              "type": "string"
+            },
+            "pt": {
+              "type": "string"
+            },
+            "zh-cn": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "en"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "creator",
+        "download_link"
+      ],
+      "additionalProperties": false
+    },
+    "cardCodeList": {
+      "title": "CardCodeList",
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "additionalProperties": false
+    },
+    "cardSearchQuery": {
+      "title": "CardSearchQuery",
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string",
+          "enum": [
+            "scenario",
+            "deck"
+          ]
+        },
+        "traits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "unique": {
+          "type": "boolean"
+        },
+        "non_story_only": {
+          "type": "boolean"
+        },
+        "vengeance": {
+          "type": "boolean"
+        },
+        "exclude_code": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "code": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "cardQuery": {
+      "title": "CardQuery",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/cardSearchQuery"
+        },
+        {
+          "$ref": "#/definitions/cardCodeList"
+        }
+      ]
+    },
+    "choice": {
+      "title": "Choice",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "large": {
+          "type": "boolean"
+        },
+        "text": {
+          "type": "string"
+        },
+        "confirm_text": {
+          "type": "string"
+        },
+        "feminine_text": {
+          "type": "string"
+        },
+        "masculine_text": {
+          "type": "string"
+        },
+        "nonbinary_text": {
+          "type": "string"
+        },
+        "plural_text": {
+            "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "border": {
+          "type": "boolean"
+        },
+        "border_color": {
+          "$ref": "#/definitions/borderColor"
+        },
+        "pre_border_effects": {
+          "type": "array",
+          "items": {
+            "$ref": "effect.schema.json#/definitions/effect"
+          }
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "effect.schema.json#/definitions/effect"
+          }
+        },
+        "allow_duplicates": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "binaryConditionalChoice": {
+      "title": "BinaryConditionalChoice",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "large": {
+          "type": "boolean"
+        },
+        "text": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "probability": {
+          "type": "number"
+        },
+        "style": {
+          "type": "string",
+          "enum": [
+            "interlude"
+          ]
+        },
+        "gender": {
+          "type": "string",
+          "enum": [
+            "m",
+            "f"
+          ]
+        },
+        "tokens": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/chaosToken"
+          }
+        },
+        "description": {
+          "type": "string"
+        },
+        "condition": {
+          "$ref": "condition.schema.json#/definitions/binaryChoiceCondition"
+        },
+        "repeatable": {
+          "type": "boolean"
+        },
+        "border": {
+          "type": "boolean"
+        },
+        "border_color": {
+          "$ref": "#/definitions/borderColor"
+        },
+        "pre_border_effects": {
+          "type": "array",
+          "items": {
+            "$ref": "effect.schema.json#/definitions/effect"
+          }
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "effect.schema.json#/definitions/effect"
+          }
+        },
+        "narration": {
+          "$ref": "types.schema.json#/definitions/narration"
+        },
+        "hidden": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "chaosTokenModifier": {
+      "title": "ChaosTokenModifier",
+      "type": "object",
+      "properties": {
+        "modifier": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "auto_fail",
+                "auto_succeed"
+              ]
+            }
+          ]
+        },
+        "reveal_another": {
+          "type": "number"
+        },
+        "increase_difficulty": {
+          "type": "number"
+        },
+        "double_next_modifier": {
+          "type": "boolean"
+        },
+        "cancel_modifiers": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "modifier"
+      ]
+    },
+    "simpleChaosTokenValue": {
+      "title": "SimpleChaosTokenValue",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "null"
+        },
+        "token": {
+          "$ref": "#/definitions/specialChaosToken"
+        },
+        "text": {
+          "type": "string"
+        },
+        "value": {
+          "$ref": "#/definitions/chaosTokenModifier"
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "token",
+        "value"
+      ]
+    },
+    "counterChaosTokenValue": {
+      "title": "CounterChaosTokenValue",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "counter"
+          ]
+        },
+        "token": {
+          "$ref": "#/definitions/specialChaosToken"
+        },
+        "text": {
+          "type": "string"
+        },
+        "counter": {
+          "type": "object",
+          "properties": {
+            "prompt": {
+              "type": "string"
+            },
+            "min": {
+              "type": "number"
+            },
+            "max": {
+              "type": "number"
+            },
+            "scale": {
+              "type": "number"
+            },
+            "reveal_another": {
+              "type": "number"
+            },
+            "adjustment": {
+              "type": "number"
+            },
+            "initial_value": {
+              "type": "number"
+            },
+            "negate": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "prompt"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "token",
+        "counter"
+      ]
+    },
+    "conditionChaosTokenValue": {
+      "title": "ConditionChaosTokenValue",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "condition"
+          ]
+        },
+        "token": {
+          "$ref": "#/definitions/specialChaosToken"
+        },
+        "text": {
+          "type": "string"
+        },
+        "condition": {
+          "type": "object",
+          "properties": {
+            "default_value": {
+              "$ref": "#/definitions/chaosTokenModifier"
+            },
+            "options": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "prompt",
+                  "modified_value"
+                ],
+                "properties": {
+                  "prompt": {
+                    "type": "string"
+                  },
+                  "modified_value": {
+                    "$ref": "#/definitions/chaosTokenModifier"
+                  }
+                }
+              }
+            }
+          },
+          "required": [
+            "default_value",
+            "options"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "token",
+        "condition"
+      ]
+    },
+    "singleChaosTokenValue": {
+      "title": "SingleChaosTokenValue",
+      "type": "object",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/simpleChaosTokenValue"
+        },
+        {
+          "$ref": "#/definitions/counterChaosTokenValue"
+        },
+        {
+          "$ref": "#/definitions/conditionChaosTokenValue"
+        }
+      ]
+    },
+    "scenarioChaosTokens": {
+      "title": "ScenarioChaosTokens",
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "scenario": {
+          "type": "string"
+        },
+        "standard": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/singleChaosTokenValue"
+          }
+        },
+        "hard": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/singleChaosTokenValue"
+          }
+        }
+      },
+      "required": [
+        "code",
+        "scenario",
+        "standard",
+        "hard"
+      ],
+      "additionalProperties": false
+    },
+    "investigatorConditionalChoice": {
+      "title": "InvestigatorConditionalChoice",
+      "type": "object",
+      "properties": {
+        "icon": {
+          "$ref": "#/definitions/choiceIcon"
+        },
+        "id": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "selected_text": {
+          "type": "string"
+        },
+        "selected_text_feminine": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "condition": {
+          "$ref": "condition.schema.json#/definitions/investigatorChoiceCondition"
+        },
+        "border": {
+          "type": "boolean"
+        },
+        "border_color": {
+          "$ref": "#/definitions/borderColor"
+        },
+        "pre_border_effects": {
+          "type": "array",
+          "items": {
+            "$ref": "effect.schema.json#/definitions/effect"
+          }
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "effect.schema.json#/definitions/effect"
+          }
+        },
+        "allow_duplicates": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "tableCell": {
+      "title": "TableCell",
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string"
+        },
+        "size": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "text",
+        "size"
+      ],
+      "additionalProperties": false
+    },
+    "tableRow": {
+      "title": "TableRow",
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tableCell"
+          }
+        }
+      },
+      "required": [
+        "cells"
+      ],
+      "additionalProperties": false
+    },
+    "supply": {
+      "title": "Supply",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "cost": {
+          "type": "number"
+        },
+        "multiple": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "description",
+        "cost"
+      ],
+      "additionalProperties": false
+    },
+    "bulletType": {
+      "title": "BulletType",
+      "type": "string",
+      "enum": [
+        "none",
+        "small",
+        "default"
+      ]
+    }
+  }
+}

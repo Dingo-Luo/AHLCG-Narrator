@@ -1,0 +1,27 @@
+{
+  "repository": "zzorba/ArkhamCards",
+  "files": [
+    {
+      "sha256": "74b65541d8c13ab8c7527c993fb94b9e2ce6d4e6ea3d537d2dfb2d90aacc7565",
+      "path": "assets/classes/guardian.svg"
+    },
+    {
+      "sha256": "1494fa69c5ac7e88d67c26b8798483a561abe7a8b25c1a0dbeeaada92ef610cf",
+      "path": "assets/classes/seeker.svg"
+    },
+    {
+      "sha256": "dba2ec6e442ebce0723820f03aad9b3704546edf3021f52d652db8a08a75f779",
+      "path": "assets/classes/rogue.svg"
+    },
+    {
+      "sha256": "6e2d2bd322097b8d41d42a49543812b4f792683bfb6690f13bd9631443a52bdb",
+      "path": "assets/classes/mystic.svg"
+    },
+    {
+      "sha256": "47a4b17e18273568a23ffa70d8862a946ce03e3e73aafd2382c7c7ce635f4bf2",
+      "path": "assets/classes/survivor.svg"
+    }
+  ],
+  "commit": "cf05dd084e0c8956f9f3e7c199021cbdeccfea96",
+  "url": "https://raw.githubusercontent.com/zzorba/ArkhamCards/cf05dd084e0c8956f9f3e7c199021cbdeccfea96/assets/arkhamicons-config.json"
+}

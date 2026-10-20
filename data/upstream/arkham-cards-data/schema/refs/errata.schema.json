@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "schema/errata.schema.json",
+  "definitions": {
+    "question": {
+      "title": "Question",
+      "type": "object",
+      "properties": {
+        "question": {
+          "type": "string"
+        },
+        "answer": {
+          "type": "string"
+        }
+      },
+      "required": ["question", "answer"],
+      "additionalProperties": false
+    },
+    "scenarioFaqEntry": {
+      "title": "ScenarioFaqEntry",
+      "type": "object",
+      "properties": {
+        "scenario_code": {
+          "type": "string"
+        },
+        "campaign_code": {
+          "type": "string"
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/question"
+          }
+        }
+      },
+      "required": ["scenario_code", "questions"],
+      "additionalProperties": false
+    },
+    "campaignFaqEntry": {
+      "title": "CampaignFaqEntry",
+      "type": "object",
+      "properties": {
+        "cycles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/question"
+          }
+        }
+      },
+      "required": ["cycles", "questions"],
+      "additionalProperties": false
+    },
+    "cardErrata": {
+      "title": "CardErrata",
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "required": ["code", "text"],
+      "additionalProperties": false
+    },
+    "scenarioCardErrata": {
+      "title": "ScenarioCardErrata",
+      "type": "object",
+      "properties": {
+        "encounter_code": {
+          "type": "string"
+        },
+        "cards": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/cardErrata"
+          }
+        }
+      },
+      "required": ["encounter_code", "cards"],
+      "additionalProperties": false
+    },
+    "errata": {
+      "title": "Errata",
+      "type": "object",
+      "properties": {
+        "cards": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/scenarioCardErrata"
+          }
+        },
+        "faq": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/scenarioFaqEntry"
+          }
+        },
+        "campaign_faq": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/campaignFaqEntry"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "required": ["cards", "faq"]
+    }
+  }
+}

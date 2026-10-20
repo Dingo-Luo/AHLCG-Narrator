@@ -1,0 +1,1475 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.4.2\n"
+
+msgid "Abyssal Gifts"
+msgstr "深淵贈禮"
+
+msgid "Abyssal Tribute"
+msgstr "深淵祭品"
+
+msgid "Agents of Azathoth"
+msgstr "阿撒托斯的使徒"
+
+msgid "Agents of Cthulhu"
+msgstr "克蘇魯的使者"
+
+msgid "Agents of Hastur"
+msgstr "哈斯塔的使者"
+
+msgid "Agents of Shub-Niggurath"
+msgstr "莎布·尼古拉絲的使者"
+
+msgid "Agents of Yig"
+msgstr "伊格的使徒"
+
+msgid "Agents of Yog-Sothoth"
+msgstr "猶格·索托斯的使者"
+
+msgid "Alien Interference"
+msgstr "異星干擾"
+
+msgid "Ancient Evils"
+msgstr "遠古惡魔"
+
+msgid "Anette's Coven"
+msgstr "安妮特的女巫集會"
+
+msgid "Bad Luck"
+msgstr "壞運"
+
+msgid "The Bayou"
+msgstr "河口"
+
+msgid "Beast Thralls"
+msgstr "獸之奴僕"
+
+msgid "Beyond the Threshold"
+msgstr "界限彼端"
+
+msgid "Bishop's Thralls"
+msgstr "畢曉普之僕"
+
+msgid "Epic Multiplayer"
+msgstr "多組史詩"
+
+msgid "Single Group"
+msgstr "單組團隊"
+
+msgid "Blood On The Altar"
+msgstr "血色祭壇"
+
+msgid "Brotherhood of the Beast"
+msgstr "惡獸兄弟會"
+
+msgid "Byakhee"
+msgstr "拜亞基"
+
+msgid "Children of Paradise"
+msgstr "樂園之子"
+
+msgid "Chilling Cold"
+msgstr "寒冷刺骨"
+
+msgid "City of Sins"
+msgstr "罪惡之城"
+
+msgid "Creeping Cold"
+msgstr "寒冷駭人"
+
+msgid "Cult of the Yellow Sign"
+msgstr "黃色印記信徒"
+
+msgid "Cult of Umôrdhoth"
+msgstr "烏默爾多斯的崇拜者"
+
+msgid "Dark Rituals"
+msgstr "黑暗儀式"
+
+msgid "Death of Stars"
+msgstr "星辰消逝"
+
+msgid "Decay & Filth"
+msgstr "衰敗與汙穢"
+
+msgid "Delusions"
+msgstr "妄想"
+
+msgid "Dunwich"
+msgstr "敦威治"
+
+msgid "Erratic Fear"
+msgstr "無定恐懼"
+
+msgid "Evil Portents"
+msgstr "邪兆"
+
+msgid "Excelsior Management"
+msgstr "艾肖希爾管理部門"
+
+msgid "Expedition"
+msgstr "探險"
+
+msgid "The Flood Below"
+msgstr "地底洪流"
+
+msgid "Temporal Flux"
+msgstr "時間湧動"
+
+msgid "Ghouls"
+msgstr "食屍鬼"
+
+msgid "Ghouls of Umôrdhoth"
+msgstr "烏默爾多斯的食屍鬼"
+
+msgid "Guardians of Time"
+msgstr "時間守衛者"
+
+msgid "Hastur's Gift"
+msgstr "哈斯塔的餽贈"
+
+msgid "Hauntings"
+msgstr "如影隨形"
+
+msgid "Hideous Abominations"
+msgstr "醜陋異形"
+
+msgid "Inexorable Fate"
+msgstr "在劫難逃"
+
+msgid "Inhabitants of Carcosa"
+msgstr "卡爾克薩居民"
+
+msgid "K'n-yan"
+msgstr "昆揚"
+
+msgid "Locked Doors"
+msgstr "上鎖的門"
+
+msgid "Mi-Go Incursion"
+msgstr "米戈入侵"
+
+msgid "Music of the Damned"
+msgstr "受詛咒的歌聲"
+
+msgid "Naomi's Crew"
+msgstr "娜奧米的打手"
+
+msgid "Nightgaunts"
+msgstr "夜魘"
+
+msgid "Dark Cult"
+msgstr "黑暗異教徒"
+
+msgid "Pillars of Judgment"
+msgstr "審判之柱"
+
+msgid "Pnakotic Brotherhood"
+msgstr "納克特兄弟會"
+
+msgid "Poison"
+msgstr "毒藥"
+
+msgid "Rainforest"
+msgstr "雨林"
+
+msgid "Rats"
+msgstr "老鼠"
+
+msgid "Realm of Death"
+msgstr "冥界"
+
+msgid "Resurgent Evils"
+msgstr "甦生惡魔"
+
+msgid "Return Cult of Umôrdhoth"
+msgstr "烏默爾多斯教團"
+
+msgid "Return to K'n-yan"
+msgstr "重返昆揚"
+
+msgid "Return to Pillars of Judgment"
+msgstr "重返審判之柱"
+
+msgid "Return to the Boundary Beyond"
+msgstr "重返界限彼端"
+
+msgid "Return to the City of Archives"
+msgstr "重返天機之城"
+
+msgid "Return to the Depths of Yoth"
+msgstr "重返幽嘶深淵"
+
+msgid "Return to the Doom of Eztli"
+msgstr "重返埃茲特里的覆滅"
+
+msgid "Return to the Gathering"
+msgstr "重返聚集於此"
+
+msgid "Return to the Rainforest"
+msgstr "重返雨林"
+
+msgid "Return to the Untamed Wilds"
+msgstr "重返荒莽密林"
+
+msgid "Return to Turn Back Time"
+msgstr "重返時間倒流"
+
+msgid "Forgotten Ruins"
+msgstr "失落遺跡"
+
+msgid "Sands of Egypt"
+msgstr "埃及之沙"
+
+msgid "Secret Doors"
+msgstr "秘密的門"
+
+msgid "Secrets of the Universe"
+msgstr "宇宙之秘"
+
+msgid "Serpents"
+msgstr "蛇族"
+
+msgid "Silver Twilight Lodge"
+msgstr "銀暮祕社"
+
+msgid "Sins of the Past"
+msgstr "往日罪孽"
+
+msgid "Sorcery"
+msgstr "巫術"
+
+msgid "Spectral Predators"
+msgstr "幽靈捕食者"
+
+msgid "The Stranger"
+msgstr "陌生人"
+
+msgid "Striking Fear"
+msgstr "恐懼打擊"
+
+msgid "Swarm of Assimilation"
+msgstr "同化蟲群"
+
+msgid "The Beyond"
+msgstr "異世界"
+
+msgid "The Devourers Cult"
+msgstr "噬魔教徒"
+
+msgid "The Watcher"
+msgstr "看守人"
+
+msgid "Trapped Spirits"
+msgstr "被困的靈魂"
+
+msgid "Deadly Traps"
+msgstr "致死陷阱"
+
+msgid "Yig's Venom"
+msgstr "伊格的毒液"
+
+msgid "Vile Experiments"
+msgstr "邪惡實驗"
+
+msgid "The Vortex Above"
+msgstr "空中漩渦"
+
+msgid "Whippoorwills"
+msgstr "夜鷹"
+
+msgid "Witchcraft"
+msgstr "巫法"
+
+msgid "Yog-Sothoth's Emissaries"
+msgstr "猶格·索托斯的特使"
+
+msgid "City of the Damned"
+msgstr "詛咒之城"
+
+msgid "Return to Disappearance at the Twilight Estate"
+msgstr "重返暮色莊園失蹤事件"
+
+msgid "Unspeakable Fate"
+msgstr "窮途末路"
+
+msgid "Unstable Realm"
+msgstr "惘界"
+
+msgid "Chilling Mists"
+msgstr "冷冽迷霧"
+
+msgid "Bloodthirsty Spirits"
+msgstr "嗜血的靈魂"
+
+msgid "Hexcraft"
+msgstr "妖法"
+
+msgid "Impending Evils"
+msgstr "迫近惡魔"
+
+msgid "Agents of Atlach-Nacha"
+msgstr "阿特拉克·納克亞的使徒"
+
+msgid "Agents of Nyarlathotep"
+msgstr "奈亞拉托提普的使徒"
+
+msgid "Corsairs"
+msgstr "海盜"
+
+msgid "Creatures of the Underworld"
+msgstr "地底生物"
+
+msgid "Dreamer's Curse"
+msgstr "入夢者的詛咒"
+
+msgid "Dreamlands"
+msgstr "幻夢境"
+
+msgid "Merging Realities"
+msgstr "現實融合"
+
+msgid "Spiders"
+msgstr "蜘蛛"
+
+msgid "Whispers of Hypnos"
+msgstr "修普諾斯的低語"
+
+msgid "Zoogs"
+msgstr "祖格鼠"
+
+msgid "The Labyrinths of Lunacy"
+msgstr ""
+
+msgid "Delusory Evils"
+msgstr "迷亂惡魔"
+
+msgid "Neurotic Fear"
+msgstr "恐懼失常"
+
+msgid "Hastur's Envoys"
+msgstr "哈斯塔的特使"
+
+msgid "Decaying Reality"
+msgstr "衰敗現實"
+
+msgid "Maddening Delusions"
+msgstr "發狂妄想"
+
+msgid "Where the Gods Dwell"
+msgstr "神居之所"
+
+msgid "Terror of the Vale"
+msgstr "恐怖谷"
+
+msgid "Descent into the Pitch"
+msgstr "深入漆黑之海"
+
+msgid "Cult of Pnakotus"
+msgstr "納克特教團"
+
+msgid "Doomed Expedition"
+msgstr "無望探險"
+
+msgid "Temporal Hunters"
+msgstr "時間獵手"
+
+msgid "Venomous Hate"
+msgstr "劇毒仇恨"
+
+msgid "Creatures of the Deep"
+msgstr "深海生物"
+
+msgid "Flooded Caverns"
+msgstr "淹沒的洞窟"
+
+msgid "Rising Tide"
+msgstr "潮起"
+
+msgid "Shattered Memories"
+msgstr "破碎記憶"
+
+msgid "Agents of Dagon"
+msgstr "達貢的使徒"
+
+msgid "Agents of Hydra"
+msgstr "海德拉的使徒"
+
+msgid "The Locals"
+msgstr "當地人"
+
+msgid "Fog over Innsmouth"
+msgstr "印斯茅斯之霧"
+
+msgid "Syzygy"
+msgstr "朔望"
+
+msgid "Malfunction"
+msgstr "機械故障"
+
+msgid "The Tatterdemalion"
+msgstr ""
+
+msgid "Electric Nightmare"
+msgstr ""
+
+msgid "Lost Quantum"
+msgstr ""
+
+msgid "In the Shadow of Earth"
+msgstr ""
+
+msgid "Strange Moons"
+msgstr ""
+
+msgid "The Machine in Yellow"
+msgstr ""
+
+msgid "Fragment of Carcosa"
+msgstr ""
+
+msgid "Starfall"
+msgstr ""
+
+msgid "Deep Space"
+msgstr ""
+
+msgid "Anachronism"
+msgstr ""
+
+msgid "Dark Past"
+msgstr ""
+
+msgid "Artificial Intelligence"
+msgstr ""
+
+msgid "Endtimes"
+msgstr ""
+
+msgid "The Boogeyman"
+msgstr ""
+
+msgid "Interstellar Predators"
+msgstr ""
+
+msgid "Hastur's Gaze"
+msgstr ""
+
+msgid "Deep Ones"
+msgstr ""
+
+msgid "Sinking Ship"
+msgstr ""
+
+msgid "A Sea of Troubles"
+msgstr "麻煩之海"
+
+msgid "Gurathnaka's Shadows"
+msgstr "食夢者之影"
+
+msgid "Chesire Cat"
+msgstr "柴郡貓"
+
+msgid "Arkham in Wonderland"
+msgstr "詭境仙鎮"
+
+msgid "Warped Reality"
+msgstr "扭曲現實"
+
+msgid "Bleeding Hearts"
+msgstr "淌血紅心"
+
+msgid "Card Guards"
+msgstr "撲克牌守衛"
+
+msgid "Riddles & Games"
+msgstr "謎語和遊戲"
+
+msgid "Fool's Mate"
+msgstr "愚者弈局"
+
+msgid "Chessmen"
+msgstr "西洋棋子"
+
+msgid "Lucid Nightmare"
+msgstr "清醒夢魘"
+
+msgid "Alice in Arkham"
+msgstr "阿卡姆的愛麗絲"
+
+msgid "Sibling Rivalry"
+msgstr "兄弟鬩牆"
+
+msgid "Tempest in a Teapot"
+msgstr "壺中風暴"
+
+msgid "Walrus and Carpenter"
+msgstr "海象和木匠"
+
+msgid "Wild Snark Chase"
+msgstr "獵捕蛇鯊"
+
+msgid "Jabberwocky"
+msgstr "查博蕪基龍"
+
+msgid "The Warning"
+msgstr ""
+
+msgid "Berserkers"
+msgstr ""
+
+msgid "Draugar"
+msgstr ""
+
+msgid "Lacuna"
+msgstr ""
+
+msgid "Runic Oaths"
+msgstr ""
+
+msgid "Hudulfólk"
+msgstr ""
+
+msgid "Glacial Mists"
+msgstr ""
+
+msgid "The Crown"
+msgstr ""
+
+msgid "The Fallen"
+msgstr ""
+
+msgid "The Golden Circle"
+msgstr ""
+
+msgid "Ice and Death"
+msgstr "亡命冰原"
+
+msgid "The Crash"
+msgstr "飛機失事"
+
+msgid "Creatures in the Ice"
+msgstr "冰中生物"
+
+msgid "Deadly Weather"
+msgstr "致命天氣"
+
+msgid "Hazards of Antarctica"
+msgstr "南極險境"
+
+msgid "Silence and Mystery"
+msgstr "沉默與神秘"
+
+msgid "Tekeli-li"
+msgstr "忒咳哩-哩"
+
+msgid "To the Forbidden Peaks"
+msgstr "失落之峰"
+
+msgid "The Great Seal"
+msgstr "巨大封印"
+
+msgid "City of the Elder Things"
+msgstr "古老者之城"
+
+msgid "Seeping Nightmares"
+msgstr "滲出夢魘"
+
+msgid "Nameless Horrors"
+msgstr "無名恐怖"
+
+msgid "Memorials of the Lost"
+msgstr "紀念逝者"
+
+msgid "Fatal Mirage"
+msgstr "致命幻景"
+
+msgid "Elder Things"
+msgstr "古老者"
+
+msgid "The Heart of Madness"
+msgstr "瘋狂之心"
+
+msgid "Stirring in the Deep"
+msgstr "深處激盪"
+
+msgid "Shoggoths"
+msgstr "修格斯"
+
+msgid "Penguins"
+msgstr "企鵝"
+
+msgid "Miasma"
+msgstr "危險瘴氣"
+
+msgid "Lost in the Night"
+msgstr "夜半失蹤"
+
+msgid "Left Behind"
+msgstr "慘遭拋棄"
+
+msgid "Expedition Team"
+msgstr "探險隊"
+
+msgid "Agents of the Unknown"
+msgstr "未知使徒"
+
+msgid "Machinations Through Time"
+msgstr "時間騙局"
+
+msgid "Red Tide Rising"
+msgstr "赤潮升湧"
+
+msgid "Agency Survivors"
+msgstr ""
+
+msgid "Agents of Cthugha"
+msgstr ""
+
+msgid "Gifts of the Plaguebearer"
+msgstr ""
+
+msgid "Haze of Miasma"
+msgstr ""
+
+msgid "Life and Death"
+msgstr ""
+
+msgid "The Plaguebearer's Commands"
+msgstr ""
+
+msgid "Tenuous Allies"
+msgstr ""
+
+msgid "Unbound Power"
+msgstr ""
+
+msgid "Late Risers"
+msgstr ""
+
+msgid "Night on the Town"
+msgstr ""
+
+msgid "Dead by Dawn"
+msgstr ""
+
+msgid "Mourning Chorus"
+msgstr ""
+
+msgid "High Noon Descent"
+msgstr ""
+
+msgid "The Afternoon War"
+msgstr ""
+
+msgid "Death at Sundown"
+msgstr ""
+
+msgid "The Midnight Hour"
+msgstr ""
+
+msgid "Fallen Arkham"
+msgstr ""
+
+msgid "Cheshire Cat"
+msgstr "柴郡貓"
+
+msgid "The Symphony of Erich Zann"
+msgstr ""
+
+msgid "Meteoric Phenomenon"
+msgstr ""
+
+msgid "Unnatural Disturbances"
+msgstr ""
+
+msgid "Inhospitable Locality"
+msgstr ""
+
+msgid "Made Flesh"
+msgstr ""
+
+msgid "Lost Cathedral"
+msgstr ""
+
+msgid "Across Dreadful Waters"
+msgstr ""
+
+msgid "Archaic Evils"
+msgstr ""
+
+msgid "Architects of Chaos"
+msgstr ""
+
+msgid "Awakened Madness"
+msgstr ""
+
+msgid "Blood From Stones"
+msgstr ""
+
+msgid "Crumbling Masonry"
+msgstr ""
+
+msgid "Cult of Cthulhu"
+msgstr ""
+
+msgid "Deep Dreams"
+msgstr ""
+
+msgid "Going Twice"
+msgstr ""
+
+msgid "Grand Compass"
+msgstr ""
+
+msgid "Lost Moorings"
+msgstr ""
+
+msgid "Private Lives"
+msgstr ""
+
+msgid "Pyroclastic Flow"
+msgstr ""
+
+msgid "Shadowy Agents"
+msgstr ""
+
+msgid "Spawn of R'lyeh"
+msgstr ""
+
+msgid "Storm and Sea"
+msgstr ""
+
+msgid "Tomb of Dead Dreams"
+msgstr ""
+
+msgid "Unfriendly Ports"
+msgstr ""
+
+msgid "Unnatural Stone"
+msgstr ""
+
+msgid "Hanninah Valley"
+msgstr ""
+
+msgid "Wendigo's Myth"
+msgstr ""
+
+msgid "Fortune and Folly"
+msgstr ""
+
+msgid "Fortune's Chosen"
+msgstr ""
+
+msgid "Plan in Shambles"
+msgstr ""
+
+msgid "Legendry"
+msgstr ""
+
+msgid "Occultism"
+msgstr ""
+
+msgid "Magyar"
+msgstr ""
+
+msgid "Natural Hazards"
+msgstr ""
+
+msgid "Wild Beasts"
+msgstr ""
+
+msgid "Ancient Hunger"
+msgstr ""
+
+msgid "Witch-Cult"
+msgstr ""
+
+msgid "Tomes"
+msgstr ""
+
+msgid "Riddles and Rain"
+msgstr "雨霧中的謎團"
+
+msgid "Mysteries Abound"
+msgstr "詭秘莫測"
+
+msgid "Shades of Suffering"
+msgstr "苦難形影"
+
+msgid "Agents of the Outside"
+msgstr "異域使徒"
+
+msgid "Beyond the Beyond"
+msgstr "界外異域"
+
+msgid "Congress of the Keys"
+msgstr "密鑰峰會"
+
+msgid "Dancing Mad"
+msgstr "癲狂起舞"
+
+msgid "Dead Heat"
+msgstr "致命酷熱"
+
+msgid "Dogs of War"
+msgstr "戰爭之犬"
+
+msgid "Outsiders"
+msgstr "異域存在"
+
+msgid "Scarlet Sorcery"
+msgstr "緋紅巫術"
+
+msgid "Spatial Anomaly"
+msgstr "空間異常"
+
+msgid "Strange Happenings"
+msgstr "奇異事件"
+
+msgid "Secret War"
+msgstr "秘密戰爭"
+
+msgid "Shadow of a Doubt"
+msgstr "可疑陰影"
+
+msgid "Without a Trace"
+msgstr "無痕異域"
+
+msgid "Agents of Yuggoth"
+msgstr "猶格斯星的使徒"
+
+msgid "Cleanup Crew"
+msgstr "清道夫"
+
+msgid "Crimson Conspiracy"
+msgstr "緋紅陰謀"
+
+msgid "Dark Veiling"
+msgstr "黑暗籠罩"
+
+msgid "Dealings in the Dark"
+msgstr "暗盤交易"
+
+msgid "Globetrotting"
+msgstr "環球情資"
+
+msgid "On Thin Ice"
+msgstr "如履薄冰"
+
+msgid "Red Coterie"
+msgstr "緋紅結社"
+
+msgid "Sanguine Shadows"
+msgstr "訕笑陰影"
+
+msgid "Spreading Corruption"
+msgstr "腐化蔓延"
+
+msgid "Africa is Watching"
+msgstr ""
+
+msgid "To the Heart of the Congo"
+msgstr ""
+
+msgid "The Avatar of Darkness"
+msgstr ""
+
+msgid "African Wildlife"
+msgstr ""
+
+msgid "Lands of the Congo"
+msgstr ""
+
+msgid "Cult of Darkness"
+msgstr ""
+
+msgid "Return to The Pit of Despair"
+msgstr ""
+
+msgid "Return to The Vanishing of Elina Harper"
+msgstr ""
+
+msgid "Return to In Too Deep"
+msgstr ""
+
+msgid "Return to Devil Reef"
+msgstr ""
+
+msgid "Return to Horror in High Gear"
+msgstr ""
+
+msgid "Return to A Light in the Fog"
+msgstr ""
+
+msgid "Return to The Lair of Dagon"
+msgstr ""
+
+msgid "Return to Into the Maelstrom"
+msgstr ""
+
+msgid "Stalkers of Cthulhu"
+msgstr ""
+
+msgid "Rolling Tide"
+msgstr ""
+
+msgid "Innsmouth Haze"
+msgstr ""
+
+msgid "Occultation"
+msgstr ""
+
+msgid "Barricaded Doors"
+msgstr ""
+
+msgid "Return to Flooded Caverns"
+msgstr ""
+
+msgid "The Blob That Ate Everything Else"
+msgstr ""
+
+msgid "Mi-Go Incursion II"
+msgstr ""
+
+msgid "Laid to Rest"
+msgstr "安魂鎮息"
+
+msgid "Relics of the Past"
+msgstr ""
+
+msgid "Too Noble"
+msgstr ""
+
+msgid "Something Big"
+msgstr ""
+
+msgid "Unscrupulous Investments"
+msgstr ""
+
+msgid "Anything Once"
+msgstr ""
+
+msgid "Mysterious Benefits"
+msgstr ""
+
+msgid "The First Day"
+msgstr "首日"
+
+msgid "The Second Day"
+msgstr "次日"
+
+msgid "The Final Day"
+msgstr "終日"
+
+msgid "Agents of the Colour"
+msgstr "異彩使徒"
+
+msgid "Fate of the Vale"
+msgstr "谷中宿命"
+
+msgid "Heirlooms"
+msgstr "傳家寶"
+
+msgid "Horrors in the Rock"
+msgstr "石中駭物"
+
+msgid "Myconids"
+msgstr "蕈菇"
+
+msgid "Residents"
+msgstr "住民"
+
+msgid "The Longest Night"
+msgstr "長夜"
+
+msgid "The Silent Heath"
+msgstr "靜寂荒原"
+
+msgid "The Twisted Hollow"
+msgstr "盤根空樹"
+
+msgid "Transfiguration"
+msgstr "變貌"
+
+msgid "Day of Rest"
+msgstr "休憩之日"
+
+msgid "Day of Rain"
+msgstr "綿雨之日"
+
+msgid "Day of the Feast"
+msgstr "盛宴之日"
+
+msgid "Blight"
+msgstr "凋零"
+
+msgid "Fire!"
+msgstr "著火！"
+
+msgid "Hemlock House"
+msgstr "鐵杉之家"
+
+msgid "Mutations"
+msgstr "突變"
+
+msgid "Refractions"
+msgstr "折射"
+
+msgid "The Forest"
+msgstr "森林"
+
+msgid "The Lost Sister"
+msgstr "迷途姊妹"
+
+msgid "The Thing in the Depths"
+msgstr "池底之物"
+
+msgid "The Vale"
+msgstr "山谷"
+
+msgid "Written in Rock"
+msgstr "銘刻於石"
+
+msgid "Depraved Legions"
+msgstr ""
+
+msgid "Spiralling Inferno"
+msgstr ""
+
+msgid "Scorched Wasteland"
+msgstr ""
+
+msgid "Malevolent Ritual"
+msgstr ""
+
+msgid "Final Annihilation"
+msgstr ""
+
+msgid "The Midwinter Gala"
+msgstr ""
+
+msgid "The Road to Oz"
+msgstr ""
+
+msgid "Ferocious Beasts"
+msgstr ""
+
+msgid "Wicked Witches"
+msgstr ""
+
+msgid "Prismatic Evils"
+msgstr ""
+
+msgid "Terror Out of Space"
+msgstr ""
+
+msgid "Princess of Oz"
+msgstr ""
+
+msgid "Chromatic Infection"
+msgstr ""
+
+msgid "Deep Impact"
+msgstr ""
+
+msgid "Emerald City"
+msgstr ""
+
+msgid "Alien Vibrance"
+msgstr ""
+
+msgid "Horrid Infection"
+msgstr ""
+
+msgid "Companions of Oz"
+msgstr ""
+
+msgid "Spiraling Decay"
+msgstr ""
+
+msgid "Double Whammy"
+msgstr ""
+
+msgid "Chasing Rainbows"
+msgstr ""
+
+msgid "Blighted Land"
+msgstr ""
+
+msgid "Misery Loves Company"
+msgstr ""
+
+msgid "Nomes"
+msgstr ""
+
+msgid "Violent Invasion"
+msgstr ""
+
+msgid "Hall of the Mountain King"
+msgstr ""
+
+msgid "Defense of the Realm"
+msgstr ""
+
+msgid "True Colours"
+msgstr ""
+
+msgid "The Colour Itself"
+msgstr ""
+
+msgid "Munchkin Country"
+msgstr ""
+
+msgid "Wilkie Country"
+msgstr ""
+
+msgid "Quadling Country"
+msgstr ""
+
+msgid "Gillikin Country"
+msgstr ""
+
+msgid "Winkie Country"
+msgstr ""
+
+msgid "Night of Fire"
+msgstr ""
+
+msgid "The Myriad Gentleman"
+msgstr ""
+
+msgid "A World Torn Down"
+msgstr ""
+
+msgid "Unstuck"
+msgstr ""
+
+msgid "A Year to Plan"
+msgstr ""
+
+msgid "A World Torn Down, Again"
+msgstr ""
+
+msgid "Time Runs Out"
+msgstr ""
+
+msgid "Agents of Aforgomon"
+msgstr ""
+
+msgid "Missions"
+msgstr ""
+
+msgid "Night of the Ritual"
+msgstr ""
+
+msgid "Nyctophobia"
+msgstr ""
+
+msgid "Paradox"
+msgstr ""
+
+msgid "Shifting Reality"
+msgstr ""
+
+msgid "Thugs"
+msgstr ""
+
+msgid "Unleashed Chaos"
+msgstr ""
+
+msgid "Unravelling Years"
+msgstr ""
+
+msgid "One Last Job"
+msgstr ""
+
+msgid "The Apiary"
+msgstr ""
+
+msgid "Cosmic Legacy"
+msgstr ""
+
+msgid "The Court of the Ancients"
+msgstr ""
+
+msgid "Depths"
+msgstr ""
+
+msgid "Alien Machinery"
+msgstr ""
+
+msgid "Dreams"
+msgstr ""
+
+msgid "Domination"
+msgstr ""
+
+msgid "The Doom of Arkham, Part I"
+msgstr ""
+
+msgid "The Doom of Arkham, Part II"
+msgstr ""
+
+msgid "The Drowned Quarter"
+msgstr ""
+
+msgid "Primordial Fog"
+msgstr ""
+
+msgid "Flood"
+msgstr ""
+
+msgid "The Great Chamber"
+msgstr ""
+
+msgid "The Inevitable"
+msgstr ""
+
+msgid "Obsidian Canyons"
+msgstr ""
+
+msgid "Pilgrims"
+msgstr ""
+
+msgid "R'lyeh"
+msgstr ""
+
+msgid "Tomb of the Sleeper"
+msgstr ""
+
+msgid "Star Spawn"
+msgstr ""
+
+msgid "Stowaways"
+msgstr ""
+
+msgid "Tasks"
+msgstr ""
+
+msgid "Underwater Creatures"
+msgstr ""
+
+msgid "The Western Wall"
+msgstr ""
+
+msgid "Elder Mist"
+msgstr ""
+
+msgid "The Expedition"
+msgstr ""
+
+msgid "The Inescapable"
+msgstr ""
+
+msgid "Court of the Ancients"
+msgstr ""
+
+msgid "The Doom of Arkham Part I"
+msgstr ""
+
+msgid "The Doom of Arkham Part II"
+msgstr ""
+
+msgid "The Grand Vault"
+msgstr ""
+
+msgid "Sepulchre of the Sleeper"
+msgstr ""
+
+msgid "Undersea Creatures"
+msgstr ""
+
+msgid "Film Fatale"
+msgstr ""
+
+msgid "Forgotten Island"
+msgstr ""
+
+msgid "Abominable Contessa"
+msgstr ""
+
+msgid "Cosmic Journey"
+msgstr ""
+
+msgid "One Night Only"
+msgstr ""
+
+msgid "The Primrose Path"
+msgstr ""
+
+msgid "Harm's Way"
+msgstr ""
+
+msgid "All Points West"
+msgstr ""
+
+msgid "Piper at the Gates of Dawn"
+msgstr ""
+
+msgid "Bacchanalia"
+msgstr ""
+
+msgid "Red Sunrise"
+msgstr ""
+
+msgid "Thousand to One"
+msgstr ""
+
+msgid "Children of the Goat"
+msgstr ""
+
+msgid "Circus Grounds"
+msgstr ""
+
+msgid "Cult of Shub Niggurath"
+msgstr ""
+
+msgid "Illusory Tricks"
+msgstr ""
+
+msgid "Lunatic Night"
+msgstr ""
+
+msgid "New Moon Daredevils"
+msgstr ""
+
+msgid "New Moon Entertainers"
+msgstr ""
+
+msgid "Panicked Masses"
+msgstr ""
+
+msgid "Primordial Evils"
+msgstr ""
+
+msgid "Savage Woods"
+msgstr ""
+
+msgid "Destiny and Prophecy"
+msgstr ""
+
+msgid "Enthralling Encore"
+msgstr ""
+
+msgid "Spreading Flames"
+msgstr ""
+
+msgid "Smoke and Mirrors"
+msgstr ""
+
+msgid "Queen of Ash"
+msgstr ""
+
+msgid "Arcane Lock"
+msgstr ""
+
+msgid "Ashen Pilgrims"
+msgstr ""
+
+msgid "Cosmic Evils"
+msgstr ""
+
+msgid "Cultists"
+msgstr ""
+
+msgid "Dead Ends"
+msgstr ""
+
+msgid "Bad Weather"
+msgstr ""
+
+msgid "Eldritch Lore"
+msgstr ""
+
+msgid "Flying Terrors"
+msgstr ""
+
+msgid "Gangs of Arkham"
+msgstr ""
+
+msgid "Hallucinations"
+msgstr ""
+
+msgid "Mad Science"
+msgstr ""
+
+msgid "People of Arkham"
+msgstr ""
+
+msgid "Reeking Decay"
+msgstr ""
+
+msgid "Sewers"
+msgstr ""
+
+msgid "Torment"
+msgstr ""
+
+msgid "Bystanders"
+msgstr ""
+
+msgid "River of Blood"
+msgstr ""
+
+msgid "New Horizons"
+msgstr ""
+
+msgid "Blood Money"
+msgstr ""
+
+msgid "Afflicted"
+msgstr ""
+
+msgid "Agents of Zburamoarte"
+msgstr ""
+
+msgid "Blood Blight"
+msgstr ""
+
+msgid "Blood Moon"
+msgstr ""
+
+msgid "Bloodthirst"
+msgstr ""
+
+msgid "Children of Blood"
+msgstr ""
+
+msgid "Friends in Low Places"
+msgstr ""
+
+msgid "Hunted"
+msgstr ""
+
+msgid "Infected"
+msgstr ""
+
+msgid "Misinformation"
+msgstr ""
+
+msgid "Mongrels"
+msgstr ""
+
+msgid "Preyed Upon"
+msgstr ""
+
+msgid "Sanguine Secrets"
+msgstr ""
+
+msgid "Stalked"
+msgstr ""
+
+msgid "Vermin"
+msgstr ""

@@ -1,0 +1,1485 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "schema/effect.schema.json",
+  "definitions": {
+    "storyStepEffect": {
+      "title": "StoryStepEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "story_step"
+          ]
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "steps"
+      ],
+      "additionalProperties": false
+    },
+    "saveDecksEffect": {
+      "title": "SaveDecksEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "save_decks"
+          ]
+        },
+        "adjust_xp": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "upgradeDecksEffect": {
+      "title": "UpgradeDecksEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "upgrade_decks"
+          ]
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "earnXpEffect": {
+      "title": "EarnXpEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "earn_xp"
+          ]
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "all",
+            "defeated",
+            "$input_value",
+            "lead_investigator",
+            "$fixed_investigator"
+          ]
+        },
+        "fixed_investigator": {
+          "type": "string"
+        },
+        "bonus": {
+          "type": "number"
+        },
+        "input_scale": {
+          "type": "number"
+        },
+        "side_scenario_cost": {
+          "type": "boolean"
+        },
+        "special_xp": {
+          "$ref": "types.schema.json#/definitions/specialXp"
+        },
+        "transfer_special_xp": {
+          "$ref": "types.schema.json#/definitions/specialXp"
+        }
+      },
+      "required": [
+        "type",
+        "investigator"
+      ],
+      "additionalProperties": false
+    },
+    "addWeaknessEffect": {
+      "title": "AddWeaknessEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "add_weakness"
+          ]
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "all",
+            "$input_value",
+            "lead_investigator",
+            "$fixed_investigator"
+          ]
+        },
+        "fixed_investigator": {
+          "type": "string"
+        },
+        "weakness_traits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "select_traits": {
+          "type": "boolean"
+        },
+        "count": {
+          "type": "string",
+          "enum": [
+            "$input_value"
+          ]
+        },
+        "standalone": {
+          "type": "boolean"
+        },
+        "choose_only": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "type",
+        "investigator",
+        "weakness_traits"
+      ],
+      "additionalProperties": false
+    },
+    "addCardEffect": {
+      "title": "AddCardEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "add_card"
+          ]
+        },
+        "investigator": {
+          "$ref": "types.schema.json#/definitions/investigator"
+        },
+        "fixed_investigator": {
+          "type": "string"
+        },
+        "optional": {
+          "type": "boolean"
+        },
+        "card": {
+          "type": "string"
+        },
+        "ignore_deck_limit": {
+          "type": "boolean"
+        },
+        "non_story": {
+          "type": "boolean"
+        },
+        "show_prompt": {
+          "type": "boolean"
+        },
+        "hidden": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "type",
+        "investigator",
+        "card"
+      ],
+      "additionalProperties": false
+    },
+    "setCardCountEffect": {
+      "title": "SetCardCountEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "set_card_count"
+          ]
+        },
+        "investigator": {
+          "type": "string",
+          "enum": ["$input_value"]
+        },
+        "card": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "type",
+        "investigator",
+        "card",
+        "quantity"
+      ],
+      "additionalProperties": false
+    },
+    "replaceCardEffect": {
+      "title": "ReplaceCardEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "replace_card"
+          ]
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "all",
+            "defeated"
+          ]
+        },
+        "has_card": {
+          "type": "string"
+        },
+        "old_card": {
+          "type": "string"
+        },
+        "new_card": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "old_card",
+        "new_card"
+      ],
+      "additionalProperties": false
+    },
+    "campaignDataEffect": {
+      "title": "CampaignDataEffect",
+      "oneOf": [
+        { "$ref": "#/definitions/campaignDataSetScenariosEffect" },
+        { "$ref": "#/definitions/campaignDataResultEffect" },
+        { "$ref": "#/definitions/campaignDataDifficultyEffect" },
+        { "$ref": "#/definitions/campaignDataNextScenarioEffect" },
+        { "$ref": "#/definitions/campaignDataSwapChaosBagEffect" },
+        { "$ref": "#/definitions/campaignDataRedirectExperienceEffect" },
+        { "$ref": "#/definitions/campaignDataEmbarkEffect" },
+        { "$ref": "#/definitions/campaignDataUpdateLocationEffect" },
+        { "$ref": "#/definitions/campaignDataUnlockMapEffect" }
+      ]
+    },
+    "campaignDataResultEffect": {
+      "title": "CampaignDataResultEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "setting": {
+          "type": "string",
+          "enum": [
+            "result"
+          ]
+        },
+        "value": {
+          "$ref": "types.schema.json#/definitions/campaignResult"
+        }
+      },
+      "required": [
+        "type",
+        "setting",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "campaignDataDifficultyEffect": {
+      "title": "CampaignDataDifficultyEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "setting": {
+          "type": "string",
+          "enum": [
+            "difficulty"
+          ]
+        },
+        "value": {
+          "$ref": "types.schema.json#/definitions/difficulty"
+        }
+      },
+      "required": [
+        "type",
+        "setting",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "campaignDataSwapChaosBagEffect": {
+      "title": "CampaignDataSwapChaosBagEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "setting": {
+          "type": "string",
+          "enum": [
+            "swap_chaos_bag"
+          ]
+        },
+        "initialize": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "type",
+        "setting"
+      ],
+      "additionalProperties": false
+    },
+    "campaignDataRedirectExperienceEffect": {
+      "title": "CampaignDataRedirectExperienceEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "setting": {
+          "type": "string",
+          "enum": [
+            "redirect_experience"
+          ]
+        },
+        "investigator_count": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "setting",
+        "investigator_count"
+      ],
+      "additionalProperties": false
+    },
+    "campaignDataEmbarkEffect": {
+      "title": "CampaignDataEmbarkEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "setting": {
+          "type": "string",
+          "enum": ["embark"]
+        },
+        "location": {
+          "type": "string"
+        },
+        "may_return": {
+          "type": "boolean"
+        },
+        "transit": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "type",
+        "setting"
+      ],
+      "additionalProperties": false
+    },
+    "campaignDataUnlockMapEffect": {
+      "title": "CampaignDataUnlockMapEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "setting": {
+          "type": "string",
+          "enum": ["unlock_map"]
+        }
+      },
+      "required": [
+        "type",
+        "setting"
+      ],
+      "additionalProperties": false
+    },
+    "campaignDataUpdateLocationEffect": {
+      "title": "CampaignDataUpdateLocationEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "setting": {
+          "type": "string",
+          "enum": ["unlock_location", "lock_location", "unlock_dossier", "hide_dossier"]
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "setting",
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "campaignDataNextScenarioEffect": {
+      "title": "CampaignDataNextScenarioEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "setting": {
+          "type": "string",
+          "enum": [
+            "next_scenario",
+            "skip_scenario",
+            "replay_scenario"
+          ]
+        },
+        "scenario": {
+          "type": "string"
+        },
+        "prelude_continuation": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "type",
+        "setting",
+        "scenario"
+      ],
+      "additionalProperties": false
+    },
+    "campaignDataSetScenariosEffect": {
+      "title": "CampaignDataSetScenariosEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_data"
+          ]
+        },
+        "setting": {
+          "type": "string",
+          "enum": [
+            "set_scenarios"
+          ]
+        },
+        "scenarios": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "setting",
+        "scenarios"
+      ],
+      "additionalProperties": false
+    },
+    "gainSuppliesEffect": {
+      "title": "GainSuppliesEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "gain_supplies"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "supplies": {
+          "type": "array",
+          "items": {
+            "$ref": "types.schema.json#/definitions/supply"
+          }
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "$input_value"
+          ]
+        }
+      },
+      "required": ["type", "section", "supplies", "investigator"],
+      "additionalProperties": false
+    },
+    "loseSuppliesEffect": {
+      "title": "LoseSuppliesEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "lose_supplies"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "supply": {
+          "type": "string"
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "all"
+          ]
+        }
+      },
+      "required": ["type", "section", "supply", "investigator"],
+      "additionalProperties": false
+    },
+    "scenarioDataEffect": {
+      "title": "ScenarioDataEffect",
+      "oneOf": [
+        { "$ref": "#/definitions/scenarioDataInvestigatorEffect" },
+        { "$ref": "#/definitions/scenarioDataInvestigatorStatusEffect" },
+        { "$ref": "#/definitions/scenarioDataAddInvestigatorEffect" },
+        { "$ref": "#/definitions/scenarioDataStatusEffect" },
+        { "$ref": "#/definitions/scenarioDataPlayScenarioEffect" }
+      ]
+    },
+    "scenarioDataAddInvestigatorEffect": {
+      "title": "ScenarioDataAddInvestigatorEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "scenario_data"
+          ]
+        },
+        "setting": {
+          "type": "string",
+          "enum": [
+            "add_investigator"
+          ]
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "$fixed_investigator"
+          ]
+        },
+        "fixed_investigator": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "setting",
+        "investigator",
+        "fixed_investigator"
+      ],
+      "additionalProperties": false
+    },
+    "scenarioDataInvestigatorStatusEffect": {
+      "title": "ScenarioDataInvestigatorStatusEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "scenario_data"
+          ]
+        },
+        "setting": {
+          "type": "string",
+          "enum": [
+            "investigator_status"
+          ]
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "$input_value"
+          ]
+        },
+        "investigator_status": {
+          "$ref": "types.schema.json#/definitions/investigatorStatus"
+        }
+      },
+      "required": [
+        "type",
+        "setting",
+        "investigator",
+        "investigator_status"
+      ],
+      "additionalProperties": false
+    },
+    "scenarioDataPlayScenarioEffect": {
+      "title": "scenarioDataPlayScenarioEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "scenario_data"
+          ]
+        },
+        "setting": {
+          "type": "string",
+          "enum": [
+            "play_scenario_step_id"
+          ]
+        },
+        "step_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "setting",
+        "step_id"
+      ],
+      "additionalProperties": false
+    },
+    "scenarioDataStatusEffect": {
+      "title": "scenarioDataStatusEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "scenario_data"
+          ]
+        },
+        "setting": {
+          "type": "string",
+          "enum": [
+            "scenario_status"
+          ]
+        },
+        "status": {
+          "$ref": "types.schema.json#/definitions/scenarioStatus"
+        },
+        "resolution": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "setting",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "scenarioDataInvestigatorEffect": {
+      "title": "ScenarioDataInvestigatorEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "scenario_data"
+          ]
+        },
+        "setting": {
+          "type": "string",
+          "enum": [
+            "lead_investigator",
+            "playing_scenario"
+          ]
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "$input_value"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "setting",
+        "investigator"
+      ],
+      "additionalProperties": false
+    },
+    "addRemoveChaosTokenEffect": {
+      "title": "AddRemoveChaosTokenEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "add_chaos_token",
+            "remove_chaos_token"
+          ]
+        },
+        "tokens": {
+          "type": "array",
+          "items": {
+            "$ref": "types.schema.json#/definitions/chaosToken"
+          }
+        }
+      },
+      "required": [
+        "type",
+        "tokens"
+      ],
+      "additionalProperties": false
+    },
+    "campaignLogAssignTaskEffect": {
+      "title": "CampaignLogAssignTaskEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_log_assign_task"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "$input_value"
+          ]
+        },
+        "task_section": {
+          "type": "string"
+        },
+        "task_id": {
+          "type": "string"
+        }
+
+      },
+      "required": [
+        "type",
+        "section",
+        "id",
+        "investigator",
+        "task_section",
+        "task_id"
+      ],
+      "additionalProperties": false
+    },
+    "campaignLogTextEffect": {
+      "title": "CampaignLogTextEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_log_text"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "hidden": {
+          "type": "boolean"
+        },
+        "bullet_type": {
+          "$ref": "types.schema.json#/definitions/bulletType"
+        }
+      },
+      "required": [
+        "type",
+        "section",
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "campaignLogTaskEffect": {
+      "title": "CampaignLogTaskEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_log_task"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "operation": {
+          "type": "string",
+          "enum": [
+            "set_input",
+            "set",
+            "add_input",
+            "add",
+            "subtract_input"
+          ]
+        },
+        "value": {
+          "type": "number"
+        },
+        "min": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "type",
+        "section",
+        "id",
+        "operation"
+      ],
+      "additionalProperties": false
+    },
+    "campaignLogCountEffect": {
+      "title": "CampaignLogCountEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_log_count"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "operation": {
+          "type": "string",
+          "enum": [
+            "set_input",
+            "set",
+            "add_input",
+            "add",
+            "subtract_input"
+          ]
+        },
+        "value": {
+          "type": "number"
+        },
+        "text": {
+          "type": "string"
+        },
+        "hidden": {
+          "type": "boolean"
+        },
+        "min": {
+          "type": "number"
+        },
+        "alternate": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "type",
+        "section",
+        "operation"
+      ],
+      "additionalProperties": false
+    },
+    "campaignLogInvestigatorCountEffect": {
+      "title": "CampaignLogInvestigatorCountEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_log_investigator_count"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "all",
+            "defeated",
+            "$input_value",
+            "lead_investigator",
+            "$fixed_investigator"
+          ]
+        },
+        "fixed_investigator": {
+          "type": "string"
+        },
+        "operation": {
+          "type": "string",
+          "enum": [
+            "set_input",
+            "set",
+            "add_input",
+            "add",
+            "cross_out"
+          ]
+        },
+        "value": {
+          "type": "number"
+        },
+        "text": {
+          "type": "string"
+        },
+        "min": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "type",
+        "section",
+        "id",
+        "investigator",
+        "operation"
+      ],
+      "additionalProperties": false
+    },
+    "freeformCampaignLogEffect": {
+      "title": "FreeformCampaignLogEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "freeform_campaign_log"
+          ]
+        },
+        "section": {
+          "type": "string",
+          "enum": [
+            "campaign_notes"
+          ]
+        },
+        "scenario_id": {
+          "type": "string"
+        },
+        "index": {
+          "type": "number"
+        },
+        "bullet_type": {
+          "$ref": "types.schema.json#/definitions/bulletType"
+        },
+        "hidden": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "type",
+        "section"
+      ],
+      "additionalProperties": false
+    },
+    "campaignLogEffect": {
+      "title": "CampaignLogEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_log"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "investigator_section": {
+          "type": "string"
+        },
+        "cross_out": {
+          "type": "boolean"
+        },
+        "bullet_type": {
+          "$ref": "types.schema.json#/definitions/bulletType"
+        },
+        "decorate": {
+          "type": "string",
+          "enum": [
+            "circle"
+          ]
+        },
+        "remove": {
+          "type": "boolean"
+        },
+        "hidden": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "type",
+        "section"
+      ],
+      "additionalProperties": false
+    },
+    "campaignLogCardsEffect": {
+      "title": "CampaignLogCardsEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "campaign_log_cards"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "masculine_text": {
+          "type": "string"
+        },
+        "feminine_text": {
+          "type": "string"
+        },
+        "nonbinary_text": {
+          "type": "string"
+        },
+        "plural_text": {
+            "type": "string"
+        },
+        "cards": {
+          "type": "string",
+          "enum": [
+            "$lead_investigator",
+            "$all_investigators",
+            "$defeated_investigators",
+            "$input_value",
+            "$fixed_codes",
+            "$not_resigned"
+          ]
+        },
+        "codes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cross_out": {
+          "type": "boolean"
+        },
+        "remove": {
+          "type": "boolean"
+        },
+        "hidden": {
+          "type": "boolean"
+        },
+        "bullet_type": {
+          "$ref": "types.schema.json#/definitions/bulletType"
+        }
+      },
+      "required": [
+        "type",
+        "section"
+      ],
+      "additionalProperties": false
+    },
+    "checkCampaignLogCardsEffect": {
+      "title": "CheckCampaignLogCardsEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "check_campaign_log_cards"
+          ]
+        },
+        "card_type": {
+          "type": "string",
+          "enum": [
+            "player", "encounter"
+          ]
+        },
+        "text": {
+          "type": "string"
+        },
+        "masculine_text": {
+          "type": "string"
+        },
+        "feminine_text": {
+          "type": "string"
+        },
+        "nonbinary_text": {
+          "type": "string"
+        },
+        "plural_text": {
+            "type": "string"
+        },
+        "bullet_type": {
+          "$ref": "types.schema.json#/definitions/bulletType"
+        }
+      },
+      "required": [
+        "type",
+        "card_type"
+      ],
+      "additionalProperties": false
+    },
+    "checkCampaignLogCountEffect": {
+      "title": "CheckCampaignLogCountEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "check_campaign_log_count"
+          ]
+        },
+        "text": {
+          "type": "string"
+        },
+        "bullet_type": {
+          "$ref": "types.schema.json#/definitions/bulletType"
+        }
+      },
+      "required": [
+        "type",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "removeCardEffect": {
+      "title": "RemoveCardEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "remove_card"
+          ]
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "choice",
+            "defeated",
+            "$input_value",
+            "$fixed_investigator"
+          ]
+        },
+        "fixed_investigator": {
+          "type": "string"
+        },
+        "card": {
+          "type": "string"
+        },
+        "non_story": {
+          "type": "boolean"
+        },
+        "exile": {
+          "type": "boolean"
+        },
+        "hidden": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "type",
+        "card"
+      ],
+      "additionalProperties": false
+    },
+    "scarletKeyEffect": {
+      "title": "ScarletKeyEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "scarlet_key"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "scarlet_key": {
+          "type": "string"
+        },
+        "bearer_type": {
+          "type": "string",
+          "enum": [
+            "investigator",
+            "enemy",
+            "steal",
+            "return"
+          ]
+        },
+        "enemy_code": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "section",
+        "scarlet_key",
+        "bearer_type"
+      ],
+      "additionalProperties": false
+    },
+    "partnerStatusEffect": {
+      "title": "PartnerStatusEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "partner_status"
+          ]
+        },
+        "section": {
+          "type": "string"
+        },
+        "partner": {
+          "type": "string",
+          "enum": [
+            "$input_value",
+            "$fixed_partner"
+          ]
+        },
+        "fixed_partner": {
+          "type": "string"
+        },
+        "operation": {
+          "type": "string",
+          "enum": ["add", "remove"]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "eliminated",
+            "resolute",
+            "mia",
+            "safe",
+            "victim",
+            "cannot_take",
+            "the_entity",
+            "heal_damage",
+            "heal_horror"
+          ]
+        },
+        "hidden": {
+          "type": "boolean"
+        },
+        "bullet_type": {
+          "$ref": "types.schema.json#/definitions/bulletType"
+        }
+      },
+      "required": [
+        "type",
+        "section",
+        "partner",
+        "operation",
+        "status"
+      ],
+      "additionalProperties": false
+    },
+    "traumaEffect": {
+      "title": "TraumaEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "trauma"
+          ]
+        },
+        "investigator": {
+          "type": "string",
+          "enum": [
+            "all",
+            "lead_investigator",
+            "defeated",
+            "not_defeated",
+            "not_resigned",
+            "resigned",
+            "$input_value",
+            "$fixed_investigator"
+          ]
+        },
+        "fixed_investigator": {
+          "type": "string"
+        },
+        "heal_input": {
+          "type": "string",
+          "enum": [
+            "physical",
+            "mental"
+          ]
+        },
+        "mental": {
+          "type": "number"
+        },
+        "physical": {
+          "type": "number"
+        },
+        "set_mental": {
+          "type": "number"
+        },
+        "set_physical": {
+          "type": "number"
+        },
+        "mental_or_physical": {
+          "type": "number"
+        },
+        "killed": {
+          "type": "boolean"
+        },
+        "insane": {
+          "type": "boolean"
+        },
+        "hidden": {
+          "type": "boolean"
+        },
+        "bullet_type": {
+          "$ref": "types.schema.json#/definitions/bulletType"
+        }
+      },
+      "required": [
+        "type",
+        "investigator"
+      ],
+      "additionalProperties": false
+    },
+    "backupStateEffect": {
+      "title": "BackupStateEffect",
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["backup_state"]
+        },
+        "operation": {
+          "type": "string",
+          "enum": ["save", "restore"]
+        }
+      },
+      "required": ["type", "operation"],
+      "additionalProperties": false
+    },
+    "effect": {
+      "title": "Effect",
+      "oneOf": [
+        { "$ref": "#/definitions/storyStepEffect" },
+        { "$ref": "#/definitions/earnXpEffect" },
+        { "$ref": "#/definitions/addCardEffect" },
+        { "$ref": "#/definitions/setCardCountEffect" },
+        { "$ref": "#/definitions/addWeaknessEffect" },
+        { "$ref": "#/definitions/removeCardEffect" },
+        { "$ref": "#/definitions/replaceCardEffect" },
+        { "$ref": "#/definitions/traumaEffect" },
+        { "$ref": "#/definitions/partnerStatusEffect" },
+        { "$ref": "#/definitions/campaignLogEffect" },
+        { "$ref": "#/definitions/campaignLogCardsEffect" },
+        { "$ref": "#/definitions/campaignLogCountEffect" },
+        { "$ref": "#/definitions/campaignLogInvestigatorCountEffect" },
+        { "$ref": "#/definitions/campaignDataEffect" },
+        { "$ref": "#/definitions/scenarioDataEffect" },
+        { "$ref": "#/definitions/addRemoveChaosTokenEffect" },
+        { "$ref": "#/definitions/freeformCampaignLogEffect" },
+        { "$ref": "#/definitions/upgradeDecksEffect" },
+        { "$ref": "#/definitions/saveDecksEffect" },
+        { "$ref": "#/definitions/gainSuppliesEffect" },
+        { "$ref": "#/definitions/loseSuppliesEffect" },
+        { "$ref": "#/definitions/checkCampaignLogCardsEffect" },
+        { "$ref": "#/definitions/checkCampaignLogCountEffect" },
+        { "$ref": "#/definitions/scarletKeyEffect" },
+        { "$ref": "#/definitions/backupStateEffect" },
+        { "$ref": "#/definitions/campaignLogAssignTaskEffect" },
+        { "$ref": "#/definitions/campaignLogTaskEffect" },
+        { "$ref": "#/definitions/campaignLogTextEffect" }
+      ]
+    },
+    "effectsWithInput": {
+      "title": "EffectsWithInput",
+      "type": "object",
+      "properties": {
+        "border": {
+          "type": "boolean"
+        },
+        "border_color": {
+          "$ref": "types.schema.json#/definitions/borderColor"
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/effect"
+          }
+        },
+        "input": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "numberInput": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "effects"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,955 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "schema/step.schema.json",
+  "definitions": {
+    "inputStep": {
+      "title": "InputStep",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "input"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "input": {
+          "$ref": "input.schema.json#/definitions/input"
+        },
+        "bullet_type": {
+          "$ref": "types.schema.json#/definitions/bulletType"
+        },
+        "prompt_type": {
+          "type": "string",
+          "enum": ["header", "setup"]
+        },
+        "border_only": {
+          "type": "boolean"
+        },
+        "narration": {
+          "$ref": "types.schema.json#/definitions/narration"
+        }
+      },
+      "required": ["id", "type", "input"],
+      "additionalProperties": false
+    },
+    "branchStep": {
+      "title": "BranchStep",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "branch"
+          ]
+        },
+        "border_only": {
+          "type": "boolean"
+        },
+        "border_color": {
+          "$ref": "types.schema.json#/definitions/borderColor"
+        },
+        "hidden": {
+          "type": "boolean"
+        },
+        "loop": {
+          "type": "boolean"
+        },
+        "text": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "condition": {
+          "$ref": "condition.schema.json#/definitions/condition"
+        },
+        "bullet_type": {
+          "$ref": "types.schema.json#/definitions/bulletType"
+        },
+        "narration": {
+          "$ref": "types.schema.json#/definitions/narration"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "condition"
+      ],
+      "additionalProperties": false
+    },
+    "encounterSetsStep": {
+      "title": "EncounterSetsStep",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "encounter_sets"
+          ]
+        },
+        "border_only": {
+          "type": "boolean"
+        },
+        "title": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "subtext": {
+          "type": "string"
+        },
+        "aside": {
+          "type": "boolean"
+        },
+        "encounter_sets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "bullet_type": {
+          "$ref": "types.schema.json#/definitions/bulletType"
+        },
+        "narration": {
+          "$ref": "types.schema.json#/definitions/narration"
+        },
+        "remove": {
+          "type": "boolean"
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "effect.schema.json#/definitions/effect"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "encounter_sets"
+      ],
+      "additionalProperties": false
+    },
+    "tableStep": {
+      "title": "TableStep",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "table"
+          ]
+        },
+        "border_only": {
+          "type": "boolean"
+        },
+        "title": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "header": {
+          "$ref": "types.schema.json#/definitions/tableRow"
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "$ref": "types.schema.json#/definitions/tableRow"
+          }
+        },
+        "bullet_type": {
+          "$ref": "types.schema.json#/definitions/bulletType"
+        },
+        "narration": {
+          "$ref": "types.schema.json#/definitions/narration"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "header",
+        "rows"
+      ],
+      "additionalProperties": false
+    },
+    "locationConnectorsStep": {
+      "title": "LocationConnectorsStep",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "location_connectors"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "border_only": {
+          "type": "boolean"
+        },
+        "text": {
+          "type": "string"
+        },
+        "subtext": {
+          "type": "string"
+        },
+        "location_connectors": {
+          "type": "array",
+          "items": {
+            "$ref": "types.schema.json#/definitions/locationConnector"
+          }
+        },
+        "bullet_type": {
+          "$ref": "types.schema.json#/definitions/bulletType"
+        },
+        "narration": {
+          "$ref": "types.schema.json#/definitions/narration"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "text",
+        "subtext",
+        "location_connectors"
+      ],
+      "additionalProperties": false
+    },
+    "ruleReminderStep": {
+      "title": "RuleReminderStep",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "rule_reminder"
+          ]
+        },
+        "border_only": {
+          "type": "boolean"
+        },
+        "text": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "image": {
+                "$ref": "types.schema.json#/definitions/image"
+              },
+              "width": {
+                "type": "string",
+                "enum": ["full", "half", "quarter"]
+              },
+              "text": {
+                "type": "string"
+              }
+            },
+            "required": ["image", "width"],
+            "additionalProperties": false
+          }
+        },
+        "bullets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string"
+              }
+            },
+            "required": ["text"],
+            "additionalProperties": false
+          }
+        },
+        "example": {
+          "type": "string"
+        },
+        "bullet_type": {
+          "type": "null"
+        },
+        "narration": {
+          "$ref": "types.schema.json#/definitions/narration"
+        }
+      },
+      "required": [
+        "id",
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "travelCostStep": {
+      "title": "TravelCostStep",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["travel_cost"]
+        },
+        "text": {
+          "type": "string"
+        },
+        "border_only": {
+          "type": "boolean"
+        },
+        "title": {
+          "type": "string"
+        },
+        "bullet_type": {
+          "type": "null"
+        },
+        "narration": {
+          "$ref": "types.schema.json#/definitions/narration"
+        }
+      },
+      "required": [
+        "id",
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "borderStep": {
+      "title": "BorderStep",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "border_only": {
+          "type": "boolean"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "border"
+          ]
+        },
+        "border": {
+          "type": "boolean"
+        },
+        "border_color": {
+          "$ref": "types.schema.json#/definitions/borderColor"
+        },
+        "title": {
+          "type": "string"
+        },
+        "title_font": {
+          "type": "string",
+          "enum": ["status"]
+        },
+        "title_strikethrough": {
+          "type": "boolean"
+        },
+        "text": {
+          "type": "null"
+        },
+        "bullets": {
+          "type": "null"
+        },
+        "bullet_type": {
+          "type": "null"
+        },
+        "confirmation_text": {
+          "type": "string"
+        },
+        "confirmation_steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "narration": {
+          "$ref": "types.schema.json#/definitions/narration"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "border",
+        "steps"
+      ],
+      "additionalProperties": false
+    },
+    "storyStep": {
+      "title": "StoryStep",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "story"
+          ]
+        },
+        "border": {
+          "type": "boolean"
+        },
+        "border_color": {
+          "$ref": "types.schema.json#/definitions/borderColor"
+        },
+        "border_only": {
+          "type": "boolean"
+        },
+        "title": {
+          "type": "string"
+        },
+        "title_font": {
+          "type": "string",
+          "enum": ["status"]
+        },
+        "text": {
+          "type": "string"
+        },
+        "bullets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string"
+              }
+            },
+            "required": ["text"],
+            "additionalProperties": false
+          }
+        },
+        "bullet_type": {
+          "type": "null"
+        },
+        "narration": {
+          "$ref": "types.schema.json#/definitions/narration"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "genericStep": {
+      "title": "GenericStep",
+      "type": "object",
+      "properties": {
+        "border_only": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "null"
+        },
+        "title": {
+          "type": "string"
+        },
+        "hidden": {
+          "type": "boolean"
+        },
+        "text": {
+          "type": "string"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "effect.schema.json#/definitions/effect"
+          }
+        },
+        "bullets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string"
+              }
+            },
+            "required": ["text"],
+            "additionalProperties": false
+          }
+        },
+        "bullet_type": {
+          "$ref": "types.schema.json#/definitions/bulletType"
+        },
+        "narration": {
+          "$ref": "types.schema.json#/definitions/narration"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "xpCountStep": {
+      "title": "XpCountStep",
+      "type": "object",
+      "properties": {
+        "border_only": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "xp_count"
+          ]
+        },
+        "bullet_type": {
+          "$ref": "types.schema.json#/definitions/bulletType"
+        },
+        "title": {
+          "type": "string"
+        },
+        "special_xp": {
+          "$ref": "types.schema.json#/definitions/specialXp"
+        },
+        "text": {
+          "type": "string"
+        },
+        "narration": {
+          "$ref": "types.schema.json#/definitions/narration"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "special_xp"
+      ],
+      "additionalProperties": false
+    },
+    "resolutionStep": {
+      "title": "ResolutionStep",
+      "type": "object",
+      "properties": {
+        "border_only": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "resolution"
+          ]
+        },
+        "resolution": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "title": {
+          "type": "null"
+        },
+        "generated": {
+          "type": "boolean"
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "effect.schema.json#/definitions/scenarioDataStatusEffect"
+          }
+        },
+        "bullet_type": {
+          "type": "null"
+        },
+        "narration": {
+          "$ref": "types.schema.json#/definitions/narration"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "resolution"
+      ],
+      "additionalProperties": false
+    },
+    "investigatorSetupStep": {
+      "title": "InvestigatorSetupStep",
+      "type": "object",
+      "properties": {
+        "border_only": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "investigator_setup"
+          ]
+        },
+        "text": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "effects": {
+          "type": "array",
+          "items": {
+            "$ref": "effect.schema.json#/definitions/scenarioDataStatusEffect"
+          }
+        },
+        "bullet_type": {
+          "type": "null"
+        },
+        "narration": {
+          "$ref": "types.schema.json#/definitions/narration"
+        },
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["scarlet_keys"]
+          }
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "sections"
+      ],
+      "additionalProperties": false
+    },
+    "locationSetupStep": {
+      "title": "LocationSetupStep",
+      "type": "object",
+      "properties": {
+        "border_only": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "location_setup"
+          ]
+        },
+        "svg": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "note": {
+          "type": "string"
+        },
+        "vertical": {
+          "type": "string",
+          "enum": [
+            "half",
+            "normal"
+          ]
+        },
+        "horizontal": {
+          "type": "string",
+          "enum": [
+            "half",
+            "normal",
+            "tight"
+          ]
+        },
+        "locations": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "annotations": {
+          "type": "array",
+          "items": {
+            "$ref": "types.schema.json#/definitions/locationAnnotation"
+          }
+        },
+        "cards": {
+          "type": "array",
+          "items": {
+            "$ref": "types.schema.json#/definitions/locationSetupCard"
+          }
+        },
+        "decorations": {
+          "type": "array",
+          "items": {
+            "$ref": "types.schema.json#/definitions/locationDecoration"
+          }
+        },
+        "arrows": {
+          "type": "array",
+          "items": {
+            "$ref": "types.schema.json#/definitions/locationArrow"
+          }
+        },
+        "resource_dividers": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "right": {
+                  "type": "number"
+                },
+                "bottom": {
+                  "type": "number"
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            }
+          }
+        },
+        "location_names": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "placeholder": {
+                "type": "boolean"
+              },
+              "random": {
+                "type": "boolean"
+              },
+              "faded": {
+                "type": "boolean"
+              }
+            },
+            "required": ["code", "name"],
+            "additionalProperties": false
+          }
+        },
+        "bullet_type": {
+          "type": "null"
+        },
+        "narration": {
+          "$ref": "types.schema.json#/definitions/narration"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "text",
+        "locations",
+        "vertical",
+        "horizontal"
+      ],
+      "additionalProperties": false
+    },
+    "internalStep": {
+      "title": "InternalStep",
+      "type": "object",
+      "properties": {
+        "border_only": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "internal"
+          ]
+        },
+        "text": {
+          "type": "null"
+        },
+        "hidden": {
+          "type": "boolean"
+        },
+        "bullet_type": {
+          "type": "null"
+        },
+        "title": {
+          "type": "null"
+        },
+        "narration": {
+          "$ref": "types.schema.json#/definitions/narration"
+        }
+      },
+      "required": [
+        "id",
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "effectsStep": {
+      "title": "EffectsStep",
+      "type": "object",
+      "properties": {
+        "border_only": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "effects"
+          ]
+        },
+        "text": {
+          "type": "null"
+        },
+        "title": {
+          "type": "null"
+        },
+        "effectsWithInput": {
+          "type": "array",
+          "items": {
+            "$ref": "effect.schema.json#/definitions/effectsWithInput"
+          }
+        },
+        "stepText": {
+          "type": "boolean"
+        },
+        "bullet_type": {
+          "$ref": "types.schema.json#/definitions/bulletType"
+        },
+        "narration": {
+          "$ref": "types.schema.json#/definitions/narration"
+        },
+        "syntheticId": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "effectsWithInput",
+        "stepText"
+      ],
+      "additionalProperties": false
+    },
+    "step": {
+      "title": "Step",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/branchStep"
+        },
+        {
+          "$ref": "#/definitions/effectsStep"
+        },
+        {
+          "$ref": "#/definitions/inputStep"
+        },
+        {
+          "$ref": "#/definitions/encounterSetsStep"
+        },
+        {
+          "$ref": "#/definitions/genericStep"
+        },
+        {
+          "$ref": "#/definitions/resolutionStep"
+        },
+        {
+          "$ref": "#/definitions/ruleReminderStep"
+        },
+        {
+          "$ref": "#/definitions/storyStep"
+        },
+        {
+          "$ref": "#/definitions/locationSetupStep"
+        },
+        {
+          "$ref": "#/definitions/locationConnectorsStep"
+        },
+        {
+          "$ref": "#/definitions/tableStep"
+        },
+        {
+          "$ref": "#/definitions/xpCountStep"
+        },
+        {
+          "$ref": "#/definitions/internalStep"
+        },
+        {
+          "$ref": "#/definitions/borderStep"
+        },
+        {
+          "$ref": "#/definitions/travelCostStep"
+        },
+        {
+          "$ref": "#/definitions/investigatorSetupStep"
+        }
+      ]
+    }
+  }
+}
