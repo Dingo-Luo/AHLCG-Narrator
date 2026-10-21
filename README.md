@@ -21,7 +21,6 @@
 | 2019 | 扩展 4：万象无终 / The Circle Undone | ⬜ | ⬜ |
 | 2019 | 扩展 5：食梦者 / The Dream-Eaters | ⬜ | ⬜ |
 | 2020 | 扩展 6：印斯茅斯阴谋 / The Innsmouth Conspiracy | ⬜ | ⬜ |
-| 2021 | 修订基础版：狂热之夜 / Revised Core Set | ⬜ | ⬜ |
 | 2021 | 扩展 7：地球边缘 / Edge of the Earth | ⬜ | ⬜ |
 | 2022 | 扩展 8：绯红密钥 / The Scarlet Keys | ⬜ | ⬜ |
 | 2024 | 扩展 9：铁杉谷盛宴 / The Feast of Hemlock Vale | ⬜ | ⬜ |

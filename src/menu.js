@@ -18,7 +18,6 @@ export function renderMainMenu(database, library, { L, t, escape, button, locale
 
 export function renderNewPlayForm(database, { L, t, escape, button }, row) {
   return `<form id="new-form"><label>${L('扩展', 'Expansion')}<select name="expansion" required><option value="dwl">${escape(t(database.campaign.name))}</option></select></label>
-    <label class="difficulty-field">${L('难度','Difficulty')}<select name="difficulty" required>${[['easy',L('简单','Easy')],['standard',L('标准','Standard')],['hard',L('困难','Hard')],['expert',L('专家','Expert')]].map(([value,label])=>`<option value="${value}" ${value==='standard'?'selected':''}>${label}</option>`).join('')}</select></label>
     <div class="section-title"><h2>${L('调查员', 'Investigators')}</h2></div><div id="roster">${row}</div>
     ${button('+ '+L('加入调查员', 'Add investigator'), 'add-roster', 'type="button"', 'small')}
     <div class="form-actions"><button class="button" type="button" data-action="close-modal">${L('取消', 'Cancel')}</button><button class="button primary" type="submit">${L('开始游戏', 'Start game')}</button></div></form>`;

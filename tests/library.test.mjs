@@ -93,11 +93,9 @@ test('deletion refuses stale writes and storage errors without losing games',()=
   assert.throws(()=>deletePlay(store,changed,changed.activeId),/quota/);
   assert.equal(changed.plays.length,2);assert.equal(readLibrary(store).plays.length,2);
 });
-test('new-game form asks for expansion, difficulty and investigators',()=>{
+test('new-game form only asks for expansion and investigators',()=>{
   const html=renderNewPlayForm(db,ui,'<select name="investigator"></select>');
   assert.ok(html.includes('name="expansion"'));assert.ok(html.includes('value="dwl"'));
   assert.ok(html.includes('name="investigator"'));assert.ok(!html.includes('name="name"'));
-  assert.ok(html.includes('name="difficulty"'));assert.ok(!html.includes('覆盖'));
-  for(const value of ['easy','standard','hard','expert'])assert.ok(html.includes(`value="${value}"`));
-  assert.match(html,/value="standard" selected/);
+  assert.ok(!html.includes('name="difficulty"'));assert.ok(!html.includes('覆盖'));
 });

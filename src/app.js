@@ -332,7 +332,6 @@ document.addEventListener('submit',event=>{
         return {name:localizedCard(card,locale).name,card:card.code};
       });
       let next=createSave(investigators,t(database.campaign.name),database.sources[0].commit);
-      next=commit(database,next,{type:'difficulty',value:form.get('difficulty')});
       next=commit(database,next,{type:'start',scenario:'dwl_prologue'});
       persist(next,{create:true});view='story';modal.close();render();
     }else{
