@@ -221,3 +221,14 @@ test('board renders exactly two cards with per-card controls and hidden transcri
   assert.equal((html.match(/disabled title="Narration/g)||[]).length,2);
   assert.ok(!html.includes('On the Right Track')); // Unrevealed reverse-side story.
 });
+
+test('new-game difficulty survives starting, saving and replaying the campaign',()=>{
+  for(const value of ['easy','standard','hard','expert']){
+    let save=commit(db,createSave([{name:'Roland',card:'01001'}]),{type:'difficulty',value});
+    save=commit(db,save,{type:'start',scenario:'dwl_prologue'});
+    save=commit(db,save,{type:'advance'});
+    assert.equal(replay(db,JSON.parse(JSON.stringify(save))).difficulty,value);
+    assert.throws(()=>commit(db,save,{type:'difficulty',value:'easy'}),/开始后/);
+  }
+  assert.throws(()=>commit(db,createSave([{name:'Roland',card:'01001'}]),{type:'difficulty',value:'invalid'}),/无效难度/);
+});

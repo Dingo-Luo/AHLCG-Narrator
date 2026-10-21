@@ -1,91 +1,72 @@
-# 诡镇档案 · AHLCG Narrator
+# AHLCG Narrator
 
-《诡镇奇谈：卡牌版》实体游戏的中英双语剧情助手。网页保留故事与玩家选择，开场结束后显示并排的密谋卡和推进卡，并保存调查员创伤与经验。已移除准备步骤界面。配音暂不实现。
+《诡镇奇谈：卡牌版》剧情助手。跟随故事、记录选择，查看密谋与推进卡。
 
-## 本地运行
+## 内容时间线
 
-Windows 下在项目文件夹运行：
+✅ 已收录　⬜ 尚未收录。配音包括故事、密谋卡与推进卡。
 
-```powershell
-.\start.cmd
-```
+目前仅收录扩展 1「敦威治遗产」；可交互游玩序章、「百赌百胜」和「课外活动」，后续章节仍在完善。配音尚未加入。
 
-启动器会依次查找 PATH 中的 Node.js、常见安装目录和本机 Codex 自带的 Node.js，不会修改系统 PATH。也可双击 `start.cmd`，并保持命令窗口打开。需要 Node.js 22 或更新版本；无第三方运行依赖，也不需要 npm 安装。已配置 Node.js 的环境仍可运行 `node scripts/serve.mjs`。
+### 基础版与战役扩展
 
-打开 <http://localhost:4173>。不要直接双击 `index.html`，浏览器需要通过 HTTP 读取 JSON 和 JavaScript 模块。更改端口可先设置 `$env:PORT = '4174'`。`Ctrl+C` 停止本地服务器。
+同一战役的旧版分包与新版合集合并列出。
 
-## 当前可用
+| 首发年份 | 内容 | 剧情 | 配音 |
+| --- | --- | :---: | :---: |
+| 2016 | 基础版：狂热之夜 / Night of the Zealot | ⬜ | ⬜ |
+| 2017 | 扩展 1：敦威治遗产 / The Dunwich Legacy | ✅ | ⬜ |
+| 2017 | 扩展 2：卡尔克萨之路 / The Path to Carcosa | ⬜ | ⬜ |
+| 2018 | 扩展 3：失落的时代 / The Forgotten Age | ⬜ | ⬜ |
+| 2019 | 扩展 4：万象无终 / The Circle Undone | ⬜ | ⬜ |
+| 2019 | 扩展 5：食梦者 / The Dream-Eaters | ⬜ | ⬜ |
+| 2020 | 扩展 6：印斯茅斯阴谋 / The Innsmouth Conspiracy | ⬜ | ⬜ |
+| 2021 | 修订基础版：狂热之夜 / Revised Core Set | ⬜ | ⬜ |
+| 2021 | 扩展 7：地球边缘 / Edge of the Earth | ⬜ | ⬜ |
+| 2022 | 扩展 8：绯红密钥 / The Scarlet Keys | ⬜ | ⬜ |
+| 2024 | 扩展 9：铁杉谷盛宴 / The Feast of Hemlock Vale | ⬜ | ⬜ |
+| 2025 | 扩展 10：沉没之城 / The Drowned City | ⬜ | ⬜ |
+| 2026 | 第二章：全新基础版 / Chapter Two Core Set | ⬜ | ⬜ |
+| 2026 | 第二章：Children of Blood | ⬜ | ⬜ |
 
-- 主菜单提供历史游戏的“继续”“删除”和“开始新游戏”；删除后可直接撤销，刷新后仍可恢复。
-- 新游戏选择扩展（目前仅敦威治遗产）与 1–4 位调查员。难度默认标准，不再单独询问名称与难度。
-- 每场游戏独立保存，创建新游戏不覆盖历史游戏；历史列表显示调查员、最近游戏时间与当前章节。
-- 敦威治序章：选择先去学校还是俱乐部。
-- **百赌百胜（The House Always Wins）**、**课外活动（Extracurricular Activity）**：开场、故事选择、结局及结算；不再逐步显示遭遇组、地点或其他实体准备指示。
-- 开场结束直接显示双卡桌面。两叠卡牌各自提供上一张、下一张、翻面和配音入口；配音未制作时按钮明确禁用。卡牌文字收进可展开的“查看文字”。
-- 剧情页有上一步、下一步及已访问章节选择，可在整场游戏中来回查看。返回时保留原选择并标示；可以直接继续原来的路线，也可改选。
-- “记录行动”和“结束调查”收进弹窗，不在桌面展开额外剧情或结局列表。“百赌百胜”的作弊选择可在游戏中记录，结局时沿用；尚未记录则在结局时询问。
-- 百赌百胜的推进卡 3 根据顺序选用对应版本；推进卡 2b 的文字根据战役记录选择分支。卡图保留原卡的两种指示。
-- 两个剧本的 13 张密谋/推进卡，共 **26 个正反面卡图**已下载到仓库。图片使用英文原卡，文字使用上游独立的简体中文译文；当前 10 位调查员及这 13 张卡的显示字段均已核对。
-- 自动记录结局日志、经验、结局创伤、剧情卡归属，以及流程要求加入的混乱标记说明；提供被击败状态的创伤结算。
-- 累计经验、已花费经验、可用经验、肉体创伤、精神创伤；可手动修正。
-- 刷新后恢复历史列表、浏览位置与各场进度。日志支持无确认提示的撤销/重做，跨标签页更新时提示刷新。不提供手动导入、导出或备份界面。
-- 中英内容切换，桌面侧边栏与手机底部导航。
+### 重返系列
 
-战役全部 **12 个章节/幕间文件**已导入。其余 6 场主剧本及后续幕间尚未适配交互；完成前两场后，界面会明确停在下一幕间，而不会跳过未实现规则。暂不启用塔罗扩展、重返版本、账号同步、组牌、战斗管理或配音。首次战役的随机基础弱点等牌组准备仍按实体规则完成。
+| 首发年份 | 内容 | 剧情 | 配音 |
+| --- | --- | :---: | :---: |
+| 2018 | Return to the Night of the Zealot | ⬜ | ⬜ |
+| 2019 | Return to the Dunwich Legacy | ⬜ | ⬜ |
+| 2019 | Return to the Path to Carcosa | ⬜ | ⬜ |
+| 2020 | Return to the Forgotten Age | ⬜ | ⬜ |
+| 2021 | Return to the Circle Undone | ⬜ | ⬜ |
 
-## 数据结构
+### 独立剧本 / POD
 
-| 路径 | 用途 |
-| --- | --- |
-| `data/upstream/arkham-cards-data/` | 原始战役、PO 翻译、规则 schema 和来源 README |
-| `data/upstream/arkhamdb-json-data/` | 基础/敦威治卡牌英文与中文原始数据 |
-| `data/dwl.json` | 浏览器直接读取的内容数据库：战役、章节、翻译表、卡牌、卡图关联 |
-| `data/sources.json` | 上游仓库 commit、每个原始文件及图片来源与 SHA-256 |
-| `data/import-report.json` | 导入数量及覆盖范围 |
-| `data/save.schema.json` | 本地玩家存档的结构说明 |
-| `assets/cards/` | 已验证下载的原版游戏卡图 |
-| `src/engine.js` | 支持的战役规则与事件重放引擎 |
-| `src/navigation.js` | 剧情前后浏览、章节跳转及独立卡牌查看 |
-| `src/library.js` | 多场游戏的独立存储、旧记录迁移与写入冲突检查 |
-| `src/menu.js` | 精简主菜单及新游戏表单 |
-| `src/app.js` | 网页交互及本地存储 |
+| 首发年份 | 内容 | 剧情 | 配音 |
+| --- | --- | :---: | :---: |
+| 2016 | Curse of the Rougarou | ⬜ | ⬜ |
+| 2016 | Carnevale of Horrors | ⬜ | ⬜ |
+| 2018 | The Labyrinths of Lunacy | ⬜ | ⬜ |
+| 2018 | Guardians of the Abyss | ⬜ | ⬜ |
+| 2019 | Murder at the Excelsior Hotel | ⬜ | ⬜ |
+| 2020 | The Blob That Ate Everything | ⬜ | ⬜ |
+| 2020 | War of the Outer Gods | ⬜ | ⬜ |
+| 2022 | Machinations Through Time | ⬜ | ⬜ |
+| 2023 | Fortune and Folly | ⬜ | ⬜ |
+| 2023 | The Blob That Ate Everything ELSE! | ⬜ | ⬜ |
+| 2024 | The Midwinter Gala | ⬜ | ⬜ |
+| 2025 | Film Fatale | ⬜ | ⬜ |
+| 2026 | 第二章：Traces to Nowhere | ⬜ | ⬜ |
 
-保留上游 `setup`、`steps`、`condition`、`input`、`effects`、`resolutions` 和原始 ID，不重新编写剧本。浏览器将上游 PO 转换得到的翻译表用于剧情；找不到译文时显示英文并提示。卡牌中文来自 ArkhamDB 的独立 `zh-cn` 目录，不执行繁简转换。上游其他卡包尚有缺漏，缺失字段保留原有繁体或英文。原始译文、独立来源版本及当前可玩内容审计保存在 `data/upstream/`、`data/sources.json` 和 `data/simplified-chinese-audit.json`。
+### 平行调查员挑战剧本
 
-## 存档与结算
+| 首发年份 | 内容 | 剧情 | 配音 |
+| --- | --- | :---: | :---: |
+| 2020 | Read or Die · All or Nothing · Bad Blood | ⬜ | ⬜ |
+| 2021 | By the Book · Red Tide Rising | ⬜ | ⬜ |
+| 2023 | On the Road Again · Laid to Rest · Path of the Righteous | ⬜ | ⬜ |
+| 2024 | Relics of the Past · Hunting for Answers · Pistols and Pearls · Aura of Faith | ⬜ | ⬜ |
+| 2025 | Enthralling Encore | ⬜ | ⬜ |
 
-玩家记录使用 `localStorage`，键为 `ahlcg-narrator-history-v1`，不是 cookie。每场游戏有独立 ID、最近游戏时间与完整操作记录，集合另存当前游戏 ID 与写入版本。创建新游戏会追加到历史集合；继续旧游戏只更新对应记录。语言偏好单独保存。无远程数据库、无登录、无跨设备同步。
+仅含调查员或玩家卡牌的产品不另列剧情状态。
 
-首次读取时，旧的 `ahlcg-narrator-save-v1` 单场记录会迁入历史列表，旧键本身保留。损坏数据不覆盖，多标签页使用过时列表写入时会拒绝写入并提示刷新。写入失败不会先更改内存中的当前游戏。
-
-删除会将该场游戏移入本地历史集合的可恢复列表；“撤销上次删除”恢复完整进度与浏览位置。删除最后一场后不会重新迁入旧单场记录。
-
-存档保存基础调查员列表及完整操作记录。可选 `cursor` 标记当前浏览位置，每次读取只重放到该处；之前的经验、创伤和日志显示该位置对应的状态。后退、章节跳转和撤销不会删除后续记录，前进或重做可恢复；重新选择相同选项也沿用已有路线。
-
-在过去的步骤改变选择或数值时，仅保留当前位置之前的有效事件，再建立新的分支；旧分支的经验、创伤和后续章节不会混入新结果。`cardViews` 单独保存各章节两叠卡的查看位置，因此来回查看卡图不会删掉已记录的后续剧情。新存档固定内容源版本，数据更新后版本不同的存档会拒绝直接重放。
-
-结局带来的创伤在确认对应步骤时记入；调查员因伤害/恐惧被击败的创伤在最终归档时另外记入。因此两类创伤可能叠加，这是不同来源。其他特殊卡牌效果需手动修正。已使用经验不能超过累计获得经验。
-
-选择结局由玩家根据实体游戏结果确认，网站不判定战斗和胜利条件。翻面与“下一张”独立保存每一叠当前卡牌。卡上的实体游戏操作仍由玩家执行。旧存档按原来的事件重放，再追加 `story_only` 转换记录，保留历史并跳过剩余准备步骤；不删除原始数据。
-
-新存档使用 `flow: "story"`。内容库仍保留上游准备数据，供来源追踪和旧存档重放使用，但不会展示为新流程中的准备向导。未实现的故事规则会报错并保留原存档，不会默默忽略。
-
-## 更新内容
-
-```powershell
-node scripts/import-data.mjs
-```
-
-该命令连接 GitHub 和 ArkhamDB，读取当前 `master` 的精确 commit，再导入数据、解析翻译并下载当前交互剧本的卡图。进行中的历史游戏固定内容版本，更新前需考虑内容版本迁移。Windows 图片下载通过系统 PowerShell 网络栈执行，以遵守系统代理配置；不需要密钥。
-
-后续扩展某剧本时：检查上游输入/条件/效果类型，扩展 `src/engine.js`，加入规则与回归测试，再将剧本加入交互白名单并下载对应图片。**不能只把剧本 ID 加入白名单就宣称已支持。**
-
-## 验证
-
-```powershell
-node --test tests/engine.test.mjs tests/library.test.mjs tests/navigation.test.mjs tests/localization.test.mjs
-```
-
-55 项测试覆盖故事与结局、旧流程兼容、双卡独立进度、多场游戏隔离和存储保护，以及跨章节前后浏览、改选重算、删除恢复、导航边界和简体译文与上游原文件逐项一致。网页无构建步骤，静态部署时排除 `.git`、`tests`、`scripts` 和测试产物即可。
-
-来源及内容权利见 [THIRD_PARTY.md](THIRD_PARTY.md)。当前只在本地开发，没有发布或推送到远程仓库。
+目录核对：[FFG 产品目录](https://www.fantasyflightgames.com/productline/arkham-horror-the-card-game/) · [ArkhamDB 内容列表](https://github.com/zzorba/arkhamdb-json-data/blob/master/packs.json)。更新于 2026-10-21。
