@@ -13,7 +13,7 @@ export function storyNavigation(database, save) {
     const active = state.active;
     if (!active && !Object.keys(state.completed).length) return;
     const step = active?.phase === 'setup' ? currentStep(database,state) : null;
-    if (step && step.type !== 'story' && !step.input) return; // Legacy physical setup is never a navigation destination.
+    if (step && step.type !== 'story' && !step.input&&!database.scenarios[active.id].storySetup) return; // Legacy physical setup is never a navigation destination.
     const key = active ? `${active.id}:${active.phase}:${active.queue[0] || ''}` : `next:${state.nextScenario || ''}`;
     if (key !== lastKey) {
       stops.push({ position, end:position, key, scenario:active?.id || state.nextScenario });
@@ -37,7 +37,8 @@ export function browseCard(database, save, type, action) {
   if(action==='flip')side=side==='front'?'back':'front';
   else if(action==='previous'||action==='next'){
     const deck=cardDeck(database,state,type),index=deck.findIndex(card=>card.code===code);
-    const target=deck[index+(action==='next'?1:-1)];
+    const other=action==='next'?deck.slice(index+1):deck.slice(0,index).reverse();
+    const target=other.find(card=>card.stage!==current.card.stage||card.type_code!==current.card.type_code);
     if(!target)throw Error('已经到达卡组边界');
     side=action==='next'&&code==='02063'&&state.completed.extracurricular_activity?'back':'front';
     code=target.code;
@@ -45,5 +46,13 @@ export function browseCard(database, save, type, action) {
   const next=structuredClone(save);
   next.cardViews??={};next.cardViews[state.active.id]??={};
   next.cardViews[state.active.id][type]={code,side};
+  replay(database,next);return next;
+}
+export function chooseCardVersion(database,save,type,code){
+  const state=replay(database,save),current=boardCard(database,state,type);
+  if(state.active?.phase!=='play'||!current)throw Error('请先回到卡牌桌面');
+  const card=cardDeck(database,state,type).find(card=>card.code===code&&card.stage===current.card.stage&&card.type_code===current.card.type_code);
+  if(!card)throw Error('无效卡牌版本');
+  const next=structuredClone(save);next.cardViews??={};next.cardViews[state.active.id]??={};next.cardViews[state.active.id][type]={code,side:'front'};
   replay(database,next);return next;
 }

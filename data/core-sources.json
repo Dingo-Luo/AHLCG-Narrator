@@ -1,0 +1,278 @@
+{
+  "repository": "zzorba/arkham-cards-data",
+  "commit": "dba650a271b794d73797b6c82adc73c00a4deb5c",
+  "files": [
+    {
+      "path": "campaigns/notz/campaign.json",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/campaigns/notz/campaign.json",
+      "sha256": "05a52868a1d3f30e848d7df3f08669219ddff774656d58051367af29f382babe"
+    },
+    {
+      "path": "i18n/zh-cn/campaigns/notz/campaign.po",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/i18n/zh-cn/campaigns/notz/campaign.po",
+      "sha256": "61464dd2639ea26aa9952db3665c860b2cfe5e807986799e90e439ebe8848f71"
+    },
+    {
+      "path": "i18n/zh/campaigns/notz/campaign.po",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/i18n/zh/campaigns/notz/campaign.po",
+      "sha256": "3ecdf82cf9c295c43c443f5303ad13abfb5381b38fd63e0ca9de1b7fbec3bfc5"
+    },
+    {
+      "path": "campaigns/notz/torch.json",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/campaigns/notz/torch.json",
+      "sha256": "7ccf3753634657270855a81165b2c8f56cd4c11d498df02bee172ccd70fc6735"
+    },
+    {
+      "path": "i18n/zh-cn/campaigns/notz/torch.po",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/i18n/zh-cn/campaigns/notz/torch.po",
+      "sha256": "e09cda0a629699b95e039f2b91d4f146d48c8a2a4b662aa7a81ad19b785c14cd"
+    },
+    {
+      "path": "i18n/zh/campaigns/notz/torch.po",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/i18n/zh/campaigns/notz/torch.po",
+      "sha256": "f9d2e689e08412bc77964b52170bb13f73e8360cf503723367ac3a846bd7d8c3"
+    },
+    {
+      "path": "campaigns/notz/arkham.json",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/campaigns/notz/arkham.json",
+      "sha256": "1c92d66c4d0e6e45448ac5ab5d83d478f483d69918dbfdd4eb32e2776470b0f0"
+    },
+    {
+      "path": "i18n/zh-cn/campaigns/notz/arkham.po",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/i18n/zh-cn/campaigns/notz/arkham.po",
+      "sha256": "27006184655de03c223f5b1a3f079610ec19ed0ed31515bd160a881a9bc1b2d8"
+    },
+    {
+      "path": "i18n/zh/campaigns/notz/arkham.po",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/i18n/zh/campaigns/notz/arkham.po",
+      "sha256": "19ca5cd9d43a0249149868c00a9c75834dded734c129b6ee497d708e8ce10539"
+    },
+    {
+      "path": "campaigns/notz/tentacles.json",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/campaigns/notz/tentacles.json",
+      "sha256": "ea5914965d57780105ec018a4982bf1640e42b490b774ab7a9b317683a1b21f6"
+    },
+    {
+      "path": "i18n/zh-cn/campaigns/notz/tentacles.po",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/i18n/zh-cn/campaigns/notz/tentacles.po",
+      "sha256": "afb785e3da1ada0282f7af2dfd163987b5916e84bdc1779e11aa34775a4074e0"
+    },
+    {
+      "path": "i18n/zh/campaigns/notz/tentacles.po",
+      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/i18n/zh/campaigns/notz/tentacles.po",
+      "sha256": "43154b27dcc83ebede91e37c4b8c23e6db0e06a691fe93273ac13c868f9fbc68"
+    }
+  ],
+  "images": [
+    {
+      "code": "01105",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/01105.png",
+      "path": "assets/cards/01105.jpg",
+      "sha256": "7f62126e873ecbbdee331ca90f2e5684d8dfda6aaec3e31eb583d7539f0347c2"
+    },
+    {
+      "code": "01108",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/01108.png",
+      "path": "assets/cards/01108.jpg",
+      "sha256": "b44d1796435e69d3a09b589c7b6f488584a65f7b427959129ab20559059b2f84"
+    },
+    {
+      "code": "01107",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/01107.png",
+      "path": "assets/cards/01107.jpg",
+      "sha256": "d83da9990fe25730eb146008be7109fcb5706bb237758c74ac8ae7ab801ff987"
+    },
+    {
+      "code": "01106",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/01106.png",
+      "path": "assets/cards/01106.jpg",
+      "sha256": "43e30da8cbbee126aa9cd8602ce0a57fbda641b2ce4b3c6cf009f379ab09d923"
+    },
+    {
+      "code": "01108",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/01108b.png",
+      "path": "assets/cards/01108b.jpg",
+      "sha256": "c72087edcf99849458f22949304746f24d5b75ccb8ac3770ce3bdbb1bba79f76"
+    },
+    {
+      "code": "01107",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/01107b.png",
+      "path": "assets/cards/01107b.jpg",
+      "sha256": "3e6ae472a96cdff9409b4891581e7c29a90d30111ce2b98d2206b8fa4f4a5e8c"
+    },
+    {
+      "code": "01105",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/01105b.png",
+      "path": "assets/cards/01105b.jpg",
+      "sha256": "a5359e74f00e2b436816d165f4b7a3e7fae05559404717a08530fef3c50e7f40"
+    },
+    {
+      "code": "01106",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/01106b.png",
+      "path": "assets/cards/01106b.jpg",
+      "sha256": "fef47b1d3bb8616c6f32cbc2e8101516d41d44ac0471bd84dc377f8c4b4b2fef"
+    },
+    {
+      "code": "01109",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/01109.png",
+      "path": "assets/cards/01109.jpg",
+      "sha256": "43930079216595b3b05f89ebe612ccf5993cfa6d9ce64ba000f4ce6c00725493"
+    },
+    {
+      "code": "01110",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/01110.png",
+      "path": "assets/cards/01110.jpg",
+      "sha256": "53be407a4df62bf31025b6b245494daae547e97348b7f6c53879f9705c0ae1ce"
+    },
+    {
+      "code": "01122",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/01122.png",
+      "path": "assets/cards/01122.jpg",
+      "sha256": "2753ec7eaec59321b31f62fc98d64df507b8dae1084e32a1a702881d50e5dd01"
+    },
+    {
+      "code": "01121a",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/01121a.png",
+      "path": "assets/cards/01121a.jpg",
+      "sha256": "621b318a49b5685d72a3759fa6a3f627913feac3d8e96317c6c52e8869745946"
+    },
+    {
+      "code": "01109",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/01109b.png",
+      "path": "assets/cards/01109b.jpg",
+      "sha256": "2d09caba5eb8ec31c180bc0740d5a72efdd0fa494eee80e6777a8cb81c885589"
+    },
+    {
+      "code": "01122",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/01122b.png",
+      "path": "assets/cards/01122b.jpg",
+      "sha256": "b7bc5a02730a6eacab3216031e7adfd26391173e58e0d2739c3d77f53656a8e0"
+    },
+    {
+      "code": "01110",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/01110b.png",
+      "path": "assets/cards/01110b.jpg",
+      "sha256": "93eb34569b93abf5ac473af9d1f74818b22e701c02837bbfc0b495ade033cfc4"
+    },
+    {
+      "code": "01121a",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/01121b.png",
+      "path": "assets/cards/01121ab.jpg",
+      "sha256": "74a181fcfe675725478a848ee3a3f4a99e9aa2d004e7a429f0c5ad5a18aea31d"
+    },
+    {
+      "code": "01143",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/01143.png",
+      "path": "assets/cards/01143.jpg",
+      "sha256": "2738605bfe28f4f485fa8faf2d17532322780475842035cd3ffa4cd0539f275a"
+    },
+    {
+      "code": "01123",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/01123.png",
+      "path": "assets/cards/01123.jpg",
+      "sha256": "e9d8e851b141c4ef16b9ad1256d3e61740d1dc3ba85f4ca7fe2c44bdb7c07378"
+    },
+    {
+      "code": "01144",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/01144.png",
+      "path": "assets/cards/01144.jpg",
+      "sha256": "07917bab2928064cea3bd1b5838b07c4665679da82ec1c4367bf5a435fa47c91"
+    },
+    {
+      "code": "01145",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/01145.png",
+      "path": "assets/cards/01145.jpg",
+      "sha256": "4aea927ca15025c90609e1440cd49d9dfa3dc6d1ca7b6668d10c4ddba065edc0"
+    },
+    {
+      "code": "01143",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/01143b.png",
+      "path": "assets/cards/01143b.jpg",
+      "sha256": "b1e09cf862029b070f007aae71694bdabc9a398e77729c0920527783b6fe449d"
+    },
+    {
+      "code": "01123",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/01123b.png",
+      "path": "assets/cards/01123b.jpg",
+      "sha256": "6ccdcf38fcb5e4773ce0521a829deffdfc4d2de2d78e9204df9d6a5f712ce491"
+    },
+    {
+      "code": "01144",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/01144b.png",
+      "path": "assets/cards/01144b.jpg",
+      "sha256": "74849d7071f244a7a49d39a0f88beb1b2f87bc918f438a46019f213c6fb93002"
+    },
+    {
+      "code": "01145",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/01145b.png",
+      "path": "assets/cards/01145b.jpg",
+      "sha256": "2936a90dd4464ed3732008f4debe49245c11265d34d382e7b3b26400bd9c5352"
+    },
+    {
+      "code": "01148",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/01148.png",
+      "path": "assets/cards/01148.jpg",
+      "sha256": "167661d7befc5a976e60b1e945d744860544f6c83c298948bc309096c92305b0"
+    },
+    {
+      "code": "01147",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/01147.png",
+      "path": "assets/cards/01147.jpg",
+      "sha256": "eca1922296a440c682f7d912ac89430aa8a0fba259cd28b22ec3b88f96e2c1bb"
+    },
+    {
+      "code": "01146",
+      "side": "front",
+      "url": "https://arkhamdb.com/bundles/cards/01146.png",
+      "path": "assets/cards/01146.jpg",
+      "sha256": "b1a36663f5acd559ea75eb7343c7e1536d0b56825511ce0b6777661a9c3c10f7"
+    },
+    {
+      "code": "01148",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/01148b.png",
+      "path": "assets/cards/01148b.jpg",
+      "sha256": "8a9612c1d14d9bc245c16ef2c8792cf0457f7af1e1817f27aff08ffdcb4713e5"
+    },
+    {
+      "code": "01147",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/01147b.png",
+      "path": "assets/cards/01147b.jpg",
+      "sha256": "3f9226341d41a652798cb31084800e4e90c02a863e7b861f33336f1efdb4bc71"
+    },
+    {
+      "code": "01146",
+      "side": "back",
+      "url": "https://arkhamdb.com/bundles/cards/01146b.png",
+      "path": "assets/cards/01146b.jpg",
+      "sha256": "44f2ac021a42c039255e18c240e6a0fafe84d186a34c179932fdb97b694faa9b"
+    }
+  ]
+}

@@ -1,0 +1,978 @@
+{
+  "id": "the_pallid_mask",
+  "scenario_name": "The Pallid Mask",
+  "full_name": "Scenario VI: The Pallid Mask",
+  "header": "Scenario VI",
+  "chaos_bag_card": "03240",
+  "standalone_setup": [
+    "setup_standalone_bag",
+    "randomly_choose_tokens",
+    "lead_investigator_mitpm",
+    "found_nigels_home",
+    "no_haruko",
+    "check_intro_condition",
+    "check_ishimaru_haruko",
+    "gather_encounter_sets",
+    "set_aside_cards",
+    "check_catacomb_entry",
+    "create_catacombs_deck",
+    "place_investigators",
+    "check_for_mitpm",
+    "check_for_onyx_clasp",
+    "set_aside_pallid_mask",
+    "encounter_deck",
+    "location_adjacency_rule",
+    "$play_scenario"
+  ],
+  "setup": [
+    "check_intro_condition",
+    "check_ishimaru_haruko",
+    "$check_tarot_reading",
+    "gather_encounter_sets",
+    "set_aside_cards",
+    "check_catacomb_entry",
+    "create_catacombs_deck",
+    "place_investigators",
+    "check_for_mitpm",
+    "check_for_onyx_clasp",
+    "set_aside_pallid_mask",
+    "encounter_deck",
+    "location_adjacency_rule",
+    "$play_scenario"
+  ],
+  "rules": [
+    {
+      "title": "Location Adjacency in the Catacombs",
+      "steps": ["location_adjacency_rule"]
+    }
+  ],
+  "steps": [
+    {
+      "id": "setup_standalone_bag",
+      "text": "Assemble the chaos bag using the following tokens: +1, 0, 0, -1, -1, -1, -2, -2, -3, -3, -4, [skull], [skull], [skull], [auto_fail], [elder_sign]",
+      "effects": [
+        {
+          "type": "campaign_data",
+          "setting": "difficulty",
+          "value": "standard"
+        },
+        {
+          "type": "add_chaos_token",
+          "tokens": [
+            "+1",
+            "0",
+            "0",
+            "-1",
+            "-1",
+            "-1",
+            "-2",
+            "-2",
+            "-3",
+            "-3",
+            "-4",
+            "skull",
+            "skull",
+            "skull",
+            "auto_fail",
+            "elder_sign"
+          ]
+        }
+      ],
+      "bullets": [
+        {
+          "text": "Do not alter the contents of the chaos bag during the intro."
+        }
+      ]
+    },
+    {
+      "id": "randomly_choose_tokens",
+      "text": "Randomly choose one of the following tokens ([cultist], [tablet], or [elder_thing]). Add 2 of the chosen token to the chaos bag.",
+      "type": "input",
+      "input": {
+        "type": "choose_one",
+        "choices": [
+          {
+            "id": "cultist",
+            "text": "[cultist]",
+            "effects": [
+              {
+                "type": "add_chaos_token",
+                "tokens": [
+                  "cultist",
+                  "cultist"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "tablet",
+            "text": "[tablet]",
+            "effects": [
+              {
+                "type": "add_chaos_token",
+                "tokens": [
+                  "tablet",
+                  "tablet"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "elder_thing",
+            "text": "[elder_thing]",
+            "effects": [
+              {
+                "type": "add_chaos_token",
+                "tokens": [
+                  "elder_thing",
+                  "elder_thing"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "lead_investigator_mitpm",
+      "text": "The lead investigator adds The Man in the Pallid Mask weakness to their deck.",
+      "effects": [
+        {
+          "type": "add_card",
+          "investigator": "lead_investigator",
+          "card": "03059"
+        }
+      ]
+    },
+    {
+      "id": "found_nigels_home",
+      "text": "<i>You found Nigel's home.</i>",
+      "effects": [
+        {
+          "type": "campaign_log",
+          "section": "campaign_notes",
+          "id": "found_nigels_home",
+          "text": "you found Nigel's home."
+        }
+      ]
+    },
+    {
+      "id": "no_haruko",
+      "text": "<i>Ishimaru Haruko is not listed under VIPs Interviewed or VIPs Slain.</i>"
+    },
+    {
+      "id": "check_intro_condition",
+      "text": "Check Campaign Log. <i>If you did not escape the gaze of the phantom</i>, or <i>if you were unable to find Nigel</i>",
+      "type": "branch",
+      "condition": {
+        "type": "multi",
+        "conditions": [
+          {
+            "type": "campaign_log",
+            "section": "campaign_notes",
+            "id": "unable_to_find_nigel",
+            "options": [
+              {
+                "boolCondition": true
+              }
+            ]
+          },
+          {
+            "type": "campaign_log",
+            "section": "campaign_notes",
+            "id": "did_not_escape_gaze",
+            "options": [
+              {
+                "boolCondition": true
+              }
+            ]
+          }
+        ],
+        "count": 1,
+        "options": [
+          {
+            "boolCondition": true,
+            "steps": [
+              "intro_1",
+              "awoke_inside_catacombs"
+            ]
+          },
+          {
+            "boolCondition": false,
+            "steps": [
+              "intro_2",
+              "entered_catacombs"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "intro_1",
+      "narration": {
+        "id": "the_path_to_carcosa.the_pallid_mask.intro_1",
+        "name": "Intro 1",
+        "lang": [
+          "dv",
+          "ru",
+          "es",
+          "de",
+          "pl"
+        ]
+      },
+      "type": "story",
+      "text": "You are stirred awake by dirty, stale air and dust in your throat. You are lying on a slab of cold stone inside a lightless underground passageway. How did you get here? And where is “here” exactly? A shiver courses up your body, and your hair stands on end. Rising to your feet, you take stock of your surroundings. Bones decorate the walls and ceiling around you, open-mouthed skulls peering back at you everywhere you look."
+    },
+    {
+      "id": "intro_2",
+      "narration": {
+        "id": "the_path_to_carcosa.the_pallid_mask.intro_2",
+        "name": "Intro 2",
+        "lang": [
+          "dv",
+          "ru",
+          "es",
+          "de",
+          "pl"
+        ]
+      },
+      "type": "story",
+      "text": "The contents of Nigel Engram’s home answer none of your questions about The King in Yellow, but do hint at where you should head next. The old, tattered map you found on his coffee table depicts a section of the infamous Catacombs of Paris. One particular room on the map has been circled with pen, and next to it is written: “The key to opening the Path lies here!” You swallow your fear and head immediately for the entrance to the catacombs underneath Rue de la Tombe-Issoire."
+    },
+    {
+      "id": "entered_catacombs",
+      "effects": [
+        {
+          "type": "campaign_log",
+          "section": "campaign_notes",
+          "id": "entered_catacombs",
+          "text": "you entered the catacombs on your own."
+        }
+      ]
+    },
+    {
+      "id": "awoke_inside_catacombs",
+      "effects": [
+        {
+          "type": "campaign_log",
+          "section": "campaign_notes",
+          "id": "awoke_inside_catacombs",
+          "text": "you awoke inside the catacombs."
+        }
+      ]
+    },
+    {
+      "id": "check_ishimaru_haruko",
+      "text": "Check Campaign Log. <i>If Ishimaru Haruko is listed under VIPs Interviewed</i>:",
+      "type": "branch",
+      "condition": {
+        "type": "campaign_log",
+        "section": "vips_interviewed",
+        "id": "03078",
+        "options": [
+          {
+            "boolCondition": true,
+            "steps": [
+              "harukos_information",
+              "opened_a_secret_passageway"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "harukos_information",
+      "narration": {
+        "id": "the_path_to_carcosa.the_pallid_mask.harukos_information",
+        "name": "Haruko's Information",
+        "lang": [
+          "dv",
+          "ru",
+          "es",
+          "de",
+          "pl"
+        ]
+      },
+      "type": "story",
+      "text": "Just past the archway closest to you, you see a familiar symbol etched into the skull of a sheep: rows of concentric semicircles, lined with exotic runes. Two wavy lines descend from the design, leading into the skull’s lower jawbone. You recognize it as the pattern Haruko had shown you. Wondering why it would appear here, you examine the skull in greater detail. As soon as you touch the underside of the skull’s jawbone, its mouth suddenly opens. Bones collapse to the ground as the wall slides to reveal a new path."
+    },
+    {
+      "id": "opened_a_secret_passageway",
+      "text": "Remember that “you opened a secret passageway.”"
+    },
+    {
+      "id": "gather_encounter_sets",
+      "title": "Setup",
+      "type": "encounter_sets",
+      "encounter_sets": [
+        "the_pallid_mask",
+        "ghouls",
+        "hauntings",
+        "chilling_cold"
+      ]
+    },
+    {
+      "id": "set_aside_cards",
+      "text": "Find the Tomb of Shadows and the Blocked Passage (each one is the revealed side of a Catacombs location). Set them aside, out of play."
+    },
+    {
+      "id": "check_catacomb_entry",
+      "type": "branch",
+      "condition": {
+        "type": "campaign_log",
+        "section": "campaign_notes",
+        "id": "awoke_inside_catacombs",
+        "options": [
+          {
+            "boolCondition": true,
+            "steps": [
+              "start_random_location"
+            ]
+          },
+          {
+            "boolCondition": false,
+            "steps": [
+              "start_gate_to_hell"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "start_random_location",
+      "text": "Put a random Catacombs location (other than the set‐aside Tomb of Shadows or Blocked Passage) into play, Catacombs side faceup. For the remainder of the scenario, that location is referred to as “the starting location.” Place a resource token on this location to mark it as the starting location. <b>Do not place investigators here yet.</b>"
+    },
+    {
+      "id": "start_gate_to_hell",
+      "text": "Find The Gate to Hell (it is the revealed side of a Catacombs location). Put The Gate to Hell into play, Catacombs side faceup. For the remainder of the scenario, The Gate to Hell is referred to as “the starting location.” Place a resource token on The Gate to Hell to mark it as the starting location. <b>Do not place investigators here yet.</b>"
+    },
+    {
+      "id": "create_catacombs_deck",
+      "text": "Set all of the other locations aside as a separate “Catacombs Deck.” To do this, perform the following:",
+      "bullets": [
+        {
+          "text": "Shuffle the set‐aside Tomb of Shadows, the set‐aside Blocked Passage, and 3 other Catacombs locations together to form the bottom 5 cards of the Catacombs Deck, Catacombs side faceup."
+        },
+        {
+          "text": "Then, place all of the other Catacombs locations on top, in a random order. All of the cards in the Catacombs Deck should be showing only the Catacombs side, so that the players do not know which is which."
+        }
+      ]
+    },
+    {
+      "id": "place_investigators",
+      "text": "Each investigator begins play at the starting location. <i>(Remember to trigger the <b>Forced</b> effect on that location when it is revealed.)</i> If “you opened a secret passageway,” choose a Catacombs location adjacent to the starting location and reveal it."
+    },
+    {
+      "id": "set_aside_pallid_mask",
+      "text": "The bearer of The Man in the Pallid Mask weakness searches their deck for it and sets it aside, out of play."
+    },
+    {
+      "id": "encounter_deck",
+      "text": "Shuffle the remainder of the encounter cards to form the encounter deck."
+    },
+    {
+      "id": "check_for_onyx_clasp",
+      "hidden": true,
+      "type": "branch",
+      "condition": {
+        "type": "campaign_log",
+        "section": "campaign_notes",
+        "id": "took_onyx_clasp",
+        "options": [
+          {
+            "boolCondition": true,
+            "steps": [
+              "check_missing_onyx_clasp"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "check_missing_onyx_clasp",
+      "hidden": true,
+      "type": "branch",
+      "condition": {
+        "type": "has_card",
+        "card": "03142",
+        "investigator": "any",
+        "options": [
+          {
+            "boolCondition": false,
+            "steps": [
+              "transfer_onyx_clasp"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "transfer_onyx_clasp",
+      "text": "Because <i>you took the onyx clasp</i> and the original bearer of the Clasp of Black Onyx weakness is not playing this scenario, another investigator must become the bearer.",
+      "effects": [
+        {
+          "type": "remove_card",
+          "card": "03142"
+        },
+        {
+          "type": "add_card",
+          "investigator": "any",
+          "card": "03142"
+        }
+      ]
+    },
+    {
+      "id": "check_for_mitpm",
+      "hidden": true,
+      "type": "branch",
+      "condition": {
+        "type": "has_card",
+        "card": "03059",
+        "investigator": "any",
+        "options": [
+          {
+            "boolCondition": false,
+            "steps": [
+              "transfer_mitpm"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "transfer_mitpm",
+      "text": "Because the original bearer of The Man in the Pallid Mask weakness is not playing this scenario, another investigator must become the bearer.",
+      "effects": [
+        {
+          "type": "remove_card",
+          "card": "03059"
+        },
+        {
+          "type": "add_card",
+          "investigator": "any",
+          "card": "03059"
+        }
+      ]
+    },
+    {
+      "id": "location_adjacency_rule",
+      "type": "rule_reminder",
+      "title": "Location Adjacency in the Catacombs",
+      "text": "During this scenario, locations will be arranged in a set pattern, with new locations from the Catacombs Deck emerging to the left, right, above, or below existing locations, as they are revealed. A location that is put into play to the left, right, above, or below another location should be set next to that location in the manner described, with no other locations in between them.\nA location that is next to another location in this manner is considered <b>adjacent</b>. Locations are only adjacent orthogonally (left, right, above, and below), and are not adjacent diagonally. During this scenario, adjacent locations are considered to be connected to one another.\nYou cannot put a location into play where an existing location already is. If you are given the choice to place a location from the Catacombs Deck in one of multiple spots, and one of those spots is occupied by an existing location, you cannot choose that spot. You must choose a spot unoccupied by a location, if able. If all of the specified spots are occupied by existing locations, the <b>Forced</b> effect fails and no new Catacombs locations are put into play."
+    },
+    {
+      "id": "$play_scenario",
+      "type": "input",
+      "input": {
+        "type": "play_scenario",
+        "branches": [
+          {
+            "id": "mitpm_defeated",
+            "icon": "ptc",
+            "text": "Defeated the Man in the Pallid Mask",
+            "steps": [
+              "mitpm_defeated"
+            ]
+          },
+          {
+            "id": "mark_conviction_or_doubt",
+            "condition": {
+              "type": "campaign_log",
+              "section": "hidden",
+              "id": "tpm_conviction_or_doubt",
+              "options": [
+                {
+                  "boolCondition": false
+                }
+              ]
+            },
+            "text": "Mark Conviction or Doubt",
+            "steps": [
+              "mark_conviction_or_doubt"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mark_conviction_or_doubt",
+      "text": "How was act 2 advanced?",
+      "type": "input",
+      "input": {
+        "type": "choose_one",
+        "choices": [
+          {
+            "id": "conviction",
+            "text": "The Man in the Pallid Mask was defeated.",
+            "description": "Mark two <b>Conviction</b>.",
+            "effects": [
+              {
+                "type": "campaign_log_count",
+                "section": "conviction",
+                "operation": "add",
+                "value": 2
+              },
+              {
+                "type": "campaign_log",
+                "section": "hidden",
+                "id": "tpm_conviction_or_doubt",
+                "text": "dummy"
+              }
+            ]
+          },
+          {
+            "id": "doubt",
+            "text": "You spent clues to advance.",
+            "description": "Mark two <b>Doubt</b>.",
+            "effects": [
+              {
+                "type": "campaign_log_count",
+                "section": "doubt",
+                "operation": "add",
+                "value": 2
+              },
+              {
+                "type": "campaign_log",
+                "section": "hidden",
+                "id": "tpm_conviction_or_doubt",
+                "text": "dummy"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mitpm_defeated",
+      "text": "In your Campaign Log, under “Chasing the Stranger,” place one tally mark.",
+      "effects": [
+        {
+          "type": "campaign_log_count",
+          "section": "chasing_the_stranger",
+          "operation": "add",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "know_site_of_gate",
+      "effects": [
+        {
+          "type": "campaign_log",
+          "section": "campaign_notes",
+          "id": "know_site_of_gate",
+          "text": "you know the site of the gate."
+        }
+      ]
+    },
+    {
+      "id": "know_site_of_gate_chasing_stranger",
+      "text": "In your Campaign Log, record that <i>you know the site of the gate</i>. Add two tally marks under “Chasing the Stranger.”",
+      "effects": [
+        {
+          "type": "campaign_log",
+          "section": "campaign_notes",
+          "id": "know_site_of_gate",
+          "text": "you know the site of the gate."
+        },
+        {
+          "type": "campaign_log_count",
+          "section": "chasing_the_stranger",
+          "operation": "add",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "read_act_2_choice",
+      "text": "Each investigator must choose whether or not to read Act II of The King in Yellow. At least one investigator must read Act II.\nIn your Campaign Log, record the names of each investigator who chose to read Act II. Each investigator who read Act II searches the collection for a random basic [[Madness]] or [[Pact]] weakness, and adds it to their deck (does not count toward deck size). Each investigator who read Act II earns 2 additional experience as they gain insight into the machinations of the Tattered King.",
+      "type": "input",
+      "input": {
+        "type": "investigator_choice",
+        "investigator": "choice",
+        "source": "scenario",
+        "choices": [
+          {
+            "id": "read_act_2",
+            "text": "Read Act II",
+            "effects": [
+              {
+                "type": "campaign_log_cards",
+                "section": "campaign_notes",
+                "id": "read_act_2",
+                "cards": "$input_value",
+                "masculine_text": "#name# read Act 2 of The King in Yellow.",
+                "feminine_text": "#name# read Act 2 of The King in Yellow.",
+                "nonbinary_text": "#name# read Act 2 of The King in Yellow."
+              },
+              {
+                "type": "add_weakness",
+                "investigator": "$input_value",
+                "weakness_traits": [
+                  "Madness",
+                  "Pact"
+                ]
+              },
+              {
+                "type": "earn_xp",
+                "investigator": "$input_value",
+                "bonus": 2
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "earn_xp",
+      "text": "Each investigator earns experience equal to the Victory X value of each card in the victory display.",
+      "type": "input",
+      "input": {
+        "type": "counter",
+        "text": "Victory display:",
+        "effects": [
+          {
+            "type": "earn_xp",
+            "investigator": "all"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ask_ishimaru_haruko",
+      "hidden": true,
+      "type": "branch",
+      "condition": {
+        "type": "campaign_log",
+        "section": "vips_slain",
+        "id": "03067b",
+        "options": [
+          {
+            "boolCondition": false,
+            "steps": [
+              "prompt_ishimaru_haruko"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "prompt_ishimaru_haruko",
+      "type": "input",
+      "input": {
+        "type": "choose_one",
+        "choices": [
+          {
+            "id": "haruko_killed",
+            "text": "Is Ishimaru Haruko <i>(Just Skin and Bones)</i> in the victory display?",
+            "steps": [
+              "kill_haruko"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "kill_haruko",
+      "bullet_type": "small",
+      "text": "In your Campaign Log, under \"VIPS Slain\", record <i>Ishimaru Haruko</i>.",
+      "effects": [
+        {
+          "type": "campaign_log_cards",
+          "section": "vips_slain",
+          "id": "03067b"
+        }
+      ]
+    },
+    {
+      "id": "add_tablets",
+      "text": "Remove all [cultist], [tablet], and [elder_thing] tokens from the chaos bag. Then, add 2 [tablet] tokens to the chaos bag.",
+      "effects": [
+        {
+          "type": "remove_chaos_token",
+          "tokens": [
+            "cultist",
+            "cultist",
+            "tablet",
+            "tablet",
+            "elder_thing",
+            "elder_thing"
+          ]
+        },
+        {
+          "type": "add_chaos_token",
+          "tokens": [
+            "tablet",
+            "tablet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "add_elder_things",
+      "text": "Remove all [cultist], [tablet], and [elder_thing] tokens from the chaos bag. Then, add 2 [elder_thing] tokens to the chaos bag.",
+      "effects": [
+        {
+          "type": "remove_chaos_token",
+          "tokens": [
+            "cultist",
+            "cultist",
+            "tablet",
+            "tablet",
+            "elder_thing",
+            "elder_thing"
+          ]
+        },
+        {
+          "type": "add_chaos_token",
+          "tokens": [
+            "elder_thing",
+            "elder_thing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "add_cultists",
+      "text": "Remove all [cultist], [tablet], and [elder_thing] tokens from the chaos bag. Then, add 2 [cultist] tokens to the chaos bag.",
+      "effects": [
+        {
+          "type": "remove_chaos_token",
+          "tokens": [
+            "cultist",
+            "cultist",
+            "tablet",
+            "tablet",
+            "elder_thing",
+            "elder_thing"
+          ]
+        },
+        {
+          "type": "add_chaos_token",
+          "tokens": [
+            "cultist",
+            "cultist"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "maybe_add_conviction",
+      "hidden": true,
+      "type": "branch",
+      "condition": {
+        "type": "campaign_log",
+        "section": "hidden",
+        "id": "tpm_conviction_or_doubt",
+        "options": [
+          {
+            "boolCondition": false,
+            "steps": [
+              "add_two_conviction"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "add_two_conviction",
+      "text": "During the scenario, you were instructed to mark two <b>Conviction</b> in your Campaign Log.",
+      "effects": [
+        {
+          "type": "campaign_log_count",
+          "section": "conviction",
+          "operation": "add",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "maybe_add_doubt",
+      "hidden": true,
+      "type": "branch",
+      "condition": {
+        "type": "campaign_log",
+        "section": "hidden",
+        "id": "tpm_conviction_or_doubt",
+        "options": [
+          {
+            "boolCondition": false,
+            "steps": [
+              "add_two_doubt"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "add_two_doubt",
+      "text": "During the scenario, you were instructed to mark two <b>Doubt</b> in your Campaign Log.",
+      "effects": [
+        {
+          "type": "campaign_log_count",
+          "section": "doubt",
+          "operation": "add",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "maybe_ask_conviction_or_doubt",
+      "hidden": true,
+      "type": "branch",
+      "condition": {
+        "type": "multi",
+        "conditions": [
+          {
+            "type": "campaign_log",
+            "section": "hidden",
+            "id": "tpm_conviction_or_doubt",
+            "options": [
+              {
+                "boolCondition": false
+              }
+            ]
+          },
+          {
+            "type": "campaign_data",
+            "campaign_data": "version",
+            "min_version": 2,
+            "options": [
+              {
+                "boolCondition": true
+              }
+            ]
+          }
+        ],
+        "count": 2,
+        "options": [
+          {
+            "boolCondition": true,
+            "steps": [
+              "ask_conviction_or_doubt_resolution"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ask_conviction_or_doubt_resolution",
+      "type": "input",
+      "text": "During the scenario, were you instructed to make any Campaign Log changes?",
+      "input": {
+        "type": "choose_one",
+        "choices": [
+          {
+            "id": "doubt",
+            "text": "Mark 2 <b>Doubt</b>.",
+            "effects": [
+              {
+                "type": "campaign_log_count",
+                "section": "doubt",
+                "operation": "add",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "id": "conviction",
+            "text": "Mark 2 <b>Conviction</b>.",
+            "effects": [
+              {
+                "type": "campaign_log_count",
+                "section": "conviction",
+                "operation": "add",
+                "value": 2
+              }
+            ]
+          },
+          {
+            "id": "neither",
+            "text": "Scenario ended before Act 2b was resolved."
+          }
+        ]
+      }
+    }
+  ],
+  "resolutions": [
+    {
+      "id": "no_resolution",
+      "narration": {
+        "id": "the_path_to_carcosa.the_pallid_mask.no_resolution",
+        "name": "No Resolution",
+        "lang": [
+          "dv",
+          "ru",
+          "es",
+          "de",
+          "pl"
+        ]
+      },
+      "title": "No resolution was reached",
+      "description": "Each investigator was defeated",
+      "investigator_status": [
+        "eliminated",
+        "physical",
+        "mental"
+      ],
+      "text": "You are shaken awake by a police officer and lifted to your feet. You feel as though the weight of a train has slammed into your head. The pain is unbearable. The man shines a flashlight in your eyes and asks you several questions in French. Dazed as you are, you find it difficult to answer. He points toward the staircase nearby and pushes you away from the catacombs. You stumble onto the Rue de la Tombe-Issoire and slowly make your way to a hotel where you can stay the night.\nSeveral days of research later, the meaning of the strange diagrams you saw within the catacombs still escapes you. You feel as though you have been led on a wild goose chase. Just as you are about to give up, you see a faded yellow book on the table nearest to you. You are stunned to discover that it is the unabridged script of The King in Yellow. Drawn on the cover in black ink is the very same diagram whose meaning you have been struggling to interpret for several sleepless nights. Who had placed it here? How had it come to your hotel room? Regardless, you know what you must do. The play holds the secrets—it has all along—and yet like a fool you have avoided reading Act II out of superstition. Its words cannot harm you any more than the creatures and fanatics you have already encountered. Trembling, you open to the second part, and begin to read.",
+      "steps": [
+        "maybe_ask_conviction_or_doubt",
+        "know_site_of_gate",
+        "read_act_2_choice",
+        "add_elder_things",
+        "ask_ishimaru_haruko",
+        "earn_xp",
+        "$upgrade_decks"
+      ]
+    },
+    {
+      "id": "R1",
+      "narration": {
+        "id": "the_path_to_carcosa.the_pallid_mask.resolution_1",
+        "name": "Resolution 1",
+        "lang": [
+          "dv",
+          "ru",
+          "es",
+          "de",
+          "pl"
+        ]
+      },
+      "title": "Resolution 1",
+      "text": "The burned skull holds the key to everything. You are sure of it. You have tried every method available to you in studying the diagram it bears, but the answer eludes you still. You have brought the skull to experts, occultists, and professors. You have even tried speaking with the skull on more than one occasion. Exasperated, you place the skull on your night table and try to get some sleep for the first time since escaping the catacombs. As you fall asleep, you cannot shake the sight of the diagram etched in the skull’s forehead.\nYou awaken with a spark of inspiration and rush to the Musée du Louvre, a famous Parisian museum housing tens of thousands of paintings, drawings, and archaeological finds. You spend days exploring the museum—every display, every collection, every single object of art that might hold a clue to the diagram’s meaning. Finally, you see it: a painting depicting a beautiful island town weathering a torrential storm. Waves crash against the stone of the outer wall, the tide threatening to swallow the island whole. Lightning flashes around the tower of the abbey above the village. A whirlwind of black clouds churns in the sky above. The diagram from the burned skull you hold in your hands is recreated perfectly in the stained glass of the abbey. The title of the piece is “The Path Is Open.”",
+      "steps": [
+        "maybe_add_conviction",
+        "know_site_of_gate",
+        "add_cultists",
+        "ask_ishimaru_haruko",
+        "earn_xp",
+        "$upgrade_decks"
+      ]
+    },
+    {
+      "id": "R2",
+      "narration": {
+        "id": "the_path_to_carcosa.the_pallid_mask.resolution_2",
+        "name": "Resolution 2",
+        "lang": [
+          "dv",
+          "ru",
+          "es",
+          "de",
+          "pl"
+        ]
+      },
+      "title": "Resolution 2",
+      "text": "You fall ceaselessly through the empty abyss. No air slows your descent or courses through your hair. It is a passageway devoid of reality. Finally, you pass through an invisible gateway and enter another realm. Looming above and below you are two skylines, one a warped reflection of the other. A vortex of swirling black clouds and crashing waves lies in between them. You study both sides—the familiar city and its strange mirror. Could this be the path to Carcosa? A passageway between realities, where realms converge? If so, all that is left is to find where this gate appears on Earth. You fall into the vortex below.\nYou are shaken awake by a police officer and lifted to your feet. You feel as though the weight of a train has slammed into your head. The pain is unbearable. The man shines a flashlight in your eyes and asks you several questions in French. Your eyes widen with realization and you wrest your arm free from the confused man’s grip. “I have to go at once!”",
+      "steps": [
+        "maybe_add_doubt",
+        "know_site_of_gate_chasing_stranger",
+        "add_tablets",
+        "ask_ishimaru_haruko",
+        "earn_xp",
+        "$upgrade_decks"
+      ]
+    }
+  ]
+}

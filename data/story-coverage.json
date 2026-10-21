@@ -1,0 +1,80 @@
+{
+  "edition": "campaign-box",
+  "voiceIncluded": false,
+  "conversionPerformed": false,
+  "campaigns": {
+    "core": {
+      "name": "The Night of the Zealot",
+      "chapters": [
+        "core_prologue",
+        "torch",
+        "arkham",
+        "tentacles"
+      ],
+      "scenarios": [
+        "torch",
+        "arkham",
+        "tentacles"
+      ],
+      "sourceRevision": "dba650a271b794d73797b6c82adc73c00a4deb5c"
+    },
+    "dwl": {
+      "name": "The Dunwich Legacy",
+      "chapters": [
+        "dwl_prologue",
+        "extracurricular_activity",
+        "the_house_always_wins",
+        "armitages_fate",
+        "the_miskatonic_museum",
+        "essex_county_express",
+        "blood_on_the_altar",
+        "dwl_interlude2",
+        "undimensioned_and_unseen",
+        "where_doom_awaits",
+        "lost_in_time_and_space",
+        "dwl_epilogue"
+      ],
+      "scenarios": [
+        "extracurricular_activity",
+        "the_house_always_wins",
+        "the_miskatonic_museum",
+        "essex_county_express",
+        "blood_on_the_altar",
+        "undimensioned_and_unseen",
+        "where_doom_awaits",
+        "lost_in_time_and_space"
+      ],
+      "sourceRevision": "22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d"
+    },
+    "ptc": {
+      "name": "The Path to Carcosa",
+      "chapters": [
+        "ptc_prologue",
+        "curtain_call",
+        "the_last_king",
+        "ptc_interlude1_reprint",
+        "echoes_of_the_past",
+        "the_unspeakable_oath",
+        "ptc_interlude2",
+        "a_phantom_of_truth",
+        "the_pallid_mask",
+        "black_stars_rise",
+        "dim_carcosa",
+        "ptc_epilogue"
+      ],
+      "scenarios": [
+        "curtain_call",
+        "the_last_king",
+        "echoes_of_the_past",
+        "the_unspeakable_oath",
+        "a_phantom_of_truth",
+        "the_pallid_mask",
+        "black_stars_rise",
+        "dim_carcosa"
+      ],
+      "sourceRevision": "dba650a271b794d73797b6c82adc73c00a4deb5c"
+    }
+  },
+  "localCardImages": 244,
+  "missingSimplifiedCardFields": []
+}

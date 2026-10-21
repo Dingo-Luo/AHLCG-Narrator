@@ -5,7 +5,7 @@
   "required": ["version", "campaignId", "name", "investigators", "events"],
   "properties": {
     "version": { "const": 1 },
-    "campaignId": { "const": "dwl" },
+    "campaignId": { "enum": ["core", "dwl", "ptc"] },
     "name": { "type": "string", "maxLength": 80 },
     "flow": { "const": "story" },
     "createdAt": { "type": "string" },
@@ -24,11 +24,12 @@
       "items": {
         "type": "object", "required": ["type"],
         "properties": {
-          "type": { "enum": ["difficulty", "start", "advance", "resolution", "finish", "adjust", "reveal", "story_only", "next_card", "record_action"] },
+          "type": { "enum": ["difficulty", "start", "advance", "resolution", "finish", "adjust", "reveal", "story_only", "next_card", "record_action", "story_action"] },
           "scenario": { "type": "string" }, "value": { "type": ["string", "boolean"] },
           "deck": { "enum": ["agenda", "act"] },
           "id": { "type": "string" }, "statuses": { "type": "object", "additionalProperties": { "enum": ["survived", "resigned", "physical", "mental", "both", "eliminated"] } },
-          "answer": { "type": ["string", "integer", "object"] },
+          "answer": { "type": ["string", "integer", "object", "array"] },
+          "lead": { "type": "string", "pattern": "^i[1-4]$" },
           "investigator": { "type": "string" }, "field": { "enum": ["earned", "spent", "physical", "mental"] },
           "delta": { "type": "integer" }, "card": { "type": "string" }, "side": { "enum": ["front", "back"] }
         }

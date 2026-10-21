@@ -1,0 +1,515 @@
+{
+  "id": "ptc",
+  "position": 2,
+  "version": 5,
+  "name": "The Path to Carcosa",
+  "tarot": [
+    "curtain_call",
+    "the_last_king",
+    "echoes_of_the_past",
+    "the_unspeakable_oath",
+    "a_phantom_of_truth",
+    "the_pallid_mask",
+    "black_stars_rise",
+    "dim_carcosa"
+  ],
+  "campaign_type": "campaign",
+  "campaign_log": [
+    {
+      "id": "campaign_notes",
+      "title": "Campaign Notes"
+    },
+    {
+      "id": "chasing_the_stranger",
+      "title": "Chasing the Stranger",
+      "type": "count"
+    },
+    {
+      "id": "vips_interviewed",
+      "title": "VIPs Interviewed"
+    },
+    {
+      "id": "vips_slain",
+      "title": "VIPs Slain"
+    },
+    {
+      "id": "doubt",
+      "title": "Doubt",
+      "type": "count"
+    },
+    {
+      "id": "conviction",
+      "title": "Conviction",
+      "type": "count"
+    },
+    {
+      "id": "hidden",
+      "hidden": true,
+      "title": "Hidden"
+    }
+  ],
+  "scenarios": [
+    "ptc_prologue",
+    "curtain_call",
+    "the_last_king"
+  ],
+  "hidden_scenarios": [
+    "ptc_interlude1",
+    "ptc_interlude1_reprint",
+    "echoes_of_the_past",
+    "the_unspeakable_oath",
+    "ptc_interlude2",
+    "a_phantom_of_truth",
+    "the_pallid_mask",
+    "black_stars_rise",
+    "dim_carcosa",
+    "ptc_epilogue"
+  ],
+  "setup": [
+    "prologue",
+    "choose_investigators",
+    "difficulty_choice",
+    "maybe_draw_weakness",
+    "check_reprint_version",
+    "$hidden_keyword",
+    "$doubt_and_conviction",
+    "$story_cards"
+  ],
+  "rules": [
+    {
+      "title": "New Keyword: Hidden",
+      "steps": ["$hidden_keyword"]
+    },
+    {
+      "title": "Doubt and Conviction",
+      "steps": ["$doubt_and_conviction"]
+    },
+    {
+      "title": "Story Cards",
+      "steps": ["$story_cards"]
+    }
+  ],
+  "steps": [
+    {
+      "id": "maybe_draw_weakness",
+      "type": "branch",
+      "hidden": true,
+      "condition": {
+        "type": "campaign_data",
+        "campaign_data": "version",
+        "min_version": 4,
+        "options": [
+          {
+            "boolCondition": true,
+            "steps": ["draw_weakness"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "draw_weakness",
+      "type": "input",
+      "bullet_type": "none",
+      "input": {
+        "type": "investigator_choice",
+        "source": "scenario",
+        "investigator": "all",
+        "choices": [
+          {
+            "id": "rbw",
+            "text": "Draw Random Basic Weakness",
+            "effects": [
+              {
+                "type": "add_weakness",
+                "investigator": "$input_value",
+                "weakness_traits": [],
+                "select_traits": false
+              },
+              {
+                "type": "remove_card",
+                "investigator": "$input_value",
+                "card": "01000",
+                "non_story": true
+              }
+            ],
+            "steps": ["save_decks"]
+          }
+        ]
+      }
+    },
+    {
+      "id": "save_decks",
+      "type": "input",
+      "input": {
+        "type": "save_decks",
+        "trauma": true
+      }
+    },
+    {
+      "id": "prologue",
+      "type": "story",
+      "title": "Have You Seen the Yellow Sign?",
+      "text": "“He mentioned the establishment of the Dynasty in Carcosa, the lakes which connected Hastur, Aldebaran, and the mystery of the Hyades. He spoke of Cassilda and Camilla, and sounded the cloudy depths of Demhe and the Lake of Hali.” – Robert W. Chambers, “The Repairer of Reputations”"
+    },
+    {
+      "id": "choose_investigators",
+      "type": "input",
+      "input": {
+        "type": "scenario_investigators"
+      }
+    },
+    {
+      "id": "check_reprint_version",
+      "type": "branch",
+      "hidden": true,
+      "condition": {
+        "type": "campaign_data",
+        "campaign_data": "version",
+        "min_version": 3,
+        "options": [
+          {
+            "boolCondition": true,
+            "steps": ["describe_reprint", "ask_reprint"]
+          },
+          {
+            "boolCondition": false,
+            "effects": [
+              {
+                "type": "campaign_data",
+                "setting": "set_scenarios",
+                "scenarios": [
+                  "ptc_prologue",
+                  "curtain_call",
+                  "the_last_king",
+                  "ptc_interlude1",
+                  "echoes_of_the_past",
+                  "the_unspeakable_oath",
+                  "ptc_interlude2",
+                  "a_phantom_of_truth",
+                  "the_pallid_mask",
+                  "black_stars_rise",
+                  "dim_carcosa",
+                  "ptc_epilogue"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "describe_reprint",
+      "text": "The reprinted version of this campaign that is packaged in a single box <i>(The Path to Carcosa Campaign Expansion)</i> contains updated names and traits on many encounter cards. To help minimize confusion, this app can provide setup matching either version."
+    },
+    {
+      "id": "ask_reprint",
+      "type": "input",
+      "text": "Which version would you like to use?",
+      "input": {
+        "type": "choose_one",
+        "choices": [
+          {
+            "id": "original",
+            "text": "Original",
+            "description": "<i>Deluxe Expansion + 6 Mythos Packs</i>",
+            "effects": [
+              {
+                "type": "campaign_data",
+                "setting": "set_scenarios",
+                "scenarios": [
+                  "ptc_prologue",
+                  "curtain_call",
+                  "the_last_king",
+                  "ptc_interlude1",
+                  "echoes_of_the_past",
+                  "the_unspeakable_oath",
+                  "ptc_interlude2",
+                  "a_phantom_of_truth",
+                  "the_pallid_mask",
+                  "black_stars_rise",
+                  "dim_carcosa",
+                  "ptc_epilogue"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "reprint",
+            "text": "Reprint",
+            "description": "<i>Single Campaign Expansion</i>",
+            "effects": [
+              {
+                "type": "campaign_log",
+                "section": "hidden",
+                "id": "reprint_language",
+                "text": "dummy"
+              },
+              {
+                "type": "campaign_data",
+                "setting": "set_scenarios",
+                "scenarios": [
+                  "ptc_prologue",
+                  "curtain_call",
+                  "the_last_king",
+                  "ptc_interlude1_reprint",
+                  "echoes_of_the_past",
+                  "the_unspeakable_oath",
+                  "ptc_interlude2",
+                  "a_phantom_of_truth",
+                  "the_pallid_mask",
+                  "black_stars_rise",
+                  "dim_carcosa",
+                  "ptc_epilogue"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "difficulty_choice",
+      "text": "Choose difficulty level:",
+      "type": "input",
+      "input": {
+        "type": "choose_one",
+        "default_choice": "standard",
+        "choices": [
+          {
+            "id": "easy",
+            "text": "Easy",
+            "description": "<i>I want to watch the play</i>",
+            "tokens": [
+              "+1",
+              "+1",
+              "0",
+              "0",
+              "0",
+              "-1",
+              "-1",
+              "-1",
+              "-2",
+              "-2",
+              "skull",
+              "skull",
+              "skull",
+              "auto_fail",
+              "elder_sign"
+            ],
+            "effects": [
+              {
+                "type": "campaign_data",
+                "setting": "difficulty",
+                "value": "easy"
+              },
+              {
+                "type": "add_chaos_token",
+                "tokens": [
+                  "+1",
+                  "+1",
+                  "0",
+                  "0",
+                  "0",
+                  "-1",
+                  "-1",
+                  "-1",
+                  "-2",
+                  "-2",
+                  "skull",
+                  "skull",
+                  "skull",
+                  "auto_fail",
+                  "elder_sign"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "standard",
+            "text": "Standard",
+            "description": "<i>I want to read the signs</i>",
+            "tokens": [
+              "+1",
+              "0",
+              "0",
+              "-1",
+              "-1",
+              "-1",
+              "-2",
+              "-2",
+              "-3",
+              "-4",
+              "skull",
+              "skull",
+              "skull",
+              "auto_fail",
+              "elder_sign"
+            ],
+            "effects": [
+              {
+                "type": "campaign_data",
+                "setting": "difficulty",
+                "value": "standard"
+              },
+              {
+                "type": "add_chaos_token",
+                "tokens": [
+                  "+1",
+                  "0",
+                  "0",
+                  "-1",
+                  "-1",
+                  "-1",
+                  "-2",
+                  "-2",
+                  "-3",
+                  "-4",
+                  "skull",
+                  "skull",
+                  "skull",
+                  "auto_fail",
+                  "elder_sign"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "hard",
+            "text": "Hard",
+            "description": "<i>I want to speak the oath</i>",
+            "tokens": [
+              "0",
+              "0",
+              "0",
+              "-1",
+              "-1",
+              "-2",
+              "-2",
+              "-3",
+              "-3",
+              "-4",
+              "-5",
+              "skull",
+              "skull",
+              "skull",
+              "auto_fail",
+              "elder_sign"
+            ],
+            "effects": [
+              {
+                "type": "campaign_data",
+                "setting": "difficulty",
+                "value": "hard"
+              },
+              {
+                "type": "add_chaos_token",
+                "tokens": [
+                  "0",
+                  "0",
+                  "0",
+                  "-1",
+                  "-1",
+                  "-2",
+                  "-2",
+                  "-3",
+                  "-3",
+                  "-4",
+                  "-5",
+                  "skull",
+                  "skull",
+                  "skull",
+                  "auto_fail",
+                  "elder_sign"
+                ]
+              }
+            ]
+          },
+          {
+            "id": "expert",
+            "text": "Expert",
+            "description": "<i>I want <u>The King in Yellow</u></i>",
+            "tokens": [
+              "0",
+              "-1",
+              "-1",
+              "-2",
+              "-2",
+              "-3",
+              "-3",
+              "-4",
+              "-4",
+              "-5",
+              "-6",
+              "-8",
+              "skull",
+              "skull",
+              "skull",
+              "auto_fail",
+              "elder_sign"
+            ],
+            "effects": [
+              {
+                "type": "campaign_data",
+                "setting": "difficulty",
+                "value": "expert"
+              },
+              {
+                "type": "add_chaos_token",
+                "tokens": [
+                  "0",
+                  "-1",
+                  "-1",
+                  "-2",
+                  "-2",
+                  "-3",
+                  "-3",
+                  "-4",
+                  "-4",
+                  "-5",
+                  "-6",
+                  "-8",
+                  "skull",
+                  "skull",
+                  "skull",
+                  "auto_fail",
+                  "elder_sign"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "side_scenario_steps": [
+    {
+      "id": "$play_scenario",
+      "type": "input",
+      "input": {
+        "type": "play_scenario",
+        "branches": [
+          {
+            "id": "mitpm_defeated",
+            "icon": "ptc",
+            "text": "Defeated the Man in the Pallid Mask",
+            "steps": [
+              "mitpm_defeated"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "mitpm_defeated",
+      "text": "In your Campaign Log, under “Chasing the Stranger,” place one tally mark.",
+      "effects": [
+        {
+          "type": "campaign_log_count",
+          "section": "chasing_the_stranger",
+          "operation": "add",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}
