@@ -1,0 +1,14 @@
+{
+  "core": {
+    "campaign": 0,
+    "scenarios": {"core_prologue": 0, "torch": 1, "arkham": 2, "tentacles": 3}
+  },
+  "dwl": {
+    "campaign": 1,
+    "scenarios": {"dwl_prologue": 0, "extracurricular_activity": 1, "the_house_always_wins": 2, "armitages_fate": 101, "the_miskatonic_museum": 3, "essex_county_express": 4, "blood_on_the_altar": 5, "dwl_interlude2": 102, "undimensioned_and_unseen": 6, "where_doom_awaits": 7, "lost_in_time_and_space": 8, "dwl_epilogue": 199}
+  },
+  "ptc": {
+    "campaign": 2,
+    "scenarios": {"ptc_prologue": 0, "curtain_call": 1, "the_last_king": 2, "ptc_interlude1": 101, "ptc_interlude1_reprint": 101, "echoes_of_the_past": 3, "the_unspeakable_oath": 4, "ptc_interlude2": 102, "a_phantom_of_truth": 5, "the_pallid_mask": 6, "black_stars_rise": 7, "dim_carcosa": 8, "ptc_epilogue": 199}
+  }
+}

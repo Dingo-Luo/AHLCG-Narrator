@@ -19,10 +19,7 @@
   ],
   "cards": 829,
   "agendaAndActCards": 82,
-  "translations": {
-    "zh-cn": 547,
-    "zh": 505
-  },
   "localCardImages": 26,
-  "images": "English card images for interactive scenarios are stored locally. Other images remain remote references. Separate upstream zh-cn card translations are imported without character conversion; current playable coverage is recorded in simplified-chinese-audit.json. Campaign has zh-cn and zh catalogs."
+  "images": "保留现有英文卡图，同时展示中文卡牌文字。",
+  "contentLanguage": "zh-CN"
 }

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "AHLCG Narrator local save v1",
+  "title": "诡镇档案本地存档 v1",
   "type": "object",
   "required": ["version", "campaignId", "name", "investigators", "events"],
   "properties": {

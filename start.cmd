@@ -1,4 +1,5 @@
 @echo off
+chcp 65001 >nul
 setlocal
 set "AHLCG_NODE="
 where node.exe >nul 2>nul
@@ -10,11 +11,11 @@ if exist "%LOCALAPPDATA%\Programs\nodejs\node.exe" set "AHLCG_NODE=%LOCALAPPDATA
 if defined AHLCG_NODE goto run
 if exist "%USERPROFILE%\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe" set "AHLCG_NODE=%USERPROFILE%\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe"
 if defined AHLCG_NODE goto run
-echo No Node.js runtime found. Install Node.js 22 or newer, then run this file again.
+echo 未找到 Node.js。请安装 22 或更新版本，然后重新运行。
 exit /b 1
 
 :run
-echo Starting Arkham Chronicles. Keep this window open; press Ctrl+C to stop.
-echo Open http://localhost:4173 ^(or the port printed below^).
+echo 正在启动诡镇档案。请保持窗口开启；按 Ctrl+C 停止。
+echo 请打开 http://localhost:4173 ^（或下方显示的端口）。
 "%AHLCG_NODE%" "%~dp0scripts\serve.mjs"
 exit /b %errorlevel%

@@ -4,7 +4,7 @@
   "conversionPerformed": false,
   "campaigns": {
     "core": {
-      "name": "The Night of the Zealot",
+      "name": "狂热之夜",
       "chapters": [
         "core_prologue",
         "torch",
@@ -19,7 +19,7 @@
       "sourceRevision": "dba650a271b794d73797b6c82adc73c00a4deb5c"
     },
     "dwl": {
-      "name": "The Dunwich Legacy",
+      "name": "敦威治遗产",
       "chapters": [
         "dwl_prologue",
         "extracurricular_activity",
@@ -47,7 +47,7 @@
       "sourceRevision": "22b90f96a3af7dc3480ad7773c1e5ca038ff1d1d"
     },
     "ptc": {
-      "name": "The Path to Carcosa",
+      "name": "卡尔克萨之路",
       "chapters": [
         "ptc_prologue",
         "curtain_call",

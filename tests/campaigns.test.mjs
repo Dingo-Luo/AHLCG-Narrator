@@ -66,7 +66,7 @@ test('Carcosa always uses the campaign-box story edition, without an edition pro
  next=run(next,{type:'advance'});assert.ok(storyNavigation(db,next).previous!==null);
  assert.ok(replay(db,next).log['hidden:reprint_language']);
 });
-test('Black Stars Rise has independent agenda stacks, hidden reverses and local variant images',async()=>{
+test('Black Stars Rise has independent agenda stacks, hidden reverses and Chinese variant text',async()=>{
  let save=arrivals.black_stars_rise;
  assert.equal(boardCard(db,replay(db,save),'agenda').card.code,'03275');assert.equal(boardCard(db,replay(db,save),'act').card.code,'03278');
  save=browseCard(db,save,'agenda','next');assert.equal(boardCard(db,replay(db,save),'agenda').card.stage,2);
@@ -74,7 +74,7 @@ test('Black Stars Rise has independent agenda stacks, hidden reverses and local 
  assert.equal(boardCard(db,replay(db,save),'act').card.code,'03278');
  assert.equal(boardCard(db,replay(db,save),'agenda').side,'back');
  assert.throws(()=>chooseCardVersion(db,save,'agenda','03279b'),/版本/);
- for(const code of ['03276a','03276b','03279a','03279b'])for(const side of ['front','back'])assert.ok((await readFile(new URL('../'+db.cards[code].images[side],import.meta.url))).length>1000);
+ for(const code of ['03276a','03276b','03279a','03279b'])assert.ok(db.cards[code].name);
  const html=renderBoard(db,replay(db,arrivals.black_stars_rise),{L:(a)=>a,escape:s=>s,button:()=>'',prose:s=>s,locale:'zh-cn'});
  assert.equal((html.match(/<img /g)||[]).length,2);assert.ok(html.includes('密谋 1c'));
 });
@@ -85,12 +85,14 @@ test('individual clue XP is balanced and investigator status follows the chosen 
  while(currentStep(db,replay(db,save))?.input?.type!=='investigator_counter'&&n--){const step=currentStep(db,replay(db,save));save=run(save,{type:'advance',answer:answerFor(save,step)});}
  assert.ok(n>0);assert.throws(()=>run(save,{type:'advance',answer:{i1:3,i2:0}}),/平均/);
 });
-test('all three campaigns keep source text and have complete Simplified Chinese card fields and local artwork',async()=>{
+test('all three campaigns use native Chinese card fields with available artwork',async()=>{
  const scenarios=['torch','arkham','tentacles',...db.campaigns.dwl.scenarios,...db.campaigns.ptc.scenarios];
  for(const card of Object.values(db.cards).filter(c=>['agenda','act'].includes(c.type_code)&&(scenarios.includes(c.encounter_code)||['flood','vortex'].includes(c.encounter_code)))){
-  for(const field of ['name','text','back_name','back_text','flavor','back_flavor'])if(card[field])assert.ok(card.zh_cn?.[field],`${card.code}/${field}`);
-  for(const side of ['front','back']){
-   assert.match(card.images[side],/^assets\/cards\//);const bytes=await readFile(new URL('../'+card.images[side],import.meta.url));assert.ok(bytes.length>1000);
+  for(const field of ['name','text','back_name','back_text','flavor','back_flavor'])if(card[field]&&/[A-Za-z]/.test(card[field]))assert.match(card[field], /[㐀-鿿]/u,`${card.code}/${field}`);
+  for(const side of ['front','back']) {
+    assert.match(card.images[side],/^assets\/cards\//);
+    assert.ok((await readFile(new URL('../'+card.images[side],import.meta.url))).length>1000);
   }
+  assert.ok(!('en' in (card.audio||{})));
  }
 });

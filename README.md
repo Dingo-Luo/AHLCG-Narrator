@@ -1,4 +1,4 @@
-# AHLCG Narrator
+# 诡镇档案
 
 《诡镇奇谈：卡牌版》剧情助手。跟随故事、记录选择，查看密谋与推进卡。
 
@@ -14,58 +14,39 @@
 
 | 首发年份 | 内容 | 剧情 | 配音 |
 | --- | --- | :---: | :---: |
-| 2016 | 基础版：狂热之夜 / Night of the Zealot | ✅ | ⬜ |
-| 2017 | 扩展 1：敦威治遗产 / The Dunwich Legacy | ✅ | ⬜ |
-| 2017 | 扩展 2：卡尔克萨之路 / The Path to Carcosa | ✅ | ⬜ |
-| 2018 | 扩展 3：失落的时代 / The Forgotten Age | ⬜ | ⬜ |
-| 2019 | 扩展 4：万象无终 / The Circle Undone | ⬜ | ⬜ |
-| 2019 | 扩展 5：食梦者 / The Dream-Eaters | ⬜ | ⬜ |
-| 2020 | 扩展 6：印斯茅斯阴谋 / The Innsmouth Conspiracy | ⬜ | ⬜ |
-| 2021 | 扩展 7：地球边缘 / Edge of the Earth | ⬜ | ⬜ |
-| 2022 | 扩展 8：绯红密钥 / The Scarlet Keys | ⬜ | ⬜ |
-| 2024 | 扩展 9：铁杉谷盛宴 / The Feast of Hemlock Vale | ⬜ | ⬜ |
-| 2025 | 扩展 10：沉没之城 / The Drowned City | ⬜ | ⬜ |
-| 2026 | 第二章：全新基础版 / Chapter Two Core Set | ⬜ | ⬜ |
-| 2026 | 第二章：Children of Blood | ⬜ | ⬜ |
+| 2016 | 基础版：狂热之夜 | ✅ | ⬜ |
+| 2017 | 扩展 1：敦威治遗产 | ✅ | ⬜ |
+| 2017 | 扩展 2：卡尔克萨之路| ✅ | ⬜ |
+| 2018 | 扩展 3：失落的时代| ⬜ | ⬜ |
+| 2019 | 扩展 4：万象无终| ⬜ | ⬜ |
+| 2019 | 扩展 5：食梦者| ⬜ | ⬜ |
+| 2020 | 扩展 6：印斯茅斯阴谋| ⬜ | ⬜ |
+| 2021 | 扩展 7：地球边缘| ⬜ | ⬜ |
+| 2022 | 扩展 8：绯红密钥| ⬜ | ⬜ |
+| 2024 | 扩展 9：铁杉谷盛宴| ⬜ | ⬜ |
+| 2025 | 扩展 10：沉没之城| ⬜ | ⬜ |
+| 2026 | 第二章：全新基础版| ⬜ | ⬜ |
 
-### 重返系列
-
-| 首发年份 | 内容 | 剧情 | 配音 |
-| --- | --- | :---: | :---: |
-| 2018 | Return to the Night of the Zealot | ⬜ | ⬜ |
-| 2019 | Return to the Dunwich Legacy | ⬜ | ⬜ |
-| 2019 | Return to the Path to Carcosa | ⬜ | ⬜ |
-| 2020 | Return to the Forgotten Age | ⬜ | ⬜ |
-| 2021 | Return to the Circle Undone | ⬜ | ⬜ |
-
-### 独立剧本 / POD
-
-| 首发年份 | 内容 | 剧情 | 配音 |
-| --- | --- | :---: | :---: |
-| 2016 | Curse of the Rougarou | ⬜ | ⬜ |
-| 2016 | Carnevale of Horrors | ⬜ | ⬜ |
-| 2018 | The Labyrinths of Lunacy | ⬜ | ⬜ |
-| 2018 | Guardians of the Abyss | ⬜ | ⬜ |
-| 2019 | Murder at the Excelsior Hotel | ⬜ | ⬜ |
-| 2020 | The Blob That Ate Everything | ⬜ | ⬜ |
-| 2020 | War of the Outer Gods | ⬜ | ⬜ |
-| 2022 | Machinations Through Time | ⬜ | ⬜ |
-| 2023 | Fortune and Folly | ⬜ | ⬜ |
-| 2023 | The Blob That Ate Everything ELSE! | ⬜ | ⬜ |
-| 2024 | The Midwinter Gala | ⬜ | ⬜ |
-| 2025 | Film Fatale | ⬜ | ⬜ |
-| 2026 | 第二章：Traces to Nowhere | ⬜ | ⬜ |
-
-### 平行调查员挑战剧本
-
-| 首发年份 | 内容 | 剧情 | 配音 |
-| --- | --- | :---: | :---: |
-| 2020 | Read or Die · All or Nothing · Bad Blood | ⬜ | ⬜ |
-| 2021 | By the Book · Red Tide Rising | ⬜ | ⬜ |
-| 2023 | On the Road Again · Laid to Rest · Path of the Righteous | ⬜ | ⬜ |
-| 2024 | Relics of the Past · Hunting for Answers · Pistols and Pearls · Aura of Faith | ⬜ | ⬜ |
-| 2025 | Enthralling Encore | ⬜ | ⬜ |
+重返系列、独立剧本及平行调查员挑战剧本尚未收录，待整理中文名称后补充。
 
 仅含调查员或玩家卡牌的产品不另列剧情状态。
 
 目录核对：[FFG 产品目录](https://www.fantasyflightgames.com/productline/arkham-horror-the-card-game/) · [ArkhamDB 内容列表](https://github.com/zzorba/arkhamdb-json-data/blob/master/packs.json)。更新于 2026-10-21。
+
+## 中文显示
+
+仅提供中文界面与剧情显示，优先使用简体译文，卡牌字段缺失时保留已有繁体译文。缺少中文译文的内容显示提示，不显示英文原文。密谋与推进卡保留现有英文卡图，同时展示中文文字；配音接口保留，音频尚未加入。未有中文名称的未来产品不列入时间线。
+
+内容文件直接保存中文，不再维护英文内容库、PO 翻译键或多语言目录。英文卡图仍作为目前可用的卡牌图片保留。
+
+编辑 `data/core.json`、`data/dwl.json`、`data/ptc.json` 中的中文内容后，运行 `npm run check:content` 校验内容与卡图，再运行 `npm test`。已移除旧版联网导入命令，避免重新引入英文内容。`data/chinese-content-audit.json` 记录尚缺中文的字段位置。
+
+剧情 ID、存档键、规则枚举和来源版本属于技术数据，继续保持稳定。用户已有记录不会被改写。
+
+## 配音脚本编号
+
+故事、结局及卡牌文字已按段落登记永久编号。查看 [配音制作说明](docs/narration.md) 与 [完整编号脚本](docs/配音脚本.md)。运行 `npm run build:narration` 更新脚本，运行 `npm run check:narration` 检查编号与音频映射。卡牌只为叙述段落配音，规则与标题只编号不配音；音频尚未制作。
+
+## 本地 IndexTTS
+
+本地安装与编号配音生成工具见 [IndexTTS 安装说明](tools/local-tts/README.md)。工具支持正常语速、参考声音和可选情绪文字，输出草稿 MP3 及 WAV，不覆盖已有试听样本。模型需自行完成安装，目前工作网络阻挡了模型权重下载。

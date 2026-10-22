@@ -10,7 +10,7 @@ function storage() {
   return { getItem:key=>values.has(key)?values.get(key):null, setItem:(key,value)=>values.set(key,String(value)) };
 }
 const fresh = name => createSave([{name}],name);
-const ui = { L:(zh)=>zh, t:value=>db.translations['zh-cn'][value]||value, escape:String, locale:'zh-cn', button:(label,action,attrs='')=>`<button data-action="${action}" ${attrs}>${label}</button>` };
+const ui = { L:(zh)=>zh, t:value=>value, escape:String, locale:'zh-cn', button:(label,action,attrs='')=>`<button data-action="${action}" ${attrs}>${label}</button>` };
 test('creating two games preserves the first and stores separate IDs',()=>{
   const store=storage();let library=readLibrary(store);
   library=savePlay(store,library,fresh('甲'),{create:true});const first=library.activeId;

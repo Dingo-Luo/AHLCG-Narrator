@@ -18,7 +18,6 @@ export function mergeCampaigns(dunwich,core,carcosa){
     scenario.storySetup=scenario.storyChapter?scenario.setup:scenario.setup.filter(id=>id==='$play_scenario'||narrative(id));
   }
   return {...dunwich,campaigns,campaignSources:{dwl:dunwich.sources[0].commit,core:core.source.commit,...(carcosa?{ptc:carcosa.source.commit}:{})},
-    scenarios,cards:{...dunwich.cards,...core.cards,...carcosa?.cards,...carcosa?.dwlCards},
-    translations:Object.fromEntries(['zh-cn','zh'].map(locale=>[locale,{...dunwich.translations[locale],...core.translations[locale],...carcosa?.translations?.[locale]}]))};
+    scenarios,cards:{...dunwich.cards,...core.cards,...carcosa?.cards,...carcosa?.dwlCards}};
 }
 export const campaignOf=(database,id)=>database.campaigns?.[id]||database.campaign;

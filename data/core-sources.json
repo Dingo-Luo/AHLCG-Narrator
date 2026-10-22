@@ -1,68 +1,6 @@
 {
   "repository": "zzorba/arkham-cards-data",
   "commit": "dba650a271b794d73797b6c82adc73c00a4deb5c",
-  "files": [
-    {
-      "path": "campaigns/notz/campaign.json",
-      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/campaigns/notz/campaign.json",
-      "sha256": "05a52868a1d3f30e848d7df3f08669219ddff774656d58051367af29f382babe"
-    },
-    {
-      "path": "i18n/zh-cn/campaigns/notz/campaign.po",
-      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/i18n/zh-cn/campaigns/notz/campaign.po",
-      "sha256": "61464dd2639ea26aa9952db3665c860b2cfe5e807986799e90e439ebe8848f71"
-    },
-    {
-      "path": "i18n/zh/campaigns/notz/campaign.po",
-      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/i18n/zh/campaigns/notz/campaign.po",
-      "sha256": "3ecdf82cf9c295c43c443f5303ad13abfb5381b38fd63e0ca9de1b7fbec3bfc5"
-    },
-    {
-      "path": "campaigns/notz/torch.json",
-      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/campaigns/notz/torch.json",
-      "sha256": "7ccf3753634657270855a81165b2c8f56cd4c11d498df02bee172ccd70fc6735"
-    },
-    {
-      "path": "i18n/zh-cn/campaigns/notz/torch.po",
-      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/i18n/zh-cn/campaigns/notz/torch.po",
-      "sha256": "e09cda0a629699b95e039f2b91d4f146d48c8a2a4b662aa7a81ad19b785c14cd"
-    },
-    {
-      "path": "i18n/zh/campaigns/notz/torch.po",
-      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/i18n/zh/campaigns/notz/torch.po",
-      "sha256": "f9d2e689e08412bc77964b52170bb13f73e8360cf503723367ac3a846bd7d8c3"
-    },
-    {
-      "path": "campaigns/notz/arkham.json",
-      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/campaigns/notz/arkham.json",
-      "sha256": "1c92d66c4d0e6e45448ac5ab5d83d478f483d69918dbfdd4eb32e2776470b0f0"
-    },
-    {
-      "path": "i18n/zh-cn/campaigns/notz/arkham.po",
-      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/i18n/zh-cn/campaigns/notz/arkham.po",
-      "sha256": "27006184655de03c223f5b1a3f079610ec19ed0ed31515bd160a881a9bc1b2d8"
-    },
-    {
-      "path": "i18n/zh/campaigns/notz/arkham.po",
-      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/i18n/zh/campaigns/notz/arkham.po",
-      "sha256": "19ca5cd9d43a0249149868c00a9c75834dded734c129b6ee497d708e8ce10539"
-    },
-    {
-      "path": "campaigns/notz/tentacles.json",
-      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/campaigns/notz/tentacles.json",
-      "sha256": "ea5914965d57780105ec018a4982bf1640e42b490b774ab7a9b317683a1b21f6"
-    },
-    {
-      "path": "i18n/zh-cn/campaigns/notz/tentacles.po",
-      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/i18n/zh-cn/campaigns/notz/tentacles.po",
-      "sha256": "afb785e3da1ada0282f7af2dfd163987b5916e84bdc1779e11aa34775a4074e0"
-    },
-    {
-      "path": "i18n/zh/campaigns/notz/tentacles.po",
-      "url": "https://raw.githubusercontent.com/zzorba/arkham-cards-data/dba650a271b794d73797b6c82adc73c00a4deb5c/i18n/zh/campaigns/notz/tentacles.po",
-      "sha256": "43154b27dcc83ebede91e37c4b8c23e6db0e06a691fe93273ac13c868f9fbc68"
-    }
-  ],
   "images": [
     {
       "code": "01105",
@@ -274,5 +212,6 @@
       "path": "assets/cards/01146b.jpg",
       "sha256": "44f2ac021a42c039255e18c240e6a0fafe84d186a34c179932fdb97b694faa9b"
     }
-  ]
+  ],
+  "contentLanguage": "zh-CN"
 }

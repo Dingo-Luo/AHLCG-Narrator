@@ -1,0 +1,275 @@
+{
+  "language": "zh-CN",
+  "missingContent": [
+    {
+      "file": "core",
+      "path": "campaign/steps/5/input/choices/0/description"
+    },
+    {
+      "file": "core",
+      "path": "campaign/steps/5/input/choices/1/description"
+    },
+    {
+      "file": "core",
+      "path": "campaign/steps/5/input/choices/2/description"
+    },
+    {
+      "file": "core",
+      "path": "campaign/steps/5/input/choices/3/description"
+    },
+    {
+      "file": "core",
+      "path": "scenarios/torch/steps/4/text"
+    },
+    {
+      "file": "core",
+      "path": "scenarios/arkham/header"
+    },
+    {
+      "file": "core",
+      "path": "scenarios/arkham/steps/0/input/choices/0/description"
+    },
+    {
+      "file": "core",
+      "path": "scenarios/arkham/steps/0/input/choices/1/description"
+    },
+    {
+      "file": "core",
+      "path": "scenarios/arkham/steps/0/input/choices/2/description"
+    },
+    {
+      "file": "core",
+      "path": "scenarios/arkham/steps/0/input/choices/3/description"
+    },
+    {
+      "file": "core",
+      "path": "scenarios/arkham/steps/19/text"
+    },
+    {
+      "file": "core",
+      "path": "scenarios/arkham/resolutions/0/text"
+    },
+    {
+      "file": "core",
+      "path": "scenarios/tentacles/header"
+    },
+    {
+      "file": "core",
+      "path": "scenarios/tentacles/steps/9/text"
+    },
+    {
+      "file": "dwl",
+      "path": "scenarios/armitages_fate/steps/1/narration/name"
+    },
+    {
+      "file": "dwl",
+      "path": "scenarios/armitages_fate/steps/2/narration/name"
+    },
+    {
+      "file": "dwl",
+      "path": "scenarios/dwl_epilogue/steps/2/text"
+    },
+    {
+      "file": "dwl",
+      "path": "scenarios/dwl_interlude2/steps/2/narration/name"
+    },
+    {
+      "file": "dwl",
+      "path": "scenarios/dwl_interlude2/steps/7/narration/name"
+    },
+    {
+      "file": "dwl",
+      "path": "scenarios/dwl_interlude2/steps/12/narration/name"
+    },
+    {
+      "file": "dwl",
+      "path": "scenarios/dwl_interlude2/steps/17/narration/name"
+    },
+    {
+      "file": "dwl",
+      "path": "scenarios/dwl_interlude2/steps/21/narration/name"
+    },
+    {
+      "file": "dwl",
+      "path": "cards/12109/back_flavor"
+    },
+    {
+      "file": "dwl",
+      "path": "cards/12115/flavor"
+    },
+    {
+      "file": "dwl",
+      "path": "cards/02320/back_subname"
+    },
+    {
+      "file": "dwl",
+      "path": "cards/02054/back_subname"
+    },
+    {
+      "file": "dwl",
+      "path": "cards/02055/back_subname"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/curtain_call/header"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/curtain_call/steps/5/text"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/dim_carcosa/steps/26/text"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/echoes_of_the_past/header"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/echoes_of_the_past/steps/2/narration/name"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/black_stars_rise/header"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/black_stars_rise/steps/2/narration/name"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/black_stars_rise/steps/11/text"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/ptc_epilogue/steps/1/narration/name"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/a_phantom_of_truth/header"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/a_phantom_of_truth/steps/27/narration/name"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/a_phantom_of_truth/steps/29/narration/name"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/a_phantom_of_truth/steps/29/text"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/a_phantom_of_truth/steps/39/text"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/a_phantom_of_truth/steps/41/text"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/a_phantom_of_truth/steps/42/text"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/the_last_king/header"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/the_last_king/steps/10/text"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/ptc_interlude1/steps/15/narration/name"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/ptc_interlude1/steps/16/narration/name"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/ptc_interlude1/steps/17/narration/name"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/the_unspeakable_oath/header"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/the_unspeakable_oath/steps/9/narration/name"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/the_unspeakable_oath/steps/21/text"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/the_pallid_mask/header"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/the_pallid_mask/steps/11/narration/name"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/ptc_interlude2/steps/9/narration/name"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/ptc_interlude2/steps/10/narration/name"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/ptc_interlude2/steps/11/narration/name"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/ptc_interlude2/steps/12/narration/name"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/ptc_interlude2/steps/13/narration/name"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/ptc_interlude1_reprint/steps/15/narration/name"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/ptc_interlude1_reprint/steps/16/narration/name"
+    },
+    {
+      "file": "ptc",
+      "path": "scenarios/ptc_interlude1_reprint/steps/17/narration/name"
+    },
+    {
+      "file": "ptc",
+      "path": "cards/03211/back_subname"
+    },
+    {
+      "file": "ptc",
+      "path": "cards/03211/subname"
+    },
+    {
+      "file": "ptc",
+      "path": "cards/03168/back_subname"
+    },
+    {
+      "file": "ptc",
+      "path": "cards/03169/back_subname"
+    },
+    {
+      "file": "ptc",
+      "path": "cards/03170/back_subname"
+    },
+    {
+      "file": "ptc",
+      "path": "cards/03171/back_subname"
+    }
+  ],
+  "missingCount": 67,
+  "conversionPerformed": false
+}

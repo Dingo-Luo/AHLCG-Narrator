@@ -3,7 +3,6 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createSave, replay, commit, currentStep, cardDeck, boardCard } from '../src/engine.js';
 import { renderBoard } from '../src/board.js';
-import { parsePO } from '../scripts/import-data.mjs';
 const db = JSON.parse(await readFile(new URL('../data/dwl.json', import.meta.url)));
 const statuses = { i1:'survived', i2:'physical' };
 // Original fixtures exercise compatibility with pre-story-only saves.
@@ -104,14 +103,11 @@ test('import validation rejects malformed and duplicate investigator records',()
   assert.throws(()=>replay(db,{version:50}));
   const save=fresh();save.investigators[1].id='i1';assert.throws(()=>replay(db,save));
 });
-test('PO parsing handles multiline strings and excludes fuzzy translations',()=>{
-  assert.deepEqual(parsePO('msgid "a"\n"b"\nmsgstr "甲"\n"乙"\n\n#, fuzzy\nmsgid "x"\nmsgstr "错误"\n'),{ab:'甲乙'});
-});
 test('database preserves scenario links and source provenance',()=>{
   assert.equal(db.campaign.scenarios.length,12);
   for(const id of db.campaign.scenarios)assert.ok(db.scenarios[id]);
-  assert.ok(db.cards['02063'].zh.back_text);
-  assert.ok(db.cards['02067'].back_text.includes('Extracurricular Activity'));
+  assert.ok(db.cards['02063'].back_text);
+  assert.match(db.cards['02067'].back_text, /[㐀-鿿]/u);
   assert.ok(db.sources.every(item=>/^[a-f0-9]{40}$/.test(item.commit)));
 });
 test('pinned saves reject a changed content revision',()=>{
@@ -210,15 +206,16 @@ for(const cheated of [false,true])test(`recorded action (${cheated}) feeds resol
   assert.equal(replay(db,save).tokens.includes('elder_thing'),cheated);
   assert.equal(replay(db,save).investigators[0].earned,4);
 });
-test('board renders exactly two cards with per-card controls and hidden transcripts',()=>{
+test('board renders exactly two cards with per-card controls and visible Chinese transcripts',()=>{
   const state=replay(db,run(storyBegin(),{type:'advance'}));
-  const html=renderBoard(db,state,{locale:'en',L:(_zh,en)=>en,escape:String,prose:String,button:(label,action)=>`<button data-action="${action}">${label}</button>`});
+  const html=renderBoard(db,state,{locale:'zh-cn',L:zh=>zh,escape:String,prose:String,button:(label,action)=>`<button data-action="${action}">${label}</button>`});
   assert.equal((html.match(/class="board-card"/g)||[]).length,2);
   assert.equal((html.match(/data-action="next-card"/g)||[]).length,2);
   assert.equal((html.match(/data-action="flip-card"/g)||[]).length,2);
   assert.equal((html.match(/data-action="previous-card"/g)||[]).length,2);
-  assert.equal((html.match(/<details class="card-transcript">/g)||[]).length,2);
-  assert.equal((html.match(/disabled title="Narration/g)||[]).length,2);
+  assert.equal((html.match(/<details class="card-transcript" open>/g)||[]).length,2);
+  assert.equal((html.match(/data-action="narrate"/g)||[]).length,2);
+  assert.ok(html.indexOf('data-action="narrate"')<html.indexOf('data-action="flip-card"'));
   assert.ok(!html.includes('On the Right Track')); // Unrevealed reverse-side story.
 });
 

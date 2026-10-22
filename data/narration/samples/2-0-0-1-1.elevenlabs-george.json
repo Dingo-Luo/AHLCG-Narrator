@@ -1,0 +1,22 @@
+{
+  "id": "2-0-0-1-1",
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "voice": "George",
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "textHash": "03a0d13640dd73f6994ff7af6bfddaa196bd48b5205553c6d586534e1bc3b9aa",
+  "text": "你翻开手中折起的节目单，再次阅读彷佛你已读过百遍的这张纸片。“米斯卡塔尼克剧院上演：《黄衣之王》，”纸上这么写著。“阿卡姆本地的沃德剧院将迎来这部戏剧的特别上演，为期一晚。这部令人无法抗拒的戏剧共有两幕。本作品由奈杰尔·英格兰姆负责筹划和管理。本剧演员均属于一个小型剧团，在演员名单最后还有个未署名的人物：“陌生人。”",
+  "src": "assets/audio/zh-CN/2/0/elevenlabs-george/2-0-0-1-1.03a0d13640dd.mp3",
+  "status": "draft",
+  "voiceSettings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.0
+  },
+  "characters": 159,
+  "reportedCharacterCost": "159",
+  "bytes": 538374,
+  "generatedAt": "2026-10-22T13:24:02.496525+00:00"
+}
