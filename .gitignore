@@ -2,6 +2,21 @@ node_modules/
 .cache/
 artifacts/
 *.log
+data/narration/production/*.lock
+__pycache__/
 
-tools/local-tts/local-state.json
-tools/local-tts/__pycache__/
+# Local authoring, validation, preview and voice production (keep on this computer).
+/scripts/
+/tools/
+/tests/
+/docs/
+/package.json
+/start.cmd
+/data/narration/levels/
+/data/narration/production/
+/data/narration/samples/
+
+# Publish final MP3 files; keep audio intermediates local.
+/assets/audio/**/*.wav
+/assets/audio/**/*.part
+/assets/audio/**/*.tmp
