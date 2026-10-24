@@ -1,5 +1,6 @@
 import { boardCard,cardDeck } from './engine.js';
 import { localizedCard } from './localization.js';
+import { hasNarratedText } from './narration.js';
 
 export function renderBoard(database, state, ui) {
   const { L, escape, button, prose } = ui;
@@ -20,10 +21,12 @@ export function renderBoard(database, state, ui) {
       if(divider)textRange=state.completed.extracurricular_activity?{start:divider.index+divider[0].length,end:text.length}:{start:0,end:divider.index};
     }
     const flavor = translated[prefix+'flavor'];
+    const hasNarration=hasNarratedText(flavor||'',`card:${card.code}:${prefix}flavor`,database.narrationIndex)
+      ||hasNarratedText(text,`card:${card.code}:${prefix}text`,database.narrationIndex,textRange);
     return `<article class="board-card" data-deck="${type}"><div class="board-card-heading"><span class="eyebrow">${label}</span><span class="board-side">${L(side === 'front' ? '正面' : '背面')}</span></div>
       ${variants.length>1?`<select class="card-version" aria-label="${escape(label)} · ${L('卡牌版本')}" data-action="card-version" data-deck="${type}">${variants.map((v,index)=>`<option value="${v.code}" ${v.code===card.code?'selected':''}>${L('版本')} ${index+1} · ${escape(localizedCard(v).name)}</option>`).join('')}</select>`:''}
       <img class="board-image" src="${escape(card.images[side])}" alt="${escape(label)} · ${escape(translated[prefix+'name'] || '')}">
-      <div class="board-controls">${button('▷ '+L('播放配音'), 'narrate', 'aria-pressed="false"', 'small')}
+      <div class="board-controls">${hasNarration?button('▷ '+L('播放配音'), 'narrate', 'aria-pressed="false"', 'small'):''}
       ${button('↻ '+L('翻面'), 'flip-card', `data-deck="${type}"`, 'small')}
       ${button('← '+L('上一张'), 'previous-card', `data-deck="${type}" ${first?'disabled':''}`, 'small')}
       ${button(L(last ? '最后一张' : '下一张')+' →', 'next-card', `data-deck="${type}" ${last ? 'disabled' : ''}`, 'primary small')}</div>

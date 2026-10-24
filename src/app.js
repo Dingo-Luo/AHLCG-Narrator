@@ -1,4 +1,5 @@
-import { createNarrationIndex, renderNarratedText } from './narration.js';
+import { createMusicPlayer } from './music.js';
+import { createNarrationIndex, renderNarratedText, hasNarratedText } from './narration.js';
 import { createNarrationPlayer, narrationClips } from './narration-player.js';
 import { chineseText } from './chinese.js';
 import { createSave, replay, commit, SUPPORTED, playPosition,cultistCards,storyActions,allowedStatuses } from './engine.js';
@@ -13,13 +14,17 @@ const root = document.getElementById('app');
 const modal = document.getElementById('modal');
 let database, save = null, state = null, view = 'home', storageProblem = false, corruptSave = false, externalChange = false;
 let activeNarrationButton = null;
+let activeNarrationKey = null;
 const narrationPlayer = createNarrationPlayer({onStop() {
   if(activeNarrationButton) {
     activeNarrationButton.textContent='▷ 播放配音';
     activeNarrationButton.setAttribute('aria-pressed','false');
   }
   activeNarrationButton=null;
+  activeNarrationKey=null;
 }});
+let musicTracks=[];
+const musicPlayer=createMusicPlayer({onChange:syncMusicControls});
 let library = emptyLibrary();
 let resolutionCandidate = null, toastTimer, navigationSave, navigationState;
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
@@ -133,22 +138,65 @@ function nextStep() {
   else if(state.active?.queue.length&&step?.input?.type!=='choose_one')advanceCurrent();
 }
 function nav() {
-  return [ ['home', '⌂', L('主菜单')], ['story', '▤', L('剧情')], ['team', '♙', L('调查员')], ['log', '✎', L('日志')] ];
+  return [ ['home', '⌂', L('主菜单')], ['story', '▤', L('剧情')], ['team', '♙', L('调查员')], ['log', '✎', L('日志')], ['music', '♫', L('音乐')] ];
 }
-function render() {
-  stopNarration();
+function musicControls() {
+  const {track,playing,volume}=musicPlayer.snapshot();
+  return `<div class="music-controls" role="group" aria-label="背景音乐"><button class="button small" data-action="music-toggle" aria-label="${playing?'暂停背景音乐':'播放背景音乐'}" aria-pressed="${playing}" ${track||musicTracks.some(item=>item.default)?'':'disabled'}>${playing?'Ⅱ 暂停':'▷ 音乐'}</button><span class="music-current" title="${escape(track?.title||'未选择音乐')}">${escape(track?.title||'未选择音乐')}</span><label class="music-volume">音量<input type="range" min="0" max="100" step="1" value="${Math.round(volume*100)}" data-music-volume aria-label="背景音乐音量"><output data-music-volume-value>${Math.round(volume*100)}%</output></label></div>`;
+}
+function syncMusicControls() {
+  const {track,playing,volume}=musicPlayer.snapshot();
+  for(const control of document.querySelectorAll('[data-action="music-toggle"]')) {
+    control.disabled=!track&&!musicTracks.some(item=>item.default);
+    control.setAttribute('aria-pressed',String(playing));
+    control.setAttribute('aria-label',playing?'暂停背景音乐':'播放背景音乐');
+    control.textContent=playing?'Ⅱ 暂停':'▷ 音乐';
+  }
+  for(const label of document.querySelectorAll('.music-current')) {
+    label.textContent=track?.title||'未选择音乐';label.title=label.textContent;
+  }
+  for(const input of document.querySelectorAll('[data-music-volume]'))input.value=Math.round(volume*100);
+  for(const output of document.querySelectorAll('[data-music-volume-value]'))output.textContent=`${Math.round(volume*100)}%`;
+  for(const row of document.querySelectorAll('[data-action="music-select"]')) {
+    const selected=row.dataset.track===track?.id;
+    row.setAttribute('aria-pressed',String(selected));
+    row.classList.toggle('selected',selected);
+    row.querySelector('.music-track-state').textContent=selected?(playing?'播放中':'已暂停'):'';
+  }
+}
+function musicPage() {
+  const {track,playing}=musicPlayer.snapshot();
+  return head('',L('音乐'))+`<div class="music-list">${musicTracks.map(item=>`<button class="music-track ${track?.id===item.id?'selected':''}" data-action="music-select" data-track="${escape(item.id)}" aria-pressed="${track?.id===item.id}"><span class="music-track-name">${escape(item.title)}</span><span class="music-track-state">${track?.id===item.id?(playing?'播放中':'已暂停'):''}</span></button>`).join('')||'<p>暂无音乐。</p>'}</div>`;
+}
+document.addEventListener('input',event=>{
+  if(event.target.matches('[data-music-volume]'))musicPlayer.setVolume(Number(event.target.value)/100);
+
+});
+function render({keepNarration=false}={}) {
+  if(!keepNarration)stopNarration();
   document.title=L('诡镇档案');
   document.documentElement.lang = 'zh-CN';
   const menu = view === 'home';
   const scenario = state?.active && database.scenarios[state.active.id];
   root.innerHTML = `<div class="shell ${menu ? 'menu-shell' : ''}">
     ${menu ? '' : `<aside class="sidebar"><a class="brand" href="#home"><strong>${L('诡镇档案')}</strong></a><nav class="nav" aria-label="主导航">${nav().map(([id,icon,label])=>`<button data-action="navigate" data-view="${id}" class="${view===id?'active':''}" ${view===id?'aria-current="page"':''}><span class="nav-icon" aria-hidden="true">${icon}</span>${label}</button>`).join('')}</nav></aside>`}
-    <div class="workspace"><header class="topbar"><span class="mobile-brand">${L('诡镇档案')}</span><div class="breadcrumb"><b>${escape(menu ? L('诡镇档案') : scenario ? t(scenario.scenario_name) : L('游戏'))}</b></div><div class="top-actions">${menu ? '' : `<span class="save-status ${storageProblem||externalChange?'save-error':''}" role="status">${externalChange?L('请刷新以载入最新记录'):storageProblem?L('保存失败'):L('已自动保存')}</span>`}</div></header>
+    <div class="workspace"><header class="topbar"><span class="mobile-brand">${L('诡镇档案')}</span><div class="breadcrumb"><b>${escape(menu ? L('诡镇档案') : scenario ? t(scenario.scenario_name) : L('游戏'))}</b></div><div class="top-actions">${menu||!(storageProblem||externalChange) ? '' : `<span class="save-status ${storageProblem||externalChange?'save-error':''}" role="status">${externalChange?L('请刷新以载入最新记录'):L('保存失败')}</span>`}${musicControls()}</div></header>
       <main class="content ${menu?'menu-content':''}" id="main">${storageProblem||externalChange?`<div class="notice error">${externalChange?L('另一标签页已更新游戏记录，请刷新后继续。'):L('无法读取或保存游戏记录，已有数据未被删除。')}</div>`:''}${renderView()}</main>
     </div></div>`;
   for(const img of root.querySelectorAll('img'))img.addEventListener('error',()=>{
     img.hidden=true;const message=document.createElement('p');message.className='notice';message.textContent=L('卡图未能加载，仍可阅读下方卡牌文字。');img.after(message);
   },{once:true});
+  if(keepNarration&&activeNarrationKey) {
+    activeNarrationButton=null;
+    for(const control of root.querySelectorAll('[data-action="narrate"]')) {
+      const scope=control.closest('.board-card, .story-paper');
+      const key=[...(scope?.querySelectorAll('[data-narration-id]')||[])].map(node=>node.dataset.narrationId).join('|');
+      if(key===activeNarrationKey) {
+        activeNarrationButton=control;
+        control.textContent='■ 停止配音';control.setAttribute('aria-pressed','true');
+      }
+    }
+  }
 }
 function head(_eyebrow, heading, sub = '', action = '') {
   return `<div class="page-head"><div><h1>${escape(heading)}</h1>${sub?`<p>${escape(sub)}</p>`:''}</div>${action}</div>`;
@@ -157,6 +205,7 @@ function head(_eyebrow, heading, sub = '', action = '') {
 function renderView() {
   if (view === 'home') return home();
   if (!save) return `<div class="paper empty"><div class="eyebrow">故事由此开始</div><h2>${L('先建立你的战役档案')}</h2><p>${L('加入调查员后，即可记录剧情选择与进度。')}</p>${button(L('建立战役'), 'new', '', 'primary')}</div>`;
+  if (view === 'music') return musicPage();
   if (view === 'team') return team();
   if (view === 'log') return log() + historyPanel();
   if (view === 'agenda' || view === 'act') return story();
@@ -195,10 +244,11 @@ function stepContent(step) {
   const phase = state.active.phase;
   const remembered=pendingEvent()?.type==='advance'?pendingEvent().answer:undefined;
   const textTitle = step.title || (step.type === 'story' ? L('故事背景') : step.type === 'encounter_sets' ? L('收集遭遇组') : step.type === 'location_setup' ? '地点布局' : step.input ? L('记录你的选择') : L('故事与记录'));
-  let result = `<div class="eyebrow">${phase === 'setup' ? '开场故事' : '结局与影响'}</div><h2>${escape(t(textTitle))}</h2>${step.text?button('▷ 播放配音','narrate','aria-pressed="false"','small'):''}`;
+  const kind=state.active.queue[0]?.startsWith('@resolution:')?'resolution':'step';
+  const narrationKey=`scenario:${state.active.id}:${kind}:${step.id}:text`;
+  let result = `<div class="eyebrow">${phase === 'setup' ? '开场故事' : '结局与影响'}</div><h2>${escape(t(textTitle))}</h2>${step.text&&hasNarratedText(step.text,narrationKey,database.narrationIndex)?button('▷ 播放配音','narrate','aria-pressed="false"','small'):''}`;
   if (step.text) {
-    const kind=state.active.queue[0]?.startsWith('@resolution:')?'resolution':'step';
-    result += narratedText(step.text,`scenario:${state.active.id}:${kind}:${step.id}:text`);
+    result += narratedText(step.text,narrationKey);
   }
   if (step.effects?.some(item => item.type === 'campaign_log') && !step.text) result += step.effects.filter(item => item.type === 'campaign_log').map(item => `<div class="log-entry">${prose(item.text)}</div>`).join('');
   const assignment = step.effects?.find(item => item.type === 'add_card');
@@ -297,7 +347,9 @@ document.addEventListener('click',async event=>{
   const el=event.target.closest('[data-action]');if(!el)return;
   try {
     switch(el.dataset.action) {
-      case 'navigate': view=el.dataset.view;render();window.scrollTo(0,0);break;
+      case 'music-toggle': await musicPlayer.toggle(musicTracks.find(item=>item.default));break;
+      case 'music-select': await musicPlayer.select(musicTracks.find(track=>track.id===el.dataset.track));break;
+      case 'navigate': view=el.dataset.view;render({keepNarration:view!=='home'});window.scrollTo(0,0);break;
       case 'new': if(modal.open)modal.close();await newCampaign();break;
       case 'close-modal':modal.close();resolutionCandidate=null;break;
       case 'previous-step':goTo(storyNav().previous);break;
@@ -349,6 +401,7 @@ document.addEventListener('click',async event=>{
         if(!clips.length)break;
         narrationPlayer.play(clips);
         activeNarrationButton=el;
+        activeNarrationKey=ids.join('|');
         el.textContent='■ 停止配音';el.setAttribute('aria-pressed','true');
         break;
       }
@@ -412,6 +465,7 @@ async function init(){
     }));
     database=mergeCampaigns(dunwich,core,carcosa);
     database.narrationIndex=createNarrationIndex(manifest,audio);
+    try { const response=await fetch('data/music.json');if(response.ok)musicTracks=await response.json(); } catch(error) { console.warn('Music list unavailable:',error); }
     readStorage();render();
   } catch(error) {
     root.innerHTML=`<main class="content"><div class="paper"><h1>档案暂时无法打开</h1><p>请通过本地服务器打开网站，并确认内容与配音索引文件存在。</p><p>${escape(error.message)}</p></div></main>`;

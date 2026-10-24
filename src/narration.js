@@ -8,6 +8,16 @@ export function resolveClip(unit, audio) {
   return clip.src;
 }
 
+export function hasNarratedText(raw, sourceKey, index, range) {
+  const source=index?.sources.get(sourceKey);
+  if(!source||source.sourceText!==raw)return false;
+  const start=range?.start??0,end=range?.end??raw.length;
+  return source.units.some(id=>{
+    const unit=index.units.get(id);
+    return unit?.speak&&unit.start>=start&&unit.end<=end;
+  });
+}
+
 // Annotate the unchanged source markup, rather than duplicating the paragraph in UI.
 // A range is used for the conditional reverse of card 02067; the other branch is hidden.
 export function renderNarratedText(raw, sourceKey, index, {prose,escape}, range) {

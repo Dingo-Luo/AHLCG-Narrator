@@ -1,0 +1,80 @@
+[
+  {
+    "id": "6b4e8291dabe",
+    "title": "诡镇主题曲",
+    "src": "bgm/诡镇主题曲.mp3",
+    "default": true
+  },
+  {
+    "id": "46b0afe70197",
+    "title": "不详的氛围",
+    "src": "bgm/不详的氛围.mp3",
+    "default": false
+  },
+  {
+    "id": "404671b07eae",
+    "title": "宏大的开场",
+    "src": "bgm/宏大的开场.mp3",
+    "default": false
+  },
+  {
+    "id": "9a225746bed0",
+    "title": "恶兆的显现",
+    "src": "bgm/恶兆的显现.mp3",
+    "default": false
+  },
+  {
+    "id": "29527911e43b",
+    "title": "悲惨的境遇",
+    "src": "bgm/悲惨的境遇.mp3",
+    "default": false
+  },
+  {
+    "id": "16a5bf08bf17",
+    "title": "惊险的追逐",
+    "src": "bgm/惊险的追逐.mp3",
+    "default": false
+  },
+  {
+    "id": "7903d9495b46",
+    "title": "攻击与交战",
+    "src": "bgm/攻击与交战.mp3",
+    "default": false
+  },
+  {
+    "id": "d094effbcab1",
+    "title": "暗中的调查",
+    "src": "bgm/暗中的调查.mp3",
+    "default": false
+  },
+  {
+    "id": "fb2af1b4a3d0",
+    "title": "查阅旧档案",
+    "src": "bgm/查阅旧档案.mp3",
+    "default": false
+  },
+  {
+    "id": "50849595d9d8",
+    "title": "沸腾的力量",
+    "src": "bgm/沸腾的力量.mp3",
+    "default": false
+  },
+  {
+    "id": "391c6eb6a035",
+    "title": "诡异的房间",
+    "src": "bgm/诡异的房间.mp3",
+    "default": false
+  },
+  {
+    "id": "f3757d43abbd",
+    "title": "诡秘的学院",
+    "src": "bgm/诡秘的学院.mp3",
+    "default": false
+  },
+  {
+    "id": "a1d62b34307a",
+    "title": "轻松的小镇",
+    "src": "bgm/轻松的小镇.mp3",
+    "default": false
+  }
+]
