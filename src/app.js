@@ -142,7 +142,7 @@ function nav() {
 }
 function musicControls() {
   const {track,playing,volume}=musicPlayer.snapshot();
-  return `<div class="music-controls" role="group" aria-label="背景音乐"><button class="button small" data-action="music-toggle" aria-label="${playing?'暂停背景音乐':'播放背景音乐'}" aria-pressed="${playing}" ${track||musicTracks.some(item=>item.default)?'':'disabled'}>${playing?'Ⅱ 暂停':'▷ 音乐'}</button><span class="music-current" title="${escape(track?.title||'未选择音乐')}">${escape(track?.title||'未选择音乐')}</span><label class="music-volume">音量<input type="range" min="0" max="100" step="1" value="${Math.round(volume*100)}" data-music-volume aria-label="背景音乐音量"><output data-music-volume-value>${Math.round(volume*100)}%</output></label></div>`;
+  return `<div class="music-controls" role="group" aria-label="背景音乐"><button class="button small narration-speed" data-action="narration-speed" aria-label="切换配音速度" title="配音速度">${narrationPlayer.getRate().toFixed(1)}×</button><button class="button small music-play" data-action="music-toggle" aria-label="${playing?'暂停背景音乐':'播放背景音乐'}" aria-pressed="${playing}" ${track||musicTracks.some(item=>item.default)?'':'disabled'}>${playing?'⏸':'▶'}</button><span class="music-current" title="${escape(track?.title||'未选择音乐')}">${escape(track?.title||'未选择音乐')}</span><label class="music-volume">音量<input type="range" min="0" max="100" step="1" value="${Math.round(volume*100)}" data-music-volume aria-label="背景音乐音量"><output data-music-volume-value>${Math.round(volume*100)}%</output></label></div>`;
 }
 function syncMusicControls() {
   const {track,playing,volume}=musicPlayer.snapshot();
@@ -150,7 +150,7 @@ function syncMusicControls() {
     control.disabled=!track&&!musicTracks.some(item=>item.default);
     control.setAttribute('aria-pressed',String(playing));
     control.setAttribute('aria-label',playing?'暂停背景音乐':'播放背景音乐');
-    control.textContent=playing?'Ⅱ 暂停':'▷ 音乐';
+    control.textContent=playing?'⏸':'▶';
   }
   for(const label of document.querySelectorAll('.music-current')) {
     label.textContent=track?.title||'未选择音乐';label.title=label.textContent;
@@ -347,6 +347,13 @@ document.addEventListener('click',async event=>{
   const el=event.target.closest('[data-action]');if(!el)return;
   try {
     switch(el.dataset.action) {
+      case 'narration-speed': {
+        const speeds=[1,1.2,1.5];
+        narrationPlayer.setRate(speeds[(speeds.indexOf(narrationPlayer.getRate())+1)%speeds.length]);
+        el.textContent=narrationPlayer.getRate().toFixed(1)+'×';
+        el.setAttribute('aria-label','配音速度 '+el.textContent+'，点击切换');
+        break;
+      }
       case 'music-toggle': await musicPlayer.toggle(musicTracks.find(item=>item.default));break;
       case 'music-select': await musicPlayer.select(musicTracks.find(track=>track.id===el.dataset.track));break;
       case 'navigate': view=el.dataset.view;render({keepNarration:view!=='home'});window.scrollTo(0,0);break;

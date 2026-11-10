@@ -12,7 +12,12 @@ export function narrationClips(index, ids) {
 }
 
 export function createNarrationPlayer({createAudio=src=>new Audio(src),onStop=()=>{}}={}) {
-  let generation=0,current=null;
+  let generation=0,current=null,rate=1;
+  function setRate(value) {
+    if(![1,1.2,1.5].includes(value))return;
+    rate=value;
+    if(current)current.playbackRate=rate;
+  }
   function stop() {
     generation++;
     if(current) {
@@ -30,6 +35,8 @@ export function createNarrationPlayer({createAudio=src=>new Audio(src),onStop=()
       const src=queue.shift();
       if(!src){stop();return;}
       const audio=createAudio(src);current=audio;
+      audio.playbackRate=rate;
+      audio.preservesPitch=true;
       let advanced=false;
       function advance() {
         if(advanced||token!==generation||current!==audio)return;
@@ -47,5 +54,5 @@ export function createNarrationPlayer({createAudio=src=>new Audio(src),onStop=()
     }
     next();
   }
-  return {play,stop};
+  return {play,stop,setRate,getRate:()=>rate};
 }
