@@ -1,0 +1,3006 @@
+{
+  "source": {
+    "repository": "zzorba/arkham-cards-data",
+    "commit": "baf88bf413a629adb9ca64dd1d53844fcba45dd9",
+    "cardsCommit": "7e6bbac1fcf127ce983c812926f31f662a69da66"
+  },
+  "images": [
+    {
+      "code": "04044",
+      "side": "front",
+      "path": "assets/cards/04044.jpg",
+      "url": "https://assets.arkham.build/optimized/04044.jpg",
+      "sha256": "d6479f4c9f992906a47d7b2f53ad0ae9b610b0d73383633eb81c8b4d0add4590"
+    },
+    {
+      "code": "04044",
+      "side": "back",
+      "path": "assets/cards/04044b.jpg",
+      "url": "https://assets.arkham.build/optimized/04044b.jpg",
+      "sha256": "dd2b50a129d4a491c333b30fc67903b3deca8af3cb4c645d4e2a242b075dea2d"
+    },
+    {
+      "code": "04045",
+      "side": "front",
+      "path": "assets/cards/04045.jpg",
+      "url": "https://assets.arkham.build/optimized/04045.jpg",
+      "sha256": "fe1f5680735145100559265e955033883f6850162d3e6cb61ee38277271a2607"
+    },
+    {
+      "code": "04045",
+      "side": "back",
+      "path": "assets/cards/04045b.jpg",
+      "url": "https://assets.arkham.build/optimized/04045b.jpg",
+      "sha256": "180e27e3e0cdd8f76dd175358c372f87ab63ee4f17ef1f93d0b24e32d247c27a"
+    },
+    {
+      "code": "04046",
+      "side": "front",
+      "path": "assets/cards/04046.jpg",
+      "url": "https://assets.arkham.build/optimized/04046.jpg",
+      "sha256": "6c591d7c8a7a28443c01e2254018a666930c1481d41bd056ed2f574175cb6077"
+    },
+    {
+      "code": "04046",
+      "side": "back",
+      "path": "assets/cards/04046b.jpg",
+      "url": "https://assets.arkham.build/optimized/04046b.jpg",
+      "sha256": "80c4ab02e462c1a4db7674c417d17ad136b3bcfaff99d35412e1275f2f3f8b99"
+    },
+    {
+      "code": "04047",
+      "side": "front",
+      "path": "assets/cards/04047.jpg",
+      "url": "https://assets.arkham.build/optimized/04047.jpg",
+      "sha256": "af09ad3316bd67533a10b0ef082a2f1070d7ade7946ce0cdd8a0b0f1d61921d5"
+    },
+    {
+      "code": "04047",
+      "side": "back",
+      "path": "assets/cards/04047b.jpg",
+      "url": "https://assets.arkham.build/optimized/04047b.jpg",
+      "sha256": "ad768056d27de6ca868d7fc80ca08ee907d8a435b65b2035dd78920806801b74"
+    },
+    {
+      "code": "04048",
+      "side": "front",
+      "path": "assets/cards/04048.jpg",
+      "url": "https://assets.arkham.build/optimized/04048.jpg",
+      "sha256": "f7f6c764d72bf6ce2a58b34abf3bad5ab08da31a61d8a1cd1354ee54c802e6b6"
+    },
+    {
+      "code": "04048",
+      "side": "back",
+      "path": "assets/cards/04048b.jpg",
+      "url": "https://assets.arkham.build/optimized/04048b.jpg",
+      "sha256": "09b05f0d0c9a5f0f5448a2e548aa2963b6378a721366bade3a2bc011f5759a9f"
+    },
+    {
+      "code": "04049",
+      "side": "front",
+      "path": "assets/cards/04049.jpg",
+      "url": "https://assets.arkham.build/optimized/04049.jpg",
+      "sha256": "f6b957943ed846789e7b1c184d1e2df62167f9d4ee326127eb5dce8e7e9fd349"
+    },
+    {
+      "code": "04049",
+      "side": "back",
+      "path": "assets/cards/04049b.jpg",
+      "url": "https://assets.arkham.build/optimized/04049b.jpg",
+      "sha256": "f7fd2b1274502ef96bdd0b6583fc34fb7d915625248bede8db96079d33276d0b"
+    },
+    {
+      "code": "04055",
+      "side": "front",
+      "path": "assets/cards/04055.jpg",
+      "url": "https://assets.arkham.build/optimized/04055.jpg",
+      "sha256": "8b6de7b10af193f8ed8acf8a032119b171c5ee94b3867a372f0fd6dc9e9cb788"
+    },
+    {
+      "code": "04055",
+      "side": "back",
+      "path": "assets/cards/04055b.jpg",
+      "url": "https://assets.arkham.build/optimized/04055b.jpg",
+      "sha256": "a0ec86388f3f1723d2b209f73947abc53d89b5a7458127ea1ac3380a66db9e96"
+    },
+    {
+      "code": "04056",
+      "side": "front",
+      "path": "assets/cards/04056.jpg",
+      "url": "https://assets.arkham.build/optimized/04056.jpg",
+      "sha256": "e9e7e44077a240a8af0f9dfbcf6deafc7d163c01114e00c178a44d2fd359f15e"
+    },
+    {
+      "code": "04056",
+      "side": "back",
+      "path": "assets/cards/04056b.jpg",
+      "url": "https://assets.arkham.build/optimized/04056b.jpg",
+      "sha256": "e0bc46f0b8fe3bd8f7a7386afa8e0e84cd55116a2de1c11a3e7e9686497bae8e"
+    },
+    {
+      "code": "04057",
+      "side": "front",
+      "path": "assets/cards/04057.jpg",
+      "url": "https://assets.arkham.build/optimized/04057.jpg",
+      "sha256": "1abb3f8a420ba4955e16938b3c1d419589229d6885d7d7c6da2aa44d4a4efe7e"
+    },
+    {
+      "code": "04057",
+      "side": "back",
+      "path": "assets/cards/04057b.jpg",
+      "url": "https://assets.arkham.build/optimized/04057b.jpg",
+      "sha256": "cfcd882937ab92af48e90b633eab268ed180b32130a6bf8595464303eb6583f1"
+    },
+    {
+      "code": "04058",
+      "side": "front",
+      "path": "assets/cards/04058.jpg",
+      "url": "https://assets.arkham.build/optimized/04058.jpg",
+      "sha256": "5b9c1b0d357a23e4ca69d17c04014a1f1ef873c4e71fab88831a9f031ad97dae"
+    },
+    {
+      "code": "04058",
+      "side": "back",
+      "path": "assets/cards/04058b.jpg",
+      "url": "https://assets.arkham.build/optimized/04058b.jpg",
+      "sha256": "44b658ca2298d04ee64b7e82439d4eeac1099d9b914bacdf2d80e34efcfbfc26"
+    },
+    {
+      "code": "04059",
+      "side": "front",
+      "path": "assets/cards/04059.jpg",
+      "url": "https://assets.arkham.build/optimized/04059.jpg",
+      "sha256": "264305f7db9910ede53c73597c1fcff6a0a17b18518df07341f1ac5186592acb"
+    },
+    {
+      "code": "04059",
+      "side": "back",
+      "path": "assets/cards/04059b.jpg",
+      "url": "https://assets.arkham.build/optimized/04059b.jpg",
+      "sha256": "b0d2cc113938b940778179ebccee98dc4caf2bf30cc3d9e368c3f2ca95377539"
+    },
+    {
+      "code": "04114",
+      "side": "front",
+      "path": "assets/cards/04114.jpg",
+      "url": "https://assets.arkham.build/optimized/04114.jpg",
+      "sha256": "44a08b24b44945c3de1c4affb9b61121ee629458c07b86ee4472bdc79b7d7fdc"
+    },
+    {
+      "code": "04114",
+      "side": "back",
+      "path": "assets/cards/04114b.jpg",
+      "url": "https://assets.arkham.build/optimized/04114b.jpg",
+      "sha256": "2726e03704a525ac6777157effdf4d517ef3e89bfcc5718841db00687f358eea"
+    },
+    {
+      "code": "04115",
+      "side": "front",
+      "path": "assets/cards/04115.jpg",
+      "url": "https://assets.arkham.build/optimized/04115.jpg",
+      "sha256": "c533f3e96a86151498ca918682fb974c888442040b96acc7485b689a07cff68e"
+    },
+    {
+      "code": "04115",
+      "side": "back",
+      "path": "assets/cards/04115b.jpg",
+      "url": "https://assets.arkham.build/optimized/04115b.jpg",
+      "sha256": "793bfe0d3fbc17f6a08cece4eb85c128042387ff3dad1036ee15db690be704c4"
+    },
+    {
+      "code": "04116",
+      "side": "front",
+      "path": "assets/cards/04116.jpg",
+      "url": "https://assets.arkham.build/optimized/04116.jpg",
+      "sha256": "56ebde28ff56d1c1a9fc7b455ec583352f27eec74d20242bc8c3ef947596d867"
+    },
+    {
+      "code": "04116",
+      "side": "back",
+      "path": "assets/cards/04116b.jpg",
+      "url": "https://assets.arkham.build/optimized/04116b.jpg",
+      "sha256": "516c835ae3a645d085a352d2936da781786111012c8cbd876590b763130bdee0"
+    },
+    {
+      "code": "04117a",
+      "side": "front",
+      "path": "assets/cards/04117a.jpg",
+      "url": "https://assets.arkham.build/optimized/04117a.jpg",
+      "sha256": "3394f6b3990b98b406357023036904bfa304e79fc6a6b19fa7574fd07841a45e"
+    },
+    {
+      "code": "04117a",
+      "side": "back",
+      "path": "assets/cards/04117b.jpg",
+      "url": "https://assets.arkham.build/optimized/04117b.jpg",
+      "sha256": "af61aad2ffd253f981004529719ec310de54ea1721c953512912ebcb7972571f"
+    },
+    {
+      "code": "04118a",
+      "side": "front",
+      "path": "assets/cards/04118a.jpg",
+      "url": "https://assets.arkham.build/optimized/04118a.jpg",
+      "sha256": "6afe5fd2e334e7fd3e663a86f8c9dabd1645cbd8f39b260c67c902accc7286c5"
+    },
+    {
+      "code": "04118a",
+      "side": "back",
+      "path": "assets/cards/04118b.jpg",
+      "url": "https://assets.arkham.build/optimized/04118b.jpg",
+      "sha256": "40d06a935634079cd6f658ee0a82843a86f0c0c276318d136e68e9f2acb1cca6"
+    },
+    {
+      "code": "04119",
+      "side": "front",
+      "path": "assets/cards/04119.jpg",
+      "url": "https://assets.arkham.build/optimized/04119.jpg",
+      "sha256": "ec4fc0a4fa8bc01a341aadd4319279f21f7f44f449bfbb4a46861196f18573d8"
+    },
+    {
+      "code": "04119",
+      "side": "back",
+      "path": "assets/cards/04119b.jpg",
+      "url": "https://assets.arkham.build/optimized/04119b.jpg",
+      "sha256": "9407c2d63e4f6d9cc72ed4359ebd8a093a4d4d4ff0d2c1a5306ebafab73522df"
+    },
+    {
+      "code": "04120",
+      "side": "front",
+      "path": "assets/cards/04120.jpg",
+      "url": "https://assets.arkham.build/optimized/04120.jpg",
+      "sha256": "dbaedec0b28546fb1e10d84155e5be15191ba2e604de4f56b48a6110dab3694d"
+    },
+    {
+      "code": "04120",
+      "side": "back",
+      "path": "assets/cards/04120b.jpg",
+      "url": "https://assets.arkham.build/optimized/04120b.jpg",
+      "sha256": "bbca37e6a33d81d68c9cea2adb9b424ce130c3f4e26c8fa26c0d6d4492cb554f"
+    },
+    {
+      "code": "04121",
+      "side": "front",
+      "path": "assets/cards/04121.jpg",
+      "url": "https://assets.arkham.build/optimized/04121.jpg",
+      "sha256": "51142754031fbbdef95e792721c18080fe468b45e216c3600ca5c0a8f2420bc2"
+    },
+    {
+      "code": "04121",
+      "side": "back",
+      "path": "assets/cards/04121b.jpg",
+      "url": "https://assets.arkham.build/optimized/04121b.jpg",
+      "sha256": "da7acea95d053aa30ca4b9263a8ca3c12b0d3645e45106cdb82aa3ea0e63f489"
+    },
+    {
+      "code": "04122",
+      "side": "front",
+      "path": "assets/cards/04122.jpg",
+      "url": "https://assets.arkham.build/optimized/04122.jpg",
+      "sha256": "0061b1034affb46ca9d85dc068dacf7bdab0b35548ae8a6cebcfc386bd73069d"
+    },
+    {
+      "code": "04122",
+      "side": "back",
+      "path": "assets/cards/04122b.jpg",
+      "url": "https://assets.arkham.build/optimized/04122b.jpg",
+      "sha256": "7b1fd05a1c11e9bdb4af73bd7f8672aa749385de571562d45df85ef5d2f3edd9"
+    },
+    {
+      "code": "04123",
+      "side": "front",
+      "path": "assets/cards/04123.jpg",
+      "url": "https://assets.arkham.build/optimized/04123.jpg",
+      "sha256": "c2dcb4c58dabb4037df5b1b670f883e8ab6f34daeb7998f5935743d1834682bf"
+    },
+    {
+      "code": "04123",
+      "side": "back",
+      "path": "assets/cards/04123b.jpg",
+      "url": "https://assets.arkham.build/optimized/04123b.jpg",
+      "sha256": "fa7798a587fc30d3e490596cbaf8efb7f0f9fb1e4dca6521ec528d29be7ae4c1"
+    },
+    {
+      "code": "04124",
+      "side": "front",
+      "path": "assets/cards/04124.jpg",
+      "url": "https://assets.arkham.build/optimized/04124.jpg",
+      "sha256": "23c90914ca55d0c6328fa0c131b015cf756064b0e8e333161099a0b64b5156cc"
+    },
+    {
+      "code": "04124",
+      "side": "back",
+      "path": "assets/cards/04124b.jpg",
+      "url": "https://assets.arkham.build/optimized/04124b.jpg",
+      "sha256": "2f77efec3308ab4d9db3f07c87d4be3c0838c7c2b52b32f6bc0432c5beca9ebc"
+    },
+    {
+      "code": "04125a",
+      "side": "front",
+      "path": "assets/cards/04125a.jpg",
+      "url": "https://assets.arkham.build/optimized/04125a.jpg",
+      "sha256": "d6fc79ce7a2462d54190c5cf47aa5918b4c7d5fedaa82a88083d4aaa67e6af2e"
+    },
+    {
+      "code": "04125a",
+      "side": "back",
+      "path": "assets/cards/04125b.jpg",
+      "url": "https://assets.arkham.build/optimized/04125b.jpg",
+      "sha256": "1c8531131b67005e73fafaf9b9be0654f7363e0069e2e7752ca8884291c466d5"
+    },
+    {
+      "code": "04126a",
+      "side": "front",
+      "path": "assets/cards/04126a.jpg",
+      "url": "https://assets.arkham.build/optimized/04126a.jpg",
+      "sha256": "0fbadbdcd2476b65e9b645cb72586b0c0c67befd5f969a7a64495980b17e187c"
+    },
+    {
+      "code": "04126a",
+      "side": "back",
+      "path": "assets/cards/04126b.jpg",
+      "url": "https://assets.arkham.build/optimized/04126b.jpg",
+      "sha256": "bcb460be2861808980734a25a630a2b0344d685926c6834b04d10d0d66fa9933"
+    },
+    {
+      "code": "04127",
+      "side": "front",
+      "path": "assets/cards/04127.jpg",
+      "url": "https://assets.arkham.build/optimized/04127.jpg",
+      "sha256": "0a18b320b13716b2be21b1c731555f3f33c5b94040d66d52512b3ce956dd8b5e"
+    },
+    {
+      "code": "04127",
+      "side": "back",
+      "path": "assets/cards/04127b.jpg",
+      "url": "https://assets.arkham.build/optimized/04127b.jpg",
+      "sha256": "334acda4462a15c0808776086dccf7543f815126f65396e70f1f86d1099b63ec"
+    },
+    {
+      "code": "04128a",
+      "side": "front",
+      "path": "assets/cards/04128a.jpg",
+      "url": "https://assets.arkham.build/optimized/04128a.jpg",
+      "sha256": "907f2797a821344e31a7a3ef57f15ff24d4eafae863adb4845fbeb3f3db24164"
+    },
+    {
+      "code": "04128a",
+      "side": "back",
+      "path": "assets/cards/04128b.jpg",
+      "url": "https://assets.arkham.build/optimized/04128b.jpg",
+      "sha256": "8b332bb9b642d9905be1d8fbc4812b81a5a412cb9f2a355479a0e9de5f4608e2"
+    },
+    {
+      "code": "04129",
+      "side": "front",
+      "path": "assets/cards/04129.jpg",
+      "url": "https://assets.arkham.build/optimized/04129.jpg",
+      "sha256": "1caf96a8a549d3f4f19e42d7cbabe1bfee638fda15136fec43c2836246305419"
+    },
+    {
+      "code": "04129",
+      "side": "back",
+      "path": "assets/cards/04129b.jpg",
+      "url": "https://assets.arkham.build/optimized/04129b.jpg",
+      "sha256": "1a724d2df7081381bc759790a23d1dffb32119ffcb5af69c6299526316a00ea3"
+    },
+    {
+      "code": "04130a",
+      "side": "front",
+      "path": "assets/cards/04130a.jpg",
+      "url": "https://assets.arkham.build/optimized/04130a.jpg",
+      "sha256": "54d320fd9d1dd17f561c79f65f477c8f8e4d1fa567f19dd17db370059965cbae"
+    },
+    {
+      "code": "04130a",
+      "side": "back",
+      "path": "assets/cards/04130b.jpg",
+      "url": "https://assets.arkham.build/optimized/04130b.jpg",
+      "sha256": "234e70fc25e598d26795dda1e8d9817c430cbc1b12565c5947fdec6c50af8447"
+    },
+    {
+      "code": "04131",
+      "side": "front",
+      "path": "assets/cards/04131.jpg",
+      "url": "https://assets.arkham.build/optimized/04131.jpg",
+      "sha256": "e00377b58e735f6fff64fb3333cc3003f63db28d4350ceaf5117f84a5e7c1a78"
+    },
+    {
+      "code": "04131",
+      "side": "back",
+      "path": "assets/cards/04131b.jpg",
+      "url": "https://assets.arkham.build/optimized/04131b.jpg",
+      "sha256": "e90e5ad666ac0d8b71db953e739e17c5c57a3036a8fc070c9932f5b11aa8f73f"
+    },
+    {
+      "code": "04132",
+      "side": "front",
+      "path": "assets/cards/04132.jpg",
+      "url": "https://assets.arkham.build/optimized/04132.jpg",
+      "sha256": "ffc969cfa9fb39193bd615906d0b119171a4bbd9ca44be0be62b0ad8fba53228"
+    },
+    {
+      "code": "04132",
+      "side": "back",
+      "path": "assets/cards/04132b.jpg",
+      "url": "https://assets.arkham.build/optimized/04132b.jpg",
+      "sha256": "b6cd84b219c6eab14b6fed16c40463a8abeb9b091e628ee807acb0817d755411"
+    },
+    {
+      "code": "04133a",
+      "side": "front",
+      "path": "assets/cards/04133a.jpg",
+      "url": "https://assets.arkham.build/optimized/04133a.jpg",
+      "sha256": "c3a779a3ddea5d2bde8ec9250547fc098c8dccc1311ab273f05d725c792603f6"
+    },
+    {
+      "code": "04133a",
+      "side": "back",
+      "path": "assets/cards/04133b.jpg",
+      "url": "https://assets.arkham.build/optimized/04133b.jpg",
+      "sha256": "35e719792a31f038b7d03401808014ba36d5f0e3ea31646a169038187a1cd8b6"
+    },
+    {
+      "code": "04134a",
+      "side": "front",
+      "path": "assets/cards/04134a.jpg",
+      "url": "https://assets.arkham.build/optimized/04134a.jpg",
+      "sha256": "520c37178efde22d4a2c5ec3e0623b930129ab306f6bc880c49c720f7e989367"
+    },
+    {
+      "code": "04134a",
+      "side": "back",
+      "path": "assets/cards/04134b.jpg",
+      "url": "https://assets.arkham.build/optimized/04134b.jpg",
+      "sha256": "5d3a4705404b34790afa69180b714016f340cfe12bf9bdd13da7a17c315814b1"
+    },
+    {
+      "code": "04135",
+      "side": "front",
+      "path": "assets/cards/04135.jpg",
+      "url": "https://assets.arkham.build/optimized/04135.jpg",
+      "sha256": "3f308cd8e94a598adb82ddc6da00ec27d7f7f944841dd6b7586daaf804ceed51"
+    },
+    {
+      "code": "04135",
+      "side": "back",
+      "path": "assets/cards/04135b.jpg",
+      "url": "https://assets.arkham.build/optimized/04135b.jpg",
+      "sha256": "52f1ee306406768c1228776a3bc6d73a0dd94ffc64c027cba4f44ffd44da61ea"
+    },
+    {
+      "code": "04136",
+      "side": "front",
+      "path": "assets/cards/04136.jpg",
+      "url": "https://assets.arkham.build/optimized/04136.jpg",
+      "sha256": "72e91fac5c8bff366c9e67eb4ce15f83243cf7a6c931c05d7b8b16ae33ff246f"
+    },
+    {
+      "code": "04136",
+      "side": "back",
+      "path": "assets/cards/04136b.jpg",
+      "url": "https://assets.arkham.build/optimized/04136b.jpg",
+      "sha256": "6551482fe6724764e4a9216a6418275f9fc42effb42821e07feb360d4ec5b051"
+    },
+    {
+      "code": "04137a",
+      "side": "front",
+      "path": "assets/cards/04137a.jpg",
+      "url": "https://assets.arkham.build/optimized/04137a.jpg",
+      "sha256": "670e33852f6ac693429efb76913a7cbd340ace728461baa76649e985602f6868"
+    },
+    {
+      "code": "04137a",
+      "side": "back",
+      "path": "assets/cards/04137b.jpg",
+      "url": "https://assets.arkham.build/optimized/04137b.jpg",
+      "sha256": "88d1062397e89599b4873f7de720a43686256f754d2bd2c66aa1d0ef6f8eb469"
+    },
+    {
+      "code": "04138",
+      "side": "front",
+      "path": "assets/cards/04138.jpg",
+      "url": "https://assets.arkham.build/optimized/04138.jpg",
+      "sha256": "39b934a5dafd2ad182b73c7497089420c2261b7d3fb27f30d80abbea58555690"
+    },
+    {
+      "code": "04138",
+      "side": "back",
+      "path": "assets/cards/04138b.jpg",
+      "url": "https://assets.arkham.build/optimized/04138b.jpg",
+      "sha256": "9456e7f71dda371bf2892298b3f868f4bd26a05e0ca077ded81cde8731a72cbc"
+    },
+    {
+      "code": "04139",
+      "side": "front",
+      "path": "assets/cards/04139.jpg",
+      "url": "https://assets.arkham.build/optimized/04139.jpg",
+      "sha256": "f0697137d9ee94ea2686c46297f816f7071eec5ac4082e6f4e307992a8fcacfd"
+    },
+    {
+      "code": "04139",
+      "side": "back",
+      "path": "assets/cards/04139b.jpg",
+      "url": "https://assets.arkham.build/optimized/04139b.jpg",
+      "sha256": "62bc055078a6aee6c3376ed7a29b8f7f6c1c8f90026c66990e427db2243502f9"
+    },
+    {
+      "code": "04140",
+      "side": "front",
+      "path": "assets/cards/04140.jpg",
+      "url": "https://assets.arkham.build/optimized/04140.jpg",
+      "sha256": "929720319379119ea1d02aa94c1dc72337511ae51ee14774fcaebbea82403a01"
+    },
+    {
+      "code": "04140",
+      "side": "back",
+      "path": "assets/cards/04140b.jpg",
+      "url": "https://assets.arkham.build/optimized/04140b.jpg",
+      "sha256": "a7cfd6c7dce3497b8581a3fef6a092081df3a67ce5d6a27fab8744890c9485b7"
+    },
+    {
+      "code": "04162",
+      "side": "front",
+      "path": "assets/cards/04162.jpg",
+      "url": "https://assets.arkham.build/optimized/04162.jpg",
+      "sha256": "f264772f7a14504548e6674932c234acd26cf13a1d6f4722873554c796e4a45a"
+    },
+    {
+      "code": "04162",
+      "side": "back",
+      "path": "assets/cards/04162b.jpg",
+      "url": "https://assets.arkham.build/optimized/04162b.jpg",
+      "sha256": "5db31a7f07eb2c26072a12f7ffef30a831cda93e7cc0c59da727546dbc08a722"
+    },
+    {
+      "code": "04163",
+      "side": "front",
+      "path": "assets/cards/04163.jpg",
+      "url": "https://assets.arkham.build/optimized/04163.jpg",
+      "sha256": "eeb61beca4688fea5ed6460ee66815496a47810ebd402085de4f214b8121778e"
+    },
+    {
+      "code": "04163",
+      "side": "back",
+      "path": "assets/cards/04163b.jpg",
+      "url": "https://assets.arkham.build/optimized/04163b.jpg",
+      "sha256": "ca1c7530bbbfb8292956f03fd355d7760f1a0150ad2f4aa4ead2508bb2c19449"
+    },
+    {
+      "code": "04164",
+      "side": "front",
+      "path": "assets/cards/04164.jpg",
+      "url": "https://assets.arkham.build/optimized/04164.jpg",
+      "sha256": "1a8e43ce792d35e10d63cfbcd9a504dac80c4b3c01cfddfd672a8652f75dc2d6"
+    },
+    {
+      "code": "04164",
+      "side": "back",
+      "path": "assets/cards/04164b.jpg",
+      "url": "https://assets.arkham.build/optimized/04164b.jpg",
+      "sha256": "2c65ef18df4ae43dde5720b689f19b5ab192b309d25351bd584a203e32e93e6a"
+    },
+    {
+      "code": "04165",
+      "side": "front",
+      "path": "assets/cards/04165.jpg",
+      "url": "https://assets.arkham.build/optimized/04165.jpg",
+      "sha256": "b3d13fbf1c70f55ae77359f57b96f3816af35b9460855f5d0ac352d404a8a400"
+    },
+    {
+      "code": "04165",
+      "side": "back",
+      "path": "assets/cards/04165b.jpg",
+      "url": "https://assets.arkham.build/optimized/04165b.jpg",
+      "sha256": "de16a6ca28782779817db0c49b9ea37f621dc75d61853b72945885f06578d809"
+    },
+    {
+      "code": "04166",
+      "side": "front",
+      "path": "assets/cards/04166.jpg",
+      "url": "https://assets.arkham.build/optimized/04166.jpg",
+      "sha256": "d3a606fe387d8b526d13f0a4d454b9b1fc07dcd20b0503a998d3613097ac0119"
+    },
+    {
+      "code": "04166",
+      "side": "back",
+      "path": "assets/cards/04166b.jpg",
+      "url": "https://assets.arkham.build/optimized/04166b.jpg",
+      "sha256": "fbd44e57d78a2f442d6ff31f85d5da0a282d164d17b5bb0b40f3b5d3f7a6e48f"
+    },
+    {
+      "code": "04167",
+      "side": "front",
+      "path": "assets/cards/04167.jpg",
+      "url": "https://assets.arkham.build/optimized/04167.jpg",
+      "sha256": "c5e2faa71b64fbd8b8ab9c0fac3c10ab05bc662e8af1b6c010410b6daec43e20"
+    },
+    {
+      "code": "04167",
+      "side": "back",
+      "path": "assets/cards/04167b.jpg",
+      "url": "https://assets.arkham.build/optimized/04167b.jpg",
+      "sha256": "f00c52ccc23d9aa6eeb0409dbfbf7119a40b821f94871b4e61cd1eed839f8313"
+    },
+    {
+      "code": "04207",
+      "side": "front",
+      "path": "assets/cards/04207.jpg",
+      "url": "https://assets.arkham.build/optimized/04207.jpg",
+      "sha256": "4d097a2476571938d5ba465a3e46909d040691e62a44d1f7209528d3473722e5"
+    },
+    {
+      "code": "04207",
+      "side": "back",
+      "path": "assets/cards/04207b.jpg",
+      "url": "https://assets.arkham.build/optimized/04207b.jpg",
+      "sha256": "97118682086d4199a4c0e66d618ada6fb26ef7cbe8ea23b066bdc0bc6f05685c"
+    },
+    {
+      "code": "04208",
+      "side": "front",
+      "path": "assets/cards/04208.jpg",
+      "url": "https://assets.arkham.build/optimized/04208.jpg",
+      "sha256": "f8f0f6d4796b48762f4647d3d897215415bb570ed27386d25b0753cc32abb0c6"
+    },
+    {
+      "code": "04208",
+      "side": "back",
+      "path": "assets/cards/04208b.jpg",
+      "url": "https://assets.arkham.build/optimized/04208b.jpg",
+      "sha256": "944f87f027b415a4a359becca461c672ae2331f58501af68a0f7a9e666d6a18d"
+    },
+    {
+      "code": "04209",
+      "side": "front",
+      "path": "assets/cards/04209.jpg",
+      "url": "https://assets.arkham.build/optimized/04209.jpg",
+      "sha256": "7e60d6d3030a03c8cf6ebc164c4ae45a4ac5bbeb973a3569c73908d5f7a64079"
+    },
+    {
+      "code": "04209",
+      "side": "back",
+      "path": "assets/cards/04209b.jpg",
+      "url": "https://assets.arkham.build/optimized/04209b.jpg",
+      "sha256": "0bea70189acdcf59c649bc1befc4003755686a24aac1fd201fa8f5f28901be1d"
+    },
+    {
+      "code": "04210",
+      "side": "front",
+      "path": "assets/cards/04210.jpg",
+      "url": "https://assets.arkham.build/optimized/04210.jpg",
+      "sha256": "368f6ae618852bb43ea6096aa3f82ebd89a9dbbefe53567590a45e8574b0f333"
+    },
+    {
+      "code": "04210",
+      "side": "back",
+      "path": "assets/cards/04210b.jpg",
+      "url": "https://assets.arkham.build/optimized/04210b.jpg",
+      "sha256": "fed47790adb6126246a3382cfae895be45637a915320d296b09a3ec35ab22d5b"
+    },
+    {
+      "code": "04211",
+      "side": "front",
+      "path": "assets/cards/04211.jpg",
+      "url": "https://assets.arkham.build/optimized/04211.jpg",
+      "sha256": "7dfe731c67b716a0c2304b55e780ed72ec2941cf8c84adaa99e686341e2f5cb7"
+    },
+    {
+      "code": "04211",
+      "side": "back",
+      "path": "assets/cards/04211b.jpg",
+      "url": "https://assets.arkham.build/optimized/04211b.jpg",
+      "sha256": "e4c139148d963132b103a681e642ec048526b4af8823d4229c6c8d1408d502ae"
+    },
+    {
+      "code": "04212",
+      "side": "front",
+      "path": "assets/cards/04212.jpg",
+      "url": "https://assets.arkham.build/optimized/04212.jpg",
+      "sha256": "ec54110293e83eef6c20ef48c8f14f03677b88b475de876a7cab42e4ba53d40e"
+    },
+    {
+      "code": "04212",
+      "side": "back",
+      "path": "assets/cards/04212b.jpg",
+      "url": "https://assets.arkham.build/optimized/04212b.jpg",
+      "sha256": "bd41f7e23c290a93cfe4c2cae5e0b9688fc610176cb88ff073c4e7d02a4e24c9"
+    },
+    {
+      "code": "04213",
+      "side": "front",
+      "path": "assets/cards/04213.jpg",
+      "url": "https://assets.arkham.build/optimized/04213.jpg",
+      "sha256": "0f77ea46ce5ff19a0a7434cdf60021acf25e0f76b0a8b2d89991a9850e700334"
+    },
+    {
+      "code": "04213",
+      "side": "back",
+      "path": "assets/cards/04213b.jpg",
+      "url": "https://assets.arkham.build/optimized/04213b.jpg",
+      "sha256": "d949840392ec06868301199b54dac422b3d690e4af479764f8d3982f9e866955"
+    },
+    {
+      "code": "04214",
+      "side": "front",
+      "path": "assets/cards/04214.jpg",
+      "url": "https://assets.arkham.build/optimized/04214.jpg",
+      "sha256": "d5360096f45204db175478c4464d49cae9f347c71c30f713be002e38932df7f7"
+    },
+    {
+      "code": "04214",
+      "side": "back",
+      "path": "assets/cards/04214b.jpg",
+      "url": "https://assets.arkham.build/optimized/04214b.jpg",
+      "sha256": "9a6b453a897fdcc8dc72ccbf99680a15965b17fedb4d4f43e728e0b2ccdb53cf"
+    },
+    {
+      "code": "04238",
+      "side": "front",
+      "path": "assets/cards/04238.jpg",
+      "url": "https://assets.arkham.build/optimized/04238.jpg",
+      "sha256": "9fa97c3941959e14cecf2fddaf89c82a43f0bde3a91eae8c9d69754265907f59"
+    },
+    {
+      "code": "04238",
+      "side": "back",
+      "path": "assets/cards/04238b.jpg",
+      "url": "https://assets.arkham.build/optimized/04238b.jpg",
+      "sha256": "1643c6bee214f2967d4b60894b7b4c52a6f1086a1bc0d3415fb88aa0a6c2ae00"
+    },
+    {
+      "code": "04239",
+      "side": "front",
+      "path": "assets/cards/04239.jpg",
+      "url": "https://assets.arkham.build/optimized/04239.jpg",
+      "sha256": "de03c7c7c5cffe29f9081e5d205c30951e383ecd89c27715485de43d3d7af316"
+    },
+    {
+      "code": "04239",
+      "side": "back",
+      "path": "assets/cards/04239b.jpg",
+      "url": "https://assets.arkham.build/optimized/04239b.jpg",
+      "sha256": "ccd8f8f15147bc2c35ce5e8ff6f9594e3ba4e57bb6f82d9c027ae107447db788"
+    },
+    {
+      "code": "04240",
+      "side": "front",
+      "path": "assets/cards/04240.jpg",
+      "url": "https://assets.arkham.build/optimized/04240.jpg",
+      "sha256": "288ca974a324dc88836990f084b062970e9d8dbaf19fdc3f7f71a33bee0eb6b2"
+    },
+    {
+      "code": "04240",
+      "side": "back",
+      "path": "assets/cards/04240b.jpg",
+      "url": "https://assets.arkham.build/optimized/04240b.jpg",
+      "sha256": "10f1d169791610a0f176e4ac5621639c05f76755c87748155bbd6d187256bf05"
+    },
+    {
+      "code": "04241",
+      "side": "front",
+      "path": "assets/cards/04241.jpg",
+      "url": "https://assets.arkham.build/optimized/04241.jpg",
+      "sha256": "53da0bf307ff026d7f88598a280e312759018437977ab2f6961245186eae5361"
+    },
+    {
+      "code": "04241",
+      "side": "back",
+      "path": "assets/cards/04241b.jpg",
+      "url": "https://assets.arkham.build/optimized/04241b.jpg",
+      "sha256": "b17b751757b24ce3dcfadfebac36170f0313a06542ca680fa74eed93098c82bf"
+    },
+    {
+      "code": "04242",
+      "side": "front",
+      "path": "assets/cards/04242.jpg",
+      "url": "https://assets.arkham.build/optimized/04242.jpg",
+      "sha256": "dad0df21053ac373ed524dd0347c3c263bd50ea233474cf8936a37a852c051ec"
+    },
+    {
+      "code": "04242",
+      "side": "back",
+      "path": "assets/cards/04242b.jpg",
+      "url": "https://assets.arkham.build/optimized/04242b.jpg",
+      "sha256": "f71cae00ad5e8a41e912c264c4f0c6c56eed6aa4bd3eae74ed14d2bacf438706"
+    },
+    {
+      "code": "04243",
+      "side": "front",
+      "path": "assets/cards/04243.jpg",
+      "url": "https://assets.arkham.build/optimized/04243.jpg",
+      "sha256": "d96bc9a1ca9370a55fc1c22b58067dd5fa9cbc2bde91aad287617a485f65752b"
+    },
+    {
+      "code": "04243",
+      "side": "back",
+      "path": "assets/cards/04243b.jpg",
+      "url": "https://assets.arkham.build/optimized/04243b.jpg",
+      "sha256": "8787932e3e10917fe584d3eea6b1981bdcab280083d20cd41b1c91bc583a5051"
+    },
+    {
+      "code": "04278",
+      "side": "front",
+      "path": "assets/cards/04278.jpg",
+      "url": "https://assets.arkham.build/optimized/04278.jpg",
+      "sha256": "d7effadd61aaa43091ab32ee2d6d36ed2c39c94f7a440ac653a193bea4bbc4fe"
+    },
+    {
+      "code": "04278",
+      "side": "back",
+      "path": "assets/cards/04278b.jpg",
+      "url": "https://assets.arkham.build/optimized/04278b.jpg",
+      "sha256": "aad555647c51e97bb3577cfb779c737e9108bce69f4f59a8579dc68b3401a35e"
+    },
+    {
+      "code": "04279",
+      "side": "front",
+      "path": "assets/cards/04279.jpg",
+      "url": "https://assets.arkham.build/optimized/04279.jpg",
+      "sha256": "0531f55d7790f0d648aec946a01b0bb9df9a94b2967706a2feec39496b07e0e5"
+    },
+    {
+      "code": "04279",
+      "side": "back",
+      "path": "assets/cards/04279b.jpg",
+      "url": "https://assets.arkham.build/optimized/04279b.jpg",
+      "sha256": "35a709821c72d12df0cbdc769d0929028d6f9365c1888d44f05edad5066600fa"
+    },
+    {
+      "code": "04280",
+      "side": "front",
+      "path": "assets/cards/04280.jpg",
+      "url": "https://assets.arkham.build/optimized/04280.jpg",
+      "sha256": "e0740798a6849973b0efccc205595c91588943c3b6af00316d28dea5f218a0d0"
+    },
+    {
+      "code": "04280",
+      "side": "back",
+      "path": "assets/cards/04280b.jpg",
+      "url": "https://assets.arkham.build/optimized/04280b.jpg",
+      "sha256": "c9fde703b90b728c72069eaff84b05d86cac88ebd8ef8eef75bb06e8c47b291b"
+    },
+    {
+      "code": "04281",
+      "side": "front",
+      "path": "assets/cards/04281.jpg",
+      "url": "https://assets.arkham.build/optimized/04281.jpg",
+      "sha256": "fb377ba118b3c740ef59720cac21b17d23cc2bcd8ebf17417209e1fa46180ee1"
+    },
+    {
+      "code": "04281",
+      "side": "back",
+      "path": "assets/cards/04281b.jpg",
+      "url": "https://assets.arkham.build/optimized/04281b.jpg",
+      "sha256": "3c9dbba8670198a559039653b54f3085bc48174f3a8040035308c779e9b6141c"
+    },
+    {
+      "code": "04282",
+      "side": "front",
+      "path": "assets/cards/04282.jpg",
+      "url": "https://assets.arkham.build/optimized/04282.jpg",
+      "sha256": "3f12e3eb0887e226e5711db71cfa265a37c8c07d0ebe9cca9890de273c390960"
+    },
+    {
+      "code": "04282",
+      "side": "back",
+      "path": "assets/cards/04282b.jpg",
+      "url": "https://assets.arkham.build/optimized/04282b.jpg",
+      "sha256": "b6d38df953ab1582019ff8bb0246f6d55e9a49203e2ee23c918d1ff9bf55886c"
+    },
+    {
+      "code": "04283",
+      "side": "front",
+      "path": "assets/cards/04283.jpg",
+      "url": "https://assets.arkham.build/optimized/04283.jpg",
+      "sha256": "899c2e600a0e595f02db9a5feef780a81f9a3d9dfb8ec3b9407f4f80696a0a34"
+    },
+    {
+      "code": "04283",
+      "side": "back",
+      "path": "assets/cards/04283b.jpg",
+      "url": "https://assets.arkham.build/optimized/04283b.jpg",
+      "sha256": "1fd4891b32fc5c21ec6f7abedd225c3fc669598555845022c6720af2d5ca2518"
+    },
+    {
+      "code": "04284",
+      "side": "front",
+      "path": "assets/cards/04284.jpg",
+      "url": "https://assets.arkham.build/optimized/04284.jpg",
+      "sha256": "53c36ba548156dd23538571b4fb0cadc6088537f390539df0158aa8e66d47eab"
+    },
+    {
+      "code": "04284",
+      "side": "back",
+      "path": "assets/cards/04284b.jpg",
+      "url": "https://assets.arkham.build/optimized/04284b.jpg",
+      "sha256": "a9b7e1bdfdaf29e9fd1088dc338ba5be4e0a37798af649011fca732dde5cdcfe"
+    },
+    {
+      "code": "04285",
+      "side": "front",
+      "path": "assets/cards/04285.jpg",
+      "url": "https://assets.arkham.build/optimized/04285.jpg",
+      "sha256": "417701c07185b6a1ff2643bfe4d3edb76700b0c94359b9ab5d019c25ddf21331"
+    },
+    {
+      "code": "04285",
+      "side": "back",
+      "path": "assets/cards/04285b.jpg",
+      "url": "https://assets.arkham.build/optimized/04285b.jpg",
+      "sha256": "5708ce49bce3683141a304abbb92e17cc4b229884aefa658155e194923b7623c"
+    },
+    {
+      "code": "04315",
+      "side": "front",
+      "path": "assets/cards/04315.jpg",
+      "url": "https://assets.arkham.build/optimized/04315.jpg",
+      "sha256": "573677d87819bb5a1a41d42f5e1a1b063352dccbc6a0451c77d36714edff1d91"
+    },
+    {
+      "code": "04315",
+      "side": "back",
+      "path": "assets/cards/04315b.jpg",
+      "url": "https://assets.arkham.build/optimized/04315b.jpg",
+      "sha256": "7cb70fa432a11bd56ac45dc054f59a8b6432b46c9c95871fcc19bf39ba065182"
+    },
+    {
+      "code": "04316",
+      "side": "front",
+      "path": "assets/cards/04316.jpg",
+      "url": "https://assets.arkham.build/optimized/04316.jpg",
+      "sha256": "380d17487f875c30ff65fb1a4240f4322b94041ebcf78e3d9857782f6533fc39"
+    },
+    {
+      "code": "04316",
+      "side": "back",
+      "path": "assets/cards/04316b.jpg",
+      "url": "https://assets.arkham.build/optimized/04316b.jpg",
+      "sha256": "804299423155a5b9a1593ebef94bb8a89b54b8bcb3b53d8f7d77600ce01061c0"
+    },
+    {
+      "code": "04317",
+      "side": "front",
+      "path": "assets/cards/04317.jpg",
+      "url": "https://assets.arkham.build/optimized/04317.jpg",
+      "sha256": "1da1e9888475f143224f2389c77c3af60e10b3d4cb34af975d805075b40e9bc7"
+    },
+    {
+      "code": "04317",
+      "side": "back",
+      "path": "assets/cards/04317b.jpg",
+      "url": "https://assets.arkham.build/optimized/04317b.jpg",
+      "sha256": "5999ae22b715da0eeb9514bdaf88498ca1817ca51fae801b03ec590f0e915e10"
+    },
+    {
+      "code": "04318",
+      "side": "front",
+      "path": "assets/cards/04318.jpg",
+      "url": "https://assets.arkham.build/optimized/04318.jpg",
+      "sha256": "e8f6df8042eca34d12e701c9d7021345a6944801476529c608b238db0759ee43"
+    },
+    {
+      "code": "04318",
+      "side": "back",
+      "path": "assets/cards/04318b.jpg",
+      "url": "https://assets.arkham.build/optimized/04318b.jpg",
+      "sha256": "508fe1f1a096381f13c2ceeecb90185fa3f920ba798908bb6052f2f4b6e8fc24"
+    },
+    {
+      "code": "04319",
+      "side": "front",
+      "path": "assets/cards/04319.jpg",
+      "url": "https://assets.arkham.build/optimized/04319.jpg",
+      "sha256": "7aea15021dc9e131934eeec473e44e3baff362fb8019d2295a742155b3606f29"
+    },
+    {
+      "code": "04319",
+      "side": "back",
+      "path": "assets/cards/04319b.jpg",
+      "url": "https://assets.arkham.build/optimized/04319b.jpg",
+      "sha256": "ea7ba16cfbd9b95f76b628140ff6d2249f988254e03190ffcefdadf14c87782b"
+    },
+    {
+      "code": "04320",
+      "side": "front",
+      "path": "assets/cards/04320.jpg",
+      "url": "https://assets.arkham.build/optimized/04320.jpg",
+      "sha256": "d6ddd6d44d04dc9f06ac71826cf4c6297f446e85b09dbd84664d029e075304ee"
+    },
+    {
+      "code": "04320",
+      "side": "back",
+      "path": "assets/cards/04320b.jpg",
+      "url": "https://assets.arkham.build/optimized/04320b.jpg",
+      "sha256": "906d97a2a25da0c59a11161e8ef997ba10f3a90ae9db23c62d9dd8cb4eff1b2f"
+    },
+    {
+      "code": "04321",
+      "side": "front",
+      "path": "assets/cards/04321.jpg",
+      "url": "https://assets.arkham.build/optimized/04321.jpg",
+      "sha256": "74c188359f1d26b791edac0301e41776e803fc525aaec7d11ef00791fbb0cfce"
+    },
+    {
+      "code": "04321",
+      "side": "back",
+      "path": "assets/cards/04321b.jpg",
+      "url": "https://assets.arkham.build/optimized/04321b.jpg",
+      "sha256": "60d573e550f19de45adfcb69b28054440f1805fb7f01745af9a75d8c4f75789a"
+    },
+    {
+      "code": "04322",
+      "side": "front",
+      "path": "assets/cards/04322.jpg",
+      "url": "https://assets.arkham.build/optimized/04322.jpg",
+      "sha256": "86d8e9541565021abf5dc03beea4caa7c82b04c8f1249a8820ec407ba4c54c0b"
+    },
+    {
+      "code": "04322",
+      "side": "back",
+      "path": "assets/cards/04322b.jpg",
+      "url": "https://assets.arkham.build/optimized/04322b.jpg",
+      "sha256": "0a6fe1b35c4d5b9e00fd833e49ab9cf3e5f6e23841d2a127e2d37a37bf240fdd"
+    },
+    {
+      "code": "04323",
+      "side": "front",
+      "path": "assets/cards/04323.jpg",
+      "url": "https://assets.arkham.build/optimized/04323.jpg",
+      "sha256": "66c126efda0d51de7cc65452a8839676e3b4a8b4990913956414fa246e458ccb"
+    },
+    {
+      "code": "04323",
+      "side": "back",
+      "path": "assets/cards/04323b.jpg",
+      "url": "https://assets.arkham.build/optimized/04323b.jpg",
+      "sha256": "0eb7b1ba0c06bb4d74ea2fe78d3c05f59606c98acab9deb1d658f41828f967bd"
+    },
+    {
+      "code": "04345",
+      "side": "front",
+      "path": "assets/cards/04345.jpg",
+      "url": "https://assets.arkham.build/optimized/04345.jpg",
+      "sha256": "b25f1110a117e7318f015a1252d45cad4e427194de1f8a32a460d5ad8dedffb9"
+    },
+    {
+      "code": "04345",
+      "side": "back",
+      "path": "assets/cards/04345b.jpg",
+      "url": "https://assets.arkham.build/optimized/04345b.jpg",
+      "sha256": "7e974e64e6d8c226bfacca7a6f592031dd3d8c02cd8c7e3b6f43f76387963e84"
+    },
+    {
+      "code": "04346",
+      "side": "front",
+      "path": "assets/cards/04346.jpg",
+      "url": "https://assets.arkham.build/optimized/04346.jpg",
+      "sha256": "96ccc2e11e688ab1277fcbec419e659a9bb2d1f24f79829a22991f6261b9ba81"
+    },
+    {
+      "code": "04346",
+      "side": "back",
+      "path": "assets/cards/04346b.jpg",
+      "url": "https://assets.arkham.build/optimized/04346b.jpg",
+      "sha256": "aa7cbe660bebe3b6bd96b68309804adc6b3b68e18305053d479fd086dda9aa01"
+    },
+    {
+      "code": "04347",
+      "side": "front",
+      "path": "assets/cards/04347.jpg",
+      "url": "https://assets.arkham.build/optimized/04347.jpg",
+      "sha256": "ab3a10e53390d7c41cc3b3fa249156c01dd5be8340ea24dde0613d7cc354d0eb"
+    },
+    {
+      "code": "04347",
+      "side": "back",
+      "path": "assets/cards/04347b.jpg",
+      "url": "https://assets.arkham.build/optimized/04347b.jpg",
+      "sha256": "1d57fe64124f7455facdba3580f0bcd3ca69734a8501c7e5be0d422d1dafd105"
+    },
+    {
+      "code": "05044",
+      "side": "front",
+      "path": "assets/cards/05044.jpg",
+      "url": "https://assets.arkham.build/optimized/05044.jpg",
+      "sha256": "efef4860bf0e62c81c4d48965c6cd5303b085574096d42e886032ad6b57c158c"
+    },
+    {
+      "code": "05044",
+      "side": "back",
+      "path": "assets/cards/05044b.jpg",
+      "url": "https://assets.arkham.build/optimized/05044b.jpg",
+      "sha256": "7d30e497afb6f9ac9e62f2458531c218bcc55e403da81e74e27ec9cd90c58100"
+    },
+    {
+      "code": "05045",
+      "side": "front",
+      "path": "assets/cards/05045.jpg",
+      "url": "https://assets.arkham.build/optimized/05045.jpg",
+      "sha256": "5205d4dace5977c26b2b92ef051f18c6dd7bd6357fa061b61158d9882ef263a1"
+    },
+    {
+      "code": "05045",
+      "side": "back",
+      "path": "assets/cards/05045b.jpg",
+      "url": "https://assets.arkham.build/optimized/05045b.jpg",
+      "sha256": "9151a32563e1d3d8a52b7bae57b70535d1ba97c8df6611c97512862ac958d492"
+    },
+    {
+      "code": "05051",
+      "side": "front",
+      "path": "assets/cards/05051.jpg",
+      "url": "https://assets.arkham.build/optimized/05051.jpg",
+      "sha256": "80d26f120cfd0de3dd67cfc3c21ee700765c0fdea91d96fe1ec87e918a6f3532"
+    },
+    {
+      "code": "05051",
+      "side": "back",
+      "path": "assets/cards/05051b.jpg",
+      "url": "https://assets.arkham.build/optimized/05051b.jpg",
+      "sha256": "f89a6de61da9279e6efb3cd524074d2392d611a69be6c484d4c60765be113217"
+    },
+    {
+      "code": "05052",
+      "side": "front",
+      "path": "assets/cards/05052.jpg",
+      "url": "https://assets.arkham.build/optimized/05052.jpg",
+      "sha256": "e8397f02cc9cea2bba5ffeb9a20f962c8ab3ae5080f317b776142a84d938a097"
+    },
+    {
+      "code": "05052",
+      "side": "back",
+      "path": "assets/cards/05052b.jpg",
+      "url": "https://assets.arkham.build/optimized/05052b.jpg",
+      "sha256": "b284fd40bcfce5b5c2ef2cda4a4d1c81cf0f9f90654ef3fff30c5c5ab76daa94"
+    },
+    {
+      "code": "05053",
+      "side": "front",
+      "path": "assets/cards/05053.jpg",
+      "url": "https://assets.arkham.build/optimized/05053.jpg",
+      "sha256": "dd1b82e0af99d4ee358da12c02d30f250be23c2a618f8a6d3b9d7d17eec9267f"
+    },
+    {
+      "code": "05053",
+      "side": "back",
+      "path": "assets/cards/05053b.jpg",
+      "url": "https://assets.arkham.build/optimized/05053b.jpg",
+      "sha256": "fdb402f462a706909284da61390405ff7dd51e390c64b9e1541ef7101266ee94"
+    },
+    {
+      "code": "05054",
+      "side": "front",
+      "path": "assets/cards/05054.jpg",
+      "url": "https://assets.arkham.build/optimized/05054.jpg",
+      "sha256": "03ae3dddb597ddc15c5200801f414636e2509d6062ed7d983c3a400243cbefb2"
+    },
+    {
+      "code": "05054",
+      "side": "back",
+      "path": "assets/cards/05054b.jpg",
+      "url": "https://assets.arkham.build/optimized/05054b.jpg",
+      "sha256": "77008f769ab8f9e871fca7fa97055aa16e32f50cbfaf4e7c1cff30015bd5166a"
+    },
+    {
+      "code": "05055",
+      "side": "front",
+      "path": "assets/cards/05055.jpg",
+      "url": "https://assets.arkham.build/optimized/05055.jpg",
+      "sha256": "1c3aa04f0d4ab9261feb36cea3e2a45584ff55313f9a4a60efdebb403f7cf2cd"
+    },
+    {
+      "code": "05055",
+      "side": "back",
+      "path": "assets/cards/05055b.jpg",
+      "url": "https://assets.arkham.build/optimized/05055b.jpg",
+      "sha256": "cff121f6692834a3e272a439aa7f38613dc547a5825a99a6498273a20783910d"
+    },
+    {
+      "code": "05056",
+      "side": "front",
+      "path": "assets/cards/05056.jpg",
+      "url": "https://assets.arkham.build/optimized/05056.jpg",
+      "sha256": "29d11f8f7d313b22ae0a5b8a426f21e279f8e724f4b88aabbc8740734fbd454f"
+    },
+    {
+      "code": "05056",
+      "side": "back",
+      "path": "assets/cards/05056b.jpg",
+      "url": "https://assets.arkham.build/optimized/05056b.jpg",
+      "sha256": "825f25c001b9ae630855be1b5151a4ce1a0fa0359079de109ab03d210968635e"
+    },
+    {
+      "code": "05066",
+      "side": "front",
+      "path": "assets/cards/05066.jpg",
+      "url": "https://assets.arkham.build/optimized/05066.jpg",
+      "sha256": "7ab62b89dd2f6ac3a0a2f76229d1b027eeab6a0aa8c39850e1892738cbaeba1b"
+    },
+    {
+      "code": "05066",
+      "side": "back",
+      "path": "assets/cards/05066b.jpg",
+      "url": "https://assets.arkham.build/optimized/05066b.jpg",
+      "sha256": "cb4b63be275cc29803fcd0a5bddcfe0aa73bea6a2cd4d7b9d59c3ae6042eac08"
+    },
+    {
+      "code": "05067",
+      "side": "front",
+      "path": "assets/cards/05067.jpg",
+      "url": "https://assets.arkham.build/optimized/05067.jpg",
+      "sha256": "060704b8a1b59da5a041e237821972a31e444fbdec3a90657213b11d4da3a121"
+    },
+    {
+      "code": "05067",
+      "side": "back",
+      "path": "assets/cards/05067b.jpg",
+      "url": "https://assets.arkham.build/optimized/05067b.jpg",
+      "sha256": "5aba5bf99fb6fcbc4114e9dd001249709876876ea13e21911986caca95207b52"
+    },
+    {
+      "code": "05068",
+      "side": "front",
+      "path": "assets/cards/05068.jpg",
+      "url": "https://assets.arkham.build/optimized/05068.jpg",
+      "sha256": "d6f764e20b63b93726d3152b6c2c615c5c8b3fe191f65a82e33671e1b08476cf"
+    },
+    {
+      "code": "05068",
+      "side": "back",
+      "path": "assets/cards/05068b.jpg",
+      "url": "https://assets.arkham.build/optimized/05068b.jpg",
+      "sha256": "716460b6dadad3619ba697eb2014ecedf3c7fe4812855c679b21e9b6c3fa25dc"
+    },
+    {
+      "code": "05069",
+      "side": "front",
+      "path": "assets/cards/05069.jpg",
+      "url": "https://assets.arkham.build/optimized/05069.jpg",
+      "sha256": "0d02a4884f594d4f2772e2aabb204d924692cd96c562dc45a9bb6440c4e5c38f"
+    },
+    {
+      "code": "05069",
+      "side": "back",
+      "path": "assets/cards/05069b.jpg",
+      "url": "https://assets.arkham.build/optimized/05069b.jpg",
+      "sha256": "c70df22587b9891747917aa11710b2e4bbd43e6be736e14f4791520a8ce783a8"
+    },
+    {
+      "code": "05070",
+      "side": "front",
+      "path": "assets/cards/05070.jpg",
+      "url": "https://assets.arkham.build/optimized/05070.jpg",
+      "sha256": "09f1a7d6bd071320d6cf1c25bf5cc37be69450db13963d1ed0b707423d3e3ba3"
+    },
+    {
+      "code": "05070",
+      "side": "back",
+      "path": "assets/cards/05070b.jpg",
+      "url": "https://assets.arkham.build/optimized/05070b.jpg",
+      "sha256": "0634e5884a4c02109cb0fcd17f2b048700d2f3ece73808a152aff8aa1ef27e03"
+    },
+    {
+      "code": "05121",
+      "side": "front",
+      "path": "assets/cards/05121.jpg",
+      "url": "https://assets.arkham.build/optimized/05121.jpg",
+      "sha256": "21905d531ac49715385b8bea18f2fb32f1c6dc6ec4d3d87b1d614d2f4064b4e8"
+    },
+    {
+      "code": "05121",
+      "side": "back",
+      "path": "assets/cards/05121b.jpg",
+      "url": "https://assets.arkham.build/optimized/05121b.jpg",
+      "sha256": "58174c951df5206cfb423bce0eee3b0da15640246b757cefef2cb464465dd8f4"
+    },
+    {
+      "code": "05122",
+      "side": "front",
+      "path": "assets/cards/05122.jpg",
+      "url": "https://assets.arkham.build/optimized/05122.jpg",
+      "sha256": "5b572c4022b272006d3831b30c1a12afb1fb7a9b711935b9ff75413613bd68ae"
+    },
+    {
+      "code": "05122",
+      "side": "back",
+      "path": "assets/cards/05122b.jpg",
+      "url": "https://assets.arkham.build/optimized/05122b.jpg",
+      "sha256": "1ebff06efca2b6c335a7899222cd81e59c5327e5804a60ff46e3f44273e78be1"
+    },
+    {
+      "code": "05123",
+      "side": "front",
+      "path": "assets/cards/05123.jpg",
+      "url": "https://assets.arkham.build/optimized/05123.jpg",
+      "sha256": "66c63942756d21e57eaba23173e9a8a1f915481fdecc2181aebc72ac14a5b462"
+    },
+    {
+      "code": "05123",
+      "side": "back",
+      "path": "assets/cards/05123b.jpg",
+      "url": "https://assets.arkham.build/optimized/05123b.jpg",
+      "sha256": "c6adb48ee958bbd5c9ec324a491724b3aa77b845855e8bb7bce19eea870ce606"
+    },
+    {
+      "code": "05124",
+      "side": "front",
+      "path": "assets/cards/05124.jpg",
+      "url": "https://assets.arkham.build/optimized/05124.jpg",
+      "sha256": "1dbe0c927020edfaa05838459293491826d762e8fa36e613f7e1eb52c0029be3"
+    },
+    {
+      "code": "05124",
+      "side": "back",
+      "path": "assets/cards/05124b.jpg",
+      "url": "https://assets.arkham.build/optimized/05124b.jpg",
+      "sha256": "b462435f5558e1a36aec958ec56eb322d77201dbd968fa1dff304eb8430e1c2b"
+    },
+    {
+      "code": "05125",
+      "side": "front",
+      "path": "assets/cards/05125.jpg",
+      "url": "https://assets.arkham.build/optimized/05125.jpg",
+      "sha256": "cb4f67ac88998ef9d5065a8e8bb2dd5a884b9e38bbddf3456a0a875809d06807"
+    },
+    {
+      "code": "05125",
+      "side": "back",
+      "path": "assets/cards/05125b.jpg",
+      "url": "https://assets.arkham.build/optimized/05125b.jpg",
+      "sha256": "f93501a4e7f5ad06f6d87bdda0b1f9bcc80947096510820f3933a13df6f25e81"
+    },
+    {
+      "code": "05126",
+      "side": "front",
+      "path": "assets/cards/05126.jpg",
+      "url": "https://assets.arkham.build/optimized/05126.jpg",
+      "sha256": "befc97b9ba0df918fcb5b2149ccca300ca9dff8002e320bf2fc95ac8798daf59"
+    },
+    {
+      "code": "05126",
+      "side": "back",
+      "path": "assets/cards/05126b.jpg",
+      "url": "https://assets.arkham.build/optimized/05126b.jpg",
+      "sha256": "d059616fdc20f1abd9a4b9e78381de26f2e810a5a6cdcd65de84320a0ad746d4"
+    },
+    {
+      "code": "05127",
+      "side": "front",
+      "path": "assets/cards/05127.jpg",
+      "url": "https://assets.arkham.build/optimized/05127.jpg",
+      "sha256": "09cf3c877fc836827b9b4d991ef7e6bb4de02655fcc51f01474ebd6cb6fb8135"
+    },
+    {
+      "code": "05127",
+      "side": "back",
+      "path": "assets/cards/05127b.jpg",
+      "url": "https://assets.arkham.build/optimized/05127b.jpg",
+      "sha256": "5403639303deaa81a9562a606355ade5277c3986efd6de43b070f2f97dac6ce1"
+    },
+    {
+      "code": "05162",
+      "side": "front",
+      "path": "assets/cards/05162.jpg",
+      "url": "https://assets.arkham.build/optimized/05162.jpg",
+      "sha256": "62cfae5c8392ec3f0b4638b8077080e7c68b968806eee247bd3873a216d94381"
+    },
+    {
+      "code": "05162",
+      "side": "back",
+      "path": "assets/cards/05162b.jpg",
+      "url": "https://assets.arkham.build/optimized/05162b.jpg",
+      "sha256": "ac85fecedd292bcb9192b60b6b6fe86d8c7d78d71d2d0e4ea244412ee80bd1ba"
+    },
+    {
+      "code": "05163",
+      "side": "front",
+      "path": "assets/cards/05163.jpg",
+      "url": "https://assets.arkham.build/optimized/05163.jpg",
+      "sha256": "b9935b47da481bf6729025304ba8b34cfa014320aa22509935291587eb1545a8"
+    },
+    {
+      "code": "05163",
+      "side": "back",
+      "path": "assets/cards/05163b.jpg",
+      "url": "https://assets.arkham.build/optimized/05163b.jpg",
+      "sha256": "bb532cd2d4a25e77450d73a3ee2f6274bd8b47b6db309aff252718b453d1da76"
+    },
+    {
+      "code": "05164",
+      "side": "front",
+      "path": "assets/cards/05164.jpg",
+      "url": "https://assets.arkham.build/optimized/05164.jpg",
+      "sha256": "ad72f88c84714f769446034c4a544e0dc4bf41bfcd3028bb914232a9b5ce76cb"
+    },
+    {
+      "code": "05164",
+      "side": "back",
+      "path": "assets/cards/05164b.jpg",
+      "url": "https://assets.arkham.build/optimized/05164b.jpg",
+      "sha256": "8802bc1bf9c15e219ee2a5627cb2e65967ee85d79feb4e40d019a4b1acd625cd"
+    },
+    {
+      "code": "05165",
+      "side": "front",
+      "path": "assets/cards/05165.jpg",
+      "url": "https://assets.arkham.build/optimized/05165.jpg",
+      "sha256": "4e7967ab2198dbc70dcaf75c5b7de8a6e0d8d831ddef8aa118adb9103ea202a3"
+    },
+    {
+      "code": "05165",
+      "side": "back",
+      "path": "assets/cards/05165b.jpg",
+      "url": "https://assets.arkham.build/optimized/05165b.jpg",
+      "sha256": "653307b34074b989b5f88d8d75ae1e6c95850a8a812410130a93e81e30d10285"
+    },
+    {
+      "code": "05198",
+      "side": "front",
+      "path": "assets/cards/05198.jpg",
+      "url": "https://assets.arkham.build/optimized/05198.jpg",
+      "sha256": "5c062f12f75207ef3446f7f53397d90cbcc4013e8eaec4ac6829c9dfd2d55e5c"
+    },
+    {
+      "code": "05198",
+      "side": "back",
+      "path": "assets/cards/05198b.jpg",
+      "url": "https://assets.arkham.build/optimized/05198b.jpg",
+      "sha256": "8d8c05bf76a125441bfa5b939db10c31d3aa297ff7fb606d5b8ed5e7bf9ae791"
+    },
+    {
+      "code": "05199",
+      "side": "front",
+      "path": "assets/cards/05199.jpg",
+      "url": "https://assets.arkham.build/optimized/05199.jpg",
+      "sha256": "d03c9d7e12776ed229bf1059f308d0f6a69c6640a60fb85220e561a9c4c10638"
+    },
+    {
+      "code": "05199",
+      "side": "back",
+      "path": "assets/cards/05199b.jpg",
+      "url": "https://assets.arkham.build/optimized/05199b.jpg",
+      "sha256": "da888618e348c5aacea3cf605ca9e972f2915401d348ef60de21124df35b72d7"
+    },
+    {
+      "code": "05200",
+      "side": "front",
+      "path": "assets/cards/05200.jpg",
+      "url": "https://assets.arkham.build/optimized/05200.jpg",
+      "sha256": "9d06cff6fda4556837da4080230bd7bbbb2b402bfcf6d73fde5435bafe358e5f"
+    },
+    {
+      "code": "05200",
+      "side": "back",
+      "path": "assets/cards/05200b.jpg",
+      "url": "https://assets.arkham.build/optimized/05200b.jpg",
+      "sha256": "ff96ae87b499fa2640e1f007c83ebdfb90c97b985bb3cb6eff83d51ddd36cf45"
+    },
+    {
+      "code": "05201",
+      "side": "front",
+      "path": "assets/cards/05201.jpg",
+      "url": "https://assets.arkham.build/optimized/05201.jpg",
+      "sha256": "5ef90ae16d17df62023a355bad0d9ec3e4a29b1788dad3a4da6aa27655c8db8d"
+    },
+    {
+      "code": "05201",
+      "side": "back",
+      "path": "assets/cards/05201b.jpg",
+      "url": "https://assets.arkham.build/optimized/05201b.jpg",
+      "sha256": "397343b858e934124aa0470c2a2c7bae532b56fa20da37bcfe8d73c2dc1ddd83"
+    },
+    {
+      "code": "05202",
+      "side": "front",
+      "path": "assets/cards/05202.jpg",
+      "url": "https://assets.arkham.build/optimized/05202.jpg",
+      "sha256": "f4c2d116011ed89428e7ea23e654b90c4c8342af781d94394b2a1d1fe6db91cb"
+    },
+    {
+      "code": "05202",
+      "side": "back",
+      "path": "assets/cards/05202b.jpg",
+      "url": "https://assets.arkham.build/optimized/05202b.jpg",
+      "sha256": "12708793ef717bd81e410b32820e94d7ea686df5fae8fb5fb6d1379b1f6fa498"
+    },
+    {
+      "code": "05203",
+      "side": "front",
+      "path": "assets/cards/05203.jpg",
+      "url": "https://assets.arkham.build/optimized/05203.jpg",
+      "sha256": "6172b6a540f62768c006af6e797a6e37b77e91a974dda3c59fd1088815cd91b2"
+    },
+    {
+      "code": "05203",
+      "side": "back",
+      "path": "assets/cards/05203b.jpg",
+      "url": "https://assets.arkham.build/optimized/05203b.jpg",
+      "sha256": "6be7cfc6af4848ffc9e61338bddf1850da5b949644d73c933c71162f3e8e16b5"
+    },
+    {
+      "code": "05239",
+      "side": "front",
+      "path": "assets/cards/05239.jpg",
+      "url": "https://assets.arkham.build/optimized/05239.jpg",
+      "sha256": "ff64ad3d9d2e81d1dc36ede35d0f7c13fdf8045c9ddb6069d16b7045acfbea05"
+    },
+    {
+      "code": "05239",
+      "side": "back",
+      "path": "assets/cards/05239b.jpg",
+      "url": "https://assets.arkham.build/optimized/05239b.jpg",
+      "sha256": "aa7f8fd7fe56d8ffe76c24b0825d7dbb888490ef5dbbd5316942806b8cbf7c42"
+    },
+    {
+      "code": "05240",
+      "side": "front",
+      "path": "assets/cards/05240.jpg",
+      "url": "https://assets.arkham.build/optimized/05240.jpg",
+      "sha256": "7a6e03c6847cc687a4648e69c0630001abb18c0b81965eef9d5fa95e2c2aaa63"
+    },
+    {
+      "code": "05240",
+      "side": "back",
+      "path": "assets/cards/05240b.jpg",
+      "url": "https://assets.arkham.build/optimized/05240b.jpg",
+      "sha256": "587f7bdc5a40f52ed9f3be42662319ce1f92c9747549068d7626daf7c917e731"
+    },
+    {
+      "code": "05241",
+      "side": "front",
+      "path": "assets/cards/05241.jpg",
+      "url": "https://assets.arkham.build/optimized/05241.jpg",
+      "sha256": "ee9d3d354d56b6dc8663b6933d1d13eebbdf20aec2039b6e13f2a2d1efa75342"
+    },
+    {
+      "code": "05241",
+      "side": "back",
+      "path": "assets/cards/05241b.jpg",
+      "url": "https://assets.arkham.build/optimized/05241b.jpg",
+      "sha256": "a398c420859be8f66afcbef6e9545d25c3ad5003aeea829987eb5aeb44d82cbe"
+    },
+    {
+      "code": "05242",
+      "side": "front",
+      "path": "assets/cards/05242.jpg",
+      "url": "https://assets.arkham.build/optimized/05242.jpg",
+      "sha256": "ffd96c50fe39d48dc5f6ca0660c8b3680f0ed201847e0365feea6611b831f4f5"
+    },
+    {
+      "code": "05242",
+      "side": "back",
+      "path": "assets/cards/05242b.jpg",
+      "url": "https://assets.arkham.build/optimized/05242b.jpg",
+      "sha256": "21e48f2d3aff3fe201d009364f35fc3b7348c5578e0d4392ea466aa785cce3ff"
+    },
+    {
+      "code": "05243",
+      "side": "front",
+      "path": "assets/cards/05243.jpg",
+      "url": "https://assets.arkham.build/optimized/05243.jpg",
+      "sha256": "61e55369978ff55d5aa5784ffafb38ec5f5ad41e47cf22c849e54020823aee1a"
+    },
+    {
+      "code": "05243",
+      "side": "back",
+      "path": "assets/cards/05243b.jpg",
+      "url": "https://assets.arkham.build/optimized/05243b.jpg",
+      "sha256": "c4bd21d34694cb4172dfc4235b46b1fde2e9cab5b5cd9660fa5237b27f52495d"
+    },
+    {
+      "code": "05244",
+      "side": "front",
+      "path": "assets/cards/05244.jpg",
+      "url": "https://assets.arkham.build/optimized/05244.jpg",
+      "sha256": "2c4f8eef5ad37807795f20ff789e08f14fbd66d744a30df77e1a2ed25ebbfff2"
+    },
+    {
+      "code": "05244",
+      "side": "back",
+      "path": "assets/cards/05244b.jpg",
+      "url": "https://assets.arkham.build/optimized/05244b.jpg",
+      "sha256": "40dae8afc3648ce77db281d563f436b7a170174a59b31b59efcd8f898d11123c"
+    },
+    {
+      "code": "05245",
+      "side": "front",
+      "path": "assets/cards/05245.jpg",
+      "url": "https://assets.arkham.build/optimized/05245.jpg",
+      "sha256": "ddf45b25df64a81d27bef950e149fce6807980a5b58a661edab4525246038338"
+    },
+    {
+      "code": "05245",
+      "side": "back",
+      "path": "assets/cards/05245b.jpg",
+      "url": "https://assets.arkham.build/optimized/05245b.jpg",
+      "sha256": "e0fb7af0b9299773f5af74fdcb0303745991a7c31960dd28d5474f6c2dcbba03"
+    },
+    {
+      "code": "05246",
+      "side": "front",
+      "path": "assets/cards/05246.jpg",
+      "url": "https://assets.arkham.build/optimized/05246.jpg",
+      "sha256": "2a951270f8a6d905c42c010d280f4d80030dc0eaf67d3c7a6f34917c17be6091"
+    },
+    {
+      "code": "05246",
+      "side": "back",
+      "path": "assets/cards/05246b.jpg",
+      "url": "https://assets.arkham.build/optimized/05246b.jpg",
+      "sha256": "8b2278cb6b818e0529a969d5636cb110c02927c4113fa0a6042b6f3fe30a1be0"
+    },
+    {
+      "code": "05247",
+      "side": "front",
+      "path": "assets/cards/05247.jpg",
+      "url": "https://assets.arkham.build/optimized/05247.jpg",
+      "sha256": "be8b041e0324d88407631e7deb692ec725102a29db8a34c059a614af2348e6ea"
+    },
+    {
+      "code": "05247",
+      "side": "back",
+      "path": "assets/cards/05247b.jpg",
+      "url": "https://assets.arkham.build/optimized/05247b.jpg",
+      "sha256": "35ac8b35c2a62621cf5b3cd8c4438bf291c4b3ba4598a3ad54f8fc297ce8c2c6"
+    },
+    {
+      "code": "05248",
+      "side": "front",
+      "path": "assets/cards/05248.jpg",
+      "url": "https://assets.arkham.build/optimized/05248.jpg",
+      "sha256": "4588a760d9b2cb8fbc9faef52a65f3508150dc049983a1d54c83e3004bca0242"
+    },
+    {
+      "code": "05248",
+      "side": "back",
+      "path": "assets/cards/05248b.jpg",
+      "url": "https://assets.arkham.build/optimized/05248b.jpg",
+      "sha256": "e2362cb99291c602e6b0ecea7bc956313bf0b97997d18f3dee1d5d9bbb0a9790"
+    },
+    {
+      "code": "05285",
+      "side": "front",
+      "path": "assets/cards/05285.jpg",
+      "url": "https://assets.arkham.build/optimized/05285.jpg",
+      "sha256": "ea8077b592c109bc799f77ad2952f587bc402b6bbeb99ca3c6e6de0b3c064198"
+    },
+    {
+      "code": "05285",
+      "side": "back",
+      "path": "assets/cards/05285b.jpg",
+      "url": "https://assets.arkham.build/optimized/05285b.jpg",
+      "sha256": "60577995987601731aa5bdec0ff5ec1d1337f078f82fa8b506329a420f66398b"
+    },
+    {
+      "code": "05286a",
+      "side": "front",
+      "path": "assets/cards/05286a.jpg",
+      "url": "https://assets.arkham.build/optimized/05286a.jpg",
+      "sha256": "d282c9f13bef629e1b7c11792d16fb4e659fc496a4dab0ea1fc9e4b238c19a03"
+    },
+    {
+      "code": "05286a",
+      "side": "back",
+      "path": "assets/cards/05286b.jpg",
+      "url": "https://assets.arkham.build/optimized/05286b.jpg",
+      "sha256": "0dce3e4f5f3dfe45023d971f2e3dbd544592034f1255f0ce49a65a8c1bb2ca89"
+    },
+    {
+      "code": "05287",
+      "side": "front",
+      "path": "assets/cards/05287.jpg",
+      "url": "https://assets.arkham.build/optimized/05287.jpg",
+      "sha256": "6b0d144ce08690e99ee71f08d5e34324bd1d8396e64a2993649b85e41b901ee2"
+    },
+    {
+      "code": "05287",
+      "side": "back",
+      "path": "assets/cards/05287b.jpg",
+      "url": "https://assets.arkham.build/optimized/05287b.jpg",
+      "sha256": "41b5cf9ef0bff05ff78f9f66283696e64cafa63a782b6ab7cd7fa9344c2ec07e"
+    },
+    {
+      "code": "05288a",
+      "side": "front",
+      "path": "assets/cards/05288a.jpg",
+      "url": "https://assets.arkham.build/optimized/05288a.jpg",
+      "sha256": "11a098af0ee4c4394d491269fc2498e1b61902236c72c1c46149c9ad2db63d73"
+    },
+    {
+      "code": "05288a",
+      "side": "back",
+      "path": "assets/cards/05288b.jpg",
+      "url": "https://assets.arkham.build/optimized/05288b.jpg",
+      "sha256": "1b1083c6706ee2b1708ba7b86a20d2c6b63c937abf1dc012b394bfa5cdebb2b4"
+    },
+    {
+      "code": "05289",
+      "side": "front",
+      "path": "assets/cards/05289.jpg",
+      "url": "https://assets.arkham.build/optimized/05289.jpg",
+      "sha256": "2be443e609b8409613580d36ddc7b22b8362bde1645598d1f100b237c627d68c"
+    },
+    {
+      "code": "05289",
+      "side": "back",
+      "path": "assets/cards/05289b.jpg",
+      "url": "https://assets.arkham.build/optimized/05289b.jpg",
+      "sha256": "19b17a12fea66204749b3336c6627cffd209ee7cf0e0b82e4aea9f1cf87263ad"
+    },
+    {
+      "code": "05326",
+      "side": "front",
+      "path": "assets/cards/05326.jpg",
+      "url": "https://assets.arkham.build/optimized/05326.jpg",
+      "sha256": "14fad3244c15130ea8aeb1edcee65048e1cc555bd8fd2ec6c124f4ebbfc839d3"
+    },
+    {
+      "code": "05326",
+      "side": "back",
+      "path": "assets/cards/05326b.jpg",
+      "url": "https://assets.arkham.build/optimized/05326b.jpg",
+      "sha256": "fdb9d0b17122daba739bcf31115b628c995f1eee71c78abe615611282679e4e6"
+    },
+    {
+      "code": "05327",
+      "side": "front",
+      "path": "assets/cards/05327.jpg",
+      "url": "https://assets.arkham.build/optimized/05327.jpg",
+      "sha256": "caa2f300cc202751af8458af21110d786aef49453e65d3624bb9fb1e60ef1d75"
+    },
+    {
+      "code": "05327",
+      "side": "back",
+      "path": "assets/cards/05327b.jpg",
+      "url": "https://assets.arkham.build/optimized/05327b.jpg",
+      "sha256": "06fc2695ad9ea3e2a17c5a634b4694ab906d00b75adeb65ffd4a1d6111eef4cc"
+    },
+    {
+      "code": "05328",
+      "side": "front",
+      "path": "assets/cards/05328.jpg",
+      "url": "https://assets.arkham.build/optimized/05328.jpg",
+      "sha256": "39e2960bb9bbbf3bf4396500f4f0cd595a1b1b0e4a2ebea2d0c91c3f234703cd"
+    },
+    {
+      "code": "05328",
+      "side": "back",
+      "path": "assets/cards/05328b.jpg",
+      "url": "https://assets.arkham.build/optimized/05328b.jpg",
+      "sha256": "b13634cbef9ca37cc64549c8a37d031303f9c3c886c96152ac97547669a3742e"
+    },
+    {
+      "code": "05329",
+      "side": "front",
+      "path": "assets/cards/05329.jpg",
+      "url": "https://assets.arkham.build/optimized/05329.jpg",
+      "sha256": "fb036f0ac01703a66874a45772d17bd3c50d7389fc35e212660d8c5b2d884c01"
+    },
+    {
+      "code": "05329",
+      "side": "back",
+      "path": "assets/cards/05329b.jpg",
+      "url": "https://assets.arkham.build/optimized/05329b.jpg",
+      "sha256": "645d0b9ae19105da27d292f110f0782289274b47ac840d16850325f611a40c75"
+    },
+    {
+      "code": "05330",
+      "side": "front",
+      "path": "assets/cards/05330.jpg",
+      "url": "https://assets.arkham.build/optimized/05330.jpg",
+      "sha256": "8ed96470625737131b7d0c34d80e0b647b640754b0548bbc1ffa82e4e1b951a9"
+    },
+    {
+      "code": "05330",
+      "side": "back",
+      "path": "assets/cards/05330b.jpg",
+      "url": "https://assets.arkham.build/optimized/05330b.jpg",
+      "sha256": "a08659b9c56208034a2e3638c0fc66f6d922a024deca319510affdec8db34ba0"
+    },
+    {
+      "code": "05331",
+      "side": "front",
+      "path": "assets/cards/05331.jpg",
+      "url": "https://assets.arkham.build/optimized/05331.jpg",
+      "sha256": "ae6bb6042ac3614c6c3c021e5bb754a89cff810d178e26a17804f4bd47959602"
+    },
+    {
+      "code": "05331",
+      "side": "back",
+      "path": "assets/cards/05331b.jpg",
+      "url": "https://assets.arkham.build/optimized/05331b.jpg",
+      "sha256": "fe8c94d2e90c2c17cfe17603efa93f5fd60013c463e0b5ca34f1f3993e201d60"
+    },
+    {
+      "code": "06040",
+      "side": "front",
+      "path": "assets/cards/06040.jpg",
+      "url": "https://assets.arkham.build/optimized/06040.jpg",
+      "sha256": "044920ff9f8c7d65522cdaf0125fb5c25dbf9bb76b2c6a486abe688886013344"
+    },
+    {
+      "code": "06040",
+      "side": "back",
+      "path": "assets/cards/06040b.jpg",
+      "url": "https://assets.arkham.build/optimized/06040b.jpg",
+      "sha256": "154bff835d51326a7e8a7e5aba6f0c449ce9ce9250df17e7d0f5029de1d0e7c8"
+    },
+    {
+      "code": "06041",
+      "side": "front",
+      "path": "assets/cards/06041.jpg",
+      "url": "https://assets.arkham.build/optimized/06041.jpg",
+      "sha256": "b686732d2385b2c8bc408ccb77a43648ed976f3499d14ed2617aedf14fe83f34"
+    },
+    {
+      "code": "06041",
+      "side": "back",
+      "path": "assets/cards/06041b.jpg",
+      "url": "https://assets.arkham.build/optimized/06041b.jpg",
+      "sha256": "49c19b18bc7713d028d71db670e1cea9fbb316accbd28da3e991df010cd91aad"
+    },
+    {
+      "code": "06042",
+      "side": "front",
+      "path": "assets/cards/06042.jpg",
+      "url": "https://assets.arkham.build/optimized/06042.jpg",
+      "sha256": "771f3d210b98d2ab658ef1d550cc17329df51f3b484978986d0c5aaab4e92bff"
+    },
+    {
+      "code": "06042",
+      "side": "back",
+      "path": "assets/cards/06042b.jpg",
+      "url": "https://assets.arkham.build/optimized/06042b.jpg",
+      "sha256": "2b9de3d768de6446a49d3fe115a35dd226d2fe725df6269700260d5211270f5d"
+    },
+    {
+      "code": "06043",
+      "side": "front",
+      "path": "assets/cards/06043.jpg",
+      "url": "https://assets.arkham.build/optimized/06043.jpg",
+      "sha256": "995cfc2a1c8269ab9c3e768f4ed2c7656ae0649e65409b4d1f81032a095f093c"
+    },
+    {
+      "code": "06043",
+      "side": "back",
+      "path": "assets/cards/06043b.jpg",
+      "url": "https://assets.arkham.build/optimized/06043b.jpg",
+      "sha256": "0fc5fb44cdcc7eaecc07646fcd59e5281a7657a69c5e595bded7091f87b823a5"
+    },
+    {
+      "code": "06044",
+      "side": "front",
+      "path": "assets/cards/06044.jpg",
+      "url": "https://assets.arkham.build/optimized/06044.jpg",
+      "sha256": "1144601f6fd8b404e1adaf2e5b5e22cc1e7ec6e73dc5407bbc744feda926ebfa"
+    },
+    {
+      "code": "06044",
+      "side": "back",
+      "path": "assets/cards/06044b.jpg",
+      "url": "https://assets.arkham.build/optimized/06044b.jpg",
+      "sha256": "106b6c29d1c9729cd4f362c96a218b6db58b65eeded2f0ac25db5c5a25e441ac"
+    },
+    {
+      "code": "06064",
+      "side": "front",
+      "path": "assets/cards/06064.jpg",
+      "url": "https://assets.arkham.build/optimized/06064.jpg",
+      "sha256": "b1fd2bff02e982e9a1f92e216abd3fbf99f5dfca2f1cb0af8110e3176b9269fb"
+    },
+    {
+      "code": "06064",
+      "side": "back",
+      "path": "assets/cards/06064b.jpg",
+      "url": "https://assets.arkham.build/optimized/06064b.jpg",
+      "sha256": "c2cda9e164cbb5ea51087c2e4591ed67ce2af5670830e338c6dfc7abb2356639"
+    },
+    {
+      "code": "06065",
+      "side": "front",
+      "path": "assets/cards/06065.jpg",
+      "url": "https://assets.arkham.build/optimized/06065.jpg",
+      "sha256": "10dd5dcb50db968b56df6395d77f2e100ee11b827fb72a7b49c596468bf6ae9d"
+    },
+    {
+      "code": "06065",
+      "side": "back",
+      "path": "assets/cards/06065b.jpg",
+      "url": "https://assets.arkham.build/optimized/06065b.jpg",
+      "sha256": "8c8a0949caa1d506884264db2db7c8d0f15e9f43a3be40e3714e68b10757b49b"
+    },
+    {
+      "code": "06066",
+      "side": "front",
+      "path": "assets/cards/06066.jpg",
+      "url": "https://assets.arkham.build/optimized/06066.jpg",
+      "sha256": "744623b1967eebb14e85fbda39d785447ff62190748ba33c11f9479176a5e1df"
+    },
+    {
+      "code": "06066",
+      "side": "back",
+      "path": "assets/cards/06066b.jpg",
+      "url": "https://assets.arkham.build/optimized/06066b.jpg",
+      "sha256": "5831f84b241abe59bddb9796ddc6fec301fc75701caeddab83e86becbbb55fc6"
+    },
+    {
+      "code": "06067",
+      "side": "front",
+      "path": "assets/cards/06067.jpg",
+      "url": "https://assets.arkham.build/optimized/06067.jpg",
+      "sha256": "5443a9caf207a46180a664a6fe54bc1e357faa6bc8538413d2513597eeb028b9"
+    },
+    {
+      "code": "06067",
+      "side": "back",
+      "path": "assets/cards/06067b.jpg",
+      "url": "https://assets.arkham.build/optimized/06067b.jpg",
+      "sha256": "fd810da798bd49c2ca34315d3a16e0694831fef825239f6f19d486102d8727db"
+    },
+    {
+      "code": "06068",
+      "side": "front",
+      "path": "assets/cards/06068.jpg",
+      "url": "https://assets.arkham.build/optimized/06068.jpg",
+      "sha256": "1bedf81d66d39d5435fb6998ae487217247d859731de306946bcdc4b855a20b6"
+    },
+    {
+      "code": "06068",
+      "side": "back",
+      "path": "assets/cards/06068b.jpg",
+      "url": "https://assets.arkham.build/optimized/06068b.jpg",
+      "sha256": "9a47c131569e2e866c7bbee27296bbf3d31df44b424d76218e01e24bbd1e8fe9"
+    },
+    {
+      "code": "06069",
+      "side": "front",
+      "path": "assets/cards/06069.jpg",
+      "url": "https://assets.arkham.build/optimized/06069.jpg",
+      "sha256": "1985027888fdab25f801f0ed005c8303d6d74019f4f913fa8f382bfce78b2e8c"
+    },
+    {
+      "code": "06069",
+      "side": "back",
+      "path": "assets/cards/06069b.jpg",
+      "url": "https://assets.arkham.build/optimized/06069b.jpg",
+      "sha256": "c3162632cda41a4dc799f49e8b51b5b0fe050599e90e6af7d18bb467e58a1c24"
+    },
+    {
+      "code": "06120",
+      "side": "front",
+      "path": "assets/cards/06120.jpg",
+      "url": "https://assets.arkham.build/optimized/06120.jpg",
+      "sha256": "7706601d9206099f1fad35e8d86c1d890c54c130ca810d1697e138c65db98c45"
+    },
+    {
+      "code": "06120",
+      "side": "back",
+      "path": "assets/cards/06120b.jpg",
+      "url": "https://assets.arkham.build/optimized/06120b.jpg",
+      "sha256": "5c0e03d7c1c0e2df061e39651a120215caa601738284798c0b1b35dc610fbed0"
+    },
+    {
+      "code": "06121",
+      "side": "front",
+      "path": "assets/cards/06121.jpg",
+      "url": "https://assets.arkham.build/optimized/06121.jpg",
+      "sha256": "6a26e3023c1d4baee73f7a302bd1ff596dcd837871da25f05a2fb2b245013ae6"
+    },
+    {
+      "code": "06121",
+      "side": "back",
+      "path": "assets/cards/06121b.jpg",
+      "url": "https://assets.arkham.build/optimized/06121b.jpg",
+      "sha256": "2144ad99e504b584190db049fed99661221f0f60ac4edb06c71b43f17c3a7091"
+    },
+    {
+      "code": "06122",
+      "side": "front",
+      "path": "assets/cards/06122.jpg",
+      "url": "https://assets.arkham.build/optimized/06122.jpg",
+      "sha256": "51d99b3824c2101a6d143c09edc6fc50ba66ac1f09ed7ccf4a80c948d2aaf931"
+    },
+    {
+      "code": "06122",
+      "side": "back",
+      "path": "assets/cards/06122b.jpg",
+      "url": "https://assets.arkham.build/optimized/06122b.jpg",
+      "sha256": "821cf2fa510396eaeced8c25349a0a94d273c836fc3796641160d4b591e5195a"
+    },
+    {
+      "code": "06123",
+      "side": "front",
+      "path": "assets/cards/06123.jpg",
+      "url": "https://assets.arkham.build/optimized/06123.jpg",
+      "sha256": "7c075c0abda8ed8038ed8b7c493db97c8579be95a27d272591d484187cf8ffb1"
+    },
+    {
+      "code": "06123",
+      "side": "back",
+      "path": "assets/cards/06123b.jpg",
+      "url": "https://assets.arkham.build/optimized/06123b.jpg",
+      "sha256": "cfde6b4315e469ca3f44b5c5abdbc1afaa5403e563bb7af467e7311a9b679868"
+    },
+    {
+      "code": "06124",
+      "side": "front",
+      "path": "assets/cards/06124.jpg",
+      "url": "https://assets.arkham.build/optimized/06124.jpg",
+      "sha256": "a7adce1dbed29ebf2e0d05139a16ef872e824bc7de0a8d55506c5f101ed7edf0"
+    },
+    {
+      "code": "06124",
+      "side": "back",
+      "path": "assets/cards/06124b.jpg",
+      "url": "https://assets.arkham.build/optimized/06124b.jpg",
+      "sha256": "40694655b67f84f443cf63d7fe8d04e847f8b6e53dff1ccaa4021c1ce6416112"
+    },
+    {
+      "code": "06125",
+      "side": "front",
+      "path": "assets/cards/06125.jpg",
+      "url": "https://assets.arkham.build/optimized/06125.jpg",
+      "sha256": "c2d90a7814e42a11f8427ce4ddd61f5afeca23a1e8320e740e134ff7bff98406"
+    },
+    {
+      "code": "06125",
+      "side": "back",
+      "path": "assets/cards/06125b.jpg",
+      "url": "https://assets.arkham.build/optimized/06125b.jpg",
+      "sha256": "531f81afb38a36d9e09f85c36e37e7e5631746af6c142736e6284bfbdd49d195"
+    },
+    {
+      "code": "06126",
+      "side": "front",
+      "path": "assets/cards/06126.jpg",
+      "url": "https://assets.arkham.build/optimized/06126.jpg",
+      "sha256": "e358ed619b30278beae09e9159967f6a7e6faf65fdae38527b2e02b1d2f99702"
+    },
+    {
+      "code": "06126",
+      "side": "back",
+      "path": "assets/cards/06126b.jpg",
+      "url": "https://assets.arkham.build/optimized/06126b.jpg",
+      "sha256": "be345fc2e366b4ba660164d8f6a3eeae479e8935502095a77efb0302f9272d30"
+    },
+    {
+      "code": "06169a",
+      "side": "front",
+      "path": "assets/cards/06169a.jpg",
+      "url": "https://assets.arkham.build/optimized/06169a.jpg",
+      "sha256": "9760ee1d5afd007f690361d0f729a0c3bb074515e08f4c91cb8d1b7bd5cd8e90"
+    },
+    {
+      "code": "06169a",
+      "side": "back",
+      "path": "assets/cards/06169b.jpg",
+      "url": "https://assets.arkham.build/optimized/06169b.jpg",
+      "sha256": "56640107c788105074147cef7cd4d91705077e940bcce083b07dc5c90c0f2b44"
+    },
+    {
+      "code": "06170",
+      "side": "front",
+      "path": "assets/cards/06170.jpg",
+      "url": "https://assets.arkham.build/optimized/06170.jpg",
+      "sha256": "40a92645a6eb446f260bec12c1d815edb5e68dbfe6d4469a4b6bcc47362dee35"
+    },
+    {
+      "code": "06170",
+      "side": "back",
+      "path": "assets/cards/06170b.jpg",
+      "url": "https://assets.arkham.build/optimized/06170b.jpg",
+      "sha256": "c25c0735ca9be9da7cf04801ba3a03794957edd20d0bcc2e16e62d0e7e515972"
+    },
+    {
+      "code": "06171",
+      "side": "front",
+      "path": "assets/cards/06171.jpg",
+      "url": "https://assets.arkham.build/optimized/06171.jpg",
+      "sha256": "251b0b08263f735c0a20bb060c384b5119782a0f93c9455d298d1a6cdcc54434"
+    },
+    {
+      "code": "06171",
+      "side": "back",
+      "path": "assets/cards/06171b.jpg",
+      "url": "https://assets.arkham.build/optimized/06171b.jpg",
+      "sha256": "5e09a9e766a5efaaa0dce60283801a158251c3ea69710c941680cae03c3b5bdf"
+    },
+    {
+      "code": "06172",
+      "side": "front",
+      "path": "assets/cards/06172.jpg",
+      "url": "https://assets.arkham.build/optimized/06172.jpg",
+      "sha256": "ee3bc7aa4a02822eade656c6a40610c05088d625321d12a44d98ae7c8bacf791"
+    },
+    {
+      "code": "06172",
+      "side": "back",
+      "path": "assets/cards/06172b.jpg",
+      "url": "https://assets.arkham.build/optimized/06172b.jpg",
+      "sha256": "77d78fd4acacf1b4bc62ba5f96c13b732af078c4693ff31c24079ac9075f059d"
+    },
+    {
+      "code": "06173",
+      "side": "front",
+      "path": "assets/cards/06173.jpg",
+      "url": "https://assets.arkham.build/optimized/06173.jpg",
+      "sha256": "3fdc45939d9978cc40ebf875213f768963fab0d62f12b01cb62722bc0821ae37"
+    },
+    {
+      "code": "06173",
+      "side": "back",
+      "path": "assets/cards/06173b.jpg",
+      "url": "https://assets.arkham.build/optimized/06173b.jpg",
+      "sha256": "8e5ce12a3a8fc184a7c530cd9d754110a77d0b3a2b093e5ab191e39ec7a987da"
+    },
+    {
+      "code": "06207",
+      "side": "front",
+      "path": "assets/cards/06207.jpg",
+      "url": "https://assets.arkham.build/optimized/06207.jpg",
+      "sha256": "3725d75e4b14f847b9568db534de79ac2318f36471307dee65a44cd2c4a9893e"
+    },
+    {
+      "code": "06207",
+      "side": "back",
+      "path": "assets/cards/06207b.jpg",
+      "url": "https://assets.arkham.build/optimized/06207b.jpg",
+      "sha256": "8228768b7cb163e38fe5d148d9ad083d5aea6b89a8ed07366360b2890c75a164"
+    },
+    {
+      "code": "06208",
+      "side": "front",
+      "path": "assets/cards/06208.jpg",
+      "url": "https://assets.arkham.build/optimized/06208.jpg",
+      "sha256": "0fcc8cc602d8c5fbdcc0404a04afca5d833bbe6a5c78bdc827d68f9e3c894ddb"
+    },
+    {
+      "code": "06208",
+      "side": "back",
+      "path": "assets/cards/06208b.jpg",
+      "url": "https://assets.arkham.build/optimized/06208b.jpg",
+      "sha256": "2ca7fd1a43a400fa7f93c0643a6d2f17e7b36ba5efff9c17796f918e883ab506"
+    },
+    {
+      "code": "06209",
+      "side": "front",
+      "path": "assets/cards/06209.jpg",
+      "url": "https://assets.arkham.build/optimized/06209.jpg",
+      "sha256": "c0fd8480ac91492593ca4f1fe331a16a85ec730219d42f618838556c8078db0f"
+    },
+    {
+      "code": "06209",
+      "side": "back",
+      "path": "assets/cards/06209b.jpg",
+      "url": "https://assets.arkham.build/optimized/06209b.jpg",
+      "sha256": "d2163e0f466696c3ea0161e7a73c99e631e2d62881fbb49668a520e26c727c66"
+    },
+    {
+      "code": "06210",
+      "side": "front",
+      "path": "assets/cards/06210.jpg",
+      "url": "https://assets.arkham.build/optimized/06210.jpg",
+      "sha256": "1796eee0c89c2aed2043fb4218a34ecc69035e095b924a50ad01c37cf4d2c9f4"
+    },
+    {
+      "code": "06210",
+      "side": "back",
+      "path": "assets/cards/06210b.jpg",
+      "url": "https://assets.arkham.build/optimized/06210b.jpg",
+      "sha256": "f2af6f475a9cf1723b12d0a936f762926aa61f54d6c67b079cea47eb446c13cb"
+    },
+    {
+      "code": "06211",
+      "side": "front",
+      "path": "assets/cards/06211.jpg",
+      "url": "https://assets.arkham.build/optimized/06211.jpg",
+      "sha256": "38a0bf37cd046cdf0636737668d8a3dc00e2401c4e5e739d9f9f3127b0082409"
+    },
+    {
+      "code": "06211",
+      "side": "back",
+      "path": "assets/cards/06211b.jpg",
+      "url": "https://assets.arkham.build/optimized/06211b.jpg",
+      "sha256": "26c21367edbf81a5e6aee9da10f6e06e2f6bff5d37741e7bdaa418a9ee1b42b4"
+    },
+    {
+      "code": "06212",
+      "side": "front",
+      "path": "assets/cards/06212.jpg",
+      "url": "https://assets.arkham.build/optimized/06212.jpg",
+      "sha256": "ffb56b4d9a8f549d3979840d2bf7ec616abc09fb3be6f7fc8d8eeb1819a02d8c"
+    },
+    {
+      "code": "06212",
+      "side": "back",
+      "path": "assets/cards/06212b.jpg",
+      "url": "https://assets.arkham.build/optimized/06212b.jpg",
+      "sha256": "ca8077f08533c15d3b0ac781d44e7e075530490599587b40ebd0a0b21e9c97b3"
+    },
+    {
+      "code": "06213",
+      "side": "front",
+      "path": "assets/cards/06213.jpg",
+      "url": "https://assets.arkham.build/optimized/06213.jpg",
+      "sha256": "4190888b907eb8216a0876579f295b3507f27407538a2c8b0d40d1319e3d8f95"
+    },
+    {
+      "code": "06213",
+      "side": "back",
+      "path": "assets/cards/06213b.jpg",
+      "url": "https://assets.arkham.build/optimized/06213b.jpg",
+      "sha256": "1706b79163d1f1951f339e69f848bd8cee33c16f75dbe969bb4733cf47d8388c"
+    },
+    {
+      "code": "06248",
+      "side": "front",
+      "path": "assets/cards/06248.jpg",
+      "url": "https://assets.arkham.build/optimized/06248.jpg",
+      "sha256": "1a23fc96f8f5dfca5c50f22e74cbd22b56f63341501f8c768ecfc787056459ff"
+    },
+    {
+      "code": "06248",
+      "side": "back",
+      "path": "assets/cards/06248b.jpg",
+      "url": "https://assets.arkham.build/optimized/06248b.jpg",
+      "sha256": "94d16d51f12e4ceed76dcfc5c10b2f9e0f358b73d07336e71a0baefbac65bff4"
+    },
+    {
+      "code": "06249",
+      "side": "front",
+      "path": "assets/cards/06249.jpg",
+      "url": "https://assets.arkham.build/optimized/06249.jpg",
+      "sha256": "461f6415dfb956c30123e71f3348409ef608f06279ce1b061221e09dfa08a5e2"
+    },
+    {
+      "code": "06249",
+      "side": "back",
+      "path": "assets/cards/06249b.jpg",
+      "url": "https://assets.arkham.build/optimized/06249b.jpg",
+      "sha256": "016002d5fb01efd9cb5a98037920dd957af1477553ecff6f89b5d8f6daecf7f3"
+    },
+    {
+      "code": "06250",
+      "side": "front",
+      "path": "assets/cards/06250.jpg",
+      "url": "https://assets.arkham.build/optimized/06250.jpg",
+      "sha256": "7d3f2d7d11480d68ee153022a8bd9a16e739081fec0f4a3ecb9bb863dfd83ea4"
+    },
+    {
+      "code": "06250",
+      "side": "back",
+      "path": "assets/cards/06250b.jpg",
+      "url": "https://assets.arkham.build/optimized/06250b.jpg",
+      "sha256": "08b9b7d5cdbd636ebf40f6cca2e2a8e1152638d425b5dd646ad440826f7d92ef"
+    },
+    {
+      "code": "06251",
+      "side": "front",
+      "path": "assets/cards/06251.jpg",
+      "url": "https://assets.arkham.build/optimized/06251.jpg",
+      "sha256": "bfe3d7e72fde98f9cb06baad756672f54a9ebfffcf924333664f296faaa7383b"
+    },
+    {
+      "code": "06251",
+      "side": "back",
+      "path": "assets/cards/06251b.jpg",
+      "url": "https://assets.arkham.build/optimized/06251b.jpg",
+      "sha256": "73abb68c6a83d156978992caca482638b7cfe9402616196627543e8082b2ac2c"
+    },
+    {
+      "code": "06252",
+      "side": "front",
+      "path": "assets/cards/06252.jpg",
+      "url": "https://assets.arkham.build/optimized/06252.jpg",
+      "sha256": "bf81b17885f5fb250171c353d1cf4e53ca74ca3329b90b54a077f31d20945053"
+    },
+    {
+      "code": "06252",
+      "side": "back",
+      "path": "assets/cards/06252b.jpg",
+      "url": "https://assets.arkham.build/optimized/06252b.jpg",
+      "sha256": "85c9731bc17bf2114cc4516c3edcb06c51a38073be29f861e900f4301290fb5f"
+    },
+    {
+      "code": "06253",
+      "side": "front",
+      "path": "assets/cards/06253.jpg",
+      "url": "https://assets.arkham.build/optimized/06253.jpg",
+      "sha256": "28dffd16e618d966672ccd097a7e7ef65420d33193ecbb311c188bd5d5d10004"
+    },
+    {
+      "code": "06253",
+      "side": "back",
+      "path": "assets/cards/06253b.jpg",
+      "url": "https://assets.arkham.build/optimized/06253b.jpg",
+      "sha256": "2bcf79500262a24025c4a416ba4aae6fa5c298c46a69ac1bd65b257b48775f92"
+    },
+    {
+      "code": "06287",
+      "side": "front",
+      "path": "assets/cards/06287.jpg",
+      "url": "https://assets.arkham.build/optimized/06287.jpg",
+      "sha256": "a02f97df21db2b04b39a6ef570ab750d6e524f29765720631c843efbee3b3239"
+    },
+    {
+      "code": "06287",
+      "side": "back",
+      "path": "assets/cards/06287b.jpg",
+      "url": "https://assets.arkham.build/optimized/06287b.jpg",
+      "sha256": "061487e8d6fb854457029c961d05e698d59d46baa5b5f9d243967516a0df1031"
+    },
+    {
+      "code": "06288",
+      "side": "front",
+      "path": "assets/cards/06288.jpg",
+      "url": "https://assets.arkham.build/optimized/06288.jpg",
+      "sha256": "dc5f71efa0df60d57958810ad5e1defe0c64876466c2b3d29ca2c064fbf0da2a"
+    },
+    {
+      "code": "06288",
+      "side": "back",
+      "path": "assets/cards/06288b.jpg",
+      "url": "https://assets.arkham.build/optimized/06288b.jpg",
+      "sha256": "61382c348301ecabcb57077d7d8a1e40b61a650357ed2fd5dc82b2b41ddf5f2c"
+    },
+    {
+      "code": "06289",
+      "side": "front",
+      "path": "assets/cards/06289.jpg",
+      "url": "https://assets.arkham.build/optimized/06289.jpg",
+      "sha256": "5cb46f898578a65f343820b78e94b68cab231ed49e260dc9eae463b960192c29"
+    },
+    {
+      "code": "06289",
+      "side": "back",
+      "path": "assets/cards/06289b.jpg",
+      "url": "https://assets.arkham.build/optimized/06289b.jpg",
+      "sha256": "8b0e386ed3b73f34e9c4eaf094190ab40e52d23b809b71e01c35d983cfdd387a"
+    },
+    {
+      "code": "06290",
+      "side": "front",
+      "path": "assets/cards/06290.jpg",
+      "url": "https://assets.arkham.build/optimized/06290.jpg",
+      "sha256": "e58a9d69dbf32865009e3f8e222a9b2a885bcef0a1f274dc8ad022ce969804fc"
+    },
+    {
+      "code": "06290",
+      "side": "back",
+      "path": "assets/cards/06290b.jpg",
+      "url": "https://assets.arkham.build/optimized/06290b.jpg",
+      "sha256": "c1164783fb220e4081c07b322a707dc39c0755babd3a96525e18408e6330b055"
+    },
+    {
+      "code": "06291",
+      "side": "front",
+      "path": "assets/cards/06291.jpg",
+      "url": "https://assets.arkham.build/optimized/06291.jpg",
+      "sha256": "4ead196b6f5cfe67bdbe5833106e984f32d9723610cc87f2d125ea5d3438750e"
+    },
+    {
+      "code": "06291",
+      "side": "back",
+      "path": "assets/cards/06291b.jpg",
+      "url": "https://assets.arkham.build/optimized/06291b.jpg",
+      "sha256": "c7787456cb541440604813f5bc6bd4b092caad75e4a0acf368cee00cabbdbea8"
+    },
+    {
+      "code": "06292",
+      "side": "front",
+      "path": "assets/cards/06292.jpg",
+      "url": "https://assets.arkham.build/optimized/06292.jpg",
+      "sha256": "9be74ba8d11c78246e6867d6ec96c292de46fd9557d9d46ea285e1e9ca9a30c1"
+    },
+    {
+      "code": "06292",
+      "side": "back",
+      "path": "assets/cards/06292b.jpg",
+      "url": "https://assets.arkham.build/optimized/06292b.jpg",
+      "sha256": "da76da55e460d7a8c5ba926bf65d2f2946558432d8d565c0a62bc4b0c4a34ab0"
+    },
+    {
+      "code": "06293",
+      "side": "front",
+      "path": "assets/cards/06293.jpg",
+      "url": "https://assets.arkham.build/optimized/06293.jpg",
+      "sha256": "5783c1683701734a5c46a2a5f37d2886ca142e9b802bfcc4c39aab6243b61f45"
+    },
+    {
+      "code": "06293",
+      "side": "back",
+      "path": "assets/cards/06293b.jpg",
+      "url": "https://assets.arkham.build/optimized/06293b.jpg",
+      "sha256": "111b2547b7d99e4f28f7a1d785361201fe61d27866a92a78d38352acf99bdcb9"
+    },
+    {
+      "code": "06294",
+      "side": "front",
+      "path": "assets/cards/06294.jpg",
+      "url": "https://assets.arkham.build/optimized/06294.jpg",
+      "sha256": "d8244245e37f14dbd9fd996ccc03085de00161cb9d461accaadfebbfb039632f"
+    },
+    {
+      "code": "06294",
+      "side": "back",
+      "path": "assets/cards/06294b.jpg",
+      "url": "https://assets.arkham.build/optimized/06294b.jpg",
+      "sha256": "4fea10580cce5734516a8b2c051a7358571554d1da7c5441fdcb0e6e430601c8"
+    },
+    {
+      "code": "06334",
+      "side": "front",
+      "path": "assets/cards/06334.jpg",
+      "url": "https://assets.arkham.build/optimized/06334.jpg",
+      "sha256": "7c95308f1b96d29db96e561cf537d1c7cd54a0d5942a7eca779126c72b20f911"
+    },
+    {
+      "code": "06334",
+      "side": "back",
+      "path": "assets/cards/06334b.jpg",
+      "url": "https://assets.arkham.build/optimized/06334b.jpg",
+      "sha256": "5db98b470660233c469b41247f776c6ffb149001a03ba60bd02235321fdb224a"
+    },
+    {
+      "code": "06335",
+      "side": "front",
+      "path": "assets/cards/06335.jpg",
+      "url": "https://assets.arkham.build/optimized/06335.jpg",
+      "sha256": "4271092927e46e8c357e3dd61dfdf855447b618c5b63286037a303d70405b489"
+    },
+    {
+      "code": "06335",
+      "side": "back",
+      "path": "assets/cards/06335b.jpg",
+      "url": "https://assets.arkham.build/optimized/06335b.jpg",
+      "sha256": "8ca72658c4ccf72a9ca0302d97d84c94eb2e5c2f16e983d9bcb04d0439d9ca79"
+    },
+    {
+      "code": "06336",
+      "side": "front",
+      "path": "assets/cards/06336.jpg",
+      "url": "https://assets.arkham.build/optimized/06336.jpg",
+      "sha256": "4149b2b0949decfeb8d7fe2929e66d66be752f86d8cf67d15c9b8a46f037ac60"
+    },
+    {
+      "code": "06336",
+      "side": "back",
+      "path": "assets/cards/06336b.jpg",
+      "url": "https://assets.arkham.build/optimized/06336b.jpg",
+      "sha256": "f2459f8747ab4cecc835a62c80d42d2f007b7a1ddeb214683ed73a4b05e8e2ac"
+    },
+    {
+      "code": "06337",
+      "side": "front",
+      "path": "assets/cards/06337.jpg",
+      "url": "https://assets.arkham.build/optimized/06337.jpg",
+      "sha256": "ca01f4ad67c13c74ce1d43232c3b8da4285e33f7377602aa98d6dc7f9ac699bc"
+    },
+    {
+      "code": "06337",
+      "side": "back",
+      "path": "assets/cards/06337b.jpg",
+      "url": "https://assets.arkham.build/optimized/06337b.jpg",
+      "sha256": "e0b860b2e901e8d4bc4609ced78919a85b097d9c41689f03a0116309c17e7b9a"
+    },
+    {
+      "code": "06338",
+      "side": "front",
+      "path": "assets/cards/06338.jpg",
+      "url": "https://assets.arkham.build/optimized/06338.jpg",
+      "sha256": "6b0ca798aa0e12e401e10a6916090685cdd36d74dc5a5955ac2110733b92192a"
+    },
+    {
+      "code": "06338",
+      "side": "back",
+      "path": "assets/cards/06338b.jpg",
+      "url": "https://assets.arkham.build/optimized/06338b.jpg",
+      "sha256": "50ff3ef4116de953c23c73fed1edd6f65d236f0ce85c8dab628df879f78c8d55"
+    },
+    {
+      "code": "06339",
+      "side": "front",
+      "path": "assets/cards/06339.jpg",
+      "url": "https://assets.arkham.build/optimized/06339.jpg",
+      "sha256": "0936f626ab12523f462ed697043175feb30bc15a182d882ef6c1449e30b48847"
+    },
+    {
+      "code": "06339",
+      "side": "back",
+      "path": "assets/cards/06339b.jpg",
+      "url": "https://assets.arkham.build/optimized/06339b.jpg",
+      "sha256": "097db1405d4ebaa6f0f44779562ac2cd6a8f1ffb34fe4d0b1ff4cb86aa6c6c8b"
+    },
+    {
+      "code": "12106",
+      "side": "front",
+      "path": "assets/cards/12106.jpg",
+      "url": "https://assets.arkham.build/optimized/12106.jpg",
+      "sha256": "0a7fb0d5869a394f14db64aa348a886e0a4479953d84cb8399c05c7441e2acea"
+    },
+    {
+      "code": "12106",
+      "side": "back",
+      "path": "assets/cards/12106b.jpg",
+      "url": "https://assets.arkham.build/optimized/12106b.jpg",
+      "sha256": "96c520f5f88d85b0a7104995e7032758f1721edecae45e50725e9d7c30f1b577"
+    },
+    {
+      "code": "12107",
+      "side": "front",
+      "path": "assets/cards/12107.jpg",
+      "url": "https://assets.arkham.build/optimized/12107.jpg",
+      "sha256": "2172a892c50635ad103e08fafb1396462da01deef240b579a5818f494292755c"
+    },
+    {
+      "code": "12107",
+      "side": "back",
+      "path": "assets/cards/12107b.jpg",
+      "url": "https://assets.arkham.build/optimized/12107b.jpg",
+      "sha256": "f3b54ac170c7f3956fa2ad778bf6952efe574b6b91b0e4a76527a9cdedd66523"
+    },
+    {
+      "code": "12108",
+      "side": "front",
+      "path": "assets/cards/12108.jpg",
+      "url": "https://assets.arkham.build/optimized/12108.jpg",
+      "sha256": "53f44678ca02ef49d463a8370e3ae57dbe413d000869c980a33aa10c2a3700bd"
+    },
+    {
+      "code": "12108",
+      "side": "back",
+      "path": "assets/cards/12108b.jpg",
+      "url": "https://assets.arkham.build/optimized/12108b.jpg",
+      "sha256": "4dc60653d3059be65305773aead456d546c1f419a8661e7c8b9bc0710c78575b"
+    },
+    {
+      "code": "12109",
+      "side": "front",
+      "path": "assets/cards/12109.jpg",
+      "url": "https://assets.arkham.build/optimized/12109.jpg",
+      "sha256": "0e06a9ec1e5b0ecca28749044f19f4d31b67fb9bda4d2a05999a6c4142915b88"
+    },
+    {
+      "code": "12109",
+      "side": "back",
+      "path": "assets/cards/12109b.jpg",
+      "url": "https://assets.arkham.build/optimized/12109b.jpg",
+      "sha256": "2335c6a1ba519c124e760b17f21fb31238a7c0849e268156aef4185684b04c28"
+    },
+    {
+      "code": "12110",
+      "side": "front",
+      "path": "assets/cards/12110.jpg",
+      "url": "https://assets.arkham.build/optimized/12110.jpg",
+      "sha256": "72e6671f26d4f59384923defdcfbedf58aac67a19dedec0609f4de4f06288b58"
+    },
+    {
+      "code": "12110",
+      "side": "back",
+      "path": "assets/cards/12110b.jpg",
+      "url": "https://assets.arkham.build/optimized/12110b.jpg",
+      "sha256": "4cc2c972a63680fe48530d824f7f6775fd365b4a9874577e0b69d2529d8b2f4e"
+    },
+    {
+      "code": "12111",
+      "side": "front",
+      "path": "assets/cards/12111.jpg",
+      "url": "https://assets.arkham.build/optimized/12111.jpg",
+      "sha256": "17b5af53b386ab7da4e1b542792fab33f94c15fc152a5c25aaf277235c3309cf"
+    },
+    {
+      "code": "12111",
+      "side": "back",
+      "path": "assets/cards/12111b.jpg",
+      "url": "https://assets.arkham.build/optimized/12111b.jpg",
+      "sha256": "fa2ed24d46da284ce65d3e28bced23915488a1c7b72e747363d08b0241b1967c"
+    },
+    {
+      "code": "12112",
+      "side": "front",
+      "path": "assets/cards/12112.jpg",
+      "url": "https://assets.arkham.build/optimized/12112.jpg",
+      "sha256": "f470d22a270e773184beaaa6e3b4742db16e0c53372e83f018231c2749341d68"
+    },
+    {
+      "code": "12112",
+      "side": "back",
+      "path": "assets/cards/12112b.jpg",
+      "url": "https://assets.arkham.build/optimized/12112b.jpg",
+      "sha256": "9c0e8701c355f823986c220888a3a549567b1c605770d2089243787f9c9bd2ea"
+    },
+    {
+      "code": "12134",
+      "side": "front",
+      "path": "assets/cards/12134.jpg",
+      "url": "https://assets.arkham.build/optimized/12134.jpg",
+      "sha256": "3b2a4efeac381d412964fb6a6662a358da319c48237e1e56b930bc443cd1d017"
+    },
+    {
+      "code": "12134",
+      "side": "back",
+      "path": "assets/cards/12134b.jpg",
+      "url": "https://assets.arkham.build/optimized/12134b.jpg",
+      "sha256": "1f6fff45da8c2a4ee74c769da4b85edca512d033ebff57511ceaf99ae906fb08"
+    },
+    {
+      "code": "12135",
+      "side": "front",
+      "path": "assets/cards/12135.jpg",
+      "url": "https://assets.arkham.build/optimized/12135.jpg",
+      "sha256": "2b6d4d4e14b028d94ebb54fa1503e035063a77c6a079028cf66d136596ca4f49"
+    },
+    {
+      "code": "12135",
+      "side": "back",
+      "path": "assets/cards/12135b.jpg",
+      "url": "https://assets.arkham.build/optimized/12135b.jpg",
+      "sha256": "4c1a74f8b7f5857d43bd5e3410f183db3421268a1e6c025b445011d08c74ac7a"
+    },
+    {
+      "code": "12136",
+      "side": "front",
+      "path": "assets/cards/12136.jpg",
+      "url": "https://assets.arkham.build/optimized/12136.jpg",
+      "sha256": "22934e2bb12677ec31fb48b768f0e15446d75412a94bc280f852df49d2871153"
+    },
+    {
+      "code": "12136",
+      "side": "back",
+      "path": "assets/cards/12136b.jpg",
+      "url": "https://assets.arkham.build/optimized/12136b.jpg",
+      "sha256": "6d1f955a62202d70c4c0afc9d600fb15f3c1204ee074293bd2a883becb3302d2"
+    },
+    {
+      "code": "12169",
+      "side": "front",
+      "path": "assets/cards/12169.jpg",
+      "url": "https://assets.arkham.build/optimized/12169.jpg",
+      "sha256": "c6e0e6cb5216d8d2d9ec5cfd0ea093ece7f025afe42e7a9052ae56ba44fef05f"
+    },
+    {
+      "code": "12169",
+      "side": "back",
+      "path": "assets/cards/12169b.jpg",
+      "url": "https://assets.arkham.build/optimized/12169b.jpg",
+      "sha256": "96fbb46549c92d734afda1313c2188c4470cf045f70c36e75a849bef401f5802"
+    },
+    {
+      "code": "12170",
+      "side": "front",
+      "path": "assets/cards/12170.jpg",
+      "url": "https://assets.arkham.build/optimized/12170.jpg",
+      "sha256": "07fef718ec9b136e74b21ac8aae863d606e1b972cd3778207d9d93f398005312"
+    },
+    {
+      "code": "12170",
+      "side": "back",
+      "path": "assets/cards/12170b.jpg",
+      "url": "https://assets.arkham.build/optimized/12170b.jpg",
+      "sha256": "9f02058b1521a025b353bd24c59e9e0414a0efc7211a133307a3f9d36bb6eec9"
+    },
+    {
+      "code": "12171",
+      "side": "front",
+      "path": "assets/cards/12171.jpg",
+      "url": "https://assets.arkham.build/optimized/12171.jpg",
+      "sha256": "81799aceebbc9f8e59d407be71af4a83f3fa8211fc605d73569633519144375c"
+    },
+    {
+      "code": "12171",
+      "side": "back",
+      "path": "assets/cards/12171b.jpg",
+      "url": "https://assets.arkham.build/optimized/12171b.jpg",
+      "sha256": "60cb7bb2e03e817d08d165196da4a5ae3badc294f876911793039e1e03d636f1"
+    },
+    {
+      "code": "12172",
+      "side": "front",
+      "path": "assets/cards/12172.jpg",
+      "url": "https://assets.arkham.build/optimized/12172.jpg",
+      "sha256": "cfe7ab636c0c6067146b4d222298428a03b611891549fe3eb03694585c4f73b8"
+    },
+    {
+      "code": "12172",
+      "side": "back",
+      "path": "assets/cards/12172b.jpg",
+      "url": "https://assets.arkham.build/optimized/12172b.jpg",
+      "sha256": "cd65ef52fc285157518b6c559718bceed62f002c4376fd1cac315729e031f4dd"
+    },
+    {
+      "code": "12173",
+      "side": "front",
+      "path": "assets/cards/12173.jpg",
+      "url": "https://assets.arkham.build/optimized/12173.jpg",
+      "sha256": "7eb7b0aef8963f83a563e230ce01a854a490106928824dcb22af5409daaf39a2"
+    },
+    {
+      "code": "12173",
+      "side": "back",
+      "path": "assets/cards/12173b.jpg",
+      "url": "https://assets.arkham.build/optimized/12173b.jpg",
+      "sha256": "df9a5e697bba4503f662e15d65f602ff34273ddbcbec741203584aa64802679c"
+    },
+    {
+      "code": "13002",
+      "side": "front",
+      "path": "assets/cards/13002.jpg",
+      "url": "https://assets.arkham.build/optimized/13002.jpg",
+      "sha256": "db92dc0c7510d96dd2f75b36d22edccd1a307cbe027909c77fb5a933c25052fe"
+    },
+    {
+      "code": "13002",
+      "side": "back",
+      "path": "assets/cards/13002b.jpg",
+      "url": "https://assets.arkham.build/optimized/13002b.jpg",
+      "sha256": "5bad3e1cf6be91b08d3c3b3c2b385cee15cfa2dcc1e2b329cb49c15527933206"
+    },
+    {
+      "code": "13003",
+      "side": "front",
+      "path": "assets/cards/13003.jpg",
+      "url": "https://assets.arkham.build/optimized/13003.jpg",
+      "sha256": "25ce0cf7cd023ae36db34b8ba65a8a118482dcf3271e1d40f17fa71d891af4c1"
+    },
+    {
+      "code": "13003",
+      "side": "back",
+      "path": "assets/cards/13003b.jpg",
+      "url": "https://assets.arkham.build/optimized/13003b.jpg",
+      "sha256": "f5126a2951cd409a8d4f06887fcbca3cb1a9c83efdbeecc42556a67859fce5f7"
+    },
+    {
+      "code": "13004",
+      "side": "front",
+      "path": "assets/cards/13004.jpg",
+      "url": "https://assets.arkham.build/optimized/13004.jpg",
+      "sha256": "8644aa1c60e4f09c94ef709b1cda6636f69f4162d2ddefadf9aacbe18c62f7c7"
+    },
+    {
+      "code": "13004",
+      "side": "back",
+      "path": "assets/cards/13004b.jpg",
+      "url": "https://assets.arkham.build/optimized/13004b.jpg",
+      "sha256": "5f3ab989461949cf4f185d1d781490b3f3c1489465b65445b705091d3c2888b9"
+    },
+    {
+      "code": "13005",
+      "side": "front",
+      "path": "assets/cards/13005.jpg",
+      "url": "https://assets.arkham.build/optimized/13005.jpg",
+      "sha256": "2ef22303ba09a7ff28bee9f671f2dff70a5af5200c84290dede260e678f60ef8"
+    },
+    {
+      "code": "13005",
+      "side": "back",
+      "path": "assets/cards/13005b.jpg",
+      "url": "https://assets.arkham.build/optimized/13005b.jpg",
+      "sha256": "99f949a639bb73fac3c56aa42c32567f8105a3dcf58bbc200bb7a91e7a728024"
+    },
+    {
+      "code": "13006",
+      "side": "front",
+      "path": "assets/cards/13006.jpg",
+      "url": "https://assets.arkham.build/optimized/13006.jpg",
+      "sha256": "d3e1c97b6452e51e2a745bf0323b6a922947c86257df4ffeb6df92bc1c1ff6a9"
+    },
+    {
+      "code": "13006",
+      "side": "back",
+      "path": "assets/cards/13006b.jpg",
+      "url": "https://assets.arkham.build/optimized/13006b.jpg",
+      "sha256": "b27839c9936072820f9d5d61d97e2d3f05d2c3b3f4b2159dc086f9a08cb36ee7"
+    },
+    {
+      "code": "13007",
+      "side": "front",
+      "path": "assets/cards/13007.jpg",
+      "url": "https://assets.arkham.build/optimized/13007.jpg",
+      "sha256": "718478391a49f41f24a3ceb73d5334210d49279d0edff05bc5f338c8dc22bfc0"
+    },
+    {
+      "code": "13007",
+      "side": "back",
+      "path": "assets/cards/13007b.jpg",
+      "url": "https://assets.arkham.build/optimized/13007b.jpg",
+      "sha256": "2723e3718821007f3c68335f0ff620ef8ad8db6bc90f3fca8120bbd38f7e08e2"
+    },
+    {
+      "code": "13032",
+      "side": "front",
+      "path": "assets/cards/13032.jpg",
+      "url": "https://assets.arkham.build/optimized/13032.jpg",
+      "sha256": "af52c989db6c1e8b6dfea0a0f3102520748d2391dbf0de8eed0b518d5aa20772"
+    },
+    {
+      "code": "13032",
+      "side": "back",
+      "path": "assets/cards/13032b.jpg",
+      "url": "https://assets.arkham.build/optimized/13032b.jpg",
+      "sha256": "0031a756d28cebf48120e38f7227a092573d518cd7dbbed0627e4ba3c6b98e39"
+    },
+    {
+      "code": "13033",
+      "side": "front",
+      "path": "assets/cards/13033.jpg",
+      "url": "https://assets.arkham.build/optimized/13033.jpg",
+      "sha256": "c6cf2dcfdd68a24d27c297a0e8c18b6021e0d5ef37bb578ca35bc1421a091f93"
+    },
+    {
+      "code": "13033",
+      "side": "back",
+      "path": "assets/cards/13033b.jpg",
+      "url": "https://assets.arkham.build/optimized/13033b.jpg",
+      "sha256": "8ba3b9c678b74796ea4f540ba6c67efd6f91d9715f8d58452eaabc40650bc436"
+    },
+    {
+      "code": "13034",
+      "side": "front",
+      "path": "assets/cards/13034.jpg",
+      "url": "https://assets.arkham.build/optimized/13034.jpg",
+      "sha256": "35fe9e489f70f7e732d597b3a0df68490e19b944c148a38df45668a34daa3b11"
+    },
+    {
+      "code": "13034",
+      "side": "back",
+      "path": "assets/cards/13034b.jpg",
+      "url": "https://assets.arkham.build/optimized/13034b.jpg",
+      "sha256": "14e90186ab98e4e1f93b8b9507e9f966806971b9942c23bab6d632363faad825"
+    },
+    {
+      "code": "13035",
+      "side": "front",
+      "path": "assets/cards/13035.jpg",
+      "url": "https://assets.arkham.build/optimized/13035.jpg",
+      "sha256": "7f2cf7517b3eb4a656bd81cb20842d551e3fdb49d8ba9c32afd1af8b981cf1fb"
+    },
+    {
+      "code": "13035",
+      "side": "back",
+      "path": "assets/cards/13035b.jpg",
+      "url": "https://assets.arkham.build/optimized/13035b.jpg",
+      "sha256": "dab9ba8c13e71c0ec59796905265af11e714038b69b353dc936000f654afd8e1"
+    },
+    {
+      "code": "13036",
+      "side": "front",
+      "path": "assets/cards/13036.jpg",
+      "url": "https://assets.arkham.build/optimized/13036.jpg",
+      "sha256": "9742e2b1e603a999175c05d5de54a69e997fa6f0f47df29c0d3b02fab4d22a71"
+    },
+    {
+      "code": "13036",
+      "side": "back",
+      "path": "assets/cards/13036b.jpg",
+      "url": "https://assets.arkham.build/optimized/13036b.jpg",
+      "sha256": "136f783357cb75ca94cc5ee62d8b5f45f676bd93f96a3b5fa800ac0f3b5d7c31"
+    },
+    {
+      "code": "13037",
+      "side": "front",
+      "path": "assets/cards/13037.jpg",
+      "url": "https://assets.arkham.build/optimized/13037.jpg",
+      "sha256": "e334b51f152366f6d05f90168d63f559bd0c1ff601af9c00267d094e79bc229b"
+    },
+    {
+      "code": "13037",
+      "side": "back",
+      "path": "assets/cards/13037b.jpg",
+      "url": "https://assets.arkham.build/optimized/13037b.jpg",
+      "sha256": "b20337723a6c75cf0d74529b6b256dfd87a89eb6ecd6381380f14008baf512cb"
+    },
+    {
+      "code": "13038",
+      "side": "front",
+      "path": "assets/cards/13038.jpg",
+      "url": "https://assets.arkham.build/optimized/13038.jpg",
+      "sha256": "902dcac6ddc536db61b3c405cd59c070a9ca943a97ce42247d8ad1dcc9bbcdd2"
+    },
+    {
+      "code": "13038",
+      "side": "back",
+      "path": "assets/cards/13038b.jpg",
+      "url": "https://assets.arkham.build/optimized/13038b.jpg",
+      "sha256": "7de549ffb49a52c38c529b2b730a75e8e40d93f70a45aebf5a28f124d9902ff5"
+    },
+    {
+      "code": "13069",
+      "side": "front",
+      "path": "assets/cards/13069.jpg",
+      "url": "https://assets.arkham.build/optimized/13069.jpg",
+      "sha256": "3d368780343afc48919faabee05643d5cfdba7237ea83256ea4986a5975785c6"
+    },
+    {
+      "code": "13069",
+      "side": "back",
+      "path": "assets/cards/13069b.jpg",
+      "url": "https://assets.arkham.build/optimized/13069b.jpg",
+      "sha256": "277a81751f727bb47293431c18116b254d1632af1c5b2748b45308a46754a65b"
+    },
+    {
+      "code": "13070",
+      "side": "front",
+      "path": "assets/cards/13070.jpg",
+      "url": "https://assets.arkham.build/optimized/13070.jpg",
+      "sha256": "67e6fe8f85a843b581f57f1c205d14421d3ece1ebe3a3a1fc32b3a2a285564e4"
+    },
+    {
+      "code": "13070",
+      "side": "back",
+      "path": "assets/cards/13070b.jpg",
+      "url": "https://assets.arkham.build/optimized/13070b.jpg",
+      "sha256": "02e7b3ab63deb9536df071d6518bc1fcd7ce1343d6dacc7168192330f1300c47"
+    },
+    {
+      "code": "13071",
+      "side": "front",
+      "path": "assets/cards/13071.jpg",
+      "url": "https://assets.arkham.build/optimized/13071.jpg",
+      "sha256": "b65c1899baaacdeea604fcab5ef858af5b6f8257a0531cf281ac947eeb4f4ec4"
+    },
+    {
+      "code": "13071",
+      "side": "back",
+      "path": "assets/cards/13071b.jpg",
+      "url": "https://assets.arkham.build/optimized/13071b.jpg",
+      "sha256": "bd99ab3305cdb3f09323c9a33776058ecd3e4cc39324b4b7d22afde012a6a09a"
+    },
+    {
+      "code": "13072",
+      "side": "front",
+      "path": "assets/cards/13072.jpg",
+      "url": "https://assets.arkham.build/optimized/13072.jpg",
+      "sha256": "e04b764745ca47e5ed33530e33a01b14012f65f7253b950dfd001604301edc5c"
+    },
+    {
+      "code": "13072",
+      "side": "back",
+      "path": "assets/cards/13072b.jpg",
+      "url": "https://assets.arkham.build/optimized/13072b.jpg",
+      "sha256": "964f0d44eff3a24bc06fc74294e3ffdcfe3e551780d6e6edc08266804048be26"
+    },
+    {
+      "code": "13073",
+      "side": "front",
+      "path": "assets/cards/13073.jpg",
+      "url": "https://assets.arkham.build/optimized/13073.jpg",
+      "sha256": "97b00863783a1d091f2204e9384fec9f7f502d8218c0b168811d8806606069cd"
+    },
+    {
+      "code": "13073",
+      "side": "back",
+      "path": "assets/cards/13073b.jpg",
+      "url": "https://assets.arkham.build/optimized/13073b.jpg",
+      "sha256": "36d3d7c16203f9506c178f54a4f87bafda9b86df95de8ceacdbc169d76215e4f"
+    },
+    {
+      "code": "13074",
+      "side": "front",
+      "path": "assets/cards/13074.jpg",
+      "url": "https://assets.arkham.build/optimized/13074.jpg",
+      "sha256": "f2fcb671063331c1d57133385dc92a66eb01676186bb284046065c51fae88401"
+    },
+    {
+      "code": "13074",
+      "side": "back",
+      "path": "assets/cards/13074b.jpg",
+      "url": "https://assets.arkham.build/optimized/13074b.jpg",
+      "sha256": "4f4728de522c909cdc9a8031b5ea00d9010973c33fbcd085442ef352ebabcbff"
+    },
+    {
+      "code": "13075",
+      "side": "front",
+      "path": "assets/cards/13075.jpg",
+      "url": "https://assets.arkham.build/optimized/13075.jpg",
+      "sha256": "793fa8b1552266dae37f3af82deb9d6b0b959c1f3a572adac908262d960296c2"
+    },
+    {
+      "code": "13075",
+      "side": "back",
+      "path": "assets/cards/13075b.jpg",
+      "url": "https://assets.arkham.build/optimized/13075b.jpg",
+      "sha256": "2818c16599522cab538f639aaa4140478fee7cfd952ba20680f1e218881bdb6d"
+    }
+  ],
+  "missingImages": []
+}

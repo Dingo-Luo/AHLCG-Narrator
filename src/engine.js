@@ -1,3 +1,5 @@
+import { playableInvestigator } from './investigators.js';
+import { applyExtendedEffect } from './extended-rules.js';
 // Original upstream IDs and rules are retained. Only explicitly supported rules execute.
 export const SCHEMA_VERSION = 1;
 import {campaignOf} from './content.js';
@@ -8,7 +10,7 @@ const number = (value, label = '数值') => {
   return value;
 };
 export function createSave(investigators, name = '敦威治调查', sourceRevision = null, campaignId='dwl') {
-  if(!['dwl','core','ptc'].includes(campaignId))throw Error('无效战役');
+  if(!['dwl','core','ptc','tfa','tcu','tdea','tdeb','boa','cob'].includes(campaignId))throw Error('无效战役');
   if (!Array.isArray(investigators) || !investigators.length || investigators.length > 4) throw Error('请选择 1–4 位调查员');
   return { version: SCHEMA_VERSION, campaignId, name: String(name).slice(0, 80),
     flow: 'story', sourceRevision, createdAt: new Date().toISOString(), investigators: investigators.map((item, index) => ({ id: `i${index + 1}`, name: String(item.name).trim().slice(0, 60), card: item.card || null })), events: [] };
@@ -37,6 +39,7 @@ export function cultistCards(database,state,input){
 }
 export function storyActions(database,state){
   const play=database.scenarios[state.active?.id]?.steps.find(s=>s.id==='$play_scenario');
+  if(state.guided)return (play?.input?.branches||[]).filter(b=>b.id!=='randomize_locations').map(b=>({...b,text:b.text&&b.text!=='此段暂无中文译文。'?b.text:'记录本局剧情事件'}));
   return (play?.input?.branches||[]).filter(b=>b.id!=='randomize_locations'&&(!b.condition||b.condition.options.some(o=>matchesOption(branchValue(state,b.condition),o))));
 }
 export function allowedStatuses(resolution){
@@ -59,6 +62,7 @@ function targets(state, effect,answer) {
 }
 function applyEffects(state, effects = [], answer) {
   for (const effect of effects) {
+    if(state.guided){applyExtendedEffect(state,effect,answer);continue;}
     switch (effect.type) {
       case 'campaign_log': {
         const key = `${effect.section}:${effect.id}`;
@@ -151,6 +155,7 @@ function normalize(database, state) {
     if (ref === '$upgrade_decks') return;
     const step = lookup(database, active.id, ref);
     if (!step) throw Error(`缺少上游步骤：${active.id}/${ref}`);
+    if(step.skip){active.queue.shift();continue;}
     if(step.input?.type==='scenario_investigators'&&!state.investigators.some(i=>i.killed||i.insane)){active.queue.shift();continue;}
     // New story-only flow omits physical setup instructions, retaining story and choices.
     // Legacy events still replay against their original flow until story_only is applied.
@@ -190,14 +195,14 @@ export function replay(database, save, { onStep } = {}) {
   if(campaign.id!==save.campaignId)throw Error('战役内容尚未载入');
   if (save.sourceRevision && save.sourceRevision !== (database.campaignSources?.[save.campaignId]||database.sources[0].commit)) throw Error('存档使用的剧情数据版本与当前版本不同，请保留备份并完成版本迁移后导入。');
   const state = { investigators: save.investigators.map(item => ({ ...item, earned: 0, spent: 0, physical: 0, mental: 0, storyCards: [] })),
-    storyOnly: save.flow === 'story', difficulty: 'standard',campaignVersion:campaign.version||1, log: {}, tokens: [], completed: {}, nextScenario: campaign.scenarios[0], active: null, history: [] };
+    guided:Boolean(campaign.guided), storyOnly: save.flow === 'story', difficulty: 'standard',campaignVersion:campaign.version||1, log: {}, tokens: [], completed: {}, nextScenario: campaign.scenarios[0], active: null, history: [] };
   if(campaign.initialLog)applyEffects(state,campaign.initialLog);
   const limit = playPosition(save);
   for (let index = 0; index < limit; index++) {
     const event = save.events[index];
     if (event.type === 'start') {
       if (state.active) throw Error('请先结束当前剧本');
-      if (event.scenario !== state.nextScenario || !SUPPORTED.includes(event.scenario)) throw Error('该剧本尚未开放交互，或不在当前剧情流程中');
+      if (event.scenario !== state.nextScenario || !(SUPPORTED.includes(event.scenario)||database.scenarios[event.scenario]?.guided)) throw Error('该剧本尚未开放交互，或不在当前剧情流程中');
       const scenario = database.scenarios[event.scenario];
       state.nextScenario = null;
       state.active = { id: scenario.id, phase: 'setup', queue: [...(state.storyOnly&&scenario.storySetup||scenario.setup)], card: null, board: {}, actions: {}, revealed: [], resolution: null, statuses: {} };
@@ -256,7 +261,7 @@ export function replay(database, save, { onStep } = {}) {
           const codes=state.investigators.map(i=>i.killed||i.insane?selected[i.id]:i.card);
           if(new Set(codes).size!==codes.length)throw Error('调查员不能重复');
           for(const investigator of killed){const card=database.cards[selected[investigator.id]];
-            if(!card||card.type_code!=='investigator'||!/^0[123]\d{3}$/.test(card.code)||state.retired?.includes(card.code)||killed.some(i=>i.card===card.code))throw Error('请选择有效的继任调查员');
+            if(!playableInvestigator(card)||state.retired?.includes(card.code)||killed.some(i=>i.card===card.code))throw Error('请选择有效的继任调查员');
             state.retired??=[];state.retired.push(investigator.card);
             Object.assign(investigator,{card:card.code,name:card.name,earned:0,spent:0,physical:0,mental:0,storyCards:[],killed:false,insane:false});
             state.active.statuses[investigator.id]='survived';
@@ -272,7 +277,7 @@ export function replay(database, save, { onStep } = {}) {
       if (state.active?.phase !== 'play') throw Error('请先读完开场故事');
       const resolution = database.scenarios[state.active.id].resolutions.find(item => item.id === event.id);
       if (!resolution) throw Error('无效结局');
-      if(save.campaignId==='core'||save.campaignId==='ptc'){
+      if(save.campaignId==='core'||save.campaignId==='ptc'||state.guided){
         if(!state.investigators.some(i=>i.id===event.lead))throw Error('请选择本关的调查队长');
         state.active.leadId=event.lead;
       }
@@ -362,7 +367,7 @@ export function commit(database, save, event) {
   replay(database, next); return next;
 }
 export function validateSaveShape(save) {
-  if (!save || save.version !== SCHEMA_VERSION || !['dwl','core','ptc'].includes(save.campaignId) || typeof save.name !== 'string' || save.name.length > 80 || !Array.isArray(save.events) || save.events.length > 10000) throw Error('存档格式或版本不正确');
+  if (!save || save.version !== SCHEMA_VERSION || !['dwl','core','ptc','tfa','tcu','tdea','tdeb','boa','cob'].includes(save.campaignId) || typeof save.name !== 'string' || save.name.length > 80 || !Array.isArray(save.events) || save.events.length > 10000) throw Error('存档格式或版本不正确');
   if (save.cursor !== undefined && (!Number.isSafeInteger(save.cursor) || save.cursor < 0 || save.cursor > save.events.length)) throw Error('无效的剧情位置');
   if (save.cardViews !== undefined) {
     if (!save.cardViews || typeof save.cardViews !== 'object' || Array.isArray(save.cardViews)) throw Error('无效的卡牌查看记录');

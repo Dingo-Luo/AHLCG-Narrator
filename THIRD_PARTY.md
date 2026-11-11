@@ -18,3 +18,7 @@
 职业 SVG 图标提取自 Arkham Cards 的 `assets/arkhamicons-config.json`，保留原始路径；来源 commit 与校验值见 `data/investigator-icon-sources.json`。调查员选择使用对应职业的彩色图标。
 
 基础版与卡尔克萨新增剧情来源分别记于 `data/core-sources.json`、`data/expansion-sources.json`，含来源版本及卡图 SHA-256。卡尔克萨固定采用上游新版战役合集（reprint）分支与对应幕间。不保留旧版原始文件。敦威治已有剧情版本和存档固定版本保持兼容，新增卡图另存来源清单。没有对上游中文执行繁简转换。
+
+新增战役使用 Arkham Cards data 的固定版本 baf88bf413a629adb9ca64dd1d53844fcba45dd9，以及 ArkhamDB JSON data 固定版本 7e6bbac1fcf127ce983c812926f31f662a69da66。简体译文优先，缺失时沿用现有繁体译文，不进行繁简转换。来源记录见 data/extended-sources.json。卡图取自 Arkham Build 的公开优化卡图服务（https://assets.arkham.build/optimized/），原卡牌权利归原权利人所有；该服务并不代表授予本项目转载许可。
+
+中立职业图标与现有五色图标同取自 Arkham Cards 的 arkhamicons-config.json，使用相同来源版本；校验信息见 data/investigator-icon-sources.json。

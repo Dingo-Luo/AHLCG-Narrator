@@ -20,6 +20,10 @@
     {
       "sha256": "47a4b17e18273568a23ffa70d8862a946ce03e3e73aafd2382c7c7ce635f4bf2",
       "path": "assets/classes/survivor.svg"
+    },
+    {
+      "path": "assets/classes/neutral.svg",
+      "sha256": "637773695426e38463fcbc103fc3496c4f2ed6be5e970c5fb6c74232e2845448"
     }
   ],
   "commit": "cf05dd084e0c8956f9f3e7c199021cbdeccfea96",

@@ -1,14 +1,139 @@
 {
   "core": {
     "campaign": 0,
-    "scenarios": {"core_prologue": 0, "torch": 1, "arkham": 2, "tentacles": 3}
+    "scenarios": {
+      "core_prologue": 0,
+      "torch": 1,
+      "arkham": 2,
+      "tentacles": 3
+    }
   },
   "dwl": {
     "campaign": 1,
-    "scenarios": {"dwl_prologue": 0, "extracurricular_activity": 1, "the_house_always_wins": 2, "armitages_fate": 101, "the_miskatonic_museum": 3, "essex_county_express": 4, "blood_on_the_altar": 5, "dwl_interlude2": 102, "undimensioned_and_unseen": 6, "where_doom_awaits": 7, "lost_in_time_and_space": 8, "dwl_epilogue": 199}
+    "scenarios": {
+      "dwl_prologue": 0,
+      "extracurricular_activity": 1,
+      "the_house_always_wins": 2,
+      "armitages_fate": 101,
+      "the_miskatonic_museum": 3,
+      "essex_county_express": 4,
+      "blood_on_the_altar": 5,
+      "dwl_interlude2": 102,
+      "undimensioned_and_unseen": 6,
+      "where_doom_awaits": 7,
+      "lost_in_time_and_space": 8,
+      "dwl_epilogue": 199
+    }
   },
   "ptc": {
     "campaign": 2,
-    "scenarios": {"ptc_prologue": 0, "curtain_call": 1, "the_last_king": 2, "ptc_interlude1": 101, "ptc_interlude1_reprint": 101, "echoes_of_the_past": 3, "the_unspeakable_oath": 4, "ptc_interlude2": 102, "a_phantom_of_truth": 5, "the_pallid_mask": 6, "black_stars_rise": 7, "dim_carcosa": 8, "ptc_epilogue": 199}
+    "scenarios": {
+      "ptc_prologue": 0,
+      "curtain_call": 1,
+      "the_last_king": 2,
+      "ptc_interlude1": 101,
+      "ptc_interlude1_reprint": 101,
+      "echoes_of_the_past": 3,
+      "the_unspeakable_oath": 4,
+      "ptc_interlude2": 102,
+      "a_phantom_of_truth": 5,
+      "the_pallid_mask": 6,
+      "black_stars_rise": 7,
+      "dim_carcosa": 8,
+      "ptc_epilogue": 199
+    }
+  },
+  "tfa": {
+    "campaign": 3,
+    "scenarios": {
+      "tfa_campaign_prologue": 0,
+      "tfa_tfa_prologue": 101,
+      "tfa_wilds": 1,
+      "tfa_tfa_interlude1": 102,
+      "tfa_eztli": 2,
+      "tfa_tfa_interlude2": 103,
+      "tfa_threads_of_fate": 3,
+      "tfa_the_boundary_beyond": 4,
+      "tfa_tfa_interlude3": 104,
+      "tfa_heart_of_the_elders_part_1": 5,
+      "tfa_heart_of_the_elders_part_2": 5,
+      "tfa_the_city_of_archives": 6,
+      "tfa_tfa_interlude4": 105,
+      "tfa_the_depths_of_yoth": 7,
+      "tfa_tfa_interlude5": 106,
+      "tfa_shattered_aeons": 8,
+      "tfa_tfa_epilogue": 199,
+      "tfa_turn_back_time": 99
+    }
+  },
+  "tcu": {
+    "campaign": 4,
+    "scenarios": {
+      "tcu_campaign_prologue": 0,
+      "tcu_disappearance_at_the_twilight_estate": 101,
+      "tcu_the_witching_hour": 1,
+      "tcu_at_deaths_doorstep": 2,
+      "tcu_the_price_of_progress": 102,
+      "tcu_the_secret_name": 3,
+      "tcu_the_wages_of_sin": 4,
+      "tcu_for_the_greater_good": 5,
+      "tcu_the_inner_circle": 103,
+      "tcu_union_and_disillusion": 6,
+      "tcu_in_the_clutches_of_chaos": 7,
+      "tcu_twist_of_fate": 104,
+      "tcu_before_the_black_throne": 8,
+      "tcu_tcu_epilogue": 199
+    }
+  },
+  "tdea": {
+    "campaign": 5,
+    "scenarios": {
+      "tdea_campaign_prologue": 0,
+      "tdea_tde_prologue": 101,
+      "tdea_beyond_the_gates_of_sleep": 1,
+      "tdea_the_black_cat": 102,
+      "tdea_the_search_for_kadath": 2,
+      "tdea_the_oneironauts": 103,
+      "tdea_dark_side_of_the_moon": 3,
+      "tdea_the_great_ones": 104,
+      "tdea_where_gods_dwell": 4,
+      "tdea_tde_epilogue": 199
+    }
+  },
+  "tdeb": {
+    "campaign": 5,
+    "scenarios": {
+      "tdeb_campaign_prologue": 10,
+      "tdeb_tde_prologue": 1101,
+      "tdeb_waking_nightmare": 11,
+      "tdeb_the_black_cat": 1102,
+      "tdeb_a_thousand_shapes_of_horror": 12,
+      "tdeb_the_oneironauts": 1103,
+      "tdeb_point_of_no_return": 13,
+      "tdeb_the_great_ones": 1104,
+      "tdeb_weaver_of_the_cosmos": 14,
+      "tdeb_tde_epilogue": 1199
+    }
+  },
+  "boa": {
+    "campaign": 100,
+    "scenarios": {
+      "boa_campaign_prologue": 0,
+      "boa_spreading_flames": 1,
+      "boa_smoke_and_mirrors": 2,
+      "boa_queen_of_ash": 3
+    }
+  },
+  "cob": {
+    "campaign": 101,
+    "scenarios": {
+      "cob_campaign_prologue": 0,
+      "cob_cob_prologue": 101,
+      "cob_river_of_blood": 1,
+      "cob_new_horizons": 2,
+      "cob_friends_in_low_places": 102,
+      "cob_blood_money": 3,
+      "cob_cob_epilogue": 199
+    }
   }
 }

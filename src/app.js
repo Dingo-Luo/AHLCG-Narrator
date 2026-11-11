@@ -1,3 +1,5 @@
+import {classIcon,classChoices,investigatorChoices,playableInvestigator} from './investigators.js';
+import {storyMarkup} from './story-markup.js';
 import { createMusicPlayer } from './music.js';
 import { createNarrationIndex, renderNarratedText, hasNarratedText } from './narration.js';
 import { createNarrationPlayer, narrationClips } from './narration-player.js';
@@ -7,7 +9,7 @@ import {mergeCampaigns,campaignOf} from './content.js';
 import { moveTo, storyNavigation, browseCard,chooseCardVersion } from './navigation.js';
 import { renderBoard } from './board.js';
 import { HISTORY_KEY, emptyLibrary, readLibrary, savePlay, deletePlay, restorePlay } from './library.js';
-import { localizedCard, investigatorName } from './localization.js';
+import { localizedCard, investigatorName, investigatorLabel } from './localization.js';
 import { renderMainMenu, renderNewPlayForm } from './menu.js';
 
 const root = document.getElementById('app');
@@ -35,8 +37,7 @@ const nameOf = item => investigatorName(database,item);
 const button = (text, action, extra = '', style = '') => `<button class="button ${style}" data-action="${action}" ${extra}>${text}</button>`;
 function prose(text, translate = true) {
   // Upstream markup is data. Escape first and allow only a small, attribute-free set.
-  let value = escape(translate ? t(text) : text);
-  value = value.replace(/&lt;(\/?)(b|i|em|strong|blockquote|hr|br)\s*\/?&gt;/gi, '<$1$2>');
+  let value = storyMarkup(translate ? t(text) : text,escape);
   value = value.replace(/\[\[([^\]]+)\]\]/g, '<span class="trait">$1</span>');
   const symbols = { action: '↷', reaction: '⤴', free: '◇', willpower: '意志', intellect: '智力', combat: '战力', agility: '敏捷', per_investigator: '／调查员', elder_thing: '古神', tablet: '石板', skull: '骷髅', cultist: '异教徒', elder_sign: '古印', auto_fail: '触手' };
   value = value.replace(/\[([a-z_]+)\]/g, (_, key) => `<span class="symbol">${escape(symbols[key] || '未知符号')}</span>`);
@@ -110,7 +111,7 @@ function goTo(position) {
 }
 function pendingEvent() { return save.events[playPosition(save)]; }
 function canContinue() {
-  if(!state.active)return SUPPORTED.includes(state.nextScenario);
+  if(!state.active)return (SUPPORTED.includes(state.nextScenario)||database.scenarios[state.nextScenario]?.guided);
   if(state.active.phase==='ready')return true;
   return Boolean(state.active.queue.length&&current()?.input?.type!=='choose_one');
 }
@@ -133,7 +134,7 @@ function nextStep() {
   if(['counter','card_choice','scenario_investigators','investigator_choice','investigator_counter'].includes(step?.input?.type)||step?.effects?.some(item=>item.type==='add_card'))advanceCurrent();
   else if(nav.next!==null)goTo(nav.next);
   else if(nav.nextAction!==null)goTo(nav.nextAction);
-  else if(!state.active&&SUPPORTED.includes(state.nextScenario))dispatch({type:'start',scenario:state.nextScenario});
+  else if(!state.active&&(SUPPORTED.includes(state.nextScenario)||database.scenarios[state.nextScenario]?.guided))dispatch({type:'start',scenario:state.nextScenario});
   else if(state.active?.phase==='ready')dispatch({type:'finish'});
   else if(state.active?.queue.length&&step?.input?.type!=='choose_one')advanceCurrent();
 }
@@ -142,7 +143,7 @@ function nav() {
 }
 function musicControls() {
   const {track,playing,volume}=musicPlayer.snapshot();
-  return `<div class="music-controls" role="group" aria-label="背景音乐"><button class="button small narration-speed" data-action="narration-speed" aria-label="切换配音速度" title="配音速度">${narrationPlayer.getRate().toFixed(1)}×</button><button class="button small music-play" data-action="music-toggle" aria-label="${playing?'暂停背景音乐':'播放背景音乐'}" aria-pressed="${playing}" ${track||musicTracks.some(item=>item.default)?'':'disabled'}>${playing?'⏸':'▶'}</button><span class="music-current" title="${escape(track?.title||'未选择音乐')}">${escape(track?.title||'未选择音乐')}</span><label class="music-volume">音量<input type="range" min="0" max="100" step="1" value="${Math.round(volume*100)}" data-music-volume aria-label="背景音乐音量"><output data-music-volume-value>${Math.round(volume*100)}%</output></label></div>`;
+  return `<div class="music-controls" role="group" aria-label="背景音乐"><button class="button small narration-speed" data-action="narration-speed" aria-label="切换配音速度" title="配音速度">${narrationPlayer.getRate().toFixed(1)}×</button><button class="button small music-play" data-action="music-toggle" aria-label="${playing?'暂停背景音乐':'播放背景音乐'}" aria-pressed="${playing}" ${track||musicTracks.some(item=>item.default)?'':'disabled'}>${playing?'⏸️':'▶️'}</button><span class="music-current" title="${escape(track?.title||'未选择音乐')}">${escape(track?.title||'未选择音乐')}</span><label class="music-volume">音量<input type="range" min="0" max="100" step="1" value="${Math.round(volume*100)}" data-music-volume aria-label="背景音乐音量"><output data-music-volume-value>${Math.round(volume*100)}%</output></label></div>`;
 }
 function syncMusicControls() {
   const {track,playing,volume}=musicPlayer.snapshot();
@@ -150,7 +151,7 @@ function syncMusicControls() {
     control.disabled=!track&&!musicTracks.some(item=>item.default);
     control.setAttribute('aria-pressed',String(playing));
     control.setAttribute('aria-label',playing?'暂停背景音乐':'播放背景音乐');
-    control.textContent=playing?'⏸':'▶';
+    control.textContent=playing?'⏸️':'▶️';
   }
   for(const label of document.querySelectorAll('.music-current')) {
     label.textContent=track?.title||'未选择音乐';label.title=label.textContent;
@@ -220,7 +221,7 @@ function story() {
   if (!active) {
     const next = state.nextScenario;
     if(!next)return head('',L('战役结束'))+`<article class="paper"><h2>${escape(t(campaignOf(database,save.campaignId).name))}</h2>${summaryTeam()}${button(L('查看战役日志'),'navigate','data-view="log"')}</article>`;
-    return head('下一章', L('下一段故事')) + `<div class="paper"><div class="eyebrow">${Object.keys(state.completed).length ? '故事继续' : '故事开端'}</div><h2>${escape(title(next))}</h2><p class="muted">${SUPPORTED.includes(next) ? L('继续故事。此前的行动和选择会保留。') : L('该章节的数据已导入，交互流程仍在适配中。你可以查看日志或调整调查员记录。')}</p>${SUPPORTED.includes(next) ? button(L('开始这一章') + ' →', 'start', '', 'primary') : button(L('查看战役日志'), 'navigate', 'data-view="log"')}</div>`;
+    return head('下一章', L('下一段故事')) + `<div class="paper"><div class="eyebrow">${Object.keys(state.completed).length ? '故事继续' : '故事开端'}</div><h2>${escape(title(next))}</h2><p class="muted">${(SUPPORTED.includes(next)||database.scenarios[next]?.guided) ? L('继续故事。此前的行动和选择会保留。') : L('该章节的数据已导入，交互流程仍在适配中。你可以查看日志或调整调查员记录。')}</p>${(SUPPORTED.includes(next)||database.scenarios[next]?.guided) ? button(L('开始这一章') + ' →', 'start', '', 'primary') : button(L('查看战役日志'), 'navigate', 'data-view="log"')}</div>`;
   }
   const s = database.scenarios[active.id];
   const header = head('敦威治遗产', t(s.scenario_name), '', active.phase === 'play' ? `<div class="actions">${active.id==='the_house_always_wins'||storyActions(database,state).length?button(L('记录行动'), 'story-actions', '', 'small'):''}${button(L('结束调查'), 'resolutions', '', 'small')}</div>` : '');
@@ -247,6 +248,7 @@ function stepContent(step) {
   const kind=state.active.queue[0]?.startsWith('@resolution:')?'resolution':'step';
   const narrationKey=`scenario:${state.active.id}:${kind}:${step.id}:text`;
   let result = `<div class="eyebrow">${phase === 'setup' ? '开场故事' : '结局与影响'}</div><h2>${escape(t(textTitle))}</h2>${step.text&&hasNarratedText(step.text,narrationKey,database.narrationIndex)?button('▷ 播放配音','narrate','aria-pressed="false"','small'):''}`;
+  if(step.manualRecord)result+='<p class="notice">请按实体游戏完成此项记录；涉及经验或创伤时，请在调查员页核对。</p>';
   if (step.text) {
     result += narratedText(step.text,narrationKey);
   }
@@ -263,7 +265,7 @@ function stepContent(step) {
   if(input?.type==='scenario_investigators'){
     const killed=state.investigators.filter(i=>i.killed||i.insane);
     const excluded=[...state.investigators.map(i=>i.card),...(state.retired||[])];
-    result+=killed.map(i=>`<label>${escape(nameOf(i))} · ${L('选择继任调查员')}<select data-replacement="${i.id}" required><option value="">${L('选择调查员')}</option>${Object.values(database.cards).filter(c=>c.type_code==='investigator'&&/^0[123]\d{3}$/.test(c.code)&&!excluded.includes(c.code)).map(c=>`<option value="${c.code}">${escape(localizedCard(c).name)}</option>`).join('')}</select></label>`).join('');
+    result+=killed.map(i=>`<label>${escape(nameOf(i))} · ${L('选择继任调查员')}<select data-replacement="${i.id}" required><option value="">${L('选择调查员')}</option>${Object.values(database.cards).filter(c=>playableInvestigator(c)&&!excluded.includes(c.code)).map(c=>`<option value="${c.code}">${escape(investigatorLabel(c))}</option>`).join('')}</select></label>`).join('');
     if(killed.length===state.investigators.length)result+=button(L('无人继续，结束战役'),'end-campaign','','danger small');
   }
   if(input?.type==='investigator_choice')result+=`<div class="record-options">${state.investigators.map(i=>`<label><input type="checkbox" name="affected-investigator" value="${i.id}" ${remembered?.includes?.(i.id)?'checked':''}>${escape(nameOf(i))}</label>`).join('')}</div>`;
@@ -320,19 +322,14 @@ async function newCampaign() {
   openModal(L('开始新游戏'),renderNewPlayForm(database,{L,t,escape,button},rosterRow()));
 }
 function rosterRow() {
-  const investigators=Object.values(database.cards).filter(card=>card.type_code==='investigator'&&/^(01|02|03)\d{3}$/.test(card.code));
-  return `<div class="roster-row"><input type="hidden" name="investigator" value=""><details class="investigator-picker"><summary>${L('选择调查员')}</summary><div class="investigator-options" role="group" aria-label="${L('调查员')}">${investigators.map(card=>`<button type="button" data-action="choose-investigator" data-code="${card.code}">${classIcon(card)}<span>${escape(localizedCard(card).name)}</span></button>`).join('')}</div></details><button type="button" data-action="remove-roster" aria-label="${L('移除调查员')}">×</button></div>`;
-}
-function classIcon(card) {
-  const faction=['guardian','seeker','rogue','mystic','survivor'].includes(card.faction_code)?card.faction_code:'neutral';
-  return `<span class="class-icon ${faction}" aria-hidden="true">${faction==='neutral'?'◇':`<span style="mask-image:url('assets/classes/${faction}.svg');-webkit-mask-image:url('assets/classes/${faction}.svg')"></span>`}</span>`;
+  return `<div class="roster-row"><input type="hidden" name="investigator" value=""><details class="investigator-picker"><summary>选择调查员</summary><div class="investigator-options" role="group" aria-label="调查员职业颜色">${classChoices(database,escape)}</div></details><button type="button" data-action="remove-roster" aria-label="移除调查员">×</button></div>`;
 }
 
 function chooseResolution(id) {
   const s = database.scenarios[state.active.id], res = s.resolutions.find(item=>item.id===id);
   const remembered=pendingEvent()?.type==='resolution'&&pendingEvent().id===id?pendingEvent().statuses:{};
   resolutionCandidate = id;
-  openModal(L('确认进入结局'), `<p>${escape(t(s.scenario_name))} · <strong>${escape(t(res.title))}</strong></p>${res.description ? `<div class="notice">${prose(res.description)}</div>` : ''}<p class="subtle">${L('请按实体游戏结果记录每位调查员的状态。被伤害／恐惧击败产生的创伤将在本章归档时结算。')}</p><form id="resolution-form">${['core','ptc'].includes(save.campaignId)?`<label>${L('本关调查队长')}<select name="lead" required>${state.investigators.map(i=>`<option value="${i.id}">${escape(nameOf(i))}</option>`).join('')}</select></label>`:''}<div class="resolution-form">${state.investigators.map(item=>`<label class="status-row"><span>${escape(nameOf(item))}</span><select name="${item.id}" required><option value="">${L('选择结束状态')}</option>${[['survived',L('存活／完成目标')],['resigned',L('撤退')],['physical',L('伤害击败（+1 肉体创伤）')],['mental',L('恐惧击败（+1 精神创伤）')],['both',L('同时被伤害与恐惧击败（两种创伤各 +1）')],['eliminated',L('其他方式退场（请按卡牌另记创伤）')]].filter(([value])=>allowedStatuses(res).includes(value)).map(([value,text])=>`<option value="${value}" ${remembered[item.id]===value?'selected':''}>${text}</option>`).join('')}</select></label>`).join('')}</div><div class="form-actions"><button type="button" class="button" data-action="close-modal">${L('取消')}</button><button class="button primary" type="submit">${L('确认并揭示结局')} →</button></div></form>`);
+  openModal(L('确认进入结局'), `<p>${escape(t(s.scenario_name))} · <strong>${escape(t(res.title))}</strong></p>${res.description ? `<div class="notice">${prose(res.description)}</div>` : ''}<p class="subtle">${L('请按实体游戏结果记录每位调查员的状态。被伤害／恐惧击败产生的创伤将在本章归档时结算。')}</p><form id="resolution-form">${(['core','ptc'].includes(save.campaignId)||database.campaigns[save.campaignId]?.guided)?`<label>${L('本关调查队长')}<select name="lead" required>${state.investigators.map(i=>`<option value="${i.id}">${escape(nameOf(i))}</option>`).join('')}</select></label>`:''}<div class="resolution-form">${state.investigators.map(item=>`<label class="status-row"><span>${escape(nameOf(item))}</span><select name="${item.id}" required><option value="">${L('选择结束状态')}</option>${[['survived',L('存活／完成目标')],['resigned',L('撤退')],['physical',L('伤害击败（+1 肉体创伤）')],['mental',L('恐惧击败（+1 精神创伤）')],['both',L('同时被伤害与恐惧击败（两种创伤各 +1）')],['eliminated',L('其他方式退场（请按卡牌另记创伤）')]].filter(([value])=>allowedStatuses(res).includes(value)).map(([value,text])=>`<option value="${value}" ${remembered[item.id]===value?'selected':''}>${text}</option>`).join('')}</select></label>`).join('')}</div><div class="form-actions"><button type="button" class="button" data-action="close-modal">${L('取消')}</button><button class="button primary" type="submit">${L('确认并揭示结局')} →</button></div></form>`);
 }
 function historyPanel() {
   const entries = state.history.filter(item => ['step','action'].includes(item.type) && item.answer !== undefined);
@@ -417,10 +414,16 @@ document.addEventListener('click',async event=>{
       }
       case 'undo':goTo(storyNav().previousAction);break;
       case 'add-roster':if(document.querySelectorAll('.roster-row').length<4)document.getElementById('roster').insertAdjacentHTML('beforeend',rosterRow());break;
+      case 'choose-investigator-class': {
+        const row=el.closest('.roster-row');
+        row.querySelector('.investigator-options').innerHTML=investigatorChoices(database,el.dataset.class,escape,row.querySelector('input[name="investigator"]').value);
+        break;
+      }
+      case 'investigator-classes': el.closest('.investigator-options').innerHTML=classChoices(database,escape);break;
       case 'choose-investigator': {
         const row=el.closest('.roster-row'),card=database.cards[el.dataset.code];
         row.querySelector('input[name="investigator"]').value=card.code;
-        row.querySelector('summary').innerHTML=classIcon(card)+`<span>${escape(localizedCard(card).name)}</span>`;
+        row.querySelector('summary').innerHTML=classIcon(card)+`<span>${escape(investigatorLabel(card))}</span>`;
         row.querySelectorAll('[data-action="choose-investigator"]').forEach(option=>option.setAttribute('aria-pressed',String(option===el)));
         row.querySelector('details').open=false;row.querySelector('summary').focus();break;
       }
@@ -440,7 +443,7 @@ document.addEventListener('submit',event=>{
       if(new Set(codes).size!==codes.length)throw Error(L('调查员不能重复'));
       const investigators=codes.map(code=>{
         const card=database.cards[code];
-        if(!card||card.type_code!=='investigator'||!/^(01|02|03)\d{3}$/.test(code))throw Error('请选择有效调查员');
+        if(!playableInvestigator(card))throw Error('请选择有效调查员');
         return {name:localizedCard(card).name,card:card.code};
       });
       let next=createSave(investigators,t(campaign.name),database.campaignSources[campaignId],campaignId);
@@ -449,7 +452,7 @@ document.addEventListener('submit',event=>{
     }else{
       const id=resolutionCandidate;
       const statuses=Object.fromEntries(form.entries());
-      dispatch({type:'resolution',id,statuses,...(['core','ptc'].includes(save.campaignId)?{lead:form.get('lead')}: {})});modal.close();
+      dispatch({type:'resolution',id,statuses,...((['core','ptc'].includes(save.campaignId)||database.campaigns[save.campaignId]?.guided)?{lead:form.get('lead')}: {})});modal.close();
     }
     window.scrollTo(0,0);
   }catch(error){toast(error.message)}
@@ -467,10 +470,10 @@ document.addEventListener('change',event=>{
 window.addEventListener('storage',event=>{if(event.key===HISTORY_KEY){externalChange=true;render();toast(L('另一标签页更新了存档，请刷新后继续。'))}});
 async function init(){
   try {
-    const [dunwich,core,carcosa,manifest,audio]=await Promise.all(['data/dwl.json','data/core.json','data/ptc.json','data/narration/index.json','data/narration/audio.json'].map(async path=>{
+    const [dunwich,core,carcosa,manifest,audio,extended]=await Promise.all(['data/dwl.json','data/core.json','data/ptc.json','data/narration/index.json','data/narration/audio.json','data/extended.json'].map(async path=>{
       const response=await fetch(path);if(!response.ok)throw Error(`数据加载失败：${path}`);return response.json();
     }));
-    database=mergeCampaigns(dunwich,core,carcosa);
+    database=mergeCampaigns(dunwich,core,carcosa,extended);
     database.narrationIndex=createNarrationIndex(manifest,audio);
     try { const response=await fetch('data/music.json');if(response.ok)musicTracks=await response.json(); } catch(error) { console.warn('Music list unavailable:',error); }
     readStorage();render();

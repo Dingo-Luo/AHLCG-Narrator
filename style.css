@@ -25,3 +25,4 @@
 @media(max-width:760px){.topbar{flex-wrap:wrap;gap:8px}.top-actions{margin-left:auto;flex:1 1 280px;flex-wrap:wrap;justify-content:flex-end}.music-controls{display:flex;flex-wrap:nowrap;justify-content:flex-end;width:auto;max-width:100%;margin-left:auto;gap:6px}.music-current{flex:0 1 auto;min-width:0;max-width:100px;font-size:.63rem}.music-controls .button{padding:6px 8px;font-size:.68rem}.music-volume{flex-shrink:0;justify-content:flex-end;font-size:.63rem}.music-volume input{width:65px;margin-top:0}.music-track{font-size:.9rem}.music-track-state{font-size:.65rem}}
 .music-track-name{white-space:nowrap}
 .music-controls .music-play{flex:0 0 32px;width:32px;min-height:32px;padding:5px;font-size:.85rem;text-align:center}.music-controls .narration-speed{flex-shrink:0;min-width:44px;min-height:32px;padding:5px 7px;font-size:.75rem}
+.neutral{--class-color:#77756f}.investigator-options [data-action="choose-investigator-class"]{min-height:44px}
