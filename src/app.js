@@ -6,7 +6,7 @@ import { createNarrationPlayer, narrationClips } from './narration-player.js';
 import { chineseText } from './chinese.js';
 import { createSave, replay, commit, SUPPORTED, playPosition,cultistCards,storyActions,allowedStatuses } from './engine.js';
 import {mergeCampaigns,campaignOf} from './content.js';
-import { moveTo, storyNavigation, browseCard,chooseCardVersion } from './navigation.js';
+import { moveTo, storyNavigation, skipSetupPages, browseCard,chooseCardVersion } from './navigation.js';
 import { renderBoard } from './board.js';
 import { HISTORY_KEY, emptyLibrary, readLibrary, savePlay, deletePlay, restorePlay } from './library.js';
 import { localizedCard, investigatorName, investigatorLabel } from './localization.js';
@@ -56,7 +56,7 @@ function toast(message) {
 function loadActivePlay(){
   const candidate=library.plays.find(play=>play.id===library.activeId)?.save;
   save=null;state=null;
-  if(candidate){try{state=replay(database,candidate);save=candidate;}catch(error){console.warn(error.message);}}
+  if(candidate){try{({state,save}=skipSetupPages(database,candidate));}catch(error){console.warn(error.message);}}
 }
 function readStorage() {
   try {
@@ -64,7 +64,7 @@ function readStorage() {
   } catch (error) { storageProblem = true; corruptSave = true; console.warn('History could not be loaded:', error.message); return; }
   const candidate = library.plays.find(play => play.id === library.activeId)?.save;
   if (candidate) {
-    try { state = replay(database, candidate); save = candidate; }
+    try { ({state,save}=skipSetupPages(database,candidate)); }
     catch (error) { console.warn('Previous play is unavailable:', error.message); }
   }
 }
@@ -77,6 +77,7 @@ function persist(next, options = {}) {
     if(cursor!==undefined&&cursor<next.events.length-1)next.cursor=cursor;
     nextState=replay(database,next);
   }
+  ({save: next, state: nextState}=skipSetupPages(database,next));
   try { library = savePlay(localStorage, library, next, options); }
   catch (error) { storageProblem = true; if(error.message.includes('另一标签页'))externalChange=true; render(); throw Error(L('无法保存游戏：')+error.message); }
   save = next; state = nextState; storageProblem = false; corruptSave = false; externalChange = false;
@@ -98,16 +99,7 @@ function goTo(position) {
   if(position===null||position===undefined)return;
   if(externalChange)throw Error(L('请先刷新以载入最新记录。'));
   stopNarration();
-  let next=moveTo(database,save,position);
-  const target=replay(database,next);
-  if(target.active?.phase==='setup'){
-    const step=database.scenarios[target.active.id].steps.find(item=>item.id===target.active.queue[0]);
-    if(step&&step.type!=='story'&&!step.input&&!database.scenarios[target.active.id].storySetup){
-      const earlier=storyNav().stops.filter(stop=>stop.end<=position).at(-1);
-      if(earlier)next=moveTo(database,save,earlier.end);
-    }
-  }
-  persist(next);resolutionCandidate=null;render();window.scrollTo(0,0);
+  persist(moveTo(database,save,position));resolutionCandidate=null;render();window.scrollTo(0,0);
 }
 function pendingEvent() { return save.events[playPosition(save)]; }
 function canContinue() {
@@ -244,11 +236,10 @@ function current() {
 function stepContent(step) {
   const phase = state.active.phase;
   const remembered=pendingEvent()?.type==='advance'?pendingEvent().answer:undefined;
-  const textTitle = step.title || (step.type === 'story' ? L('故事背景') : step.type === 'encounter_sets' ? L('收集遭遇组') : step.type === 'location_setup' ? '地点布局' : step.input ? L('记录你的选择') : L('故事与记录'));
+  const textTitle = step.title || (step.type === 'story' ? L('故事背景') : step.input ? L('记录你的选择') : L('故事与记录'));
   const kind=state.active.queue[0]?.startsWith('@resolution:')?'resolution':'step';
   const narrationKey=`scenario:${state.active.id}:${kind}:${step.id}:text`;
   let result = `<div class="eyebrow">${phase === 'setup' ? '开场故事' : '结局与影响'}</div><h2>${escape(t(textTitle))}</h2>${step.text&&hasNarratedText(step.text,narrationKey,database.narrationIndex)?button('▷ 播放配音','narrate','aria-pressed="false"','small'):''}`;
-  if(step.manualRecord)result+='<p class="notice">请按实体游戏完成此项记录；涉及经验或创伤时，请在调查员页核对。</p>';
   if (step.text) {
     result += narratedText(step.text,narrationKey);
   }
@@ -313,7 +304,7 @@ function logText(item){
 }
 function log() {
   const entries=Object.values(state.log).filter(item=>item.section!=='hidden');
-  return head('',L('战役日志'),'',`<div class="actions">${button(L('撤销'),'undo',storyNav().previousAction===null?'disabled':'','small')}${button(L('重做'),'redo',storyNav().nextAction===null?'disabled':'','small')}</div>`)+`<article class="paper">${entries.length?entries.map(item=>`<div class="log-entry" ${item.crossed?'style="text-decoration:line-through"':''}>${logText(item)}</div>`).join(''):`<p class="muted">${L('暂无战役记录')}</p>`}${state.tokens.length?`<div class="notice">${L('加入的混乱标记')}：${state.tokens.map(token=>prose(`[${token}]`,false)).join(' ')}</div>`:''}</article><div class="section-title"><h2>${L('进度')}</h2></div><div class="paper">${Object.entries(state.completed).map(([id,result])=>`<div class="list-item"><span>${escape(title(id))}</span><span class="pill">${result.resolution?escape(result.resolution.replace(/^R/, '结局 ')):L('已完成')}</span></div>`).join('')}${state.active?`<div class="list-item"><span>${escape(title(state.active.id))}</span><span class="pill amber">${L('进行中')}</span></div>`:''}</div>`;
+  return head('',L('战役日志'),'',`<div class="actions">${button(L('撤销'),'undo',storyNav().previousAction===null?'disabled':'','small')}${button(L('重做'),'redo',storyNav().nextAction===null?'disabled':'','small')}</div>`)+`<article class="paper">${entries.length?entries.map(item=>`<div class="log-entry" ${item.crossed?'style="text-decoration:line-through"':''}>${logText(item)}</div>`).join(''):`<p class="muted">${L('暂无战役记录')}</p>`}</article><div class="section-title"><h2>${L('进度')}</h2></div><div class="paper">${Object.entries(state.completed).map(([id,result])=>`<div class="list-item"><span>${escape(title(id))}</span><span class="pill">${result.resolution?escape(result.resolution.replace(/^R/, '结局 ')):L('已完成')}</span></div>`).join('')}${state.active?`<div class="list-item"><span>${escape(title(state.active.id))}</span><span class="pill amber">${L('进行中')}</span></div>`:''}</div>`;
 }
 
 async function newCampaign() {

@@ -188,6 +188,16 @@ export function currentStep(database, state) {
   if (ref === '$upgrade_decks') return { id: ref, type: 'upgrade', title: 'Upgrade investigators', text: 'Record experience spent in the investigator panel before continuing.' };
   return lookup(database, active.id, ref);
 }
+export function isHiddenSetup(database, state) {
+  const active = state.active;
+  if (!active?.queue.length || active.phase === 'play') return false;
+  const ref = active.queue[0];
+  if (ref === '$upgrade_decks' || database.physicalInstructions?.[active.id]?.has(ref)) return true;
+  if (active.phase !== 'setup') return false;
+  const step = currentStep(database, state);
+  return Boolean(database.hiddenSetup?.[active.id]?.has(ref)) ||
+    (!database.hiddenSetup && !database.scenarios[active.id].storySetup && step?.type !== 'story' && !step?.input);
+}
 export function playPosition(save) { return save.cursor ?? save.events.length; }
 export function replay(database, save, { onStep } = {}) {
   validateSaveShape(save);
@@ -217,9 +227,12 @@ export function replay(database, save, { onStep } = {}) {
       if (!state.active || !state.active.queue.length) throw Error('没有可继续的步骤');
       const step = currentStep(database, state);
       const input = step.input;
+      const hiddenSetup = isHiddenSetup(database, state);
       state.active.queue.shift();
       let follow = step.steps || [];
-      if (input) {
+      const skipChoice = event.answer === '__skip_setup';
+      if (skipChoice && (!hiddenSetup || !input)) throw Error('无法跳过此剧情选择');
+      if (input && !skipChoice) {
         if (input.type === 'choose_one') {
           const choice = input.choices.find(item => item.id === event.answer);
           // Single optional checkbox in upstream is shown as yes/no, not forced yes.
@@ -270,9 +283,9 @@ export function replay(database, save, { onStep } = {}) {
         }
         else throw Error(`尚未支持输入：${input.type}`);
       }
-      applyEffects(state, step.effects, event.answer);
+      applyEffects(state, step.effects, skipChoice ? undefined : event.answer);
       state.active.queue.unshift(...follow);
-      state.history.push({ type: 'step', scenario: state.active.id, step: step.id, text: step.title || step.text || step.id, answer: event.answer });
+      if (!hiddenSetup) state.history.push({ type: 'step', scenario: state.active.id, step: step.id, text: step.title || step.text || step.id, answer: event.answer });
     } else if (event.type === 'resolution') {
       if (state.active?.phase !== 'play') throw Error('请先读完开场故事');
       const resolution = database.scenarios[state.active.id].resolutions.find(item => item.id === event.id);

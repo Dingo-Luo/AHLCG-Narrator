@@ -1,4 +1,4 @@
-import { replay, currentStep, playPosition, cardDeck, boardCard } from './engine.js';
+import { replay, currentStep, playPosition, isHiddenSetup, commit, cardDeck, boardCard } from './engine.js';
 
 export function moveTo(database, save, position) {
   if (!Number.isSafeInteger(position) || position < 1 || position > save.events.length) throw Error('无效的剧情位置');
@@ -6,26 +6,48 @@ export function moveTo(database, save, position) {
   replay(database,next); return next;
 }
 
+// Replay recorded setup answers when revisiting old saves. Only append skips at the tip.
+export function skipSetupPages(database, save) {
+  let next = save;
+  let state = replay(database, next);
+  while (isHiddenSetup(database, state)) {
+    const position = playPosition(next);
+    if (position < next.events.length) next = { ...next, cursor: position + 1 };
+    else {
+      const step = currentStep(database, state);
+      next = commit(database, next, { type: 'advance', ...(step.input ? { answer: '__skip_setup' } : {}) });
+    }
+    state = replay(database, next);
+  }
+  return { save: next, state };
+}
+
 export function storyNavigation(database, save) {
   const stops = [], chapters = [];
-  let lastKey = null;
+  let lastKey = null, pendingChapter = null;
+  const visiblePositions = [];
   replay(database, { ...save, cursor:save.events.length }, { onStep(state, position) {
     const active = state.active;
     if (!active && !Object.keys(state.completed).length) return;
-    const step = active?.phase === 'setup' ? currentStep(database,state) : null;
-    if (step && step.type !== 'story' && !step.input&&!database.scenarios[active.id].storySetup) return; // Legacy physical setup is never a navigation destination.
+    if (save.events[position-1].type === 'start') pendingChapter = active.id;
+    if (isHiddenSetup(database, state)) return;
+    visiblePositions.push(position);
+    if (pendingChapter) {
+      chapters.push({ id:pendingChapter, position });
+      pendingChapter = null;
+    }
     const key = active ? `${active.id}:${active.phase}:${active.queue[0] || ''}` : `next:${state.nextScenario || ''}`;
     if (key !== lastKey) {
       stops.push({ position, end:position, key, scenario:active?.id || state.nextScenario });
       lastKey = key;
     } else stops.at(-1).end = position;
-    if (save.events[position-1].type === 'start') chapters.push({ id:active.id, position });
+
   }});
   const position = playPosition(save);
   let index = -1;
   for (let i=0;i<stops.length;i++) if (stops[i].position<=position) index=i;
   return { stops, chapters, previous:index>0?stops[index-1].end:null, next:index>=0&&index<stops.length-1?stops[index+1].end:null,
-    previousAction:position>1?position-1:null, nextAction:position<save.events.length?position+1:null };
+    previousAction:visiblePositions.findLast(i=>i<position)??null, nextAction:visiblePositions.find(i=>i>position)??null };
 }
 
 export function browseCard(database, save, type, action) {
