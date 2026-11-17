@@ -9,10 +9,16 @@ export function renderMainMenu(database, library, { L, t, escape, button, blocke
     <section class="play-history" aria-label="${L('历史游戏')}">${plays.length ? plays.map(play => {
       let progress, unavailable = false,roster=play.save.investigators;
       try {
+        if(database.bundles && database.loadedCampaign!==play.save.campaignId) {
+          const events=play.save.events.slice(0,play.save.cursor??play.save.events.length);
+          const lastStart=events.findLast(event=>event.type==='start');
+          progress=t(database.scenarios[lastStart?.scenario]?.scenario_name||L('继续剧情'));
+        } else {
         const state = replay(database, play.save);
         roster=state.investigators;
         const id = state.active?.id || state.nextScenario;
         progress = t(database.scenarios[id]?.scenario_name || L('已完成'));
+        }
       } catch { unavailable = true; progress = L('此记录暂时无法打开'); }
       return `<article class="play-row"><div class="play-info"><h2>${escape(t(campaignOf(database,play.save.campaignId).name))}</h2><p>${escape(roster.map(item=>investigatorName(database,item)).join('、'))}</p><p class="play-meta"><time datetime="${escape(play.updatedAt)}">${escape(date(play.updatedAt))}</time><span>·</span>${escape(progress)}</p></div><div class="play-actions">${button(L('继续'), 'resume-play', `data-id="${escape(play.id)}" ${unavailable || blocked ? 'disabled' : ''}`)}${button(L('删除'),'delete-play',`data-id="${escape(play.id)}" ${blocked?'disabled':''}`,'danger small')}</div></article>`;
     }).join('') : `<p class="empty-history">${L('暂无历史游戏')}</p>`}</section>${library.deleted?.length?`<button class="text-button restore-deletion" data-action="restore-play" data-id="${escape(library.deleted.at(-1).id)}" ${blocked?'disabled':''}>${L('撤销上次删除')}</button>`:''}`;

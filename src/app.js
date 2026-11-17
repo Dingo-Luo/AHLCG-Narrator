@@ -1,3 +1,4 @@
+import {fetchJson,createCampaignLoader} from './campaign-loader.js';
 import {classIcon,classChoices,investigatorChoices,playableInvestigator} from './investigators.js';
 import {storyMarkup} from './story-markup.js';
 import { createMusicPlayer } from './music.js';
@@ -5,7 +6,7 @@ import { createNarrationIndex, renderNarratedText, hasNarratedText } from './nar
 import { createNarrationPlayer, narrationClips } from './narration-player.js';
 import { chineseText } from './chinese.js';
 import { createSave, replay, commit, SUPPORTED, playPosition,cultistCards,storyActions,allowedStatuses } from './engine.js';
-import {mergeCampaigns,campaignOf} from './content.js';
+import {campaignOf} from './content.js';
 import { moveTo, storyNavigation, skipSetupPages, browseCard,chooseCardVersion } from './navigation.js';
 import { renderBoard } from './board.js';
 import { HISTORY_KEY, emptyLibrary, readLibrary, savePlay, deletePlay, restorePlay } from './library.js';
@@ -14,6 +15,7 @@ import { renderMainMenu, renderNewPlayForm } from './menu.js';
 
 const root = document.getElementById('app');
 const modal = document.getElementById('modal');
+let catalog, loadCampaign, loadingCampaign=false, retryLoad=null;
 let database, save = null, state = null, view = 'home', storageProblem = false, corruptSave = false, externalChange = false;
 let activeNarrationButton = null;
 let activeNarrationKey = null;
@@ -54,18 +56,35 @@ function toast(message) {
   clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('show'), 4500);
 }
 function loadActivePlay(){
-  const candidate=library.plays.find(play=>play.id===library.activeId)?.save;
-  save=null;state=null;
-  if(candidate){try{({state,save}=skipSetupPages(database,candidate));}catch(error){console.warn(error.message);}}
+  save=null;state=null;database=catalog;
 }
 function readStorage() {
+  try { library=readLibrary(localStorage); }
+  catch(error) { storageProblem=true;corruptSave=true;console.warn(error.message); }
+}
+async function enterCampaign(id, proceed) {
+  if(loadingCampaign)return;
+  loadingCampaign=true;
+  const formControls=[...(modal.open?modal.querySelectorAll('button, input, select'):[])].map(control=>[control,control.disabled]);
+  for(const [control] of formControls)control.disabled=true;
+  const panel=document.createElement('div');
+  panel.className='notice';
+  panel.setAttribute('role','status');
+  panel.textContent='正在加载所选战役……';
+  (modal.open?document.getElementById('modal-content'):root.querySelector('main'))?.prepend(panel);
   try {
-    library = readLibrary(localStorage);
-  } catch (error) { storageProblem = true; corruptSave = true; console.warn('History could not be loaded:', error.message); return; }
-  const candidate = library.plays.find(play => play.id === library.activeId)?.save;
-  if (candidate) {
-    try { ({state,save}=skipSetupPages(database,candidate)); }
-    catch (error) { console.warn('Previous play is unavailable:', error.message); }
+    const data=await loadCampaign(id);
+    data.narrationIndex=createNarrationIndex(data.manifest,data.audio);
+    database=data;
+    proceed();
+    retryLoad=null;
+  } catch(error) {
+    retryLoad=()=>enterCampaign(id,proceed);
+    panel.innerHTML=`<p>${escape(error.message)}</p><p>请检查网络连接后重试。</p>${button('重试','retry-load')}`;
+  } finally {
+    loadingCampaign=false;
+    for(const [control,disabled] of formControls)control.disabled=disabled;
+    if(!retryLoad)panel.remove();
   }
 }
 function persist(next, options = {}) {
@@ -343,18 +362,20 @@ document.addEventListener('click',async event=>{
         break;
       }
       case 'music-toggle': await musicPlayer.toggle(musicTracks.find(item=>item.default));break;
+      case 'retry-load':if(retryLoad){el.closest('.notice')?.remove();await retryLoad();}break;
       case 'music-select': await musicPlayer.select(musicTracks.find(track=>track.id===el.dataset.track));break;
       case 'navigate': view=el.dataset.view;render({keepNarration:view!=='home'});window.scrollTo(0,0);break;
-      case 'new': if(modal.open)modal.close();await newCampaign();break;
+      case 'new': if(loadingCampaign)return;if(modal.open)modal.close();await newCampaign();break;
       case 'close-modal':modal.close();resolutionCandidate=null;break;
       case 'previous-step':goTo(storyNav().previous);break;
       case 'next-step':nextStep();break;
       case 'redo':goTo(storyNav().nextAction);break;
       case 'resume-play': {
+        if(loadingCampaign)return;
         if(externalChange)throw Error(L('请刷新以载入最新游戏记录。'));
         const play=library.plays.find(play=>play.id===el.dataset.id);
         if(!play)throw Error(L('找不到这场游戏。'));
-        persist(play.save,{playId:play.id});view='story';render();window.scrollTo(0,0);break;
+        await enterCampaign(play.save.campaignId,()=>{persist(play.save,{playId:play.id});view='story';render();window.scrollTo(0,0);});break;
       }
       case 'delete-play':case 'restore-play': {
         if(externalChange)throw Error(L('请先刷新以载入最新记录。'));
@@ -423,9 +444,10 @@ document.addEventListener('click',async event=>{
     }
   } catch(error){toast(error.message)}
 });
-document.addEventListener('submit',event=>{
+document.addEventListener('submit',async event=>{
   if(!['new-form','resolution-form'].includes(event.target.id))return;
   event.preventDefault();
+  if(loadingCampaign)return;
   try{
     const form=new FormData(event.target);
     if(event.target.id==='new-form'){
@@ -437,9 +459,12 @@ document.addEventListener('submit',event=>{
         if(!playableInvestigator(card))throw Error('请选择有效调查员');
         return {name:localizedCard(card).name,card:card.code};
       });
-      let next=createSave(investigators,t(campaign.name),database.campaignSources[campaignId],campaignId);
-      next=commit(database,next,{type:'start',scenario:campaign.scenarios[0]});
-      persist(next,{create:true});view='story';modal.close();render();
+      await enterCampaign(campaignId,()=>{
+        const selected=database.campaigns[campaignId];
+        let next=createSave(investigators,t(selected.name),database.campaignSources[campaignId],campaignId);
+        next=commit(database,next,{type:'start',scenario:selected.scenarios[0]});
+        persist(next,{create:true});view='story';modal.close();render();
+      });
     }else{
       const id=resolutionCandidate;
       const statuses=Object.fromEntries(form.entries());
@@ -461,15 +486,16 @@ document.addEventListener('change',event=>{
 window.addEventListener('storage',event=>{if(event.key===HISTORY_KEY){externalChange=true;render();toast(L('另一标签页更新了存档，请刷新后继续。'))}});
 async function init(){
   try {
-    const [dunwich,core,carcosa,manifest,audio,extended]=await Promise.all(['data/dwl.json','data/core.json','data/ptc.json','data/narration/index.json','data/narration/audio.json','data/extended.json'].map(async path=>{
-      const response=await fetch(path);if(!response.ok)throw Error(`数据加载失败：${path}`);return response.json();
-    }));
-    database=mergeCampaigns(dunwich,core,carcosa,extended);
-    database.narrationIndex=createNarrationIndex(manifest,audio);
-    try { const response=await fetch('data/music.json');if(response.ok)musicTracks=await response.json(); } catch(error) { console.warn('Music list unavailable:',error); }
+    catalog=await fetchJson('data/catalog.json');
+    database=catalog;
+    loadCampaign=createCampaignLoader(catalog);
     readStorage();render();
+    fetchJson('data/music.json').then(tracks=>{musicTracks=tracks;if(view==='music')render({keepNarration:true});else syncMusicControls();}).catch(error=>console.warn(error.message));
   } catch(error) {
-    root.innerHTML=`<main class="content"><div class="paper"><h1>档案暂时无法打开</h1><p>请通过本地服务器打开网站，并确认内容与配音索引文件存在。</p><p>${escape(error.message)}</p></div></main>`;
+    root.innerHTML=`<main class="content"><div class="paper"><h1>档案暂时无法打开</h1><p>网络连接未能完成，请稍后重试。</p><p>${escape(error.message)}</p>${button('重新加载','retry-init')}</div></main>`;
   }
 }
+document.addEventListener('click',event=>{
+  if(event.target.closest('[data-action="retry-init"]'))init();
+});
 await init();
